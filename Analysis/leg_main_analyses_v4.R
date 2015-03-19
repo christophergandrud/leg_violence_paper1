@@ -1,7 +1,7 @@
 ############
 # Main Analysis 4 for Legislative Violence
 # Christopher Gandrud
-# 18 March 2015
+# 19 March 2015
 ############
 
 # Set working directory. Change as needed.
@@ -23,7 +23,7 @@ tau_dNew <- sum(dNew$violence) / nrow(dNew)
 
 # Subset complete cases per model
 
-vars.1 <- c("country", "year", "violence", "dem_age", "high_prop")
+vars.1 <- c("country", "year", "violence", "dem_age", "high_prop", 'maj')
 vars.2 <- c("country", "year", "violence", "dem_age", "high_prop", "maj",
             "immunity", "pr", "single_party")
 vars.3 <- c("country", "year", "violence", "dem_age", "high_prop", "maj",
@@ -65,7 +65,7 @@ dNew.8.c <- dNew[complete.cases(dNew[vars.8]),]
 
 ###########################
 ### Sample of countries with elected legislatures
-D1 <- zelig(violence ~ high_prop + dem_age, model = "relogit", data = dem.1.c,
+D1 <- zelig(violence ~ high_prop + dem_age + maj, model = "relogit", data = dem.1.c,
             tau = tau_dem, robust = list(method = "weave"), cite = FALSE)
 
 D2 <- zelig(violence ~ high_prop + dem_age + maj + immunity + pr + single_party,
@@ -98,8 +98,9 @@ D8 <- zelig(violence ~ high_prop + dem_age + maj + gdp_per_capita,
 
 ###########################
 ### Sample of countries with elected legislatures from 1990
-DN1 <- zelig(violence ~ high_prop + dem_age, model = "relogit", data = dNew.1.c,
-             tau = tau_dNew, robust = list(method = "weave"), cite = FALSE)
+DN1 <- zelig(violence ~ high_prop + dem_age + maj, model = "relogit", 
+             data = dNew.1.c, tau = tau_dNew, robust = list(method = "weave"), 
+             cite = FALSE)
 
 DN2 <- zelig(violence ~ high_prop + dem_age + maj + immunity + pr +
             single_party,

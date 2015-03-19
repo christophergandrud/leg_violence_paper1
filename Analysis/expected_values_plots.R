@@ -19,8 +19,8 @@ source('Analysis/MinMaxLines.R')
 
 ## Ranges of fitted values
 high_prop.r <- c(0, 1)
-dem.r <- seq(from = 0, to = 85, by = 2)
-maj.r <- seq(from = 20, to = 100, by = 2)
+dem.r <- seq(from = 0, to = 85, by = 5)
+maj.r <- seq(from = 20, to = 100, by = 5)
 
 #### Disporportionality < 6 Dummy ####
 ## Set fitted values
@@ -45,7 +45,7 @@ high_prop_p <- ggplot(high_prop_sum, aes(fitted, Median, ymin = Min_CI,
         scale_x_reverse(breaks = c(1, 2), labels = c("Above", "Below Median")) +
         scale_y_continuous(breaks = c(0, 0.02, 0.05),
                            labels = c("0", "0.02", "0.05"),
-                           limits = c(0, 0.071)) +
+                           limits = c(0, 0.077)) +
         xlab("\nDisproportionality") + ylab("") +
         theme_bw(base_size = 12)
 
@@ -66,7 +66,7 @@ DN2.dem_age_sim <- sim(DN2, x = DN2.dem_age)
 # Extract/clean simulations
 DN2.dem_age_e <- data.frame(simulation.matrix(DN2.dem_age_sim,
                                                 "Expected Values: E(Y|X)"))
-names(DN2.dem_age_e) <- sprintf('X%s', seq(from = 0, to = 85, by = 2))
+names(DN2.dem_age_e) <- sprintf('X%s', dem.r)
 dem_age_gather <- gather(DN2.dem_age_e, fitted, value)
 dem_age_gather$fitted <- gsub('X', '', dem_age_gather$fitted) %>% as.numeric
 
@@ -79,7 +79,7 @@ dem_age_p <- DN2.HighProp.p <- ggplot(dem_age_sum, aes(fitted, Median,
         geom_ribbon(alpha = 0.3) +
         scale_y_continuous(breaks = c(0, 0.02, 0.05),
                            labels = c("0", "0.02", "0.05"),
-                           limits = c(0, 0.071)) +
+                           limits = c(0, 0.077)) +
         xlab("\nAge of Democracy") + ylab("") +
         theme_bw(base_size = 12)
 
@@ -93,7 +93,7 @@ DN2.maj_sim <- sim(DN2, x = DN2.maj1)
 # Extract/clean simulations
 DN2.maj_e <- data.frame(simulation.matrix(DN2.maj_sim,
                                                 "Expected Values: E(Y|X)"))
-names(DN2.maj_e) <- sprintf('X%s', seq(from = 20, to = 100, by = 2))
+names(DN2.maj_e) <- sprintf('X%s', maj.r)
 maj_gather <- gather(DN2.maj_e, fitted, value)
 maj_gather$fitted <- gsub('X', '', maj_gather$fitted) %>% as.numeric
 
@@ -105,7 +105,7 @@ maj_p <- ggplot(maj_sum, aes(fitted, Median, ymin = Min_CI, ymax = Max_CI)) +
         geom_ribbon(alpha = 0.3) +
         scale_y_continuous(breaks = c(0, 0.02, 0.05),
                            labels = c("0", "0.02", "0.05"),
-                           limits = c(0, 0.071)) +
+                           limits = c(0, 0.077)) +
         xlab("\nGovernment Majority") + ylab("") +
         theme_bw(base_size = 12)
 

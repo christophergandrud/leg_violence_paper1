@@ -20,6 +20,7 @@ library(rio)
 library(foreign)
 library(tidyr)
 library(repmis)
+library(stringr)
 
 #### ----------------- Main Leg. Violence Data ---------------------------- ####
 main_violence <- import('data/raw/brawls_BG.csv') %>% select(iso2c, year)
@@ -42,7 +43,49 @@ wdi$gdp_per_capita <- wdi$gdp_per_capita / 1000
 
 wdi <- wdi[!duplicated(wdi[, c('iso2c', 'year')]),]
 
-#### --------------- Women in Parliament ---------------------------------- ####
+#### --------------- Armed Conflict ---------------------------------- ####
+conflict <- import('Data/raw/UCDPPrioArmedConflictDataset4a-2014.csv') %>%
+                filter(Year >= 1980) %>% 
+                select(ConflictId, Location, Year, TypeOfConflict)
+
+conflict <- conflict[!duplicated(conflict[, c('Location', 'Year')]), ] %>% 
+                arrange(Location, Year)
+
+# Extract conflicts in involving two countries
+split_location <- str_split_fixed(conflict$Location, ', ', n = 2) %>% 
+                    as.data.frame
+split_location$row_id <- 1:nrow(conflict)
+sub_location <- subset(split_location, V2 != '' & V2 != 'FYR')
+
+sub_conflict <- conflict[sub_location$row_id, ]
+sub_conflict$Location <- sub_location$V2
+
+# Clean Iraq 2003 war 
+sub_conflict <- sub_conflict[-2, ]
+iraq_war <- data.frame(ConflictId = rep('1-226', 3),
+                       Location = c('Iraq', 'Unites Kingdom', 'United States'),
+                       Year = rep(2003, 3),
+                       TypeOfConflict = rep(2, 3))
+
+# Combine
+conflict <- rbind(conflict[!(1:nrow(conflict) %in% sub_location$row_id), ],
+                  sub_conflict)
+conflict <- rbind(conflict, iraq_war)
+
+# Clean up
+conflict$iso2c <- countrycode(conflict$Location, origin = 'country.name',
+                              destination = 'iso2c')
+
+# Recode conflict
+conflict$internal_conflict <- 1
+conflict$internal_conflict[conflict$TypeOfConflict < 3] <- 0
+
+conflict <- conflict %>% DropNA('iso2c') %>% 
+                select(iso2c, Year, TypeOfConflict, internal_conflict) %>%
+                arrange(iso2c, Year)
+names(conflict) <- c('iso2c', 'year', 'type_of_conflict', 'internal_conflict') 
+
+#### --------------- Women in Parliament ----------------------Year------------ ####
 # From 1997 data from Inter-Parliamentary Union via World Bank Development
 # Indicators
 ## WDI indicator ID: SG.GEN.PARL.ZS
@@ -88,18 +131,25 @@ cum_nozero <- function(x){
 
         for (i in 1:nrow(temp)){
             message(i)
-            if (i == 1) temp_cum[1] <- temp[1, x]
+            if (i == 1) {
+                temp_cum[1] <- temp[1, x]
+            }
             else if (i > 1) {
-                if (!is.na(temp[i-1, x])){
-                    if (temp[i-1, x] == 0 & temp[i, x] > 0) {
-                        temp_cum[i] <- 1
-                    }
-                    else if (temp[i-1, x] > 0){
-                        temp_cum[i] <- temp_cum[i-1] + 1
-                    }
+                if (is.na(temp[i, x])){
+                    temp_cum[i] <- temp[i, x]
                 }
-                else if (is.na(temp[i-1, x])){
-                    temp_cum[i] <- NA
+                else if (!is.na(temp[i, x])){
+                    if (!is.na(temp[i-1, x])){
+                        if (temp[i-1, x] == 0 & temp[i, x] > 0) {
+                            temp_cum[i] <- 1
+                        }
+                        else if (temp[i-1, x] > 0){
+                            temp_cum[i] <- temp_cum[i-1] + 1
+                        }
+                    }
+                    else if (is.na(temp[i-1, x])){
+                        temp_cum[i] <- NA
+                    }
                 }
             }
         }
@@ -238,6 +288,15 @@ comb <- comb %>% group_by(iso2c) %>%
     mutate(disproportionality = FillDown(Var = disproportionality))
 comb <- comb %>% mutate(high_prop = FillDown(Var = high_prop)) %>%
     as.data.frame
+
+## Merge armed conflict
+comb <- merge(comb, conflict, by = c('iso2c', 'year'), all.x = T) %>%
+    arrange(iso2c, year)
+
+# Assume all missing are non-conflict years
+for (i in c('type_of_conflict', 'internal_conflict')) {
+    comb[, i][is.na(comb[, i])] <- 0
+}
 
 ## Final clean
 comb <- DropNA(comb, 'iso2c')

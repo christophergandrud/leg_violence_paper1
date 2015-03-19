@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Two Sword Lengths Apart
-% 10 December 2014
+% 19 March 2015
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % !Rnw weave = knitr
@@ -270,6 +270,7 @@ Individual observations are clearly correlated within countries and years, espec
         table = FALSE,
         custom.coef.names = CoefNames,
         custom.model.names = ModNamesB,
+        stars = c(0.001, 0.05, 0.1),
         use.packages = FALSE)
 @
 }
@@ -296,7 +297,7 @@ I avoid focusing on models that include highly correlated variables \citep[see][
 @
     \end{center}
     \begin{singlespace}
-      {\scriptsize{The graphs show the middle 95\% of 1000 simulations at each fitted value of the variables. The simulations use Model A2, Table \ref{outputTable.1990}. For each set of simulations all other variables were fitted at their means.}}
+      {\scriptsize{The graphs show the median and middle 95\% of 1000 simulations at each fitted value of the variables. The simulations use Model A2, Table \ref{outputTable.1990}. For each set of simulations all other variables were fitted at their means.}}
     \end{singlespace}
 \end{figure}
 
