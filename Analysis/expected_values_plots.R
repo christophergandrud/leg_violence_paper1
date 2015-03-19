@@ -5,7 +5,7 @@
 #######################
 
 # Set working directory. Change as needed.
-setwd('/git_repositories/LegislativeViolence/')
+setwd('/git_repositories/leg_violence_paper1/')
 
 # Load required packages
 library(Zelig)
@@ -41,6 +41,7 @@ high_prop_sum <- MinMaxLines(high_prop_gather)
 high_prop_p <- ggplot(high_prop_sum, aes(fitted, Median, ymin = Min_CI,
                     ymax = Max_CI)) +
         geom_pointrange(size = 1) +
+        geom_line() +
         scale_x_reverse(breaks = c(1, 2), labels = c("Above", "Below Median")) +
         scale_y_continuous(breaks = c(0, 0.02, 0.05),
                            labels = c("0", "0.02", "0.05"),

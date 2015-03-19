@@ -6,7 +6,7 @@
 ############
 
 # Set working directory. Change as needed.
-setwd('/git_repositories/LegislativeViolence/')
+setwd('/git_repositories/leg_violence_paper1/')
 
 # Load packages
 library(ggplot2)

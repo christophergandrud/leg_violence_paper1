@@ -37,7 +37,7 @@
 \title{Two Sword Lengths Apart: Credible Commitment Problems and Physical Violence in Multi-party Elected National Legislatures}
 
 \author{Christopher Gandrud \\
-                {\emph{Hertie School of Governance}}\footnote{Post-doctoral Researcher. Friedrichstra{\ss}er 180. 10117 Berlin, Germany. Email: \href{mailto:gandrud@hertie-school.org}{gandrud@hertie-school.org}. Thank you to Gary Cox, Simon Hix, Shirin Rai, Carole Spary, as well as seminar participants at the Hertie School of Governance and Yonsei University for very helpful comments and insights. I would also like to thank Hortense Badarani for excellent research assistance and my students at the LSE for inspiration. Full replication files--including data and source code--can be found at \url{https://github.com/christophergandrud/LegislativeViolence}. An earlier version was circulated under the title ``Two Sword Lengths: Losers' consent and violence in national legislatures''.}}
+                {\emph{Hertie School of Governance}}\footnote{Post-doctoral Researcher. Friedrichstra{\ss}er 180. 10117 Berlin, Germany. Email: \href{mailto:gandrud@hertie-school.org}{gandrud@hertie-school.org}. Thank you to Gary Cox, Simon Hix, Shirin Rai, Carole Spary, as well as seminar participants at the Hertie School of Governance and Yonsei University for very helpful comments and insights. I would also like to thank Hortense Badarani for excellent research assistance and my students at the LSE for inspiration. Full replication files--including data and source code--can be found at \url{https://github.com/christophergandrud/leg_violence_paper1}. An earlier version was circulated under the title ``Two Sword Lengths: Losers' consent and violence in national legislatures''.}}
 
 \begin{document}
 
@@ -182,7 +182,7 @@ This brief tour of descriptive statistics adds to the evidence from the previous
     \begin{center}
 
 <<FrameworkEmpirical, warning=FALSE, echo=FALSE, message=FALSE, fig.width=7, fig.height=4, out.width='0.8\\linewidth'>>=
-    source("/git_repositories/LegislativeViolence/Analysis/framework_empirical_v3.R")
+    source("/git_repositories/leg_violence_paper1/Analysis/framework_empirical_v3.R")
 
 @
     \end{center}
@@ -198,7 +198,7 @@ This brief tour of descriptive statistics adds to the evidence from the previous
     ## Run the main analyses used for predicting quantities of interest and
     #  estimating regression coefficients.
     # Run analysis
-    source("/git_repositories/LegislativeViolence/Analysis/leg_main_analyses_v4.R")
+    source("/git_repositories/leg_violence_paper1/Analysis/leg_main_analyses_v4.R")
 
 @
 
@@ -219,7 +219,7 @@ I included a number of political and societal variables in the regression models
 
 I measure the {\emph{age of a democratic regime}} as the number of years a country's Polity IV score \citep{Marshall2009} is greater than five, the point above which that data set's creators classify a country as democratic. I use two variables to examine the relationship between the proportionality of electoral outcomes and violence. One is purely institutional: a simple dummy of whether or not a country's legislature is elected by some form of {\emph{proportional electoral system}}. The variable is from the DPI database. As noted earlier, simply looking at the electoral mechanics confuses mechanisms with outcomes. So, more importantly, I use the standard Least Squares or Gallagher Index \citep{Gallagher1991} to measure realized {\emph{electoral disproportionality}}. The available data is in terms of overall national disproportionality. To gain maximum coverage, I compiled the data from both \cite{Gallagher2012} and \cite{Carey2011}. Full details can be found at: \url{http://christophergandrud.github.com/Disproportionality_Data/}. A country's disproportionality score is treated as constant from the year of an election until the year before the following election. Higher values on the Gallagher Index indicate more disproportionate, i.e. less fair electoral outcomes.
 
-As we saw in Figure \ref{framework_empirical} there appears to be a very strong negative correlation between very low levels of disproportionality and legislative violence. Only one instance of violence was observed in countries with a disproportionality score of less than about 2.5.\footnote{Though the observed range of disproportionality scores goes from almost 0 to 30, countries with scores less than 2.5 are not outliers. About 42 percent of county-years in the sample had scores of 2.5 or smaller.} This can be explained by fairness equilibria and is partially corroborated by Marien's \citeyearpar{Marien2011} finding regarding very low disproportionality measured with the Gallagher Index and political trust discussed above. To capture a possible disproportionality threshold effect--where low disproportionality is associated with stronger feelings of fairness--I created a low disproportionality dummy variable. County-years with disproportionality greater than or equal to the observed median (6)\footnote{The observed range is 0.26 to 34.52.} are coded as having higher disproportionality and those with scores lower than 6 are coded as having lower disproportionality.\footnote{Models were estimated with the continuous disproportionality measure. The parameter estimates were not statistically significant and are not shown.}
+As we saw in Figure \ref{framework_empirical} there appears to be a very strong negative correlation between very low levels of disproportionality and legislative violence. Only one instance of violence was observed in countries with a disproportionality score of less than about 2.5.\footnote{Though the observed range of disproportionality scores goes from almost 0 to 30, countries with scores less than 2.5 are not outliers. About 42 percent of county-years in the sample had scores of 2.5 or smaller.} This can be explained by fairness equilibria and is partially corroborated by Marien's \citeyearpar{Marien2011} finding regarding very low disproportionality measured with the Gallagher Index and political trust discussed above. To capture a possible disproportionality threshold effect--where low disproportionality is associated with stronger feelings of fairness--I created a low disproportionality dummy variable. County-years with disproportionality greater than or equal to the observed median (\change{6}{6.4})\footnote{The observed range is 0.26 to 34.52.} are coded as having higher disproportionality and those with scores lower than 6 are coded as having lower disproportionality.\footnote{Models were estimated with the continuous disproportionality measure. The parameter estimates were not statistically significant and are not shown.}
 
 I also investigated the possibility that a number of political, institutional, and cultural variables may actually be associated with legislative violence and that the key variables from my argument actually have spurious associations. To get a sense of how the size of the governing majority is associated with legislative violence I include the government {\emph{majority}} variable (from the DPI). It simply measures the seats held by governing parties as a proportion of all seats. I transformed the variable from a proportion to a percentage to ease interpretation. Legislators may be less likely to attack one another if they know that they could be arrested for assault. To examine this possibility I include Fish and Koening's \citeyearpar{Fish2009} dichotomous \emph{legislator immunity} variable. It equals one if national legislators are immune from arrest and/or prosecution and zero otherwise. Unfortunately, their data only captures legislative immunity in 2007. I extrapolated the 2007 value of the variable to the other observation years.\footnote{I also considered using the legislator immunity variable from the Comparative Constitutions Project \citep{ElkinsCCP2010}. However, the coding of the immunity variable is vaguer than Fish and Koening's and only deals with constitutionally mandated immunity.} We should therefore approach results from this variable with caution since it might not be a valid indicator for all country-years.
 
@@ -289,9 +289,9 @@ I avoid focusing on models that include highly correlated variables \citep[see][
 
     %\includegraphics[width = \textwidth]{leg_violence_paper-PredProb}
 
-<<predProb, warning=FALSE, echo=FALSE, message=FALSE, results='hide', fig.width=7, fig.height=4, out.width='0.8\\linewidth', cache=TRUE>>=
+<<predProb, warning=FALSE, echo=FALSE, message=FALSE, results='hide', fig.width=7, fig.height=4, out.width='0.9\\linewidth', cache=FALSE>>=
   ## Create Graphs ##
-  source("/git_repositories/LegislativeViolence/Analysis/expected_values_plots.R")
+  source("/git_repositories/leg_violence_paper1/Analysis/expected_values_plots.R")
 
 @
     \end{center}

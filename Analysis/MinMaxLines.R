@@ -1,3 +1,4 @@
+
 MinMaxLines <- function(df, byVars = "fitted", clean = T)
 {
     require(dplyr)
