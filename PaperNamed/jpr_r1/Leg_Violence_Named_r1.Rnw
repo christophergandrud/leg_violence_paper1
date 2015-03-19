@@ -291,7 +291,7 @@ I avoid focusing on models that include highly correlated variables \citep[see][
 
 <<predProb, warning=FALSE, echo=FALSE, message=FALSE, results='hide', fig.width=7, fig.height=4, out.width='0.8\\linewidth', cache=TRUE>>=
   ## Create Graphs ##
-  source("/git_repositories/LegislativeViolence/Analysis/expectedValueGraphs2.R")
+  source("/git_repositories/LegislativeViolence/Analysis/expected_values_plots.R")
 
 @
     \end{center}
