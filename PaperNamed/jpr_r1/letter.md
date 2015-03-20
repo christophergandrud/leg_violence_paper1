@@ -17,19 +17,29 @@ P.S. The footnote numbering will automatically return to normal when we remove t
 
 > Avoid the use of the term ‘recently’ in the abstract.
 
+    - Removed.
+
 > Explain ‘disproportionate electoral outcomes’ in the abstract and earlier in the introduction.
 
 > P. 1: ‘Actual, sword fights…’ -> ‘Actual sword fights…’
 
+    - Corrected.
+
 > P. 2 and elsewhere: ‘paper’ -> ‘article’.
 
+    - Replace all 'paper' with 'article'.
+
 > P. 4: ‘a large increases’ -> ‘a large increase’
+
+    - Corrected.
 
 > P 5 and 7: please name hypotheses ‘H1’ and ‘H2’.
 
 > P. 6: ‘(Saideman, Lanoue and Stanton, 2002, 108)’ -> ‘(Saideman, Lanoue & Stanton, 2002: 108)’, here and throughout the ms.
 
 > P. 7: ‘(see Lijphart, 2007)’ -> ‘(Lijphart, 2007)’, here and throughout the ms.  
+
+    - Removed 'see' from all in-text citations.
 
 > P. 12: footnote 1 close to the bottom: which note does this refer to?
 
@@ -43,6 +53,9 @@ P.S. The footnote numbering will automatically return to normal when we remove t
 
 > Since one of the key contributions is the dataset, please do provide additional information on the data collection procedure (e.g. search algorithm?) and the coding (e.g. how did you separate between multiple events involving the same actors). Additional information should be included in the article, though more detailed descriptions may be relegated to the supplementary (online) file.
 
+    - I realise that unfortunately the footnote detailing the original data gathering process was accidentally not included in the original version. I have made sure that this is now in the paper. In addition, I and two new research assistants have veryified and updated the data set using additional Google and Youtube (a surprisingly good source of information on legislative brawls) keyword searches. I have added a description of this process to the paper [TO-DO].
+
+    - Regarding multiple events involving the same actors: in our search, including watching video of many of the brawls, they are continuous events. Legislators brawl once on a given day the size and duration of the brawls varies (we have catologued this for future research), but as our research found, they are one event per day. This is how they are coded in the data set. [THINK ABOUT] 
 
 # Reviewer 2
 

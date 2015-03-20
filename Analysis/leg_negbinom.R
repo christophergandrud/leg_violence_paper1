@@ -1,7 +1,7 @@
 ############
 # Robustness test with zero inflated negative binomial model
 # Christopher Gandrud
-# 18 March 2015
+# 20 March 2015
 ############
 
 # Set working directory. Change as needed.
@@ -18,7 +18,8 @@ dem <- import('Data/LegislativeViolenceMain.csv')
 dNew <- subset(dem, year > 1989)
 
 #### Estimate Models ####
-D1_nb <- zeroinfl(violence ~ high_prop + dem_age + maj, 
+dNew.1.c <- dNew.1.c[!duplicated(dNew.1.c$iso2c, dNew.1.c$year), ]
+D1_nb <- zeroinfl(violence_y_cum ~ high_prop + dem_age + maj | high_prop + dem_age + maj, 
                data = dNew.1.c, dist = "negbin", EM = T)
 
 DN1_nb <- zeroinfl(violence ~ high_prop + dem_age, model = "negbinom", 

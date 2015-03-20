@@ -2,7 +2,7 @@
 # Legislative Violence
 # Combined scatter plots to illustrate how framework relates to findings
 # Christopher Gandrud
-# Updated 18 March 2015
+# Updated 20 March 2015
 ############
 
 # Set working directory. Change as needed.
@@ -24,7 +24,7 @@ leg_cumulative <- leg_cumulative[!duplicated(leg_cumulative[,
                                         c('iso2c', 'year', 'violence_y_cum')]), ]
 
 leg_cumulative$violence <- factor(leg_cumulative$violence, 
-                                  label = c("No Violence", "Violence"))
+                                  labels = c("No Violence", "Violence"))
 leg_cumulative <- subset(leg_cumulative, violence != "NA")
 
 cols <- c("1" = "#EDDD00", "2" = "#ED6700", "3" = "#A04400", "0" = "#5E5E5E")
