@@ -32,12 +32,11 @@ main_violence <- main_violence %>% group_by(iso2c, year) %>%
     mutate(violence_y_cum = sum(violence))
 
 #### ------------------ World Bank Development Indicators ----------------- ####
-indicators_wdi <- c('NY.GDP.PCAP.KD', 'VC.IHR.PSRC.P5')
+indicators_wdi <- c('NY.GDP.PCAP.KD')
 wdi <- WDI(indicator = indicators_wdi, start = 1975, end = 2014, extra = T) %>%
-    dplyr::rename(gdp_per_capita = NY.GDP.PCAP.KD,
-                  murder_rate = VC.IHR.PSRC.P5) %>%
+    dplyr::rename(gdp_per_capita = NY.GDP.PCAP.KD) %>%
     filter(region != 'Aggregates') %>%
-    dplyr::select(iso2c, year, gdp_per_capita, murder_rate)
+    dplyr::select(iso2c, year, gdp_per_capita)
 
 # GDP to thousands of dollars
 wdi$gdp_per_capita <- wdi$gdp_per_capita / 1000
@@ -57,6 +56,17 @@ gini <- gini %>% group_by(iso2c, year) %>%
             summarise(gini = mean (gini, na.rm = T))
 
 gini <- gini[!duplicated(gini[, c('iso2c', 'year')]),]
+
+#### ------------------- Murder Rate -------------------------------------- ####
+murder <- import('Data/raw/UNdata_HomicideRate.csv') %>%
+            dplyr::select(`Country or Area`, Year, Rate) %>%
+            rename(country = `Country or Area`)
+
+murder$iso2c <- countrycode(murder$country, origin = 'country.name', 
+                          destination = 'iso2c')
+murder$Rate <- as.numeric(murder$Rate)
+murder <- murder %>% dplyr::select(iso2c, Year, Rate)
+names(murder) <- c('iso2c', 'year', 'murder_rate')
 
 #### --------------- Armed Conflict --------------------------------------- ####
 conflict <- import('Data/raw/UCDPPrioArmedConflictDataset4a-2014.csv') %>%
@@ -288,6 +298,10 @@ comb <- merge(comb, federal, by = c('iso2c', 'year'), all.x = T) %>%
     arrange(iso2c, year)
 comb <- comb %>% group_by(iso2c) %>% mutate(federal =
                                     FillDown(Var = federal)) %>% as.data.frame
+
+## Merge in murder rate
+comb <- merge(comb, murder, by = c('iso2c', 'year'), all.x = T) %>%
+    arrange(iso2c, year)
 
 ## Merge enps/enpv
 comb <- merge(comb, enpv_enps, by = c('iso2c', 'year'), all.x = T) %>%

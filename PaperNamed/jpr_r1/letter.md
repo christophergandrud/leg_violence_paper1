@@ -49,11 +49,15 @@ P.S. The footnote numbering will automatically return to normal when we remove t
 
     - I have moved these models to the Appendix (Table [GET]).
 
-    - I also moved the discussion of the variables in these models to the Appendix. 
+    - I also moved the discussion of the variables in these models to the Appendix.
 
 > P. 18: please consider adding past armed conflict as a control.
 
-    - I show results from internal armed conflicts in the regression tables. The data is from the UCDP/PRIO Armed Conflict Dataset. [WRITE UP]
+    - Thank you for this useful suggestion. Its inclusion has revealed interesting results.
+
+    I estimated the effect of internal armed conflicts in the regression tables. (The results from all conflicts are similar, as there are very few interstate conflicts in the sample period.) The data is from the UCDP/PRIO Armed Conflict Dataset. The variable is strongly positively associated with legislative violence in almost all models. The inclusion of the variable does not substantively alter the core original findings.
+
+    I have added the variable to the regression estimates tables and included a discussion on page [GET].  [WRITE UP]
 
 > Since one of the key contributions is the dataset, please do provide additional information on the data collection procedure (e.g. search algorithm?) and the coding (e.g. how did you separate between multiple events involving the same actors). Additional information should be included in the article, though more detailed descriptions may be relegated to the supplementary (online) file.
 

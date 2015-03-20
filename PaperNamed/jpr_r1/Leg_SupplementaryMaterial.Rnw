@@ -55,6 +55,37 @@
 
 For prior correction \citep[see][]{KingRareEventsPA2001} in the models with the full sample of elected multi-party legislatures I used the observed proportion of all observations with legislative violence \change{up to 2010}{through 2012}: i.e. \change{2.1}{2.2} percent of observations up until 2010 had violence ($\tau = \frac{117}{5360} = 0.022$). There were \change{63}{109} observed incidences of violence and \change{2654}{3990} country-years from 1990 through \change{2009}{2012} in the sample, so: $\tau = \frac{109}{3390} = 0.027$.
 
+\subsection*{Additional Right-hand Variables}
+
+\todo{This section was moved from the main paper at the editor's request}
+
+I examined a number of other legislative and societal-level variables to guard against omitted variable bias. Results from models with these variables are shown in tables \ref{outputTable.dem} and \ref{outputTable.1990_2nd}. The variables are described below. It is important to first note that overall these factors were not found to be statistically significantly associated with legislative violence nor did they substantively alter the article's core findings.
+
+\subsubsection*{Variable Descriptions}
+
+Gender is closely correlated with violence in society generally. Though there are many possible reasons for this that are beyond the scope of this article, women tend to commit many fewer acts of violence than men \citep[]{Schwartz2009}. Previous research has found that women's participation in parliament has an impact on government decisions to go to war \citep{Melander2005}. Perhaps if a larger proportion of legislators are women there will be less violence in the parliamentary chamber. To examine this possibility, I gathered data on the \emph{percentage of women in parliament} per country-year from two sources. Data from 1997 and after was from the Inter-Parliamentary Union \citeyearpar{IPU2013}. Data from before 1997 was from \cite{Schwartz2009}.
+
+I included a countries' \emph{murder rate}, i.e. murders per 100,000 people, to measure a possible association between societal-level and legislative violence. The data was from \cite{UNMurder2013}, which aggregated annual murder rates from a variety of national and international sources. The data is available from 1995 through 2011.\footnote{Beyond truncating the sample somewhat, this data set unfortunately does not record Taiwan's murder rate separately from China's.}
+
+I also included standard measures of the \emph{effective number of parliamentary parties} by votes and by seats \citep[]{Laakso1979, Taagepera1989}. The data was taken from \cite{Carey2011} before 2004 and from \cite{Gallagher2012} afterwards. Both of these measures indicate how fragmented a parliamentary party system is. Higher scores indicate that there are more parties that win either votes or seats. Neither measure produced statistically significant results, so only the results for the effective number of parties by seats are shown below.
+
+To examine whether or not national legislative losers may be dissuaded from legislative violence because there is a possibility of gaining power at a provincial-level, I include the \emph{federalism} dummy variable from \cite{Carey2011}. I updated this from 2004 until the end of the observation period. In early models I also controlled for the government system type, i.e. if it had a presidential, parliamentary, or mixed assembly-elected presidential. This was from the DPI.
+
+Conflict in more economically divided societies may be generally more intense. These conflicts may spill over into legislatures where they precipitate violence between members.To capture similar possible effects from economic divisions, I include {\emph{Gini coefficients of economic inequality}} from \cite{UNU2008}.\footnote{Note, for country-years with missing data I assumed that the Gini Coefficient remained constant from the last year there is data for the country, unless the span was ten years or more. If this was the case they were treated as missing.} Finally, as is common in cross-country analyses, I also include the natural logarithm (due to its right-skewed distribution) of {\emph{gross domestic product per capita}}. This data is from the World Bank's International Development Indicators \citeyearpar{WorldBank2011} and is in thousands of 2005 United States dollars.
+
+\subsection*{Results Discussion}
+
+\todo{Moved from main paper and changed for results with updated data.}
+
+\paragraph{Societal-level Variables}
+
+In general the additional societal-level variables were found to be associated with legislative violence in any of the models. Countries' murder rates were not found to be associated with violence indicating that the link between societal and legislative violence is not strong. Ethnic fractionalization was not statistically associated with legislative brawls. GDP per capita was also not found to be associated with violence. The Gini coefficient was negatively associated with brawls--more inequality was associated with less violence. This finding runs counter to expectations and requires more research to fully understand.
+
+\paragraph{Other Political and Institutional Variables}
+
+Results for other political and institutional variables were largely not statistically significant. The effective number of parties variables and the basic continuous government fractionalization variable was statistically significant in the analyses. Likewise, federalism did not appear to be robustly related to legislative violence across the models. All of these variables are not as directly related to legislative fairness and an ability to make credible legislative commitments at a theoretical level, compared to disproportionality, democratic age and, to a lesser extent, governing majority size. So it should not come as too much of a surprise to find that they are more loosely, if not at all, associated with legislative violence.
+
+
 %%%%%%%% Elected Legislatures Results Table
 \begin{table}
 \caption{Legislative Violence Rare Events Logistic Regression Results (Multi-Party Elected Legislature 1981-2012)}
@@ -67,9 +98,9 @@ For prior correction \citep[see][]{KingRareEventsPA2001} in the models with the 
     CoefNames <- c("Low Disproportionality",
                     "Dem. Age", "Majority Size", "Internal Armed Conflict",
                     "Leg. Immunity", "PR Electoral System", "Single Party Gov.",
-                    "Self Expression", "Ethnic Frac.", "Perc. Women in Parl.", "Murder Rate",
-                    "Federal", "Gov. Frac.",
-                    "No. of Parties by Seats", "GINI", "GDP per Capita",
+                    "Self Expression", "Ethnic Frac.", "Perc. Women in Parl.",
+                    "Murder Rate", "Federal", "Gov. Frac.",
+                    "No. of Parties by Seats", "GINI", "GDP per Capita (log)",
                    "(Intercept)")
 
     stargazer(D1, D2, D3, D4, D5, D6, D7, D8, D9, D10,
@@ -90,7 +121,7 @@ For prior correction \citep[see][]{KingRareEventsPA2001} in the models with the 
 %%%%%%%% Elected Legislatures Results Table from 1990--Robustness
 \begin{table}
 \caption{Legislative Violence Regression Results (Multi-Party Elected Legislature from 1990-2012)}
-\label{outputTable.1990}
+\label{outputTable.1990_2nd}
 \begin{center}
 \scalebox{0.7}{
 <<OutTable2, warning=FALSE, echo=FALSE, message=FALSE, results='asis'>>=
@@ -100,7 +131,7 @@ For prior correction \citep[see][]{KingRareEventsPA2001} in the models with the 
                 "Dem. Age", "Majority Size", "Internal Armed Conflict",
                 "Perc. Women in Parliament",
                 "Murder Rate", "Federal", "Gov. Frac.",
-                "No. of Parties by Seats", "Gini", "GDP per Capita",
+                "No. of Parties by Seats", "Gini", "GDP per Capita (log)",
                 "(Intercept)")
 
     stargazer(DN6, DN7, DN8, DN9, DN10, DN11,
@@ -114,9 +145,36 @@ For prior correction \citep[see][]{KingRareEventsPA2001} in the models with the 
 @
 }
 \end{center}
-{\scriptsize{
-    Standard errors are in parentheses. All models use robust (WEAVE) standard errors. \\
-}}
+\end{table}
+
+
+%%%%%%%% Elected Legislatures Results Table from 1990--Robustness--PR System
+\begin{table}
+\caption{Legislative Violence Regression Results Focusing on Proportional Electoral Systems (Multi-Party Elected Legislature from 1990-2012)}
+\label{outputTable.1990_pr}
+\begin{center}
+\scalebox{0.6}{
+<<OutTable3, warning=FALSE, echo=FALSE, message=FALSE, results='asis'>>=
+    library(stargazer)
+
+    CoefNames <- c("Proportional Electoral System",
+                    "Dem. Age", "Majority Size", "Internal Armed Conflict",
+                    "Self Expression", "Ethnic Frac.", "Perc. Women in Parl.",
+                    "Murder Rate", "Federal", "Gov. Frac.",
+                    "No. of Parties by Seats", "GINI", "GDP per Capita (log)",
+                   "(Intercept)")
+
+    stargazer(DNP1, DNP2, DNP3, DNP4, DNP5, DNP6, DNP7, DNP8, DNP9, DNP10,
+    dep.var.labels = 'Violent Incident',
+    covariate.labels = CoefNames,
+    float = F,
+    out.header = F,
+    notes.append = T,
+    notes.align = 'l',
+    notes = 'Standard errors are in parentheses. All models use robust (WEAVE) standard errors.')
+@
+}
+\end{center}
 \end{table}
 
 
@@ -141,7 +199,7 @@ For prior correction \citep[see][]{KingRareEventsPA2001} in the models with the 
             Federal & Whether a country has a federal system or not & \cite{Carey2011}, updated from 2003 by the author \\
             GDP/Capita & GDP per capita in thousands of US dollars & \cite{WorldBank2011} \\
             Gov. Fractionalization & Probability that two members of the Government will be from different parties & \cite{DPI2001} \\
-            Gini & Gini Coefficient of income inequality & \cite{UNU2008} \\
+            Gini & Gini Coefficient of income inequality averaged over reported sources & \cite{UNU2008} \\
             Immunity & Whether a legislators are immune from arrest and/or criminal prosecution or not & \cite{Fish2009} \\
             Internal Conflict & Internal armed conflict involving purely domestic as well as external combatants & UCDP/PRIO Armed Conflict Dataset \citep{Themner2014} \\
             LEIC & Legislative Indices of Electoral Competitiveness. Includes both the existence of a legislature and its level of electoral competitiveness. & \cite{DPI2001} \\
@@ -173,22 +231,7 @@ For prior correction \citep[see][]{KingRareEventsPA2001} in the models with the 
     \label{corrmatrix}
     \begin{center}
 
-    \includegraphics[width = \textwidth]{corrScatter.pdf}
-    %%% corScatter not created every compile to save time %%%
-%<<corScatter>>=
-
-%    library(corrgram)
-
-%    ### Create data set with variables for corrgram
-%    vars.corrgram <- c("violence", "system", "DemAge", "maj", "MajCat", "govfrac", "singleParty", "pr", "tenshort", "UDS", "polity2", "ethnicAlesina", "CWtrust", "CWsurvSelfExpr", "disproportionality", "gini", "GDPperCapita", "enps", "enpv", "federal", "immunity", "UNMurderRate")
-
-%    # Subset elected legislature data
-%    dem.corrData <- dem[vars.corrgram]
-
-%    # Create corrgram
-%    dem.corrgram <- corrgram(dem.corrData, order = TRUE, upper.panel = NULL, diag.panel = panel.minmax)
-
-%@
+    \includegraphics[scale=0.5]{corrScatter.pdf}
 
     \end{center}
     \begin{singlespace}
