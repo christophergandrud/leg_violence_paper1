@@ -1,7 +1,7 @@
 # ---------------------------------------------------------------------------- #
 # Gather/Clean/Merge Data for Two Sword Lengths Apart
 # Christopher Gandrud
-# 19 March 2015
+# 20 March 2015
 # MIT License
 # ---------------------------------------------------------------------------- #
 
@@ -23,30 +23,45 @@ library(repmis)
 library(stringr)
 
 #### ----------------- Main Leg. Violence Data ---------------------------- ####
-main_violence <- import('data/raw/brawls_BG.csv') %>% select(iso2c, year)
+main_violence <- import('data/raw/brawls_BG.csv') %>% 
+                    dplyr::select(iso2c, year) %>%
+                    filter(year <= 2012)
 main_violence$violence <- 1
 
 main_violence <- main_violence %>% group_by(iso2c, year) %>%
     mutate(violence_y_cum = sum(violence))
 
 #### ------------------ World Bank Development Indicators ----------------- ####
-indicators_wdi <- c('SI.POV.GINI', 'NY.GDP.PCAP.KD', 'VC.IHR.PSRC.P5')
+indicators_wdi <- c('NY.GDP.PCAP.KD', 'VC.IHR.PSRC.P5')
 wdi <- WDI(indicator = indicators_wdi, start = 1975, end = 2014, extra = T) %>%
-    dplyr::rename(gini = SI.POV.GINI,
-                  gdp_per_capita = NY.GDP.PCAP.KD,
+    dplyr::rename(gdp_per_capita = NY.GDP.PCAP.KD,
                   murder_rate = VC.IHR.PSRC.P5) %>%
     filter(region != 'Aggregates') %>%
-    select(iso2c, year, gini, gdp_per_capita, murder_rate)
+    dplyr::select(iso2c, year, gdp_per_capita, murder_rate)
 
 # GDP to thousands of dollars
 wdi$gdp_per_capita <- wdi$gdp_per_capita / 1000
 
 wdi <- wdi[!duplicated(wdi[, c('iso2c', 'year')]),]
 
-#### --------------- Armed Conflict ---------------------------------- ####
+#### ------------------ GINI ---------------------------------------------- ####
+gini <- import('Data/raw/wiid_3b_1.csv')
+gini <- gini[c('Country', 'Year', 'Gini')]
+gini$iso2c <- countrycode(gini$Country, origin = 'country.name', 
+                          destination = 'iso2c')
+gini <- gini %>% dplyr::select(iso2c, Year, Gini)
+names(gini) <- c('iso2c', 'year', 'gini')
+
+# Average multiple sources
+gini <- gini %>% group_by(iso2c, year) %>% 
+            summarise(gini = mean (gini, na.rm = T))
+
+gini <- gini[!duplicated(gini[, c('iso2c', 'year')]),]
+
+#### --------------- Armed Conflict --------------------------------------- ####
 conflict <- import('Data/raw/UCDPPrioArmedConflictDataset4a-2014.csv') %>%
                 filter(Year >= 1980) %>% 
-                select(ConflictId, Location, Year, TypeOfConflict)
+                dplyr::select(ConflictId, Location, Year, TypeOfConflict)
 
 conflict <- conflict[!duplicated(conflict[, c('Location', 'Year')]), ] %>% 
                 arrange(Location, Year)
@@ -81,7 +96,7 @@ conflict$internal_conflict <- 1
 conflict$internal_conflict[conflict$TypeOfConflict < 3] <- 0
 
 conflict <- conflict %>% DropNA('iso2c') %>% 
-                select(iso2c, Year, TypeOfConflict, internal_conflict) %>%
+                dplyr::select(iso2c, Year, TypeOfConflict, internal_conflict) %>%
                 arrange(iso2c, Year)
 names(conflict) <- c('iso2c', 'year', 'type_of_conflict', 'internal_conflict') 
 
@@ -90,8 +105,8 @@ names(conflict) <- c('iso2c', 'year', 'type_of_conflict', 'internal_conflict')
 # Indicators
 ## WDI indicator ID: SG.GEN.PARL.ZS
 women <- WDI(indicator = "SG.GEN.PARL.ZS", start = 1997) %>%
-    select(-country) %>% rename(women_in_parl = SG.GEN.PARL.ZS) %>%
-    select(iso2c, year, women_in_parl)
+    dplyr::select(-country) %>% rename(women_in_parl = SG.GEN.PARL.ZS) %>%
+    dplyr::select(iso2c, year, women_in_parl)
 
 # Data from before 1997 from ICPSR: http://www.icpsr.umich.edu/icpsrweb/ICPSR/studies/24340
 women_old <- read.dta('Data/raw/24340-0001-Data.dta')
@@ -103,7 +118,7 @@ women_old$year <- women_old$year %>% gsub('P', '', .) %>% as.numeric
 women_old$iso2c <- countrycode(women_old$COUNTRYN, origin = 'country.name',
                                destination = 'iso2c')
 
-women_old <- women_old %>% select(iso2c, year, women_in_parl) %>%
+women_old <- women_old %>% dplyr::select(iso2c, year, women_in_parl) %>%
     arrange(iso2c, year) %>% filter(year >= 1980) %>%
     filter(year < 1997)
 
@@ -160,7 +175,7 @@ cum_nozero <- function(x){
 
 polity$dem_age <- cum_nozero(x = 'democracy')
 
-polity <- polity %>% select(iso2c, year, polity2, dem_age, durable)
+polity <- polity %>% dplyr::select(iso2c, year, polity2, dem_age, durable)
 polity <- polity[!duplicated(polity[, c('iso2c', 'year')]),]
 
 #### ---------------------- Database of Political Institutions ------------ ####
@@ -175,7 +190,7 @@ DpiData$countryname[DpiData$countryname == "S. Africa"] <- 'South Africa'
 DpiData$iso2c <- countrycode(DpiData$countryname, origin = 'country.name',
                              destination = 'iso2c')
 
-dpi <- DpiData %>% select(iso2c, year, maj, system, govfrac, pr, liec)
+dpi <- DpiData %>% dplyr::select(iso2c, year, maj, system, govfrac, pr, liec)
 
 for (i in names(dpi)) dpi[, i][dpi[, i] == -999] <- NA
 
@@ -187,13 +202,11 @@ dpi$single_party[!is.na(dpi$govfrac)] <- 0
 dpi$single_party[dpi$govfrac == 0] <- 1
 dpi$single_party[is.na(dpi$govfrac)] <- NA
 
-#### Only countries with elected legislatures
-dpi <- dpi %>% filter(liec > 5)
 dpi <- dpi[!duplicated(dpi[, c('iso2c', 'year')]),]
 
 #### ----------------- Dispoportionality ---------------------------------- ####
 disprop <- import('http://bit.ly/Ss6zDO', format = 'csv') %>%
-    select(iso2c, year, disproportionality) %>% filter(year >= 1980) %>%
+    dplyr::select(iso2c, year, disproportionality) %>% filter(year >= 1980) %>%
     filter(year <= 2012)
 
 # Create disproportionality threshold variable where 1 < 6.4
@@ -204,7 +217,7 @@ disprop$high_prop[is.na(disprop$high_prop)] <- NA
 disprop <- disprop[!duplicated(disprop[, c('iso2c', 'year')]),]
 
 #### ----------------- Legislative Immunity ------------------------------- ####
-immunity <- import('Data/raw/fish_k_immunity.csv') %>% select(-year)
+immunity <- import('Data/raw/fish_k_immunity.csv') %>% dplyr::select(-year)
 immunity <- immunity[!duplicated(immunity[, 'iso2c']),]
 
 #### ----------------- Ethnic Fractionalization---------------------------- ####
@@ -218,7 +231,7 @@ ethnic_frac$ethnic_alesina <- ethnic_frac$ethnic_alesina %>% as.character %>%
 
 ethnic_frac$iso2c <- countrycode(ethnic_frac$country, origin = 'country.name',
                                  destination = 'iso2c')
-ethnic_frac <- select(ethnic_frac, iso2c, ethnic_alesina)
+ethnic_frac <- dplyr::select(ethnic_frac, iso2c, ethnic_alesina)
 ethnic_frac <- ethnic_frac[!duplicated(ethnic_frac[, 'iso2c']),]
 
 #### ------------------ World Values Survey ------------------------------- ####
@@ -267,14 +280,14 @@ comb <- merge(comb, wvs, by = c('iso2c', 'year'), all.x = T) %>%
 comb <- comb %>% group_by(iso2c) %>% mutate(higher_trust =
                                                 FillDown(Var = higher_trust))
 comb <- comb %>% group_by(iso2c) %>% mutate(cw_surv_self_expr =
-                                                FillDown(Var = cw_surv_self_expr)) %>%
+                                            FillDown(Var = cw_surv_self_expr)) %>%
     as.data.frame
 
 ## Merge federal and extend
 comb <- merge(comb, federal, by = c('iso2c', 'year'), all.x = T) %>%
     arrange(iso2c, year)
 comb <- comb %>% group_by(iso2c) %>% mutate(federal =
-                                                FillDown(Var = federal)) %>% as.data.frame
+                                    FillDown(Var = federal)) %>% as.data.frame
 
 ## Merge enps/enpv
 comb <- merge(comb, enpv_enps, by = c('iso2c', 'year'), all.x = T) %>%
@@ -298,8 +311,17 @@ for (i in c('type_of_conflict', 'internal_conflict')) {
     comb[, i][is.na(comb[, i])] <- 0
 }
 
+## Merge gini
+comb <- merge(comb, gini, by = c('iso2c', 'year'), all.x = T) %>%
+    arrange(iso2c, year)
+comb <- comb %>% group_by(iso2c) %>% mutate(gini = FillDown(Var = gini))
+
 ## Final clean
-comb <- DropNA(comb, 'iso2c')
+#### Only countries with elected legislatures
+comb <- comb %>% filter(liec > 5 & !is.na(liec))
+
+
+comb <- comb %>% filter(!is.na(iso2c))
 
 violence_sub <- comb %>% filter(!is.na(violence))
 

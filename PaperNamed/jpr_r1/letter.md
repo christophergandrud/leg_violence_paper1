@@ -47,6 +47,10 @@ P.S. The footnote numbering will automatically return to normal when we remove t
 
 > P. 18: Models A4..A8 are, in my view superfluous and can be moved to the online appendix and mentioned only briefly in a footnote.
 
+    - I have moved these models to the Appendix (Table [GET]).
+
+    - I also moved the discussion of the variables in these models to the Appendix. 
+
 > P. 18: please consider adding past armed conflict as a control.
 
     - I show results from internal armed conflicts in the regression tables. The data is from the UCDP/PRIO Armed Conflict Dataset. [WRITE UP]
@@ -55,9 +59,24 @@ P.S. The footnote numbering will automatically return to normal when we remove t
 
     - I realise that unfortunately the footnote detailing the original data gathering process was accidentally not included in the original version. I have made sure that this is now in the paper. In addition, I and two new research assistants have veryified and updated the data set using additional Google and Youtube (a surprisingly good source of information on legislative brawls) keyword searches. I have added a description of this process to the paper [TO-DO].
 
-    - Regarding multiple events involving the same actors: in our search, including watching video of many of the brawls, they are continuous events. Legislators brawl once on a given day the size and duration of the brawls varies (we have catologued this for future research), but as our research found, they are one event per day. This is how they are coded in the data set. [THINK ABOUT] 
+    - Regarding multiple events involving the same actors: in our search, including watching video of many of the brawls, they are continuous events. Legislators brawl once on a given day the size and duration of the brawls varies (we have catologued this for future research), but as our research found, they are one event per day. This is how they are coded in the data set. [THINK ABOUT]
 
 # Reviewer 2
+
+
+
+> 3. Relatedly, I wonder whether this piece can actually say something about the timing of political violence. As it stands, democracy age and proportionality are relatively static, at least within a legislative session. Yet, the case study shows that it is the exogenous shocks that interact with the institutions to determine political violence; “three shocks that were largely exogenous from the national legislature” (page 10). It is my reading that the model does a good job of explaining the baseline level (or average) of political violence in a country, but a poor job of explaining why political violence occurs over time. Explaining how societal influences change in the context of legislative procedures would produce a dynamic account of legislative violence. You get at this partially by including measures of exogenous shocks like GINI and ethnic fractionalization, but these are included additively rather than interactively.
+
+    - This is a very interesting idea. Societal factors, however, such as demographics of inequality and ethnicity do not have straightforward effects on legislative institutions. [FINISH]
+
+    TIME SCALE data is too short to examine this. For example, in the US case the changes leading up to legislative violence occurred over about 50 years.
+
+    In the Supplementary materials I include regressions interacting societal factors with key legislative institutional factors. The results are not suggestive of such effects. [TO-DO]
+
+    Because of this, it would be very difficult to pursue this line of research within a quantitative framework. Instead, like the case study presented in the paper,  
+
+    I think examining how countries' legislative institutions respond to demographic shifts is an interesting, but highly complex issue that is better suited for a larger research project. This work would then clearly inform the study of legislative violence over longer periods of time.
+
 
 > 4. I appreciate the empirical check for possible bias by limiting the sample to after 1990. However, I think more is needed to convince the reader that your method of data collection (assembling based on the Google News Archive) is picking up the universe of cases (or is in fact the best option available). Since some of the value of this project is in the creation of the original data set on legislative violence, it would be useful to describe this data collection in more detail. The fact that the author removes 22% of the sample by excluding the two most recent years (2010-2011) suggests that there is a bias for later years.
 

@@ -253,25 +253,23 @@ Individual observations are clearly correlated within countries and years, espec
 \caption{Legislative Violence Regression Results (Multi-Party Elected Legislature from 1990-2012)}
 \label{outputTable.1990}
 \begin{center}
-\scalebox{0.9}{
+\scalebox{0.8}{
 <<OutTable2, warning=FALSE, echo=FALSE, message=FALSE, results='asis'>>=
-    library(texreg)
+    library(stargazer)
 
-    CoefNames <- c("(Intercept)", "Low Disproportionality",
-                "Dem. Age", "Majority Size",
+    CoefNames <- c("Low Disproportionality",
+                "Dem. Age", "Majority Size", "Internal Armed Conflict",
                 "Leg. Immunity", "PR Electoral System", "Single Party Gov.",
-                "Self Expression", "Ethnic Frac.", "Perc. Women in Parl.",
-                "Murder Rate", "Federal", "Gov. Frac.",
-                "No. of Parties by Seats", "GDP per Capita")
+                "Self Expression", "Ethnic Frac.", "(Intercept)")
 
-    ModNamesB <- c("A1", "A2", "A3", "A4", "A5", "A6", "A7", "A8")
-
-    texreg(list(DN1, DN2, DN3, DN4, DN5, DN6, DN7, DN8),
-        table = FALSE,
-        custom.coef.names = CoefNames,
-        custom.model.names = ModNamesB,
-        stars = c(0.001, 0.05, 0.1),
-        use.packages = FALSE)
+    stargazer(DN1, DN2, DN3, DN4, DN5,
+    dep.var.labels = 'Violent Incident',
+    covariate.labels = CoefNames,
+    float = F,
+    out.header = F,
+    notes.append = T,
+    notes.align = 'l',
+    notes = 'Standard errors are in parentheses. All models use robust (WEAVE) standard errors.')
 @
 }
 \end{center}
@@ -288,22 +286,20 @@ I avoid focusing on models that include highly correlated variables \citep[]{Ach
     \label{pred_prob}
     \begin{center}
 
-    %\includegraphics[width = \textwidth]{leg_violence_paper-PredProb}
-
-<<predProb, warning=FALSE, echo=FALSE, message=FALSE, results='hide', fig.width=7, fig.height=4, out.width='0.9\\linewidth', cache=FALSE>>=
+<<predProb, warning=FALSE, echo=FALSE, message=FALSE, results='hide', fig.width=7, fig.height=4, out.width='0.95\\linewidth', cache=FALSE>>=
   ## Create Graphs ##
   source("/git_repositories/leg_violence_paper1/Analysis/expected_values_plots.R")
 
 @
     \end{center}
     \begin{singlespace}
-      {\scriptsize{The graphs show the median and middle 95\% of 1000 simulations at each fitted value of the variables. The simulations use Model A2, Table \ref{outputTable.1990}. For each set of simulations all other variables were fitted at their means.}}
+      {\scriptsize{The graphs show the median and middle 95\% of 1000 simulations at each fitted value of the variables. The simulations use Model 3, Table \ref{outputTable.1990}. For each set of simulations all other variables were fitted at their means.}}
     \end{singlespace}
 \end{figure}
 
 \paragraph{Disproportionality}
 
-Across all of the models the estimates for the dummy {\emph{low disproportionality}} variable indicate that proportional electoral outcomes are associated with less legislative violence. This finding is robust at least at the 5\% significance level in all model specifications. The finding corroborates what we saw in the Sumner caning case study and Figure \ref{framework_empirical}. Violence is rare in countries with Gallagher scores below the median--6--and there is something of a cut-off point--around 2.5--below which these highly proportional countries were almost never observed to have had violence. More interesting than simple statistical significance or coefficient point estimates is the magnitude of and uncertainty surrounding the disproportionality/violence relationship. To get a sense of the magnitude of this estimated relationship and the uncertainty around it I plotted the predicted probabilities of having a legislative brawl in the left-most plot of Figure \ref{pred_prob} using estimates from Model A2. We can see that the central tendency of the predicted probabilities of a country having violence when disproportionality is greater than or equal to 6 is over two percent in a given year. All other variables are fitted at their means. Countries with disproportionality less than 6 had a very low predicted probability of violence in a year.
+Across all of the models the estimates for the dummy {\emph{low disproportionality}} variable indicate that proportional electoral outcomes are associated with less legislative violence. This finding is robust at least at the 5\% significance level in all model specifications. The finding corroborates what we saw in the Sumner caning case study and Figure \ref{framework_empirical}. Violence is rare in countries with Gallagher scores below the median--6--and there is something of a cut-off point--around 2.5--below which these highly proportional countries were almost never observed to have had violence. More interesting than simple statistical significance or coefficient point estimates is the magnitude of and uncertainty surrounding the disproportionality/violence relationship. To get a sense of the magnitude of this estimated relationship and the uncertainty around it I plotted the predicted probabilities of having a legislative brawl in the left-most plot of Figure \ref{pred_prob} using estimates from Model 3. We can see that the central tendency of the predicted probabilities of a country having violence when disproportionality is greater than or equal to 6 is over two percent in a given year. All other variables are fitted at their means. Countries with disproportionality less than 6 had a very low predicted probability of violence in a year.
 
 \paragraph{Age of Democracy}
 

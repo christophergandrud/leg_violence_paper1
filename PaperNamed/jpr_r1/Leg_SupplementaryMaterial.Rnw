@@ -47,38 +47,70 @@
 
 %%%%%%%%%%%%%%%% Run Analyses %%%%%%%%%%%%%%%%%%%%%%%%
 <<models, include=FALSE>>=
-    source("/git_repositories/leg_violence_paper1/Analysis/leg_main_analysis.R")
+    source("/git_repositories/leg_violence_paper1/Analysis/leg_main_analyses_v4.R")
 @
 
 
 \subsection*{Details on Prior Correction of the Rare Logistic Regression Models}
 
-For prior correction \citep[see][]{KingRareEventsPA2001} in the models with the full sample of elected multi-party legislatures I used the observed proportion of all observations with legislative violence \change{up to 2010}{through 2012}: i.e. 2.1 percent of observations up until 2010 had violence ($\tau = \frac{117}{5510} = 0.021$). There were \change{63}{109} observed incidences of violence and \change{2654}{3990} country-years from 1990 through \change{2009}{2012} in the sample, so: $\tau = \frac{106}{3390} = 0.027$.
+For prior correction \citep[see][]{KingRareEventsPA2001} in the models with the full sample of elected multi-party legislatures I used the observed proportion of all observations with legislative violence \change{up to 2010}{through 2012}: i.e. \change{2.1}{2.2} percent of observations up until 2010 had violence ($\tau = \frac{117}{5360} = 0.022$). There were \change{63}{109} observed incidences of violence and \change{2654}{3990} country-years from 1990 through \change{2009}{2012} in the sample, so: $\tau = \frac{109}{3390} = 0.027$.
 
 %%%%%%%% Elected Legislatures Results Table
 \begin{table}
 \caption{Legislative Violence Rare Events Logistic Regression Results (Multi-Party Elected Legislature 1981-2012)}
 \label{outputTable.dem}
 \begin{center}
-\scalebox{0.9}{
+{\scalebox{0.65}{
 <<OutTable1, warning=FALSE, echo=FALSE, message=FALSE, results='asis'>>=
-    library(texreg)
+    library(stargazer)
 
-    CoefNames <- c("(Intercept)", "Low Disproportionality",
-                    "Dem. Age", "Majority Size",
+    CoefNames <- c("Low Disproportionality",
+                    "Dem. Age", "Majority Size", "Internal Armed Conflict",
                     "Leg. Immunity", "PR Electoral System", "Single Party Gov.",
                     "Self Expression", "Ethnic Frac.", "Perc. Women in Parl.", "Murder Rate",
                     "Federal", "Gov. Frac.",
-                    "No. of Parties by Seats",
-                    "GINI", "GDP per Capita")
-    ModNamesA <- c("B1", "B2", "B3", "B4", "B5", "B6", "B7", "B8")
+                    "No. of Parties by Seats", "GINI", "GDP per Capita",
+                   "(Intercept)")
 
-    texreg(list(D1, D2, D3, D4, D5, D6, D7, D8),
-        table = FALSE,
-        custom.coef.names = CoefNames,
-        custom.model.names = ModNamesA,
-        use.packages = FALSE)
+    stargazer(D1, D2, D3, D4, D5, D6, D7, D8, D9, D10,
+        dep.var.labels = 'Violent Incident',
+        covariate.labels = CoefNames,
+        float = F,
+        out.header = F,
+        notes.append = T,
+        notes.align = 'l',
+        notes = 'Standard errors are in parentheses. All models use robust (WEAVE) standard errors.')
 
+@
+}}
+\end{center}
+
+\end{table}
+
+%%%%%%%% Elected Legislatures Results Table from 1990--Robustness
+\begin{table}
+\caption{Legislative Violence Regression Results (Multi-Party Elected Legislature from 1990-2012)}
+\label{outputTable.1990}
+\begin{center}
+\scalebox{0.7}{
+<<OutTable2, warning=FALSE, echo=FALSE, message=FALSE, results='asis'>>=
+    library(stargazer)
+
+    CoefNames <- c("Low Disproportionality",
+                "Dem. Age", "Majority Size", "Internal Armed Conflict",
+                "Perc. Women in Parliament",
+                "Murder Rate", "Federal", "Gov. Frac.",
+                "No. of Parties by Seats", "Gini", "GDP per Capita",
+                "(Intercept)")
+
+    stargazer(DN6, DN7, DN8, DN9, DN10, DN11,
+    dep.var.labels = 'Violent Incident',
+    covariate.labels = CoefNames,
+    float = F,
+    out.header = F,
+    notes.append = T,
+    notes.align = 'l',
+    notes = 'Standard errors are in parentheses. All models use robust (WEAVE) standard errors.')
 @
 }
 \end{center}
@@ -130,7 +162,7 @@ For prior correction \citep[see][]{KingRareEventsPA2001} in the models with the 
     \end{center}
     \begin{singlespace}
         Please contact the author for detailed summary statistics. \\
-        All of the data from \cite{DPI2001} was updated through 2010.
+        All of the data from \cite{DPI2001} was updated through 2012.
     \end{singlespace}
 \end{table}
 
