@@ -2,7 +2,7 @@
 # Legislative Violence
 # Combined scatter plots to illustrate how framework relates to findings
 # Christopher Gandrud
-# Updated 20 March 2015
+# Updated 23 March 2015
 ############
 
 # Set working directory. Change as needed.
@@ -27,7 +27,7 @@ leg_cumulative$violence <- factor(leg_cumulative$violence,
                                   labels = c("No Violence", "Violence"))
 leg_cumulative <- subset(leg_cumulative, violence != "NA")
 
-cols <- c("1" = "#EDDD00", "2" = "#ED6700", "3" = "#A04400", "0" = "#5E5E5E")
+cols <- c("1" = "#B7B7B7", "2" = "#7D7D7D", "3" = "#111111", "0" = "#EBEBEB")
 
 ## Create scatterplot of DemAge, Disproportionality, and Violence
 age.disp.scatter <- qplot(dem_age, disproportionality,

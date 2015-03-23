@@ -15,6 +15,10 @@ P.S. The footnote numbering will automatically return to normal when we remove t
 
 # Editor
 
+> I quite like Figure 2, however I would appreciate if you could change the color of the dots so they are distinguishable from one another when printed in grey scale.
+
+    - I have put the dots on a grey colour scale.
+
 > Avoid the use of the term ‘recently’ in the abstract.
 
     - Removed.
@@ -142,9 +146,50 @@ P.S. The footnote numbering will automatically return to normal when we remove t
 
         + The distal/normative purpose: highlight which of these findings could inform democratic institutional designs such that peaceful bargaining and competition between legislators will be more likely.
 
+> So why among all of the potential frameworks are we to believe that credible commitments are best?  If they are not best that what are the alternatives that are equally plausible and why are they not utilized?
+
+    - In Section 2, I detail a number of alternative approaches to explaining legislative violence, all of which have been informed by the literature and suggested to me in numerous conference presentations and discussions with colleagues. I then try to test these empirically, but have not found support for them. [THINK ABOUT]
 
 
+> I am not sure the author(s) definition of fair is useful. . . While I understand the intention, the problem is that there are so many unanswered questions that it becomes almost meaningless.  I do not mean that as negatively as it sounds but scholars have been arguing about the definition and meaning of fairness for centuries, so I so not see the utility of framing the paper in that literature (especially without really delving into it). Are they assuming that these conceptions of fairness are constant across time?
+
+    - This has indeed been a tricky issue for this paper, though I largely feel that it is an issue of framing that could easily be ameliorated by using a different terminology. I use the term 'fairness' in a very narrow sense defined on [GET PAGE]: "seats in the legislature and legislative resources, such as speaking time and committee appointments, proportionally correspond to voters’ support".
+
+    To avoid confusion with other and broader conceptualisations of fairness, I have replaced this term with 'a close correspondence between voters' support and legislative resources'. This is close to the Reviewer's suggestion that "The discussion of disproportional makes more sense and I think is the better way to approach and discuss the theory".
+
+    It should be noted that I have kept the proposition that legislatures where legislative resources closely correspond to electoral support are less likely to have violence because actors do care about fairness. Though not all actors and not in all times care about fairness, the fact that many do is a very well established finding in the game theoretical literature and, importantly for this paper's theory, helps explain equilibria [THINK ABOUT]
+
+>   Even if we assume those two are true (huge assumptions), why are we assuming that legislatures are looking at the distribution of legislative resources and not legislative outcomes or even political outcomes?
+
+    - These are interesting alternative considerations, but I do think that looking at the distribution of legislative resources is crucial. First, there is an empirical issue, if the distribution of resources didn't matter then we wouldn't find the results that we do in the paper's parametric models. Second, legislative outcomes, political outcomes (in democracies), and the crediblilty of these outcomes are strongly caused by the distribution of legislative resources. Looking exclusively at policy outcomes would therefore miss the underlying causal process behind outcomes. [FINISH] Furthermore, it would be very difficult at a large-n level to do this. We would have to somehow devise a measure of legislators' preferences and score policy outcomes in a way that is comparable. Though this possible on individual country cases, it would be quite an undertaking across the 100+ countries in the sample. Future research could certainly examine this issue however.
+
+> I am not sure what the case study does theoretically or empirically.
+
+    - An important reason (which I have further highlighted in the text [TO-DO]) that the US ante-bellum brawl is theoretically interesting is related to your following question regarding western cultural norms. Though it is difficult to gather information on violence in older legislatures, the case discussed highlights that there are prominent examples of violence in Western democracies when they were younger--as the paper predicts.
+
+    - I certainly agree that one case does not prove the theory, that is exactly why I use the case to illustrate the theorised process and with the bulk of the evidence built on the large-n parametric models.  
+
+    Following the editor's request, I have strengthened the reasons for including the case study in the text [TO-DO, GET PAGE]
+
+> Western democracies seem to stick out as the only democracies that do not experience violence.  Is this a cultural norm that has developed and being exported globally?  Obviously this is an empirical question but it is hard to ignore how western democracies stand out.
+
+    - This is a tricky empirical issue. Western democracies are overwhelmingly older democracies therefore a lack of violence in them is observationally equivalent to to a cultural/normative explanation. However, given the fact that violence did occur in older western democracies it seems implausible that Western democracies are inherently less violent.
+
+    Could a non-violence norm have emerged in previously violent western democracies? Certainly, but then the question is why and how? Interestingly, the theory presented in the paper regarding the effect of democratic age on credible commitments provides an answer to this question. What could be thought of as a non-violence norm plausibly was created by learning over time that commitments between legislators are credible.
+
+    This causal story, rather than a simple norm diffusion model, then also explains why the non-violence norm has not easily diffused to new democracies. Though perhaps the presence of such a norm may speed the resolution of credible commitment problems in new democracies, the fact that violence still regularly occurs in new democracies indicates that credible commitment problems remain an issue.  
+
+
+> is the violence a reaction to the disproportion or is the violence being used to create the disproportion?  The author(s) assume that it is those who do not have their fair share as acting out against it but why should we assume that?  Could the violence be the source of the “unfairness.” In addition, why assume there is only one cause.  Could it not be the case that sometimes it is creating and others the cause in which case the question is when these happen?
+
+    - I think the reviewer and I are actually in close agreement on this. As discussed in the theory section, violence may be both used by those who wish to have legislative resources more closely align with electoral support *and* by those who wish to preserve imbalances.  
+
+    - One point of disagreement is that in highly proportional systems it does not appear--at least in this sampling period--that parties using violence to increase disproportionality is common. For example, The only case of violence in a highly proportional country--South Africa [FINISH]
+
+> I think the author(s) need more fine grained data in order to determine who is instigating the violence to answer these questions but they seem critical as only one supports the theoretical argument.
+
+    - Thank you for this suggestion. In fact, colleagues and I are actively deepening the detail of this data set so that we can understand the internal dynamics of specific brawls, including which side (those that would benefit from an increase or decrease in a correspondence between legislative resources and electoral support) 'started' a given brawl. Nonetheless, as you point out and as is discussed in the paper, either side could start a brawl with the ultimate cause being a credible commitment problem.
 
 > 8. Finally, with so many zero cases and an event count, why not use a zero inflated negative binomial model?
 
-    - I examined the possibility of using zero inflated negative binomial regression. This was not in practice possible (using zeroinfl from the R pscl package). There are few country-years with more than 1 brawl (32). Most of these had two brawls, only 6 had 3 brawls. As zero inflated negative binomial regression uses a mixture model, there are likely not enough variation in the count part of the model to estimate it. Furthermore, while I have strong hypotheses regarding whether or not violence will occure (i.e. the logistic part of the mixture model), I don't have any strong priors about why a country would have 2 as opposed to 1 brawl. As such, though this was a helpful possibility to explore zero inflated negative binomial regression appears to neither be estimable for this data or theoretically justified.  [THINK ABOUT]  
+    - I examined the possibility of using zero inflated negative binomial regression. This was not in practice possible (using zeroinfl from the R pscl package). There are few country-years with more than 1 brawl (32). Most of these had two brawls, only 6 had 3 brawls. As zero inflated negative binomial regression uses a mixture model, there are likely not enough variation in the count part of the model to estimate it. Furthermore, while I have strong hypotheses regarding whether or not violence will occur (i.e. the logistic part of the mixture model), I don't have any strong priors about why a country would have 2 as opposed to 1 brawl. As such, though this was a helpful possibility to explore zero inflated negative binomial regression appears to neither be estimable for this data or theoretically justified.  [THINK ABOUT]  
