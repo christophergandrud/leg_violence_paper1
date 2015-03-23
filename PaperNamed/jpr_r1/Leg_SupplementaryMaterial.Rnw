@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Two Sword Lengths Apart: Supplementary Material
-% 20 March 2014
+% 23 March 2014
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % !Rnw weave = knitr
@@ -51,6 +51,30 @@
 @
 
 
+\subsection*{Examining Possible Measurement Error: Trends in Violence and Democracy}
+
+\todo{Section added.}
+
+As noted in the main text, data on incidents was primarily gathered using multiple key word searches of the Google News Archive, Google Search, and Youtube over a number of years. This method could have significant measurement error. The electronic availability of news and videos on legislative violence, as with material on almost all other phenomenon, could be positively correlated with time. I.e. more information is available for incidents in more recent periods.
+
+There are more incidents in later periods of the data set than earlier periods. For example, there were only 8 incidents observed in the 1980s, but 65 in the sample's last ten years (2002-2012). However, there are good reasons to believe that this distribution of incidents in time is not simply the result of measurement error.
+
+Primarily, there are many more countries with multi-party elected national legislatures--the criteria for inclusion--that could have violence later in the sample. The top panel of Figure \ref{elect_vs_violence} shows the number of countries in the sample with elected multi-party national legislatures. In 1981 there were only 65 countries. Between 1990 and 1995 a dramatic increase occurred such that by 1995 135 countries had multi-party elected legislatures. At the end of the sample period, almost double the original number 149 countries have multi-party elected national legislatures. In the bottom panel of Figure \ref{elect_vs_violence} we can see that the average observed number of violent incidents roughly follows the pattern of democratization. There is a noticeable increase in the average number of violent incidents from the mid-1990s. Furthermore, as the empirical evidence in this article has demonstrated newer democracies are more likely to have legislative violence. As such, we should expect to see more violence in the more recent period when there are many new democracies.
+
+Measurement error caused by the electronic availability of information be an issue. Nonetheless, the increasing prevalence of young multi-party elected national legislatures is likely an important cause of there being more observed incidents of violence later in the sample.
+
+\begin{figure}
+    \caption{Comparing the Number of Multi-Party Elected National Legislatures to Observed Violence in These Legislatures Over Time}
+    \label{elect_vs_violence}
+
+    \begin{center}
+<<compareLegToViolence, warning=FALSE, echo=FALSE, message=FALSE, fig.width=7, fig.height=7, out.width='0.8\\linewidth'>>=
+    source("/git_repositories/leg_violence_paper1/Analysis/dem_vs_incidents.R")
+        @
+    \end{center}
+\end{figure}
+
+
 \subsection*{Details on Prior Correction of the Rare Logistic Regression Models}
 
 For prior correction \citep[see][]{KingRareEventsPA2001} in the models with the full sample of elected multi-party legislatures I used the observed proportion of all observations with legislative violence \change{up to 2010}{through 2012}: i.e. \change{2.1}{2.2} percent of observations up until 2010 had violence ($\tau = \frac{117}{5360} = 0.022$). There were \change{63}{109} observed incidences of violence and \change{2654}{3990} country-years from 1990 through \change{2009}{2012} in the sample, so: $\tau = \frac{109}{3390} = 0.027$.
@@ -97,7 +121,7 @@ Results for other political and institutional variables were largely not statist
 
     CoefNames <- c("Low Disproportionality",
                     "Dem. Age", "Majority Size", "Internal Armed Conflict",
-                    "Leg. Immunity", "PR Electoral System", "Single Party Gov.",
+                    "Leg. Immunity", "Single Party Gov.",
                     "Self Expression", "Ethnic Frac.", "Perc. Women in Parl.",
                     "Murder Rate", "Federal", "Gov. Frac.",
                     "No. of Parties by Seats", "GINI", "GDP per Capita (log)",
@@ -135,36 +159,6 @@ Results for other political and institutional variables were largely not statist
                 "(Intercept)")
 
     stargazer(DN6, DN7, DN8, DN9, DN10, DN11,
-    dep.var.labels = 'Violent Incident',
-    covariate.labels = CoefNames,
-    float = F,
-    out.header = F,
-    notes.append = T,
-    notes.align = 'l',
-    notes = 'Standard errors are in parentheses. All models use robust (WEAVE) standard errors.')
-@
-}
-\end{center}
-\end{table}
-
-
-%%%%%%%% Elected Legislatures Results Table from 1990--Robustness--PR System
-\begin{table}
-\caption{Legislative Violence Regression Results Focusing on Proportional Electoral Systems (Multi-Party Elected Legislature from 1990-2012)}
-\label{outputTable.1990_pr}
-\begin{center}
-\scalebox{0.6}{
-<<OutTable3, warning=FALSE, echo=FALSE, message=FALSE, results='asis'>>=
-    library(stargazer)
-
-    CoefNames <- c("Proportional Electoral System",
-                    "Dem. Age", "Majority Size", "Internal Armed Conflict",
-                    "Self Expression", "Ethnic Frac.", "Perc. Women in Parl.",
-                    "Murder Rate", "Federal", "Gov. Frac.",
-                    "No. of Parties by Seats", "GINI", "GDP per Capita (log)",
-                   "(Intercept)")
-
-    stargazer(DNP1, DNP2, DNP3, DNP4, DNP5, DNP6, DNP7, DNP8, DNP9, DNP10,
     dep.var.labels = 'Violent Incident',
     covariate.labels = CoefNames,
     float = F,
