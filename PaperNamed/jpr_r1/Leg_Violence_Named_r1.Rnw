@@ -222,7 +222,7 @@ Legislative brawls are rare. Most of the time the overwhelming majority of legis
 
 I included a number of political and societal variables in the regression models to test if the associations we saw earlier are actually spurious. Variable descriptions and sources are summarized in a table that can be found in the Supplementary Material. In the interest of transparency, the table includes all of the variables that I have included in all versions of the models, even those not shown because they did not generate substantively or statistically meaningful results. A matrix illustrating the variables' correlations can also be found in the Supplementary Material. This figure includes the variables' observed minimum and maximum values for reference.
 
-I measure the {\emph{age of a democratic regime}} as the number of years a country's Polity IV score \citep{Marshall2009} is greater than five, the point above which that data set's creators classify a country as democratic. As noted earlier, simply looking at the electoral mechanics confuses mechanisms with outcomes. So, I use the standard Least Squares or Gallagher Index \citep{Gallagher1991} to measure realized {\emph{electoral disproportionality}}. The available data is in terms of overall national disproportionality. To gain maximum coverage, I compiled the data from both \cite{Gallagher2012} and \cite{Carey2011}. Full details can be found at: \url{http://christophergandrud.github.com/Disproportionality_Data/}. A country's disproportionality score is treated as constant from the year of an election until the year before the following election. Higher values on the Gallagher Index indicate more disproportionate, i.e. less fair electoral outcomes.
+I measure the {\emph{age of a democratic regime}} as the number of years a country's Polity IV score \citep{Marshall2009} is greater than five, the point above which that data set's creators classify a country as democratic. \add{Because this variable is highly right-skewed, I transformed it using the natural logarithm.} As noted earlier, simply looking at the electoral mechanics confuses mechanisms with outcomes. So, I use the standard Least Squares or Gallagher Index \citep{Gallagher1991} to measure realized {\emph{electoral disproportionality}}. The available data is in terms of overall national disproportionality. To gain maximum coverage, I compiled the data from both \cite{Gallagher2012} and \cite{Carey2011}. Full details can be found at: \url{http://christophergandrud.github.com/Disproportionality_Data/}. A country's disproportionality score is treated as constant from the year of an election until the year before the following election. Higher values on the Gallagher Index indicate more disproportionate, i.e. less fair electoral outcomes.
 
 As we saw in Figure \ref{framework_empirical} there appears to be a very strong negative correlation between very low levels of disproportionality and legislative violence. Only one instance of violence was observed in countries with a disproportionality score of less than about 2.5.\footnote{Though the observed range of disproportionality scores goes from almost 0 to 30, countries with scores less than 2.5 are not outliers. About 42 percent of county-years in the sample had scores of 2.5 or smaller.} This can be explained by fairness equilibria and is partially corroborated by Marien's \citeyearpar{Marien2011} finding regarding very low disproportionality measured with the Gallagher Index and political trust discussed above. To capture a possible disproportionality threshold effect--where low disproportionality is associated with stronger feelings of fairness--I created a low disproportionality dummy variable. County-years with disproportionality greater than or equal to the observed median (\change{6}{6.4})\footnote{The observed range is 0.26 to 34.52.} are coded as having higher disproportionality and those with scores lower than \change{6}{6.4} are coded as having lower disproportionality.\footnote{Models were estimated with the continuous disproportionality measure. The parameter estimates were not statistically significant and are not shown.}
 
@@ -247,15 +247,19 @@ Please see the Supplementary Materials for discussions of and results for a numb
 
 \section{Regression Results}
 
-I used the {\tt{relogit}} model from the {\tt{R}} package Zelig \citep{IMAIKingZelig2008} to estimate regression models. Furthermore, to get a better understanding of the magnitude of the estimated relationships between the right-hand variables and violence, I also used Zelig to predict incident probabilities with 1000 simulations per fitted value \citep[]{King2002}. Predicted probabilities for various fitted values of the key findings of interest with robust results are shown in Figure \ref{pred_prob}. These give us a substantively meaningful sense of estimated effects' magnitudes. Note: because the variables are in country-year records, all of the results should be interpreted in terms of the predicted effect of a variable on the probability of legislative violence in a given country in a year.
+I used the {\tt{relogit}} model from the {\tt{R}} package Zelig \citep{IMAIKingZelig2008} to estimate regression models. Furthermore, to get a better understanding of the magnitude of the estimated relationships between the right-hand variables and violence, I also used Zelig to predict incident probabilities with 1,000 simulations per fitted value \citep[]{King2002}. Predicted probabilities for various fitted values of the key findings of interest with robust results are shown in Figure \ref{pred_prob}. These give us a substantively meaningful sense of estimated effects' magnitudes. Note: because the variables are in country-year records, all of the results should be interpreted in terms of the predicted effect of a variable on the probability of legislative violence in a given country in a year.
 
 I observed relatively few incidences of violence in the 1980s.\footnote{There were only 8 observed incidence before 1990.} This may be because news articles from before the 1990s have not been made available on the internet with the same frequency as those written from the 1990s. To examine any estimation biases this sampling bias might create I ran the regressions on a further constricted sample of multi-party elected legislatures from 1990. The results were broadly similar across the two samples. Regression coefficient point estimates and robust standard errors for the sample that is truncated from 1990 can be found in Table \ref{outputTable.1990}. Results from the full observation period can be found in the Supplementary Materials. \add{In addition, the Supplementary Materials contain a further examination of why more incidents are observed in more recent time periods.}
 
 Individual observations are clearly correlated within countries and years, especially when there were multiple acts of violence in a country in a year. To address this issue I used robust standard errors \citep{Golder2006, Mainwaring2007}. Standard errors were adjusted using \cite{Lumley1999} weighted empirical adaptive variance estimators (WEAVE) where the true dependence structure does not need to be specified prior to running the analysis.
 
+\add{
+Finally, I subsetted the sample to include only democracies defined as country-years with a Polity IV greater than 5. Results from models with all countries that had elected multi-party legislatures, regardless of their Polity IV score are substantively similar.
+}
+
 %%%%%%%% Elected Legislatures Results Table from 1990
 \begin{table}
-\caption{Legislative Violence Regression Results (Multi-Party Elected Legislature from 1990-2012)}
+\caption{Legislative Violence Regression Results (Democratic Legislatures 1990-2012)}
 \label{outputTable.1990}
 \begin{center}
 \scalebox{0.8}{
@@ -263,11 +267,11 @@ Individual observations are clearly correlated within countries and years, espec
     library(stargazer)
 
     CoefNames <- c("Low Disproportionality",
-                "Dem. Age", "Majority Size", "Internal Armed Conflict",
+                "Dem. Age (log)", "Majority Size", "Internal Armed Conflict",
                 "Leg. Immunity", "Single Party Gov.",
                 "Self Expression", "Ethnic Frac.", "(Intercept)")
 
-    stargazer(DN1, DN2, DN3, DN4, DN5,
+    stargazer(DN1, DN2, DN3, DN4, DN5, DN6,
     dep.var.labels = 'Violent Incident',
     covariate.labels = CoefNames,
     float = F,
@@ -293,16 +297,16 @@ I avoid focusing on models that include highly correlated variables \citep[]{Ach
 
 @
     \end{center}
-    \caption{Predicted Probability of Legislative Violence in Multi-Party Elected Legislatures}
+    \caption{Predicted Probability of Legislative Violence in Democratic Legislatures}
     \label{pred_prob}
     \begin{singlespace}
-      {\scriptsize{The graphs show the median and middle 95\% of 1000 simulations at each fitted value of the variables. The simulations use Model 3, Table \ref{outputTable.1990}. For each set of simulations all other variables were fitted at their means.}}
+      {\scriptsize{The graphs show the median and middle 95\% of 1000 simulations at each fitted value of the variables. The simulations use estimates from Model 4, Table \ref{outputTable.1990}. For each set of simulations all other variables were fitted at their means.}}
     \end{singlespace}
 \end{figure}
 
 \paragraph{Disproportionality}
 
-Across all of the models the estimates for the dummy {\emph{low disproportionality}} variable indicate that proportional electoral outcomes are associated with less legislative violence. This finding is robust at least at the \change{5}{10}\% significance level in \change{all}{most} model specifications.\footnote{\add{The one exception is Model 4 which, due to list-wise deletion for missing information on the self expression variable, has about half the number of observations as the other models.}} The finding corroborates what we saw in the Sumner caning case study and Figure \ref{framework_empirical}. Violence is rare in countries with Gallagher scores below the median--6--and there is something of a cut-off point--around 2.5--below which these highly proportional countries were almost never observed to have had violence. More interesting than simple statistical significance or coefficient point estimates is the magnitude of and uncertainty surrounding the disproportionality/violence relationship. To get a sense of the magnitude of this estimated relationship and the uncertainty around it I plotted the predicted probabilities of having a legislative brawl in the left-most plot of Figure \ref{pred_prob} using estimates from Model 3. We can see that the central tendency of the expected probabilities of a country having violence when disproportionality is greater than or equal to \change{6}{6.4} is \add{well} over two percent in a given year. All other variables are fitted at their means. Countries with disproportionality less than \change{6}{6.4} had a very low predicted probability of violence in a year.
+Across all of the models the estimates for the dummy {\emph{low disproportionality}} variable indicate that proportional electoral outcomes are associated with less legislative violence. This finding is robust at least at the 5\% significance level in \change{all}{most} model specifications.\footnote{\add{The one exception is Model 5 which, due to list-wise deletion for missing information on the self expression variable, has about half the number of observations as the other models.}} The finding corroborates what we saw in the Sumner caning case study and Figure \ref{framework_empirical}. Violence is rare in countries with Gallagher scores below the median--6.4--and there is something of a cut-off point--around 2.5--below which these highly proportional countries were almost never observed to have had violence. More interesting than simple statistical significance or coefficient point estimates is the magnitude of and uncertainty surrounding the disproportionality/violence relationship. To get a sense of the magnitude of this estimated relationship and the uncertainty around it I plotted the predicted probabilities of having a legislative brawl in the left-most plot of Figure \ref{pred_prob} using estimates from Model 4. We can see that the median of the expected probabilities of a country having violence when disproportionality is greater than or equal to \change{6}{6.4} is \add{well} over \change{two}{three} percent in a given year. All other variables are fitted at their means. Countries with disproportionality less than \change{6}{6.4} had a very low predicted probability of violence in a year.
 
 \paragraph{Age of Democracy}
 

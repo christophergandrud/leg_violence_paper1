@@ -27,111 +27,114 @@ tau_dem <- sum(dem$violence) / nrow(dem)
 tau_dNew <- sum(dNew$violence) / nrow(dNew)
 
 # Subset complete cases for model that will be used in simulations
-vars.3 <- c("violence", "dem_age", "high_prop", 'maj', 'immunity',
+vars.4 <- c("violence", "dem_age", "high_prop", 'maj', 'immunity',
             'single_party', 'internal_conflict')
 
-dem.3.c <- dem[complete.cases(dem[vars.3]),]
-dNew.3.c <- dNew[complete.cases(dNew[vars.3]),]
+dNew.4.c <- dNew[complete.cases(dNew[vars.4]),]
 
 ###########################
 ### Sample of countries with elected legislatures
-D1 <- zelig(violence ~ high_prop + dem_age + maj, model = "relogit",
+D1 <- zelig(violence ~ high_prop + log(dem_age) + maj, model = "relogit",
             data = dem, tau = tau_dem, robust = list(method = "weave"),
             cite = FALSE)
 
-D2 <- zelig(violence ~ high_prop + dem_age + maj + internal_conflict,
+D2 <- zelig(violence ~ high_prop + log(dem_age) + maj + internal_conflict,
             model = "relogit", data = dem, tau = tau_dem,
             robust = list(method = "weave"), cite = FALSE)
 
-D3 <- zelig(violence ~ high_prop + dem_age + maj + internal_conflict + immunity
+D3 <- zelig(violence ~ high_prop + log(dem_age) + maj + internal_conflict + immunity
             + single_party,
-            model = "relogit", data = dem.3.c, tau = tau_dem,
+            model = "relogit", data = dem, tau = tau_dem,
             robust = list(method = "weave"), cite = FALSE)
 
-D4 <- zelig(violence ~ high_prop + dem_age + maj + internal_conflict +
+D4 <- zelig(violence ~ high_prop + log(dem_age) + maj + internal_conflict +
                 cw_surv_self_expr + ethnic_alesina, model = "relogit",
             data = dem, tau = tau_dem,
             robust = list(method = "weave"), cite = FALSE)
 
-D5 <- zelig(violence ~ high_prop + dem_age + maj + internal_conflict +
+D5 <- zelig(violence ~ high_prop + log(dem_age) + maj + internal_conflict +
                 women_in_parl,
             model = "relogit", data = dem, tau = tau_dem,
             robust = list(method = "weave"), cite = FALSE)
 
-D6 <- zelig(violence ~ high_prop + dem_age + maj + internal_conflict
+D6 <- zelig(violence ~ high_prop + log(dem_age) + maj + internal_conflict
             + murder_rate,
             model = "relogit", data = dem, tau = tau_dem,
             robust = list(method = "weave"), cite = FALSE)
 
-D7 <- zelig(violence ~ high_prop + dem_age + maj + internal_conflict +
+D7 <- zelig(violence ~ high_prop + log(dem_age) + maj + internal_conflict +
                 federal + govfrac,
             model = "relogit", data = dem, tau = tau_dem,
             robust = list(method = "weave"), cite = FALSE)
 
-D8 <- zelig(violence ~ high_prop + dem_age + maj + + internal_conflict +
+D8 <- zelig(violence ~ high_prop + log(dem_age) + maj + + internal_conflict +
                 enps,
             model = "relogit", data = dem, tau = tau_dem,
             robust = list(method = "weave"), cite = FALSE)
 
-D9 <- zelig(violence ~ high_prop + dem_age + maj + internal_conflict + gini,
+D9 <- zelig(violence ~ high_prop + log(dem_age) + maj + internal_conflict + gini,
             model = "relogit", data = dem, tau = tau_dem,
             robust = list(method = "weave"), cite = FALSE)
 
-D10 <- zelig(violence ~ high_prop + dem_age + maj + internal_conflict +
+D10 <- zelig(violence ~ high_prop + log(dem_age) + maj + internal_conflict +
                  log(gdp_per_capita),
             model = "relogit", data = dem, tau = tau_dem,
             robust = list(method = "weave"), cite = FALSE)
 
 ###########################
 ### Sample of countries with elected legislatures from 1990
-DN1 <- zelig(violence ~ high_prop + dem_age + maj, model = "relogit",
+DN1 <- zelig(violence ~ high_prop + log(dem_age), model = "relogit",
              data = dNew, tau = tau_dNew, robust = list(method = "weave"),
              cite = FALSE)
 
-DN2 <- zelig(violence ~ high_prop + dem_age + maj + internal_conflict,
+DN2 <- zelig(violence ~ high_prop + log(dem_age) + maj, model = "relogit",
+             data = dNew, tau = tau_dNew, robust = list(method = "weave"),
+             cite = FALSE)
+
+DN3 <- zelig(violence ~ high_prop + log(dem_age) + maj + internal_conflict,
              model = "relogit", data = dNew, tau = tau_dNew,
              robust = list(method = "weave"),
              cite = FALSE)
 
-DN3 <- zelig(violence ~ high_prop + dem_age + maj + internal_conflict +
+DN4 <- zelig(violence ~ high_prop + log(dem_age) + maj + internal_conflict +
                  immunity + single_party,
-             model = "relogit", data = dNew.3.c, tau = tau_dem,
+             model = "relogit", data = dNew.4.c, tau = tau_dem,
              robust = list(method = "weave"), cite = FALSE)
 
-DN4 <- zelig(violence ~ high_prop + dem_age + maj+ internal_conflict +
+DN5 <- zelig(violence ~ high_prop + log(dem_age) + maj+ internal_conflict +
                  cw_surv_self_expr, model = "relogit",
              data = dNew, tau = tau_dem, robust = list(method = "weave"),
              cite = FALSE)
 
-DN5 <- zelig(violence ~ high_prop + dem_age + maj+ internal_conflict +
+DN6 <- zelig(violence ~ high_prop + log(dem_age) + maj+ internal_conflict +
                  ethnic_alesina, model = "relogit",
              data = dNew, tau = tau_dem, robust = list(method = "weave"),
              cite = FALSE)
 
-DN6 <- zelig(violence ~ high_prop + dem_age + maj + internal_conflict +
+DN7 <- zelig(violence ~ high_prop + log(dem_age) + maj + internal_conflict +
                  women_in_parl,
              model = "relogit", data = dNew, tau = tau_dem,
              robust = list(method = "weave"), cite = FALSE)
 
-DN7 <- zelig(violence ~ high_prop + dem_age + maj + internal_conflict +
+DN8 <- zelig(violence ~ high_prop + log(dem_age) + maj + internal_conflict +
                  murder_rate,
              model = "relogit", data = dNew, tau = tau_dem,
              robust = list(method = "weave"), cite = FALSE)
 
-DN8 <- zelig(violence ~ high_prop + dem_age + maj + internal_conflict +
+DN9 <- zelig(violence ~ high_prop + log(dem_age) + maj + internal_conflict +
                  federal + govfrac,
              model = "relogit", data = dNew, tau = tau_dem,
              robust = list(method = "weave"), cite = FALSE)
 
-DN9 <- zelig(violence ~ high_prop + dem_age + maj +internal_conflict + enps,
+DN10 <- zelig(violence ~ high_prop + log(dem_age) + maj +internal_conflict + enps,
              model = "relogit", data = dNew, tau = tau_dem,
              robust = list(method = "weave"), cite = FALSE)
 
-DN10 <- zelig(violence ~ high_prop + dem_age + maj + internal_conflict + gini,
+DN11 <- zelig(violence ~ high_prop + log(dem_age) + maj + internal_conflict + gini,
              model = "relogit", data = dNew, tau = tau_dem,
              robust = list(method = "weave"), cite = FALSE)
 
-DN11 <- zelig(violence ~ high_prop + dem_age + maj + internal_conflict +
+DN12 <- zelig(violence ~ high_prop + log(dem_age) + maj + internal_conflict +
                  log(gdp_per_capita),
              model = "relogit", data = dNew, tau = tau_dem,
              robust = list(method = "weave"), cite = FALSE)

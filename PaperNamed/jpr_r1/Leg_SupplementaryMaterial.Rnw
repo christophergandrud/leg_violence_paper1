@@ -123,7 +123,7 @@ Results for other political and institutional variables were largely not statist
     library(stargazer)
 
     CoefNames <- c("Low Disproportionality",
-                    "Dem. Age", "Majority Size", "Internal Armed Conflict",
+                    "Dem. Age (log)", "Majority Size", "Internal Armed Conflict",
                     "Leg. Immunity", "Single Party Gov.",
                     "Self Expression", "Ethnic Frac.", "Perc. Women in Parl.",
                     "Murder Rate", "Federal", "Gov. Frac.",
@@ -148,7 +148,7 @@ Results for other political and institutional variables were largely not statist
 
 %%%%%%%% Elected Legislatures Results Table from 1990--Robustness
 \begin{table}
-\caption{Legislative Violence Regression Results (Multi-Party Elected Legislature from 1990-2012)}
+\caption{Legislative Violence Regression Results (Democratic Legislature from 1990-2012)}
 \label{outputTable.1990_2nd}
 \begin{center}
 \scalebox{0.7}{
@@ -156,13 +156,13 @@ Results for other political and institutional variables were largely not statist
     library(stargazer)
 
     CoefNames <- c("Low Disproportionality",
-                "Dem. Age", "Majority Size", "Internal Armed Conflict",
+                "Dem. Age (log)", "Majority Size", "Internal Armed Conflict",
                 "Perc. Women in Parliament",
                 "Murder Rate", "Federal", "Gov. Frac.",
                 "No. of Parties by Seats", "Gini", "GDP per Capita (log)",
                 "(Intercept)")
 
-    stargazer(DN6, DN7, DN8, DN9, DN10, DN11,
+    stargazer(DN7, DN8, DN9, DN10, DN11, D12,
     dep.var.labels = 'Violent Incident',
     covariate.labels = CoefNames,
     float = F,
