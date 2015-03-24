@@ -3,7 +3,7 @@ Dear Editors of the Journal of Peace Research,
 thank you for the opportunity to revise and resubmit my manuscript "Two Sword Lengths Apart: Credible Commitment Problems and Physical Violence in Multi-party Elected National Legislatures
 ".
 
-I have done my best to incorporate the reviewers' very helpful suggestions, as well as your own while keeping the manuscript within the Journal's word limit. (The revised text's word count is [GET].)
+I have done my best to incorporate the reviewers' very helpful suggestions, as well as your own while keeping the manuscript within the Journal's 10,000 word limit. (The revised text's word count is [GET].)
 
 I have highlighted key changes in the text with track changes and notes. My detailed responses to the suggestions are below.
 
@@ -14,6 +14,12 @@ P.S. The footnote numbering will automatically return to normal when we remove t
 -------------------
 
 # Editor
+
+> While your ms. is in relatively good shape, I ask that the next version fully complies with JPR style.
+
+    - I have attempted to fully conform the manuscript to JPR's style. I am happy to make additional changes as needed.
+
+    - I have posted all of the data and replication files for this paper at https://github.com/christophergandrud/leg_violence_paper1. I added a note after the main text about this, though the URL is obscured in the submitted manuscript to enable blind review.
 
 > I quite like Figure 2, however I would appreciate if you could change the color of the dots so they are distinguishable from one another when printed in grey scale.
 
@@ -136,7 +142,7 @@ P.S. The footnote numbering will automatically return to normal when we remove t
 
     Furthermore, the manuscript discusses this possibility in the subsection on the size of the governing majority--a lack of violence in large governing majority legislatures may be both an indication that many legislators are included in the legislative process and can effectively bargain peacefully *or* that the governing majority is so powerful that it can take actions to quash violence before it happens.
 
-    Perhaps the one (purely normative) point of disagreement that I have is that, while a lack of violence may not indicate well-functioning democratic institutions, a presence of violence *does* indicate that these institutions are not functioning according to the democratic ideal of enabling peaceful political contestation .
+    Perhaps the one (purely normative) point of disagreement that I have is that, while a lack of violence may not indicate well-functioning democratic institutions, a presence of violence *does* indicate that these institutions are not functioning according to the democratic ideal of enabling peaceful political contestation . I have emphasised this in the text, both in the introduction, and more extensively, in the conclusion
 
     Attempts to structure political institutions such that bargaining and contestation can be effectively conducted in a peaceful manner is a foundational goal of much of the political science literature in this area.
 
@@ -146,9 +152,11 @@ P.S. The footnote numbering will automatically return to normal when we remove t
 
         + The distal/normative purpose: highlight which of these findings could inform democratic institutional designs such that peaceful bargaining and competition between legislators will be more likely.
 
-> So why among all of the potential frameworks are we to believe that credible commitments are best?  If they are not best that what are the alternatives that are equally plausible and why are they not utilized?
+> So why among all of the potential frameworks are we to believe that credible commitments are best?  Copious amounts of ink have been spilled talking about violence at the domestic level whether it be civil wars to protests to social movements.  I also suspect that there has been some investigation into pre-election violence among other democratic process related violence (perhaps extra-judicial killings). If they are not best that what are the alternatives that are equally plausible and why are they not utilized?
 
-    - In Section 2, I detail a number of alternative approaches to explaining legislative violence, all of which have been informed by the literature and suggested to me in numerous conference presentations and discussions with colleagues. I then try to test these empirically, but have not found support for them. [THINK ABOUT]
+    - The theoretical framework in this paper was strongly influenced by important recent contributions to understanding pre-election protest and violence primarily the work of Wilkinson, 2006; Beaulieu and Hyde, 2008; Beaulieu, 2014. Protests and violence around elections are probably the most similar substantive area to legislative violence. This work contends that election protests in particular are the result of bargaining breakdowns between governing elites and opposition groups. Factors that this literature proposes as causing bargaining breakdowns include credible commitment problems and misrepresentation of private information. My explanation of legislative violence builds on this directly. I extensively discuss how credible commitment problems can lead to violence and how democratic age can reveal information about opposing sides ability to credibly commit--i.e. helps ameliorate information asymmetries.
+
+    In addition, Section 2, I detail a number of alternative approaches to explaining legislative violence, all of which have been informed by the literature and suggested to me in numerous conference presentations and discussions with colleagues. I then try to test these empirically, but have not found support for them. [THINK ABOUT]
 
 
 > I am not sure the author(s) definition of fair is useful. . . While I understand the intention, the problem is that there are so many unanswered questions that it becomes almost meaningless.  I do not mean that as negatively as it sounds but scholars have been arguing about the definition and meaning of fairness for centuries, so I so not see the utility of framing the paper in that literature (especially without really delving into it). Are they assuming that these conceptions of fairness are constant across time?

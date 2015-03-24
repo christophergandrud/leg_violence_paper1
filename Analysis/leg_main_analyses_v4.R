@@ -1,7 +1,7 @@
 ############
 # Main Analysis 4 for Legislative Violence
 # Christopher Gandrud
-# 23 March 2015
+# 24 March 2015
 ############
 
 # Set working directory. Change as needed.
@@ -14,7 +14,11 @@ library(rio)
 library(Zelig)
 
 # Load data
-dem <- import('Data/LegislativeViolenceMain.csv')
+all <- import('Data/LegislativeViolenceMain.csv')
+
+#### Keep only democracies ####
+dem <- subset(all, polity2 > 5)
+
 dem <- subset(dem, year > 1980)
 dNew <- subset(dem, year > 1989)
 

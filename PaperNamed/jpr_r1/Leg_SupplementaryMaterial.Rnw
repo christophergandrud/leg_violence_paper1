@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Two Sword Lengths Apart: Supplementary Material
-% 23 March 2014
+% 24 March 2014
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % !Rnw weave = knitr
@@ -34,6 +34,7 @@
 \setlength{\footnotesep}{\baselineskip}
 \renewcommand{\footnotelayout}{\doublespacing\normalsize}
 
+\renewcommand*\thetable{\Roman{table}}
 \setlength{\belowcaptionskip}{0.5cm}
 
 %%%%%%% Title Page %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -64,14 +65,16 @@ Primarily, there are many more countries with multi-party elected national legis
 Measurement error caused by the electronic availability of information be an issue. Nonetheless, the increasing prevalence of young multi-party elected national legislatures is likely an important cause of there being more observed incidents of violence later in the sample.
 
 \begin{figure}
-    \caption{Comparing the Number of Multi-Party Elected National Legislatures to Observed Violence in These Legislatures Over Time}
-    \label{elect_vs_violence}
 
     \begin{center}
 <<compareLegToViolence, warning=FALSE, echo=FALSE, message=FALSE, fig.width=7, fig.height=7, out.width='0.8\\linewidth'>>=
     source("/git_repositories/leg_violence_paper1/Analysis/dem_vs_incidents.R")
         @
     \end{center}
+
+    \caption{Comparing the Number of Multi-Party Elected National Legislatures to Observed Violence in These Legislatures Over Time}
+    \label{elect_vs_violence}
+
 \end{figure}
 
 
@@ -134,7 +137,8 @@ Results for other political and institutional variables were largely not statist
         out.header = F,
         notes.append = T,
         notes.align = 'l',
-        notes = 'Standard errors are in parentheses. All models use robust (WEAVE) standard errors.')
+        notes = 'Standard errors are in parentheses. All models use robust (WEAVE) standard errors.',
+        notes.label = '')
 
 @
 }}
@@ -165,7 +169,8 @@ Results for other political and institutional variables were largely not statist
     out.header = F,
     notes.append = T,
     notes.align = 'l',
-    notes = 'Standard errors are in parentheses. All models use robust (WEAVE) standard errors.')
+    notes = 'Standard errors are in parentheses. All models use robust (WEAVE) standard errors.',
+    notes.label = '')
 @
 }
 \end{center}
@@ -186,7 +191,7 @@ Results for other political and institutional variables were largely not statist
             \hline
             Variable & Description & Source \\
             \hline \hline
-            Disprop & Gallagher Index of Electoral Disproportionality & \cite{Gallagher2012} \& \cite{Carey2011} \\
+            Disproportionality & Gallagher Index of Electoral Disproportionality & \cite{Gallagher2012} \& \cite{Carey2011} \\
             ENPS & Effective number of parties by seats & \cite{Gallagher2012} \& \cite{Carey2011} \\
             ENPV & Effective number of parties by votes & \cite{Gallagher2012} \& \cite{Carey2011} \\
             Ethnic Fractionalization & Probability two randomly selected members of society are from the same ethnic group & \cite{Alesina2003} \\
@@ -197,6 +202,7 @@ Results for other political and institutional variables were largely not statist
             Immunity & Whether a legislators are immune from arrest and/or criminal prosecution or not & \cite{Fish2009} \\
             Internal Conflict & Internal armed conflict involving purely domestic as well as external combatants & UCDP/PRIO Armed Conflict Dataset \citep{Themner2014} \\
             LEIC & Legislative Indices of Electoral Competitiveness. Includes both the existence of a legislature and its level of electoral competitiveness. & \cite{DPI2001} \\
+            Lower Disproportionality & Gallagher Index below the sample mean (6.4) & Author's calculations based on \cite{Gallagher2012} \& \cite{Carey2011}\\
             Majority & Percentage of legislature controlled by governing parties & \cite{DPI2001} \\
             Murder Rate & Murders per 100,000 population & \cite{UNMurder2013} \\
             Polity & Polity IV Score & \cite{Marshall2009} \\
@@ -221,13 +227,16 @@ Results for other political and institutional variables were largely not statist
 %%%%%%%%%% Correlation matrix %%%%%%%%%%
 \begin{landscape}
 \begin{figure}[t]
-    \caption{Correlation Matrix for Variables Included in the Analysis (Multi-Party Elected Legislatures)}
-    \label{corrmatrix}
+
     \begin{center}
 
     \includegraphics[scale=0.5]{corrScatter.pdf}
 
     \end{center}
+
+    \caption{Correlation Matrix for Variables Included in the Analysis (Multi-Party Elected Legislatures)}
+    \label{corrmatrix}
+
     \begin{singlespace}
         {\scriptsize{Redder squares indicate stronger negative bi-variate correlations. \\
         Bluer squares indicate stronger positive bi-variate correlations. \\

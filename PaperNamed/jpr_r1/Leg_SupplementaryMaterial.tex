@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Two Sword Lengths Apart: Supplementary Material
-% 23 March 2014
+% 24 March 2014
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % !Rnw weave = knitr
@@ -83,6 +83,7 @@
 \setlength{\footnotesep}{\baselineskip}
 \renewcommand{\footnotelayout}{\doublespacing\normalsize}
 
+\renewcommand*\thetable{\Roman{table}}
 \setlength{\belowcaptionskip}{0.5cm}
 
 %%%%%%% Title Page %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -111,8 +112,6 @@ Primarily, there are many more countries with multi-party elected national legis
 Measurement error caused by the electronic availability of information be an issue. Nonetheless, the increasing prevalence of young multi-party elected national legislatures is likely an important cause of there being more observed incidents of violence later in the sample.
 
 \begin{figure}
-    \caption{Comparing the Number of Multi-Party Elected National Legislatures to Observed Violence in These Legislatures Over Time}
-    \label{elect_vs_violence}
 
     \begin{center}
 \begin{knitrout}
@@ -121,6 +120,10 @@ Measurement error caused by the electronic availability of information be an iss
 
 \end{knitrout}
     \end{center}
+
+    \caption{Comparing the Number of Multi-Party Elected National Legislatures to Observed Violence in These Legislatures Over Time}
+    \label{elect_vs_violence}
+
 \end{figure}
 
 
@@ -167,7 +170,7 @@ Results for other political and institutional variables were largely not statist
 {\scalebox{0.65}{
 
 % Table created by stargazer v.5.1 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
-% Date and time: Mon, Mar 23, 2015 - 15:24:41
+% Date and time: Tue, Mar 24, 2015 - 10:00:35
 \begin{tabular}{@{\extracolsep{5pt}}lcccccccccc} 
 \\[-1.8ex]\hline 
 \hline \\[-1.8ex] 
@@ -230,8 +233,8 @@ Log Likelihood & $-$308.268 & $-$304.556 & $-$302.220 & $-$213.419 & $-$247.829 
 Akaike Inf. Crit. & 624.537 & 619.112 & 618.441 & 440.837 & 507.658 & 299.298 & 566.404 & 578.965 & 602.240 & 560.942 \\ 
 \hline 
 \hline \\[-1.8ex] 
-\textit{Note:}  & \multicolumn{10}{l}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
- & \multicolumn{10}{l}{Standard errors are in parentheses. All models use robust (WEAVE) standard errors.} \\ 
+\multicolumn{11}{l}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\multicolumn{11}{l}{Standard errors are in parentheses. All models use robust (WEAVE) standard errors.} \\ 
 \end{tabular} 
 
 }}
@@ -247,7 +250,7 @@ Akaike Inf. Crit. & 624.537 & 619.112 & 618.441 & 440.837 & 507.658 & 299.298 & 
 \scalebox{0.7}{
 
 % Table created by stargazer v.5.1 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
-% Date and time: Mon, Mar 23, 2015 - 15:24:45
+% Date and time: Tue, Mar 24, 2015 - 10:00:38
 \begin{tabular}{@{\extracolsep{5pt}}lcccccc} 
 \\[-1.8ex]\hline 
 \hline \\[-1.8ex] 
@@ -298,8 +301,8 @@ Log Likelihood & $-$224.461 & $-$143.649 & $-$253.877 & $-$259.815 & $-$270.205 
 Akaike Inf. Crit. & 460.922 & 299.298 & 521.755 & 531.631 & 552.410 & 510.628 \\ 
 \hline 
 \hline \\[-1.8ex] 
-\textit{Note:}  & \multicolumn{6}{l}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
- & \multicolumn{6}{l}{Standard errors are in parentheses. All models use robust (WEAVE) standard errors.} \\ 
+\multicolumn{7}{l}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\multicolumn{7}{l}{Standard errors are in parentheses. All models use robust (WEAVE) standard errors.} \\ 
 \end{tabular} 
 
 }
@@ -356,13 +359,16 @@ Akaike Inf. Crit. & 460.922 & 299.298 & 521.755 & 531.631 & 552.410 & 510.628 \\
 %%%%%%%%%% Correlation matrix %%%%%%%%%%
 \begin{landscape}
 \begin{figure}[t]
-    \caption{Correlation Matrix for Variables Included in the Analysis (Multi-Party Elected Legislatures)}
-    \label{corrmatrix}
+
     \begin{center}
 
     \includegraphics[scale=0.5]{corrScatter.pdf}
 
     \end{center}
+
+    \caption{Correlation Matrix for Variables Included in the Analysis (Multi-Party Elected Legislatures)}
+    \label{corrmatrix}
+
     \begin{singlespace}
         {\scriptsize{Redder squares indicate stronger negative bi-variate correlations. \\
         Bluer squares indicate stronger positive bi-variate correlations. \\
