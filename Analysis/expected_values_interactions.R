@@ -74,18 +74,18 @@ dp2_p <- ggplot(dp2_comb, aes(fitted, Median, ymin = Min_CI, ymax = Max_CI,
 
 #### Prop*GINI ####
 # High Inequality
-dp_3fitted_high <- setx(DP3, high_prop = high_prop.r, gini = 0.6)
-dp_3sum_high <- sim_strip(DP3, dp_3fitted_high, high_prop.r)
-dp_3sum_high$x2 <- 'high'
+dp3_fitted_high <- setx(DP3, high_prop = high_prop.r, gini = 0.6)
+dp3_sum_high <- sim_strip(DP3, dp3_fitted_high, high_prop.r)
+dp3_sum_high$x2 <- 'high'
 
 # Low Inequality
-dp_3fitted_low <- setx(DP3, high_prop = high_prop.r, gini = 0.1)
-dp_3sum_low <- sim_strip(DP3, dp_3fitted_low, high_prop.r)
-dp_3sum_low$x2 <- 'low'
+dp3_fitted_low <- setx(DP3, high_prop = high_prop.r, gini = 0.1)
+dp3_sum_low <- sim_strip(DP3, dp3_fitted_low, high_prop.r)
+dp3_sum_low$x2 <- 'low'
 
-dp_3comb <- rbind(dp_3sum_high, dp_3sum_low)
+dp3_comb <- rbind(dp3_sum_high, dp3_sum_low)
 
-dp_3p <- ggplot(dp_3comb, aes(fitted, Median, ymin = Min_CI, ymax = Max_CI,
+dp3_p <- ggplot(dp3_comb, aes(fitted, Median, ymin = Min_CI, ymax = Max_CI,
                               colour = x2)) +
     geom_pointrange(size = 1, alpha = 0.5) +
     geom_line() +
@@ -98,18 +98,18 @@ dp_3p <- ggplot(dp_3comb, aes(fitted, Median, ymin = Min_CI, ymax = Max_CI,
 
 #### Dem Age*Etnic ####
 # High frac
-dp_6fitted_high <- setx(DP6, dem_age = dem.r, polconiii = 0.7)
-dp_6sum_high <- sim_strip(DP6, dp_6fitted_high, dem.r)
-dp_6sum_high$x2 <- 'high'
+dp6_fitted_high <- setx(DP6, dem_age = dem.r, ethnic_alesina = 0.8)
+dp6_sum_high <- sim_strip(DP6, dp6_fitted_high, dem.r)
+dp6_sum_high$x2 <- 'high'
 
 # Low frac
-dp_6fitted_low <- setx(DP6, dem_age = dem.r, polconiii = 0.5)
-dp_6sum_low <- sim_strip(DP6, dp_6fitted_low, dem.r)
-dp_6sum_low$x2 <- 'low'
+dp6_fitted_low <- setx(DP6, dem_age = dem.r, ethnic_alesina = 0.1)
+dp6_sum_low <- sim_strip(DP6, dp6_fitted_low, dem.r)
+dp6_sum_low$x2 <- 'low'
 
-dp_6comb <- rbind(dp_6sum_high, dp_6sum_low)
+dp6_comb <- rbind(dp6_sum_high, dp6_sum_low)
 
-dp_6p <- ggplot(dp_6comb, aes(fitted, Median, ymin = Min_CI, ymax = Max_CI,
+dp6_p <- ggplot(dp6_comb, aes(fitted, Median, ymin = Min_CI, ymax = Max_CI,
                               fill = x2)) +
     geom_line() +
     geom_ribbon(alpha = 0.3) +
@@ -122,18 +122,18 @@ dp_6p <- ggplot(dp_6comb, aes(fitted, Median, ymin = Min_CI, ymax = Max_CI,
 
 #### Dem Age*Pol Constraints ####
 # High contraints
-dpc_2fitted_high <- setx(DPC2, dem_age = dem.r, polconiii = 0.7)
-dpc_2sum_high <- sim_strip(DPC2, dpc_2fitted_high, dem.r)
-dpc_2sum_high$x2 <- 'high'
+dpc2_fitted_high <- setx(DPC2, dem_age = dem.r, polconiii = 0.7)
+dpc2_sum_high <- sim_strip(DPC2, dpc2_fitted_high, dem.r)
+dpc2_sum_high$x2 <- 'high'
 
 # Low constraints
-dpc_2fitted_low <- setx(DPC2, dem_age = dem.r, polconiii = 0.1)
-dpc_2sum_low <- sim_strip(DPC2, dpc_2fitted_low, dem.r)
-dpc_2sum_low$x2 <- 'low'
+dpc2_fitted_low <- setx(DPC2, dem_age = dem.r, polconiii = 0.1)
+dpc2_sum_low <- sim_strip(DPC2, dpc2_fitted_low, dem.r)
+dpc2_sum_low$x2 <- 'low'
 
-dpc_2comb <- rbind(dpc_2sum_high, dpc_2sum_low)
+dpc2_comb <- rbind(dpc2_sum_high, dpc2_sum_low)
 
-dpc_2p <- ggplot(dpc_2comb, aes(fitted, Median, ymin = Min_CI, ymax = Max_CI,
+dpc2_p <- ggplot(dpc2_comb, aes(fitted, Median, ymin = Min_CI, ymax = Max_CI,
                               fill = x2)) +
     geom_line() +
     geom_ribbon(alpha = 0.3) +
@@ -143,3 +143,5 @@ dpc_2p <- ggplot(dpc_2comb, aes(fitted, Median, ymin = Min_CI, ymax = Max_CI,
     scale_fill_grey(start = 0.1, end = 0.7, name = 'Political Constraints') +
     xlab("\nAge of Democracy") + ylab("") +
     theme_bw(base_size = 12)
+
+grid.arrange(dp1_p, dp2_p, dp3_p, dp6_p, dpc2_p)
