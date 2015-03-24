@@ -83,7 +83,7 @@
 \setlength{\belowcaptionskip}{0.5cm}
 
 %%%%%%% Title Page %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\title{Two Sword Lengths Apart: Credible Commitment Problems and Physical Violence in Multi-party Elected National Legislatures}
+\title{Two Sword Lengths Apart: Credible Commitment Problems and Physical Violence in Democratic National Legislatures}
 
 \author{Christopher Gandrud \\
                 Hertie School of Governance\footnote{Email: \href{mailto:gandrud@hertie-school.org}{gandrud@hertie-school.org}. Thank you to Gary Cox, Simon Hix, Shirin Rai, Carole Spary, as well as seminar participants at the Hertie School of Governance and Yonsei University for very helpful comments and insights. I would also like to thank Hortense Badarani for excellent research assistance and my students at the LSE for inspiration. An earlier version was circulated under the title ``Two Sword Lengths: Losers' consent and violence in national legislatures''.}}
@@ -108,9 +108,9 @@ Though legislators in democracies are often described as `battling' or `fighting
 
 Many legislatures' histories contain incidents of physical violence between legislators. In 1856 a member of the United States House of Representatives caned a senator unconscious in the Senate chamber \citep{USSenateCanning}. It has been suggested that the United Kingdom's House of Commons is physically designed to prevent violence between members. The Government and Opposition benches are said to be ``two sword lengths apart" \citep{ParliamentUKSword} so that duels will be fought with words rather than swords\add{a central democratic ideal} \cite[220]{Schwarzmantel2010}. Actual sword fights do not seem to have taken place in the Commons chamber, but violent incidences did occur in the 1800s \citep[]{ByrneViolence}. Violence in legislatures continues to occur. Recent instances of violence between legislators include brawls in South Korea in 2009\footnote{See \url{http://dailym.ai/1rHLruX}. Accessed October 2014} and in Ukraine during the years leading up to the civil war.\footnote{For example see \url{http://online.wsj.com/articles/SB10001424052748704471204575209572380473814}. Accessed October 2014} In 2013 a large confrontation happened in the Venezuelan National Assembly when the Assembly President withheld speaking time from legislators who did not recognize president's victory in a very highly contested election.\footnote{See \url{http://edition.cnn.com/2013/04/30/world/americas/venezuela-lawmakers-violence/index.html}. Accessed October 2014.}
 
-Physical violence is a dramatic break from scholars' assumption that compliance with legislative rules of the game is a given and as such symbolizes poorly functioning legislative institutions. Some work has examined the strategic and expressive choices politicians make when they decide not to participate in the democratic rules of the game \citep{wilkinson2006,Beaulieu2008,BeaulieuForthcoming}. In this article I extend this work by advancing a theory of legislative violence in multi-party elected national legislatures and test it using both case study and global-level data. Indeed, this article includes the first cross-country description of violence between legislators. It also provides us with an important window for understanding what makes legislatures work (or not) as institutions for peacefully resolving disputes between opposing parties.\footnote{Note that the underlying process I discuss that creates conditions for violence likely also creates environments where legislators use other types of less violent--and less easily observable on a global scale--forms of legislative rule breaking.}
+Physical violence is a dramatic break from scholars' assumption that compliance with legislative rules of the game is a given and as such symbolizes poorly functioning legislative institutions. Some work has examined the strategic and expressive choices politicians make when they decide not to participate in the democratic rules of the game \citep{wilkinson2006,Beaulieu2008,BeaulieuForthcoming}. In this article I extend this work by advancing a theory of legislative violence in \change{multi-party elected}{democratic} national legislatures and test it using both case study and global-level data. Indeed, this article includes the first cross-country description of violence between legislators. It also provides us with an important window for understanding what makes legislatures work (or not) as institutions for peacefully resolving disputes between opposing parties.\footnote{Note that the underlying process I discuss that creates conditions for violence likely also creates environments where legislators use other types of less violent--and less easily observable on a global scale--forms of legislative rule breaking.}
 
-I begin the article by advancing an argument for understanding when legislative violence between members of multi-party elected legislatures is more likely. Though legislators' personalities surely play some part in any given violent incident, I argue that the probability of violence is strongly influenced by the wider political environment. In particular, violence is much more likely when there are \emph{credible commitment problems} that incentivize legislators to break peaceful bargains. At least two observable institutional factors are important for affecting the likelihood that commitments will be adhered to: the \emph{proportionality of a country's electoral outcomes} and the \emph{age of its democracy}. After proposing this argument and discussing a number of key alternative explanations, I begin to empirically examine it with a case study of violence in the antebellum United States Senate. I then move to a global level study of contemporary legislative violence by describing a new data set of legislative violence. In this section I also demonstrate simple associations between my argument's key variables and violence on a global scale. I then discuss the variables and parametric regression models I use to further study these events. Finally, I lay out the evidence from these models that legislative violence is more prevalent in countries with disproportionate electoral outcomes\add{--e.g. when votes for parties do not closely correspond to the legislative seats they are given--}and in new democracies. I also find that violence is more likely in legislatures with small minority governments. I conclude the article with a discussion of the possible implications of these findings for democratic institution designers and directions for future research.
+I begin the article by advancing an argument for understanding when legislative violence between members of \change{multi-party elected}{democratic} elected legislatures is more likely. Though legislators' personalities surely play some part in any given violent incident, I argue that the probability of violence is strongly influenced by the wider political environment. In particular, violence is much more likely when there are \emph{credible commitment problems} that incentivize legislators to break peaceful bargains. At least two observable institutional factors are important for affecting the likelihood that commitments will be adhered to: the \emph{proportionality of a country's electoral outcomes} and the \emph{age of its democracy}. After proposing this argument and discussing a number of key alternative explanations, I begin to empirically examine it with a case study of violence in the antebellum United States Senate. I then move to a global level study of contemporary legislative violence by describing a new data set of legislative violence. In this section I also demonstrate simple associations between my argument's key variables and violence on a global scale. I then discuss the variables and parametric regression models I use to further study these events. Finally, I lay out the evidence from these models that legislative violence is more prevalent in countries with disproportionate electoral outcomes\add{--e.g. when votes for parties do not closely correspond to the legislative seats they are given--}and in new democracies. I also find that violence is more likely in legislatures with small minority governments. I conclude the article with a discussion of the possible implications of these findings for democratic institution designers and directions for future research.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Previous Research & Framework
 
@@ -274,6 +274,8 @@ I also investigated the possibility that a number of political, institutional, a
 To assess any effect of coalition compared to single-party governments I included the DPI {\emph{government fractionalization}} variable. It is the probability that two randomly picked deputies in the government are from different parties. I used the fractionalization variable to create an indicator of {\emph{single-party}} government. It is simply a dummy equaling one if fractionalization was zero, i.e. all governing legislators were from the same party. In general single party governments probably are better able to pass policies very close to their ideal preferences. This could heighten losers' losses and make them less likely to want to conform to non-violent legislative rules. However, all single party governments are not created equal. Some parties may act as umbrella parties that incorporate many different factions. Others are narrowly focused on a particular constituency.
 
 \add{
+Perhaps legislators are more violent if they become frustrated with their ability to effect policy change. To examine this possibility, I included Henisz's} \citeyearpar{Henisz2004}\add{ measure of political constraints.}\footnote{\add{The version of the variable included is POLCONIII. Results are similar for the other version--POLCONV--which includes two additional veto points: the judiciary and sub-federal units.}} \add{This variable captures the feasibility of policy change. The variable has been updated through 2011.
+
 To examine the possibility that armed conflict may be associated with legislative violence I created a binary internal armed conflict variable using the UCDP/PRIO Armed Conflict Dataset} \citep{Themner2014}\add{. The variable is one if there is an internal armed conflict (either involving or not involving external states) and zero otherwise.
 }
 
@@ -308,50 +310,53 @@ Finally, I subsetted the sample to include only democracies defined as country-y
 \scalebox{0.8}{
 
 % Table created by stargazer v.5.1 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
-% Date and time: Tue, Mar 24, 2015 - 13:33:39
-\begin{tabular}{@{\extracolsep{5pt}}lcccccc} 
+% Date and time: Tue, Mar 24, 2015 - 15:52:52
+\begin{tabular}{@{\extracolsep{5pt}}lccccccc} 
 \\[-1.8ex]\hline 
 \hline \\[-1.8ex] 
- & \multicolumn{6}{c}{\textit{Dependent variable:}} \\ 
-\cline{2-7} 
-\\[-1.8ex] & \multicolumn{6}{c}{Violent Incident} \\ 
-\\[-1.8ex] & (1) & (2) & (3) & (4) & (5) & (6)\\ 
+ & \multicolumn{7}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-8} 
+\\[-1.8ex] & \multicolumn{7}{c}{Violent Incident} \\ 
+\\[-1.8ex] & (1) & (2) & (3) & (4) & (5) & (6) & (7)\\ 
 \hline \\[-1.8ex] 
- Low Disproportionality & $-$0.529$^{**}$ & $-$0.602$^{**}$ & $-$0.602$^{**}$ & $-$0.602$^{**}$ & $-$0.480 & $-$0.590$^{**}$ \\ 
-  & (0.267) & (0.268) & (0.269) & (0.270) & (0.296) & (0.269) \\ 
-  & & & & & & \\ 
- Dem. Age (log) & $-$0.282$^{**}$ & $-$0.289$^{**}$ & $-$0.288$^{**}$ & $-$0.295$^{***}$ & $-$0.354$^{***}$ & $-$0.300$^{***}$ \\ 
-  & (0.111) & (0.113) & (0.112) & (0.113) & (0.135) & (0.114) \\ 
-  & & & & & & \\ 
- Majority Size &  & $-$0.027$^{***}$ & $-$0.027$^{***}$ & $-$0.027$^{***}$ & $-$0.026$^{***}$ & $-$0.027$^{***}$ \\ 
-  &  & (0.009) & (0.009) & (0.009) & (0.010) & (0.009) \\ 
-  & & & & & & \\ 
- Internal Armed Conflict &  &  & 0.535 & 0.493 & 0.497 & 0.544 \\ 
-  &  &  & (0.334) & (0.337) & (0.374) & (0.335) \\ 
-  & & & & & & \\ 
- Leg. Immunity &  &  &  & $-$0.069 &  &  \\ 
-  &  &  &  & (0.267) &  &  \\ 
-  & & & & & & \\ 
- Single Party Gov. &  &  &  & $-$0.142 &  &  \\ 
-  &  &  &  & (0.265) &  &  \\ 
-  & & & & & & \\ 
- Self Expression &  &  &  &  & 3.606 &  \\ 
-  &  &  &  &  & (2.537) &  \\ 
-  & & & & & & \\ 
- Ethnic Frac. &  &  &  &  &  & $-$0.283 \\ 
-  &  &  &  &  &  & (0.618) \\ 
-  & & & & & & \\ 
- (Intercept) & $-$2.079$^{***}$ & $-$0.544 & $-$0.637 & $-$0.603 & $-$5.205 & $-$0.603 \\ 
-  & (0.319) & (0.560) & (0.563) & (0.657) & (3.187) & (0.653) \\ 
-  & & & & & & \\ 
+ Lower Disproportionality & $-$0.529$^{**}$ & $-$0.602$^{**}$ & $-$0.602$^{**}$ & $-$0.602$^{**}$ & $-$0.581$^{**}$ & $-$0.480 & $-$0.590$^{**}$ \\ 
+  & (0.267) & (0.268) & (0.269) & (0.270) & (0.269) & (0.296) & (0.269) \\ 
+  & & & & & & & \\ 
+ Dem. Age (log) & $-$0.282$^{**}$ & $-$0.289$^{**}$ & $-$0.288$^{**}$ & $-$0.295$^{***}$ & $-$0.287$^{**}$ & $-$0.354$^{***}$ & $-$0.300$^{***}$ \\ 
+  & (0.111) & (0.113) & (0.112) & (0.113) & (0.112) & (0.135) & (0.114) \\ 
+  & & & & & & & \\ 
+ Majority Size &  & $-$0.027$^{***}$ & $-$0.027$^{***}$ & $-$0.027$^{***}$ & $-$0.025$^{***}$ & $-$0.026$^{***}$ & $-$0.027$^{***}$ \\ 
+  &  & (0.009) & (0.009) & (0.009) & (0.009) & (0.010) & (0.009) \\ 
+  & & & & & & & \\ 
+ Internal Armed Conflict &  &  & 0.535 & 0.493 & 0.510 & 0.497 & 0.544 \\ 
+  &  &  & (0.334) & (0.337) & (0.334) & (0.374) & (0.335) \\ 
+  & & & & & & & \\ 
+ Leg. Immunity &  &  &  & $-$0.069 &  &  &  \\ 
+  &  &  &  & (0.267) &  &  &  \\ 
+  & & & & & & & \\ 
+ Single Party Gov. &  &  &  & $-$0.142 &  &  &  \\ 
+  &  &  &  & (0.265) &  &  &  \\ 
+  & & & & & & & \\ 
+ Political Constraints &  &  &  &  & $-$0.418 &  &  \\ 
+  &  &  &  &  & (0.923) &  &  \\ 
+  & & & & & & & \\ 
+ Self Expression &  &  &  &  &  & 3.606 &  \\ 
+  &  &  &  &  &  & (2.537) &  \\ 
+  & & & & & & & \\ 
+ Ethnic Frac. &  &  &  &  &  &  & $-$0.284 \\ 
+  &  &  &  &  &  &  & (0.618) \\ 
+  & & & & & & & \\ 
+ (Intercept) & $-$2.079$^{***}$ & $-$0.544 & $-$0.637 & $-$0.495 & $-$0.544 & $-$5.099 & $-$0.496 \\ 
+  & (0.319) & (0.560) & (0.563) & (0.657) & (0.623) & (3.187) & (0.653) \\ 
+  & & & & & & & \\ 
 \hline \\[-1.8ex] 
-Observations & 1,445 & 1,437 & 1,437 & 1,415 & 808 & 1,431 \\ 
-Log Likelihood & $-$259.002 & $-$253.617 & $-$252.584 & $-$251.695 & $-$188.037 & $-$252.328 \\ 
-Akaike Inf. Crit. & 524.003 & 515.233 & 515.169 & 517.391 & 388.074 & 516.657 \\ 
+Observations & 1,445 & 1,437 & 1,437 & 1,415 & 1,413 & 808 & 1,431 \\ 
+Log Likelihood & $-$259.002 & $-$253.617 & $-$252.584 & $-$251.695 & $-$251.736 & $-$188.037 & $-$252.328 \\ 
+Akaike Inf. Crit. & 524.003 & 515.233 & 515.169 & 517.391 & 515.472 & 388.074 & 516.657 \\ 
 \hline 
 \hline \\[-1.8ex] 
-\multicolumn{7}{l}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
-\multicolumn{7}{l}{Standard errors are in parentheses. All models use robust (WEAVE) standard errors.} \\ 
+\multicolumn{8}{l}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\multicolumn{8}{l}{Standard errors are in parentheses. All models use robust (WEAVE) standard errors.} \\ 
 \end{tabular} 
 
 }

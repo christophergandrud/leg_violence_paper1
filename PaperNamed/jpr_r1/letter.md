@@ -3,7 +3,7 @@ Dear Editors of the Journal of Peace Research,
 thank you for the opportunity to revise and resubmit my manuscript "Two Sword Lengths Apart: Credible Commitment Problems and Physical Violence in Multi-party Elected National Legislatures
 ".
 
-I have done my best to incorporate the reviewers' very helpful suggestions, as well as your own while keeping the manuscript within the Journal's 10,000 word limit. (The revised text's word count is [GET].)
+I have done my best to incorporate the reviewers' very helpful suggestions, as well as your own while keeping the manuscript within the Journal's 10,000 word limit. (The revised text's word count is [GET].) The manuscript is much improved for them.
 
 I have highlighted key changes in the text with track changes and notes. My detailed responses to the suggestions are below.
 
@@ -71,9 +71,9 @@ P.S. The footnote numbering will automatically return to normal when we remove t
 
     - Thank you for this useful suggestion. Its inclusion has revealed interesting results.
 
-    I estimated the effect of internal armed conflicts in the regression tables. (The results from all conflicts are similar, as there are very few interstate conflicts in the sample period.) The data is from the UCDP/PRIO Armed Conflict Dataset. The variable is strongly positively associated with legislative violence in almost all models. The inclusion of the variable does not substantively alter the core original findings.
+    I estimated the effect of internal armed conflicts in the regression tables. (The results from all conflicts are similar, as there are very few interstate conflicts in the sample period.) The data is from the UCDP/PRIO Armed Conflict Dataset. Overall the variable is not robustly significant and does not alter the central findings.
 
-    I have added the variable to the regression estimates tables and included a discussion on page [GET].  [WRITE UP]
+    I have added the variable to the regression estimates tables.
 
 > Since one of the key contributions is the dataset, please do provide additional information on the data collection procedure (e.g. search algorithm?) and the coding (e.g. how did you separate between multiple events involving the same actors). Additional information should be included in the article, though more detailed descriptions may be relegated to the supplementary (online) file.
 
@@ -85,19 +85,21 @@ P.S. The footnote numbering will automatically return to normal when we remove t
 
 # Reviewer 2
 
+> It seems like the key trigger that influences the credible commitment problem is a fear of the dominant group changing the legislative procedures in their half, rather than through simply policy implementation. . .
+
 
 
 > 3. Relatedly, I wonder whether this piece can actually say something about the timing of political violence. As it stands, democracy age and proportionality are relatively static, at least within a legislative session. Yet, the case study shows that it is the exogenous shocks that interact with the institutions to determine political violence; “three shocks that were largely exogenous from the national legislature” (page 10). It is my reading that the model does a good job of explaining the baseline level (or average) of political violence in a country, but a poor job of explaining why political violence occurs over time. Explaining how societal influences change in the context of legislative procedures would produce a dynamic account of legislative violence. You get at this partially by including measures of exogenous shocks like GINI and ethnic fractionalization, but these are included additively rather than interactively.
 
-    - This is a very interesting idea. Societal factors, however, such as demographics of inequality and ethnicity do not have straightforward effects on legislative institutions. [FINISH]
+    - This is a very interesting idea, but one that I believe needs to be explored in future research. Primarily, this is because the political institutional variables are much more dynamic than the otherwise very static societal variables, especially over the period for which I have large-n data. Democratic age changes every year. Legislative majorities and proportionality changes at each election and can change dramatically from election to election given relatively simple electoral rule changes.
 
-    TIME SCALE data is too short to examine this. For example, in the US case the changes leading up to legislative violence occurred over about 50 years.
+    Societal factors such as ethnic fractionalization, income inequality, and societal attitudes, on the other hand, rarely change over 25 or so year periods. Typically the processes behind ethnic and cultural shifts take generations. The shocks that led to increasing disproportionality in the US case study, for example, materialised over almost half a century, even in a rapidly changing country with very high immigration and territorial expansion. These societal factors change so slowly that much of the data on them is updated infrequently. The most extreme case is Alesina et al.'s (2003) data which is still heavily used (there are 71 Google Scholar citations of it from 2015 alone as of March 2015), is in fact completely static over the sampling period.
 
-    In the Supplementary materials I include regressions interacting societal factors with key legislative institutional factors. The results are not suggestive of such effects. [TO-DO]
+    Because of this, it would be very difficult to pursue this line of research within a quantitative framework. As a viable alternative in future work before a much longer-time series is available, case study work, like the case study presented in the paper, could explore how societal changes could affect political institutions and credible commitment problems. I think examining how countries' legislative institutions respond to demographic shifts is an interesting, but highly complex issue that is better suited for a future research project. This work would then clearly inform the study of legislative violence over longer periods of time.
 
-    Because of this, it would be very difficult to pursue this line of research within a quantitative framework. Instead, like the case study presented in the paper,  
+    Finally, the Supplementary materials does now include regressions interacting societal factors with key legislative institutional factors. The results are not suggestive of such effects. [TO-DO]
 
-    I think examining how countries' legislative institutions respond to demographic shifts is an interesting, but highly complex issue that is better suited for a larger research project. This work would then clearly inform the study of legislative violence over longer periods of time.
+
 
 
 > 4. I appreciate the empirical check for possible bias by limiting the sample to after 1990. However, I think more is needed to convince the reader that your method of data collection (assembling based on the Google News Archive) is picking up the universe of cases (or is in fact the best option available). Since some of the value of this project is in the creation of the original data set on legislative violence, it would be useful to describe this data collection in more detail. The fact that the author removes 22% of the sample by excluding the two most recent years (2010-2011) suggests that there is a bias for later years.
@@ -141,6 +143,8 @@ P.S. The footnote numbering will automatically return to normal when we remove t
     I've tried to highlight in the theory section that legislative violence certainly is a continuation of 'the bargaining process in a different manner'. This is a direct implication of using credible commitment theory to understand legislative violence. [TO-DO] I have also added a discussion to the Conclusion highlighting the point that a lack of violence does not necessarily mean that a legislature is a well-functioning democratic institution.
 
     Furthermore, the manuscript discusses this possibility in the subsection on the size of the governing majority--a lack of violence in large governing majority legislatures may be both an indication that many legislators are included in the legislative process and can effectively bargain peacefully *or* that the governing majority is so powerful that it can take actions to quash violence before it happens.
+
+    One way that I have tried to empirically avoid conflating dynamics of flagrant non-democratic oppression of legislatures leading to violence and a breakdown of democratic legislative bargaining causing brawls was to subset the sample to include only democracies (i.e. country-years with Polity IV scores > 5). Originally, I included all countries that had elected multi-party legislatures (DPI's LIEC score more than 5). Though there is considerable overlap in the two samples, they are different by about 200 country-years. In general the results were substantively similar.
 
     Perhaps the one (purely normative) point of disagreement that I have is that, while a lack of violence may not indicate well-functioning democratic institutions, a presence of violence *does* indicate that these institutions are not functioning according to the democratic ideal of enabling peaceful political contestation . I have emphasised this in the text, both in the introduction, and more extensively, in the conclusion
 

@@ -38,7 +38,7 @@
 \setlength{\belowcaptionskip}{0.5cm}
 
 %%%%%%% Title Page %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\title{Supplementary Material: Two Sword Lengths Apart: Credible Commitment Problems and Physical Violence in Multi-party Elected National Legislatures}
+\title{Supplementary Material: Two Sword Lengths Apart: Credible Commitment Problems and Physical Violence in Democratic National Legislatures}
 
 \begin{document}
 
@@ -79,6 +79,8 @@ Measurement error caused by the electronic availability of information be an iss
 
 
 \subsection*{Details on Prior Correction of the Rare Logistic Regression Models}
+
+\todo{UPDATE}
 
 For prior correction \citep[see][]{KingRareEventsPA2001} in the models with the full sample of elected multi-party legislatures I used the observed proportion of all observations with legislative violence \change{up to 2010}{through 2012}: i.e. \change{2.1}{2.2} percent of observations up until 2010 had violence ($\tau = \frac{117}{5360} = 0.022$). There were \change{63}{109} observed incidences of violence and \change{2654}{3990} country-years from 1990 through \change{2009}{2012} in the sample, so: $\tau = \frac{109}{3390} = 0.027$.
 
@@ -122,15 +124,15 @@ Results for other political and institutional variables were largely not statist
 <<OutTable1, warning=FALSE, echo=FALSE, message=FALSE, results='asis'>>=
     library(stargazer)
 
-    CoefNames <- c("Low Disproportionality",
+    CoefNames <- c("Lower Disproportionality",
                     "Dem. Age (log)", "Majority Size", "Internal Armed Conflict",
-                    "Leg. Immunity", "Single Party Gov.",
+                    "Leg. Immunity", "Single Party Gov.", "Political Constraints",
                     "Self Expression", "Ethnic Frac.", "Perc. Women in Parl.",
                     "Murder Rate", "Federal", "Gov. Frac.",
                     "No. of Parties by Seats", "GINI", "GDP per Capita (log)",
                    "(Intercept)")
 
-    stargazer(D1, D2, D3, D4, D5, D6, D7, D8, D9, D10,
+    stargazer(D1, D2, D3, D4, D5, D6, D7, D8, D9, D10, D11,
         dep.var.labels = 'Violent Incident',
         covariate.labels = CoefNames,
         float = F,
@@ -155,14 +157,14 @@ Results for other political and institutional variables were largely not statist
 <<OutTable2, warning=FALSE, echo=FALSE, message=FALSE, results='asis'>>=
     library(stargazer)
 
-    CoefNames <- c("Low Disproportionality",
+    CoefNames <- c("Lower Disproportionality",
                 "Dem. Age (log)", "Majority Size", "Internal Armed Conflict",
                 "Perc. Women in Parliament",
                 "Murder Rate", "Federal", "Gov. Frac.",
                 "No. of Parties by Seats", "Gini", "GDP per Capita (log)",
                 "(Intercept)")
 
-    stargazer(DN7, DN8, DN9, DN10, DN11, D12,
+    stargazer(DN7, DN8, DN9, DN10, DN11, DN12,
     dep.var.labels = 'Violent Incident',
     covariate.labels = CoefNames,
     float = F,
@@ -205,13 +207,12 @@ Results for other political and institutional variables were largely not statist
             Lower Disproportionality & Gallagher Index below the sample mean (6.4) & Author's calculations based on \cite{Gallagher2012} \& \cite{Carey2011}\\
             Majority & Percentage of legislature controlled by governing parties & \cite{DPI2001} \\
             Murder Rate & Murders per 100,000 population & \cite{UNMurder2013} \\
+            Political Constraints & POLCONIII measure of political constraints & \cite[][updated through 2011]{Henisz2004} \\
             Polity & Polity IV Score & \cite{Marshall2009} \\
             PR & Whether a country uses a proportional representation electoral system or a plurality system & \cite{DPI2001} \\
             Self Expression & WVS self-expression indicator averaged across country-survey waves & \cite{WVS2009} \\
             System & Government system (parliamentary, presidential, or mixed & \cite{DPI2001} \\
-            Tenshort & Tenure of the shortest serving veto player & \cite{DPI2001} \\
             Trust & Average of WVS responses where 1 $=$ most people can be trusted and 2 $=$ you can't be too careful & \cite{WVS2009} \\
-            UDS & Posterior Mean Unified Democracy Score & \cite{Pemstein2010} \\
             Violence & Incidences of violence between legislators in the national parliamentary chamber & author \\
             Perc. Women in Parl. & Percentage of parliamentary seats held by women & \cite{WomParCrossNat} \& \cite{IPU2013} \\
             \hline

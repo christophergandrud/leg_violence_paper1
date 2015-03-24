@@ -1,7 +1,7 @@
 # ---------------------------------------------------------------------------- #
 # Gather/Clean/Merge Data for Two Sword Lengths Apart
 # Christopher Gandrud
-# 20 March 2015
+# 24 March 2015
 # MIT License
 # ---------------------------------------------------------------------------- #
 
@@ -67,6 +67,19 @@ murder$iso2c <- countrycode(murder$country, origin = 'country.name',
 murder$Rate <- as.numeric(murder$Rate)
 murder <- murder %>% dplyr::select(iso2c, Year, Rate)
 names(murder) <- c('iso2c', 'year', 'murder_rate')
+
+#### ------------------ Political Constraints ----------------------------- ####
+pol_constraints <- import('Data/raw/polcon2012.dta') %>%
+                    select(polity_country, year, polconiii, polconv)
+
+pol_constraints$iso2c <- countrycode(pol_constraints$polity_country, 
+                                     origin = 'country.name',
+                                     destination = 'iso2c')
+
+pol_constraints <- DropNA(pol_constraints, 'iso2c')
+pol_constraints <- pol_constraints %>% select(-polity_country) %>% 
+                    filter(year >= 1980)
+
 
 #### --------------- Armed Conflict --------------------------------------- ####
 conflict <- import('Data/raw/UCDPPrioArmedConflictDataset4a-2014.csv') %>%
@@ -292,6 +305,10 @@ comb <- comb %>% group_by(iso2c) %>% mutate(higher_trust =
 comb <- comb %>% group_by(iso2c) %>% mutate(cw_surv_self_expr =
                                             FillDown(Var = cw_surv_self_expr)) %>%
     as.data.frame
+
+## Merge political constraints
+comb <- merge(comb, pol_constraints, by = c('iso2c', 'year'), all.x = T) %>%
+    arrange(iso2c, year)
 
 ## Merge federal and extend
 comb <- merge(comb, federal, by = c('iso2c', 'year'), all.x = T) %>%
