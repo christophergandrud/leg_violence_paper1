@@ -27,14 +27,14 @@ maj.r <- seq(from = 20, to = 100, by = 5)
 ## Set fitted values
 DN4.high_prop <- setx(DN4, high_prop = high_prop.r)
 
-high_prop_sum <- sim_strip(DN4, DN4.high_prop)
+high_prop_sum <- sim_strip(DN4, DN4.high_prop, high_prop.r)
 
 high_prop_p <- ggplot(high_prop_sum, aes(fitted, Median, ymin = Min_CI,
                     ymax = Max_CI)) +
         geom_pointrange(size = 1) +
         geom_line() +
         scale_x_reverse(breaks = c(1, 2), labels = c("Above", "Below Median")) +
-        scale_y_continuous(breaks = c(0, 0.02, 0.05, 0.1),
+        scale_y_continuous(breaks = c(0, 0.05, 0.1),
                            limits = c(0, 0.17)) +
         xlab("\nDisproportionality") + ylab("") +
         theme_bw(base_size = 12)
@@ -43,13 +43,13 @@ high_prop_p <- ggplot(high_prop_sum, aes(fitted, Median, ymin = Min_CI,
 # Set fitted values
 DN4.dem_age <-setx(DN4, dem_age = dem.r)
 
-dem_age_sum <- sim_strip(DN4, DN4.dem_age)
+dem_age_sum <- sim_strip(DN4, DN4.dem_age, dem.r)
 
 dem_age_p <- DN4.HighProp.p <- ggplot(dem_age_sum, aes(fitted, Median,
                 ymin = Min_CI, ymax = Max_CI)) +
         geom_line() +
         geom_ribbon(alpha = 0.3) +
-        scale_y_continuous(breaks = c(0, 0.02, 0.05, 0.1),
+        scale_y_continuous(breaks = c(0, 0.05, 0.1),
                            limits = c(0, 0.17)) +
         scale_x_continuous(breaks = c(1, 25, 50, 75)) +
         xlab("\nAge of Democracy") + ylab("") +
@@ -59,12 +59,12 @@ dem_age_p <- DN4.HighProp.p <- ggplot(dem_age_sum, aes(fitted, Median,
 # Set fitted values
 DN4.maj1 <-setx(DN4, maj = maj.r)
 
-maj_sum <- sim_strip(DN4, DN4.maj1)
+maj_sum <- sim_strip(DN4, DN4.maj1, maj.r)
 
 maj_p <- ggplot(maj_sum, aes(fitted, Median, ymin = Min_CI, ymax = Max_CI)) +
         geom_line() +
         geom_ribbon(alpha = 0.3) +
-        scale_y_continuous(breaks = c(0, 0.02, 0.05, 0.1),
+        scale_y_continuous(breaks = c(0, 0.05, 0.1),
                            limits = c(0, 0.17)) +
         xlab("\nGovernment Majority") + ylab("") +
         theme_bw(base_size = 12)

@@ -24,16 +24,23 @@ dNew <- subset(dem, year > 1989)
 # tau's
 tau_dNew <- sum(dNew$violence) / nrow(dNew)
 
+# Complete cases
 vars_1 <- c("violence", "dem_age", "high_prop", 'maj', 'internal_conflict',
             'cw_surv_self_expr')
-
 dNew_1.c <- dNew[complete.cases(dNew[vars_1]),]
 
 vars_2 <- c("violence", "dem_age", "high_prop", 'maj', 'internal_conflict',
             'ethnic_alesina')
-
 dNew_2.c <- dNew[complete.cases(dNew[vars_2]),]
 
+
+vars_3 <- c("violence", "dem_age", "high_prop", 'maj', 'internal_conflict',
+            'gini')
+dNew_3.c <- dNew[complete.cases(dNew[vars_3]),]
+
+vars_4 <- c("violence", "dem_age", "high_prop", 'maj', 'internal_conflict',
+            'polconiii')
+dNew_4.c <- dNew[complete.cases(dNew[vars_4]),]
 
 ###########################
 ### Sample of countries with elected legislatures from 1990
@@ -50,7 +57,7 @@ DP2 <- zelig(violence ~ log(dem_age) + maj+ internal_conflict +
 
 DP3 <- zelig(violence ~ log(dem_age) + maj + internal_conflict +
                 high_prop*gini,
-             model = "relogit", data = dNew, tau = tau_dNew,
+             model = "relogit", data = dNew_3.c, tau = tau_dNew,
              robust = list(method = "weave"), cite = FALSE)
 
 DP4 <- zelig(violence ~ log(dem_age) + maj + internal_conflict +
@@ -65,7 +72,7 @@ DP5 <- zelig(violence ~ high_prop + maj+ internal_conflict +
 
 DP6 <- zelig(violence ~ high_prop + maj+ internal_conflict +
             log(dem_age)*ethnic_alesina, model = "relogit",
-          data = dNew, tau = tau_dNew, robust = list(method = "weave"),
+          data = dNew_2.c, tau = tau_dNew, robust = list(method = "weave"),
           cite = FALSE)
 
 DP7 <- zelig(violence ~ high_prop + maj + internal_conflict +
@@ -85,5 +92,5 @@ DPC1 <- zelig(violence ~ polconiii*high_prop + log(dem_age) + maj, model = "relo
              cite = FALSE)
 
 DPC2 <- zelig(violence ~ polconiii*log(dem_age) + high_prop + maj, model = "relogit",
-             data = dNew, tau = tau_dNew, robust = list(method = "weave"),
+             data = dNew_4.c, tau = tau_dNew, robust = list(method = "weave"),
              cite = FALSE)

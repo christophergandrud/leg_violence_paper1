@@ -1,4 +1,4 @@
-sim_strip <- function(estimates, fitted){
+sim_strip <- function(estimates, fitted, fitted_values){
     require(tidyr)
     require(dplyr)
     
@@ -7,6 +7,7 @@ sim_strip <- function(estimates, fitted){
     
     # Extract/clean simulations
     extracted <- data.frame(simulation.matrix(sim_x, "Expected Values: E(Y|X)"))
+    names(extracted) <- sprintf('X%s', fitted_values)
     extracted_gathered <- gather(extracted, fitted, value)
     extracted_gathered$fitted <- gsub('X', '', extracted_gathered$fitted) %>% 
                                     as.numeric
