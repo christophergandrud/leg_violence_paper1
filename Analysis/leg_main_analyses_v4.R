@@ -27,10 +27,9 @@ tau_dem <- sum(dem$violence) / nrow(dem)
 tau_dNew <- sum(dNew$violence) / nrow(dNew)
 
 # Subset complete cases for model that will be used in simulations
-vars.4 <- c("violence", "dem_age", "high_prop", 'maj', 'immunity',
-            'single_party', 'internal_conflict')
+vars.3 <- c("violence", "dem_age", "high_prop", 'maj', 'internal_conflict')
 
-dNew.4.c <- dNew[complete.cases(dNew[vars.4]),]
+dNew_3_complete <- dNew[complete.cases(dNew[vars.3]),]
 
 ###########################
 ### Sample of countries with elected legislatures
@@ -97,13 +96,13 @@ DN2 <- zelig(violence ~ high_prop + log(dem_age) + maj, model = "relogit",
              cite = FALSE)
 
 DN3 <- zelig(violence ~ high_prop + log(dem_age) + maj + internal_conflict,
-             model = "relogit", data = dNew, tau = tau_dNew,
+             model = "relogit", data = dNew_3_complete, tau = tau_dNew,
              robust = list(method = "weave"),
              cite = FALSE)
 
 DN4 <- zelig(violence ~ high_prop + log(dem_age) + maj + internal_conflict +
                  immunity + single_party,
-             model = "relogit", data = dNew.4.c, tau = tau_dNew,
+             model = "relogit", data = dNew, tau = tau_dNew,
              robust = list(method = "weave"), cite = FALSE)
 
 DN5 <- zelig(violence ~ high_prop + log(dem_age) + maj+ internal_conflict +
@@ -136,11 +135,13 @@ DN10 <- zelig(violence ~ high_prop + log(dem_age) + maj + internal_conflict +
              model = "relogit", data = dNew, tau = tau_dNew,
              robust = list(method = "weave"), cite = FALSE)
 
-DN11 <- zelig(violence ~ high_prop + log(dem_age) + maj +internal_conflict + enps,
+DN11 <- zelig(violence ~ high_prop + log(dem_age) + maj +internal_conflict + 
+                  enps,
              model = "relogit", data = dNew, tau = tau_dNew,
              robust = list(method = "weave"), cite = FALSE)
 
-DN12 <- zelig(violence ~ high_prop + log(dem_age) + maj + internal_conflict + gini,
+DN12 <- zelig(violence ~ high_prop + log(dem_age) + maj + internal_conflict + 
+                  gini,
              model = "relogit", data = dNew, tau = tau_dNew,
              robust = list(method = "weave"), cite = FALSE)
 

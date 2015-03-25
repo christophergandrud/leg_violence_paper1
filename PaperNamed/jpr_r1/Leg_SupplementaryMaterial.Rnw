@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Two Sword Lengths Apart: Supplementary Material
-% 24 March 2014
+% 25 March 2014
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % !Rnw weave = knitr
@@ -69,7 +69,7 @@ Measurement error caused by the electronic availability of information be an iss
     \begin{center}
 <<compareLegToViolence, warning=FALSE, echo=FALSE, message=FALSE, fig.width=7, fig.height=7, out.width='0.8\\linewidth'>>=
     source("/git_repositories/leg_violence_paper1/Analysis/dem_vs_incidents.R")
-        @
+@
     \end{center}
 
     \caption{Comparing the Number of Multi-Party Elected National Legislatures to Observed Violence in These Legislatures Over Time}
@@ -120,7 +120,7 @@ Results for other political and institutional variables were largely not statist
 \caption{Legislative Violence Rare Events Logistic Regression Results (Multi-Party Elected Legislature 1981-2012)}
 \label{outputTable.dem}
 \begin{center}
-{\scalebox{0.65}{
+{\scalebox{0.6}{
 <<OutTable1, warning=FALSE, echo=FALSE, message=FALSE, results='asis'>>=
     library(stargazer)
 
@@ -141,7 +141,6 @@ Results for other political and institutional variables were largely not statist
         notes.align = 'l',
         notes = 'Standard errors are in parentheses. All models use robust (WEAVE) standard errors.',
         notes.label = '')
-
 @
 }}
 \end{center}
@@ -155,8 +154,6 @@ Results for other political and institutional variables were largely not statist
 \begin{center}
 \scalebox{0.7}{
 <<OutTable2, warning=FALSE, echo=FALSE, message=FALSE, results='asis'>>=
-    library(stargazer)
-
     CoefNames <- c("Lower Disproportionality",
                 "Dem. Age (log)", "Majority Size", "Internal Armed Conflict",
                 "Perc. Women in Parliament",
@@ -164,7 +161,7 @@ Results for other political and institutional variables were largely not statist
                 "No. of Parties by Seats", "Gini", "GDP per Capita (log)",
                 "(Intercept)")
 
-    stargazer(DN7, DN8, DN9, DN10, DN11, DN12,
+    stargazer(DN8, DN9, DN10, DN11, DN12, DN13,
     dep.var.labels = 'Violent Incident',
     covariate.labels = CoefNames,
     float = F,
@@ -179,12 +176,127 @@ Results for other political and institutional variables were largely not statist
 \end{table}
 
 
+\subsection*{Interactions}
+
+\todo{Section added}
+
+I examined a number of interactions between the article's key independent variables--lower disproportionality and democratic age--and a number of societal level and political variables. While I did not find evidence for additive relationships between most of the societal variables and legislative brawls, perhaps they mediate the effect of disproportionality or democratic age. For example, legislators in more homogenous societies might have fewer information asymmetries across partisan divides enabling them to establish credible commitments despite having a new democracy.
+
+Tables \ref{prop_interact} and \ref{dem_interact} provide the raw estimates from these interactive models. We can see that some of the interactions contain statistically significant terms, though usually at only the 10\% level.
+
+As in the main article, in order to evaluate the substantive significance of these findings I simulated expected probabilities for interactions that included statistically significant terms at the 10\% level and higher. I then plotted them in Figure \ref{interact_plots1} and \ref{interact_plots2}. The plots show expected probabilities for various levels of low disproportionality and democratic age at `high' and `low' values of the other variables in the interactions. Self-expression was high at 1.35 and low at 1.1. Ethnic fractionalization was high at 0.8 and low at 0.1. Gini was high at 0.6 and low at 0.2, Finally, political constraints were high at 0.7 and low at 0.1.
+These fitted values are close to the variables' minimum and maximum values to enable the largest substantively meaningful contrasts.
+
+The substantive importance of these interactions is overall very weak. Though there are some differences, the simulations illustrate that there is considerable overlap in the uncertainty surrounding most of the estimates for substantively meaningful fitted values. To the extent that the estimates are suggestive of true interactive effects, overall it appears that factors creating credible commitment problems are worsened by self-expressive values, societal divisions, and an inability to alter policy.
+
+For example, in the top-panel of Figure \ref{prop_interact} it appears that societies where self-expressive values are more prevalent, violence is more likely when there is high disproportionality. Perhaps, legislators in these societies
+
+The top-panel of Figure \ref{dem_interact} suggests that perhaps in new democracies violence is more likely when there is more ethnic fractionalisation. Credible commitment problems between ethnic groups could be particularly strong in these countries. The bottom panel suggests that maybe new democracies with more policy immobility are more likely to have violence.
+
+Again, it is important to reiterate that though these interactive effects have statistically significant terms, the substantive importance of these estimates for meaningful fitted values is very weak.
+
+
+
+\begin{table}
+    \caption{Legislative Violence Regression Results with Lower Disproportionality Interactions (Democratic Legislature from 1990-2012)}
+    \label{prop_interact}
+    \begin{center}
+    \scalebox{0.7}{
+<<PropInteractTable, warning=FALSE, echo=FALSE, message=FALSE, results='asis'>>=
+    source('/git_repositories/leg_violence_paper1/Analysis/leg_interactions.R')
+
+    CoefNames <- c("Dem. Age (log)", "Majority Size",
+                   "Lower Disproportionality",
+                   "Self Expression", "Lower Disp.*Self Expression",
+                   "Ethnic Frac.",  "Lower Disp.*Ethnic Frac.",
+                   "GINI", "Lower Disp.*GINI",
+                   "GDP per Capita (log)", "Lower Disp.*GDP Per Capita",
+                   "Political Constraints", "Lower Disp.*Pol. Constraints",
+                    "(Intercept)")
+
+    stargazer(DP1, DP2, DP3, DP4, DPC1,
+    dep.var.labels = 'Violent Incident',
+    covariate.labels = CoefNames,
+    float = F,
+    out.header = F,
+    notes.append = T,
+    notes.align = 'l',
+    notes = 'Standard errors are in parentheses. All models use robust (WEAVE) standard errors.',
+    notes.label = '')
+@
+    }
+    \end{center}
+\end{table}
+
+}
+\begin{table}
+    \caption{Legislative Violence Regression Results with Democratic Age Interactions (Democratic Legislature from 1990-2012)}
+    \label{dem_interact}
+    \begin{center}
+    \scalebox{0.7}{
+<<DemAgeInteractTable, warning=FALSE, echo=FALSE, message=FALSE, results='asis'>>=
+    CoefNames <- c("Lower Disproportionality", "Majority Size", "Dem. Age (log)",
+                   "Self Expression", "Dem. Age*Self Expression",
+                   "Ethnic Frac.",  "Dem. Age*Ethnic Frac.",
+                   "GINI", "Dem. Age*GINI",
+                   "GDP per Capita (log)", "Dem. Age*GDP Per Capita",
+                   "Political Constraints", "Dem. Age*Pol. Constraints",
+                    "(Intercept)")
+
+    stargazer(DP5, DP6, DP7, DP8, DPC2,
+    dep.var.labels = 'Violent Incident',
+    covariate.labels = CoefNames,
+    float = F,
+    out.header = F,
+    notes.append = T,
+    notes.align = 'l',
+    notes = 'Standard errors are in parentheses. All models use robust (WEAVE) standard errors.',
+    notes.label = '')
+@
+    }
+    \end{center}
+\end{table}
+
+\begin{figure}
+    \begin{center}
+<<predProInteract, w1arning=FALSE, echo=FALSE, message=FALSE, results='hide', fig.width=7, fig.height=9, out.width='0.95\\linewidth', cache=FALSE>>=
+    ## Create Graphs ##
+    source("/git_repositories/leg_violence_paper1/Analysis/expected_values_interactions.R")
+    grid.arrange(dp1_p, dp2_p, dp3_p,
+                 left = "Expected Probability of Violence in a Year")
+@
+
+    \end{center}
+    \caption{Expected Probability of Legislative Violence in Democratic Legislatures per Year (Interactions 1)}
+    \label{interact_plots1}
+    \begin{singlespace}
+      {\scriptsize{The graphs show the median and middle 95\% of 1000 simulations at each fitted value of the variables. The simulations use estimates from tables \ref{prop_interact} and \ref{dem_interact}. For each set of simulations all other variables were fitted at their means.}}
+    \end{singlespace}
+\end{figure}
+
+\begin{figure}
+    \begin{center}
+<<predProInteract2, warning=FALSE, echo=FALSE, message=FALSE, results='hide', fig.width=7, fig.height=7, out.width='0.95\\linewidth', cache=FALSE>>=
+    ## Create Graphs ##
+    grid.arrange(dp6_p, dpc2_p,
+                 left = "Expected Probability of Violence in a Year")
+@
+
+    \end{center}
+    \caption{Expected Probability of Legislative Violence in Democratic Legislatures per Year (Interactions 2)}
+    \label{interact_plots2}
+    \begin{singlespace}
+      {\scriptsize{The graphs show the median and middle 95\% of 1000 simulations at each fitted value of the variables. The simulations use estimates from tables \ref{prop_interact} and \ref{dem_interact}. For each set of simulations all other variables were fitted at their means.}}
+    \end{singlespace}
+\end{figure}
+
 
 %%%%%%%%%%%%%%%%%%%%%% Figures Start %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 %%%%%%%% Variable source summary table
 \begin{table}[!h]
+    \small
     \begin{center}
     \caption{Variable Summary}
     \label{var_summary}
@@ -223,6 +335,7 @@ Results for other political and institutional variables were largely not statist
         Please contact the author for detailed summary statistics. \\
         All of the data from \cite{DPI2001} was updated through 2012.
     \end{singlespace}
+
 \end{table}
 
 %%%%%%%%%% Correlation matrix %%%%%%%%%%

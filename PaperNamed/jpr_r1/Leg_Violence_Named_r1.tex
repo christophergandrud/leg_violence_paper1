@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Two Sword Lengths Apart
-% 24 March 2015
+% 25 March 2015
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % !Rnw weave = knitr
@@ -274,7 +274,7 @@ I also investigated the possibility that a number of political, institutional, a
 To assess any effect of coalition compared to single-party governments I included the DPI {\emph{government fractionalization}} variable. It is the probability that two randomly picked deputies in the government are from different parties. I used the fractionalization variable to create an indicator of {\emph{single-party}} government. It is simply a dummy equaling one if fractionalization was zero, i.e. all governing legislators were from the same party. In general single party governments probably are better able to pass policies very close to their ideal preferences. This could heighten losers' losses and make them less likely to want to conform to non-violent legislative rules. However, all single party governments are not created equal. Some parties may act as umbrella parties that incorporate many different factions. Others are narrowly focused on a particular constituency.
 
 \add{
-Perhaps legislators are more violent if they become frustrated with their ability to effect policy change. To examine this possibility, I included Henisz's} \citeyearpar{Henisz2004}\add{ measure of political constraints.}\footnote{\add{The version of the variable included is POLCONIII. Results are similar for the other version--POLCONV--which includes two additional veto points: the judiciary and sub-federal units.}} \add{This variable captures the feasibility of policy change. The variable has been updated through 2011.
+Perhaps legislators are more violent if they become frustrated with their ability to effect policy change. To examine this possibility, I included Henisz's} \citeyearpar{Henisz2004}\add{ measure of political constraints.}\footnote{\add{The version of the variable included is POLCONIII. Results are similar for the other version--POLCONV--which includes two additional veto points: the judiciary and sub-federal units.}} \add{This variable captures the feasibility of policy change. It ranges between 0 and 1. Higher values indicate that there are more veto players with disperate preferences. The variable has been updated through 2011.
 
 To examine the possibility that armed conflict may be associated with legislative violence I created a binary internal armed conflict variable using the UCDP/PRIO Armed Conflict Dataset} \citep{Themner2014}\add{. The variable is one if there is an internal armed conflict (either involving or not involving external states) and zero otherwise.
 }
@@ -292,7 +292,7 @@ Please see the Supplementary Materials for discussions of and results for a numb
 
 \section{Regression Results}
 
-I used the {\tt{relogit}} model from the {\tt{R}} package Zelig \citep{IMAIKingZelig2008} to estimate regression models. Furthermore, to get a better understanding of the magnitude of the estimated relationships between the right-hand variables and violence, I also used Zelig to predict incident probabilities with 1,000 simulations per fitted value \citep[]{King2002}. Predicted probabilities for various fitted values of the key findings of interest with robust results are shown in Figure \ref{pred_prob}. These give us a substantively meaningful sense of estimated effects' magnitudes. Note: because the variables are in country-year records, all of the results should be interpreted in terms of the predicted effect of a variable on the probability of legislative violence in a given country in a year.
+I used the {\tt{relogit}} model from the {\tt{R}} package Zelig \citep{IMAIKingZelig2008} to estimate regression models. Furthermore, to get a better understanding of the magnitude of the estimated relationships between the right-hand variables and violence, I also used Zelig to predict incident probabilities with 1,000 simulations per fitted value \citep[]{King2002}. Expected probabilities for various fitted values of the key findings of interest with robust results are shown in Figure \ref{pred_prob}. These give us a substantively meaningful sense of estimated effects' magnitudes. Note: because the variables are in country-year records, all of the results should be interpreted in terms of the predicted effect of a variable on the probability of legislative violence in a given country in a year.
 
 I observed relatively few incidences of violence in the 1980s.\footnote{There were only 8 observed incidence before 1990.} This may be because news articles from before the 1990s have not been made available on the internet with the same frequency as those written from the 1990s. To examine any estimation biases this sampling bias might create I ran the regressions on a further constricted sample of multi-party elected legislatures from 1990. The results were broadly similar across the two samples. Regression coefficient point estimates and robust standard errors for the sample that is truncated from 1990 can be found in Table \ref{outputTable.1990}. Results from the full observation period can be found in the Supplementary Materials. \add{In addition, the Supplementary Materials contain a further examination of why more incidents are observed in more recent time periods.}
 
@@ -310,7 +310,7 @@ Finally, I subsetted the sample to include only democracies defined as country-y
 \scalebox{0.8}{
 
 % Table created by stargazer v.5.1 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
-% Date and time: Tue, Mar 24, 2015 - 17:04:10
+% Date and time: Wed, Mar 25, 2015 - 11:32:31
 \begin{tabular}{@{\extracolsep{5pt}}lccccccc} 
 \\[-1.8ex]\hline 
 \hline \\[-1.8ex] 
@@ -365,7 +365,7 @@ Akaike Inf. Crit. & 524.003 & 515.233 & 515.169 & 517.391 & 515.472 & 388.074 & 
 
 I avoid focusing on models that include highly correlated variables \citep[]{Achen2002, Schrodt2006}. In these models (not shown), as the statistical literature predicts, the coefficient estimates and standard errors change dramatically for many of the variables. There may be interactions between many of the variables included in the models. I attempted to capture interactions in the analysis, but it was empirically difficult. Given the small number of observed incidences of legislative violence there could simply not be enough information in the data to draw meaningful conclusions about these types of relationship \citep[]{Brambor2006}. I also ignore results from models with the government system type variable. It had very large, highly unstable, and largely nonsensical coefficient estimates, suggesting that the model does not contain enough information to test \citep{Babyak2004} whether or not political system type has an effect on violence.
 
-%%%%%%%%%%%%%%%% Predicted Probability Graphs %%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%% Expected Probability Graphs %%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[t]
     \begin{center}
 
@@ -375,10 +375,10 @@ I avoid focusing on models that include highly correlated variables \citep[]{Ach
 
 \end{knitrout}
     \end{center}
-    \caption{Predicted Probability of Legislative Violence in Democratic Legislatures}
+    \caption{Expected Probability of Legislative Violence in Democratic Legislatures per Year}
     \label{pred_prob}
     \begin{singlespace}
-      {\scriptsize{The graphs show the median and middle 95\% of 1000 simulations at each fitted value of the variables. The simulations use estimates from Model 4, Table \ref{outputTable.1990}. For each set of simulations all other variables were fitted at their means.}}
+      {\scriptsize{The graphs show the median and middle 95\% of 1000 simulations at each fitted value of the variables. The simulations use estimates from Model 3, Table \ref{outputTable.1990}. For each set of simulations all other variables were fitted at their means.}}
     \end{singlespace}
 \end{figure}
 

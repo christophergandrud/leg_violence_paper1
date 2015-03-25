@@ -1,7 +1,7 @@
 #######################
 # Legislative Violence Expected Value Graphs, Interactions
 # Christopher Gandrud
-# Updated 24 March 2015
+# Updated 25 March 2015
 #######################
 
 # Set working directory. Change as needed.
@@ -39,13 +39,13 @@ dp1_comb <- rbind(dp1_sum_high, dp1_sum_low)
 
 dp1_p <- ggplot(dp1_comb, aes(fitted, Median, ymin = Min_CI, ymax = Max_CI,
                 colour = x2)) +
-    geom_pointrange(size = 3, alpha = 0.5) +
+    geom_pointrange(size = 1, alpha = 0.5) +
     geom_line() +
-    scale_color_grey(name = 'Self Expression') +
+    scale_color_grey(name = 'Self\n Expr.') +
     scale_x_reverse(breaks = c(0, 1), labels = c("Above", "Below Median")) +
     scale_y_continuous(breaks = c(0, 0.05, 0.1),
                        limits = c(0, 0.17)) +
-    xlab("\nDisproportionality") + ylab("") +
+    xlab("") + ylab("") +
     theme_bw(base_size = 12)
 
 #### Prop*Ethnic ####
@@ -65,11 +65,11 @@ dp2_p <- ggplot(dp2_comb, aes(fitted, Median, ymin = Min_CI, ymax = Max_CI,
                               colour = x2)) +
     geom_pointrange(size = 1, alpha = 0.5) +
     geom_line() +
-    scale_color_grey(name = 'Ethnic Fractionalization') +
+    scale_color_grey(name = 'Ethnic\n Frac.') +
     scale_x_reverse(breaks = c(0, 1), labels = c("Above", "Below Median")) +
    # scale_y_continuous(breaks = c(0, 0.05, 0.1),
    #                    limits = c(0, 1)) +
-    xlab("\nDisproportionality") + ylab("") +
+    xlab("") + ylab("") +
     theme_bw(base_size = 12)
 
 #### Prop*GINI ####
@@ -79,7 +79,7 @@ dp3_sum_high <- sim_strip(DP3, dp3_fitted_high, high_prop.r)
 dp3_sum_high$x2 <- 'high'
 
 # Low Inequality
-dp3_fitted_low <- setx(DP3, high_prop = high_prop.r, gini = 0.1)
+dp3_fitted_low <- setx(DP3, high_prop = high_prop.r, gini = 0.2)
 dp3_sum_low <- sim_strip(DP3, dp3_fitted_low, high_prop.r)
 dp3_sum_low$x2 <- 'low'
 
@@ -89,7 +89,7 @@ dp3_p <- ggplot(dp3_comb, aes(fitted, Median, ymin = Min_CI, ymax = Max_CI,
                               colour = x2)) +
     geom_pointrange(size = 1, alpha = 0.5) +
     geom_line() +
-    scale_color_grey(name = 'Inequality (gini)') +
+    scale_color_grey(name = 'Inequality\n (gini)') +
     scale_x_reverse(breaks = c(0, 1), labels = c("Above", "Below Median")) +
     # scale_y_continuous(breaks = c(0, 0.05, 0.1),
     #                    limits = c(0, 1)) +
@@ -116,8 +116,8 @@ dp6_p <- ggplot(dp6_comb, aes(fitted, Median, ymin = Min_CI, ymax = Max_CI,
     #scale_y_continuous(breaks = c(0, 0.05, 0.1),
     #                   limits = c(0, 0.17)) +
     scale_x_continuous(breaks = c(1, 25, 50, 75)) +
-    scale_fill_grey(start = 0.1, end = 0.7, name = 'Ethnic Fractionalization') +
-    xlab("\nAge of Democracy") + ylab("") +
+    scale_fill_grey(start = 0.1, end = 0.7, name = 'Ethnic\n Frac.') +
+    xlab("") + ylab("") +
     theme_bw(base_size = 12)
 
 #### Dem Age*Pol Constraints ####
@@ -140,8 +140,10 @@ dpc2_p <- ggplot(dpc2_comb, aes(fitted, Median, ymin = Min_CI, ymax = Max_CI,
     #scale_y_continuous(breaks = c(0, 0.05, 0.1),
     #                   limits = c(0, 0.17)) +
     scale_x_continuous(breaks = c(1, 25, 50, 75)) +
-    scale_fill_grey(start = 0.1, end = 0.7, name = 'Political Constraints') +
+    scale_fill_grey(start = 0.1, end = 0.7, name = 'Political\n Constraints') +
     xlab("\nAge of Democracy") + ylab("") +
     theme_bw(base_size = 12)
 
-grid.arrange(dp1_p, dp2_p, dp3_p, dp6_p, dpc2_p)
+# grid.arrange(dp1_p, dp2_p, dp3_p)
+
+# grid.arrange(dp6_p, dpc2_p)
