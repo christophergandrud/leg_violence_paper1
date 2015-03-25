@@ -27,6 +27,7 @@
 \usepackage{verbatim}
 \usepackage{endnotes}
 \usepackage{graphicx}
+\usepackage{float}
 
 \usepackage[margins]{trackchanges}
 
@@ -52,9 +53,9 @@
 @
 
 
-\subsection*{Examining Possible Measurement Error: Trends in Violence and Democracy}
+\section*{Examining Possible Measurement Error: Trends in Violence and Democracy}
 
-\todo{Section added.}
+\todo[inline]{Section added.}
 
 As noted in the main text, data on incidents was primarily gathered using multiple key word searches of the Google News Archive, Google Search, and Youtube over a number of years. This method could have significant measurement error. The electronic availability of news and videos on legislative violence, as with material on almost all other phenomenon, could be positively correlated with time. I.e. more information is available for incidents in more recent periods.
 
@@ -78,15 +79,15 @@ Measurement error caused by the electronic availability of information be an iss
 \end{figure}
 
 
-\subsection*{Details on Prior Correction of the Rare Logistic Regression Models}
+\section*{Details on Prior Correction of the Rare Logistic Regression Models}
 
 \todo{UPDATE}
 
 For prior correction \citep[see][]{KingRareEventsPA2001} in the models with the full sample of elected multi-party legislatures I used the observed proportion of all observations with legislative violence \change{up to 2010}{through 2012}: i.e. \change{2.1}{2.2} percent of observations up until 2010 had violence ($\tau = \frac{117}{5360} = 0.022$). There were \change{63}{109} observed incidences of violence and \change{2654}{3990} country-years from 1990 through \change{2009}{2012} in the sample, so: $\tau = \frac{109}{3390} = 0.027$.
 
-\subsection*{Additional Right-hand Variables}
+\section*{Additional Right-hand Variables}
 
-\todo{This section was moved from the main paper at the editor's request}
+\todo[inline]{This section was moved from the main paper at the editor's request}
 
 I examined a number of other legislative and societal-level variables to guard against omitted variable bias. Results from models with these variables are shown in tables \ref{outputTable.dem} and \ref{outputTable.1990_2nd}. The variables are described below. It is important to first note that overall these factors were not found to be statistically significantly associated with legislative violence nor did they substantively alter the article's core findings.
 
@@ -104,7 +105,7 @@ Conflict in more economically divided societies may be generally more intense. T
 
 \subsection*{Results Discussion}
 
-\todo{Moved from main paper and changed for results with updated data.}
+\todo[inline]{Moved from main paper and changed for results with updated data.}
 
 \paragraph{Societal-level Variables}
 
@@ -116,7 +117,7 @@ Results for other political and institutional variables were largely not statist
 
 
 %%%%%%%% Elected Legislatures Results Table
-\begin{table}
+\begin{table}[H]
 \caption{Legislative Violence Rare Events Logistic Regression Results (Multi-Party Elected Legislature 1981-2012)}
 \label{outputTable.dem}
 \begin{center}
@@ -148,7 +149,7 @@ Results for other political and institutional variables were largely not statist
 \end{table}
 
 %%%%%%%% Elected Legislatures Results Table from 1990--Robustness
-\begin{table}
+\begin{table}[H]
 \caption{Legislative Violence Regression Results (Democratic Legislature from 1990-2012)}
 \label{outputTable.1990_2nd}
 \begin{center}
@@ -176,9 +177,9 @@ Results for other political and institutional variables were largely not statist
 \end{table}
 
 
-\subsection*{Interactions}
+\section*{Interactions}
 
-\todo{Section added}
+\todo[inline]{Section added}
 
 I examined a number of interactions between the article's key independent variables--lower disproportionality and democratic age--and a number of societal level and political variables. While I did not find evidence for additive relationships between most of the societal variables and legislative brawls, perhaps they mediate the effect of disproportionality or democratic age. For example, legislators in more homogenous societies might have fewer information asymmetries across partisan divides enabling them to establish credible commitments despite having a new democracy.
 
@@ -191,7 +192,7 @@ The substantive importance of these interactions is overall very weak. Though th
 
 For example, in the top-panel of Figure \ref{prop_interact} it appears that societies where self-expressive values are more prevalent, violence is more likely when there is high disproportionality. Perhaps, legislators in these societies
 
-The top-panel of Figure \ref{dem_interact} suggests that perhaps in new democracies violence is more likely when there is more ethnic fractionalisation. Credible commitment problems between ethnic groups could be particularly strong in these countries. The bottom panel suggests that maybe new democracies with more policy immobility are more likely to have violence.
+The top-panel of Figure \ref{dem_interact} suggests that perhaps in new democracies violence is more likely when there is more ethnic fractionalisation. Credible commitment problems between ethnic groups could be particularly strong in these countries. The bottom-panle of Figure \ref{dem_interact} suggests that high political constraints on policy change mediate the effect of democratic age on violence. Having more and more disperse veto players make it difficult for the current majority to enact policy change, improving their ability to make credible commitments.
 
 Again, it is important to reiterate that though these interactive effects have statistically significant terms, the substantive importance of these estimates for meaningful fitted values is very weak.
 
@@ -205,8 +206,9 @@ Again, it is important to reiterate that though these interactive effects have s
 <<PropInteractTable, warning=FALSE, echo=FALSE, message=FALSE, results='asis'>>=
     source('/git_repositories/leg_violence_paper1/Analysis/leg_interactions.R')
 
-    CoefNames <- c("Dem. Age (log)", "Majority Size",
+    CoefNames <- c("Majority Size", "Dem. Age (log)",
                    "Lower Disproportionality",
+                   "Lower Disp.*Dem. Age",
                    "Self Expression", "Lower Disp.*Self Expression",
                    "Ethnic Frac.",  "Lower Disp.*Ethnic Frac.",
                    "GINI", "Lower Disp.*GINI",
@@ -214,7 +216,7 @@ Again, it is important to reiterate that though these interactive effects have s
                    "Political Constraints", "Lower Disp.*Pol. Constraints",
                     "(Intercept)")
 
-    stargazer(DP1, DP2, DP3, DP4, DPC1,
+    stargazer(DP1_1, DP1, DP2, DP3, DP4, DPC1,
     dep.var.labels = 'Violent Incident',
     covariate.labels = CoefNames,
     float = F,
@@ -235,7 +237,8 @@ Again, it is important to reiterate that though these interactive effects have s
     \begin{center}
     \scalebox{0.7}{
 <<DemAgeInteractTable, warning=FALSE, echo=FALSE, message=FALSE, results='asis'>>=
-    CoefNames <- c("Lower Disproportionality", "Majority Size", "Dem. Age (log)",
+    CoefNames <- c("Majority Size", "Lower Disproportionality",
+                   "Dem. Age (log)",
                    "Self Expression", "Dem. Age*Self Expression",
                    "Ethnic Frac.",  "Dem. Age*Ethnic Frac.",
                    "GINI", "Dem. Age*GINI",
@@ -259,7 +262,7 @@ Again, it is important to reiterate that though these interactive effects have s
 
 \begin{figure}
     \begin{center}
-<<predProInteract, w1arning=FALSE, echo=FALSE, message=FALSE, results='hide', fig.width=7, fig.height=9, out.width='0.95\\linewidth', cache=FALSE>>=
+<<predProInteract, warning=FALSE, echo=FALSE, message=FALSE, results='hide', fig.width=7, fig.height=9, out.width='0.95\\linewidth', cache=FALSE>>=
     ## Create Graphs ##
     source("/git_repositories/leg_violence_paper1/Analysis/expected_values_interactions.R")
     grid.arrange(dp1_p, dp2_p, dp3_p,

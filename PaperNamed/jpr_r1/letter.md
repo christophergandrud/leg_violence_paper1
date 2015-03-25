@@ -47,6 +47,8 @@ P.S. The footnote numbering will automatically return to normal when we remove t
 
 > P 5 and 7: please name hypotheses ‘H1’ and ‘H2’.
 
+    - Added H1 and H2.
+
 > P. 6: ‘(Saideman, Lanoue and Stanton, 2002, 108)’ -> ‘(Saideman, Lanoue & Stanton, 2002: 108)’, here and throughout the ms.
 
 > P. 7: ‘(see Lijphart, 2007)’ -> ‘(Lijphart, 2007)’, here and throughout the ms.  
@@ -83,10 +85,35 @@ P.S. The footnote numbering will automatically return to normal when we remove t
 
     - In addition, I added to the Supplementary Materials a discussion of why the higher number of observed violent incidents later in the sample is likely largely the result of an increase in new democracies during that period rather than measurement error. [GET PAGE]
 
+---------
+
+# Joint concerns
+
+Both Reviewer 2 and 3 wonder whether legislators are concerned about legislative procedures or policy outcomes when deciding whether to brawl.
+
+I would argue, based on the prevailing understanding in legislative studies, that these are highly intertwined such that who controls the legislative procedures controls what bills pass the legislature. As such, legislators even those primarily concerned with policy outcomes will be highly influenced in their behaviour by credible commitments about legislative rules and use of legislative power.
+
+It is important to make an important distinction:
+
+1. It is well established in legislative studies work going back to at least Gary Cox's idea of the 'legislative cartel' that the ability to change legislative rules and pass legislation through a parliament are highly related. The actors that control what policies can reasonably be expected to pass the legislature correspond very closely to the set of actors that set the legislative procedures. Typically, legislative rules are altered by the same procedures that pass bills through the chamber. Think for example of the US Senate's filibuster that applies to both new legislation and rules about Senate rule-making.
+
+Furthermore, the credibility of policy outcomes is
+
+2. Ability to actually change laws, is much less related to the ability to change legislative rules. For example, there could be the votes in the US Senate to change the filibuster and pass a bill through the chamber that the majority wants, but to have the bill become and stay a law the US House, President and Supreme Court are needed.
+
+
+
+- These are interesting alternative considerations, but I do think that looking at the distribution of legislative resources is crucial. First, there is an empirical issue, if the distribution of resources didn't matter then we wouldn't find the results that we do in the paper's parametric models. Second, legislative outcomes, political outcomes (in democracies), and the crediblilty of these outcomes are strongly caused by the distribution of legislative resources. Looking exclusively at policy outcomes would therefore miss the underlying causal process behind outcomes. [FINISH] Furthermore, it would be very difficult at a large-n level to do this. We would have to somehow devise a measure of legislators' preferences and score policy outcomes in a way that is comparable. Though this possible on individual country cases, it would be quite an undertaking across the 100+ countries in the sample. Future research could certainly examine this issue however.
+
+---------
+
 # Reviewer 2
 
-> It seems like the key trigger that influences the credible commitment problem is a fear of the dominant group changing the legislative procedures in their half, rather than through simply policy implementation. . .
+> The two theoretical variables (age of democracy and proportionality) seem to be focused on explaining the credible mechanism related to control of the rules rather than altering the legislative procedures [outcomes?]. I wonder then whether these are separate influences on the credbile commitment mechanism (control of policy versus ability to alter the procedures), or whether they moderate the influence of the other. In the latter case, this would demand having some measure of the ability to alter procedures and then interacting it with the two theoretical variables.
 
+    - To operationalise how difficult it is to change policy I included Henisz's widely used measure of political constraints, which explicitly captures the feasibility of policy change.
+
+    In purely additive models it is not statistically significant, i.e. I did not find evidence that there is an aditive relationship between political constraints and legislative brawls.
 
 
 > 3. Relatedly, I wonder whether this piece can actually say something about the timing of political violence. As it stands, democracy age and proportionality are relatively static, at least within a legislative session. Yet, the case study shows that it is the exogenous shocks that interact with the institutions to determine political violence; “three shocks that were largely exogenous from the national legislature” (page 10). It is my reading that the model does a good job of explaining the baseline level (or average) of political violence in a country, but a poor job of explaining why political violence occurs over time. Explaining how societal influences change in the context of legislative procedures would produce a dynamic account of legislative violence. You get at this partially by including measures of exogenous shocks like GINI and ethnic fractionalization, but these are included additively rather than interactively.
@@ -134,6 +161,8 @@ P.S. The footnote numbering will automatically return to normal when we remove t
     - The plot now uses point rangers/ribbons to show the expected probabilities. This dramatically decreases the file size and increases legibility.
 
 
+---------
+
 # Reviewer 3
 
 > My first issue with the manuscript comes from the seemingly normative view that violence in the legislature is an indication of poor functioning. . . While I generally agree with the author(s) intuition that we generally do not want violence in these bodies, I would also be careful about attributing that as a sign of good or bad governance. I suspect that we could easily come up with numerous examples where violence was needed to accomplish outcomes. . .  violence in the international system is argued as simply being another type of bargaining behavior and not as some sign of a poorly functioning system. Why could violence at the domestic level be seen in a similar light as simply continuing the bargaining process in a different manner?
@@ -160,6 +189,8 @@ P.S. The footnote numbering will automatically return to normal when we remove t
 
     - The theoretical framework in this paper was strongly influenced by important recent contributions to understanding pre-election protest and violence primarily the work of Wilkinson, 2006; Beaulieu and Hyde, 2008; Beaulieu, 2014. Protests and violence around elections are probably the most similar substantive area to legislative violence. This work contends that election protests in particular are the result of bargaining breakdowns between governing elites and opposition groups. Factors that this literature proposes as causing bargaining breakdowns include credible commitment problems and misrepresentation of private information. My explanation of legislative violence builds on this directly. I extensively discuss how credible commitment problems can lead to violence and how democratic age can reveal information about opposing sides ability to credibly commit--i.e. helps ameliorate information asymmetries.
 
+    To stay within the journal's word limits I have added a brief discussion of a recent expressive theory of legislative disruption. [TO-DO] Though the original authors of this theory would likely view it as a competing hypothesis, I would actually argue that it is complementary. Using violence to acheive an expressive goal is more likely when commitments aren't credible. 
+
     In addition, Section 2, I detail a number of alternative approaches to explaining legislative violence, all of which have been informed by the literature and suggested to me in numerous conference presentations and discussions with colleagues. I then try to test these empirically, but have not found support for them. [THINK ABOUT]
 
 
@@ -171,17 +202,27 @@ P.S. The footnote numbering will automatically return to normal when we remove t
 
     It should be noted that I have kept the proposition that legislatures where legislative resources closely correspond to electoral support are less likely to have violence because actors do care about fairness. Though not all actors and not in all times care about fairness, the fact that many do is a very well established finding in the game theoretical literature and, importantly for this paper's theory, helps explain equilibria [THINK ABOUT]
 
->   Even if we assume those two are true (huge assumptions), why are we assuming that legislatures are looking at the distribution of legislative resources and not legislative outcomes or even political outcomes?
+>   why are we assuming that legislatures are looking at the distribution of legislative resources and not legislative outcomes or even political outcomes?
 
-    - These are interesting alternative considerations, but I do think that looking at the distribution of legislative resources is crucial. First, there is an empirical issue, if the distribution of resources didn't matter then we wouldn't find the results that we do in the paper's parametric models. Second, legislative outcomes, political outcomes (in democracies), and the crediblilty of these outcomes are strongly caused by the distribution of legislative resources. Looking exclusively at policy outcomes would therefore miss the underlying causal process behind outcomes. [FINISH] Furthermore, it would be very difficult at a large-n level to do this. We would have to somehow devise a measure of legislators' preferences and score policy outcomes in a way that is comparable. Though this possible on individual country cases, it would be quite an undertaking across the 100+ countries in the sample. Future research could certainly examine this issue however.
+    - Please see my comments above--in "Joint Concerns".
+
+> Would there not be a more dynamic process that takes into account deviations from expectations and not simply deviations from some pre-defined level?  The author(s) get at this a little with the old versus new democracy argument but it gets tangled up with the discussion of fairness.  I would simply talk about this as a more dynamic process and then the old versus new division seems a lot more intuitive.
+
+    - I have altered the discussion to reflect this. [TO-DO]
+
+
+> In addition, if these are linked then would there not be an interactive effect?
+
+    - I have added estimates from a model interacting these two variables (page [GET]). None of the terms in the interaction are significant. It is unclear what conclusions we can draw from this finding, especially (as discussed on page [GET]) as it is well-established in the statistical literature that it can be difficult to find meaningful interactions in data sets with relatively small numbers of events. As such, more research is likely needed in the future when longer-time series become available.
+
 
 > I am not sure what the case study does theoretically or empirically.
 
     - An important reason (which I have further highlighted in the text [TO-DO]) that the US ante-bellum brawl is theoretically interesting is related to your following question regarding western cultural norms. Though it is difficult to gather information on violence in older legislatures, the case discussed highlights that there are prominent examples of violence in Western democracies when they were younger--as the paper predicts.
 
-    - I certainly agree that one case does not prove the theory, that is exactly why I use the case to illustrate the theorised process and with the bulk of the evidence built on the large-n parametric models.  
+    - I certainly agree that one case does not prove the theory, that is exactly why I use the case to illustrate the theorised process and with the bulk of the evidence built on the large-n parametric models. Nonetheless, many readers greatly appreciate illustrative case studies that add 'meat' to statistical 'bones'.
 
-    Following the editor's request, I have strengthened the reasons for including the case study in the text [TO-DO, GET PAGE]
+    Following the editor's request, I have strengthened the discussion of these reasons for including the case study in the text [TO-DO, GET PAGE]
 
 > Western democracies seem to stick out as the only democracies that do not experience violence.  Is this a cultural norm that has developed and being exported globally?  Obviously this is an empirical question but it is hard to ignore how western democracies stand out.
 
@@ -192,11 +233,18 @@ P.S. The footnote numbering will automatically return to normal when we remove t
     This causal story, rather than a simple norm diffusion model, then also explains why the non-violence norm has not easily diffused to new democracies. Though perhaps the presence of such a norm may speed the resolution of credible commitment problems in new democracies, the fact that violence still regularly occurs in new democracies indicates that credible commitment problems remain an issue.  
 
 
-> is the violence a reaction to the disproportion or is the violence being used to create the disproportion?  The author(s) assume that it is those who do not have their fair share as acting out against it but why should we assume that?  Could the violence be the source of the “unfairness.” In addition, why assume there is only one cause.  Could it not be the case that sometimes it is creating and others the cause in which case the question is when these happen?
+> is the violence a reaction to the disproportion or is the violence being used to create the disproportion?  The author(s) assume that it is those who do not have their fair share as acting out against it but why should we assume that?  
 
-    - I think the reviewer and I are actually in close agreement on this. As discussed in the theory section, violence may be both used by those who wish to have legislative resources more closely align with electoral support *and* by those who wish to preserve imbalances.  
+    - I think the reviewer and I are actually in close agreement on this. As discussed in the theory section, violence may be *both* used by those who wish to have legislative resources more closely align with electoral support *and* by those who wish to preserve imbalances.  
 
     - One point of disagreement is that in highly proportional systems it does not appear--at least in this sampling period--that parties using violence to increase disproportionality is common. For example, The only case of violence in a highly proportional country--South Africa [FINISH]
+
+> Could the violence be the source of the “unfairness.” In addition, why assume there is only one cause.  Could it not be the case that sometimes it is creating and others the cause in which case the question is when these happen?
+
+    - This is an interesting proposition. Though, I believe that the current analysis actually addresses this issue. If violence was being used to maintain/fight against disproportionate outcomes *and* create disproportionate outcomes in presently more proportional systems then the Lower Disproportionality variable would be statistically insignificant. I.e. their would not be a difference in brawls between proportionate and non-proportionate systems.
+
+    This, actually lends support to the idea that legislatures are able to achieve 'fairness equilibria'. Otherwise, we would have seen a cycling of violence where commitments are not credible in proportionate or disprortionate legislatures. I have added a discussion of this to the theory section. [TO-DO]
+
 
 > I think the author(s) need more fine grained data in order to determine who is instigating the violence to answer these questions but they seem critical as only one supports the theoretical argument.
 
