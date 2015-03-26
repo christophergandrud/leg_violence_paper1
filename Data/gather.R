@@ -234,7 +234,7 @@ disprop <- import('http://bit.ly/Ss6zDO', format = 'csv') %>%
 
 # Create disproportionality threshold variable where 1 < 5.76
 disprop$high_prop <- 0
-disprop$high_prop[disprop$disproportionality < 5.76] <- 1
+disprop$high_prop[disprop$disproportionality < 6.34] <- 1
 disprop$high_prop[is.na(disprop$high_prop)] <- NA
 
 disprop <- disprop[!duplicated(disprop[, c('iso2c', 'year')]),]

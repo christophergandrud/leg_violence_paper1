@@ -23,7 +23,6 @@ source('Analysis/sim_strip.R')
 high_prop.r <- c(0, 1)
 dem.r <- seq(from = 1, to = 86, by = 5)
 
-
 #### Prop*Self Expression ####
 # High self expression
 dp1_fitted_high <- setx(DP1, high_prop = high_prop.r, cw_surv_self_expr = 1.35)
@@ -43,8 +42,8 @@ dp1_p <- ggplot(dp1_comb, aes(fitted, Median, ymin = Min_CI, ymax = Max_CI,
     geom_line() +
     scale_color_grey(name = 'Self\n Expr.') +
     scale_x_reverse(breaks = c(0, 1), labels = c("Above", "Below Median")) +
-    scale_y_continuous(breaks = c(0, 0.05, 0.1),
-                       limits = c(0, 0.17)) +
+    scale_y_continuous(breaks = c(0, 0.05, 0.1, 0.15, .2),
+                      limits = c(0, 0.2)) +
     xlab("") + ylab("") +
     theme_bw(base_size = 12)
 
@@ -67,32 +66,8 @@ dp2_p <- ggplot(dp2_comb, aes(fitted, Median, ymin = Min_CI, ymax = Max_CI,
     geom_line() +
     scale_color_grey(name = 'Ethnic\n Frac.') +
     scale_x_reverse(breaks = c(0, 1), labels = c("Above", "Below Median")) +
-   # scale_y_continuous(breaks = c(0, 0.05, 0.1),
-   #                    limits = c(0, 1)) +
-    xlab("") + ylab("") +
-    theme_bw(base_size = 12)
-
-#### Prop*GINI ####
-# High Inequality
-dp3_fitted_high <- setx(DP3, high_prop = high_prop.r, gini = 0.6)
-dp3_sum_high <- sim_strip(DP3, dp3_fitted_high, high_prop.r)
-dp3_sum_high$x2 <- 'high'
-
-# Low Inequality
-dp3_fitted_low <- setx(DP3, high_prop = high_prop.r, gini = 0.2)
-dp3_sum_low <- sim_strip(DP3, dp3_fitted_low, high_prop.r)
-dp3_sum_low$x2 <- 'low'
-
-dp3_comb <- rbind(dp3_sum_high, dp3_sum_low)
-
-dp3_p <- ggplot(dp3_comb, aes(fitted, Median, ymin = Min_CI, ymax = Max_CI,
-                              colour = x2)) +
-    geom_pointrange(size = 1, alpha = 0.5) +
-    geom_line() +
-    scale_color_grey(name = 'Inequality\n (gini)') +
-    scale_x_reverse(breaks = c(0, 1), labels = c("Above", "Below Median")) +
-    # scale_y_continuous(breaks = c(0, 0.05, 0.1),
-    #                    limits = c(0, 1)) +
+    scale_y_continuous(breaks = c(0, 0.05, 0.1, 0.15, .2),
+                       limits = c(0, 0.2)) +
     xlab("\nDisproportionality") + ylab("") +
     theme_bw(base_size = 12)
 
@@ -144,6 +119,6 @@ dpc2_p <- ggplot(dpc2_comb, aes(fitted, Median, ymin = Min_CI, ymax = Max_CI,
     xlab("\nAge of Democracy") + ylab("") +
     theme_bw(base_size = 12)
 
-# grid.arrange(dp1_p, dp2_p, dp3_p)
+# grid.arrange(dp1_p, dp2_p)
 
 # grid.arrange(dp6_p, dpc2_p)
