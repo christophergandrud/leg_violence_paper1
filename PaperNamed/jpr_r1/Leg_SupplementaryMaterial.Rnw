@@ -187,16 +187,16 @@ Tables \ref{prop_interact} and \ref{dem_interact} provide the raw estimates from
 
 As in the main article, in order to evaluate the substantive significance of these findings I simulated expected probabilities for interactions that included statistically significant terms at the 5\% level and higher. I then plotted them in figures \ref{interact_plots1} and \ref{interact_plots2}.\footnote{See Figure \ref{marginal_effect_plot} for marginal effects \citep{Brambor2006}. The substantive importance of the interactions is not conveyed as effectively in these plots. In addition, while the interaction between lower disproportionality and the Gini coefficient contains significant terms at the 5\% level the effect is substantively meaningless and is not plotted.} The plots show expected probabilities for various levels of low disproportionality and democratic age at `high' and `low' values of the other variables in the interactions. Self-expression was high at 1.35 and low at 1.1. Ethnic fractionalization was high at 0.8 and low at 0.1. Finally, political constraints were high at 0.7 and low at 0.1. These fitted values are close to the variables' minimum and maximum values to enable the largest meaningful contrasts.
 
-The substantive importance of these interactions is overall very weak. Plots of the simulations illustrate that there is considerable overlap in the uncertainty surrounding most of the estimates for substantively meaningful fitted values. This is especially true for interactions with the low disproportionality variable. To the extent that the estimates are suggestive of true interactive effects, overall it appears that factors creating credible commitment problems in new democracies are worsened by ethnic divisions and few constraints on altering policy.
+The substantive importance of these interactions is overall very weak. Plots of the simulations illustrate that there is considerable overlap in the uncertainty surrounding most of the estimates for substantively meaningful fitted values. This is especially true for interactions with the low disproportionality variable. To the extent that the estimates are suggestive of true interactive effects, overall it appears that factors creating credible commitment problems in new democracies are worsened by ethnic divisions and few constraints on altering policy. The top-panel of Figure \ref{dem_interact} suggests that perhaps in new democracies violence is more likely when there is more ethnic fractionalisation. Credible commitment problems between ethnic groups could be particularly strong in these countries. The bottom-panel of Figure \ref{dem_interact} suggests that high political constraints on policy change mediate the effect of democratic age on violence. Having more and more disperse veto players make it difficult for the current majority to enact policy change, perhaps improving their ability to make credible commitments.
 
-The top-panel of Figure \ref{dem_interact} suggests that perhaps in new democracies violence is more likely when there is more ethnic fractionalisation. Credible commitment problems between ethnic groups could be particularly strong in these countries. The bottom-panel of Figure \ref{dem_interact} suggests that high political constraints on policy change mediate the effect of democratic age on violence. Having more and more disperse veto players make it difficult for the current majority to enact policy change, perhaps improving their ability to make credible commitments. In both cases the median expected probability of a brawl in a given year is almost 20 percent for very young democracies. This is more than twice the median expected probability of violence in new democracies for the purely additive model show in this article's main text. It is important to reiterate, though that the overlap in these simulated effects is considerable.
+It is important to reiterate that though these interactive effects have statistically significant terms, the substantive importance of these estimates for meaningful fitted values is very weak.
 
 \begin{figure}
     \begin{center}
 <<predProInteract1, warning=FALSE, echo=FALSE, message=FALSE, results='hide', fig.width=7, fig.height=7, out.width='0.95\\linewidth', cache=FALSE>>=
     ## Estimate models
     source('/git_repositories/leg_violence_paper1/Analysis/leg_interactions.R')
-
+    
     ## Create Graphs ##
     source("/git_repositories/leg_violence_paper1/Analysis/expected_values_interactions.R")
     grid.arrange(dp1_p, dp2_p,
@@ -292,7 +292,7 @@ The top-panel of Figure \ref{dem_interact} suggests that perhaps in new democrac
 <<marginalEffects, warning=FALSE, echo=FALSE, message=FALSE, results='hide', fig.width=6, fig.height=6, out.width='0.95\\linewidth', cache=FALSE>>=
     ## Create Graphs ##
     source('/git_repositories/leg_violence_paper1/Analysis/interaction_marginal_effects.R')
-@
+@    
     \end{center}
     \caption{Marginal Effects of Lower Disproportionality and Democratic Age Given Representive Ranges of Interaction Variables}
     \label{marginal_effect_plot}
@@ -301,6 +301,37 @@ The top-panel of Figure \ref{dem_interact} suggests that perhaps in new democrac
     \end{singlespace}
 \end{figure}
 
+
+\section*{Ethnic fractionalization list-wise inclusion}
+
+\todo[inline]{Section added.}
+
+Table \ref{results_frac} shows models with ethnic fractionalization where key variables from the analysis are list-wise included. Ethnic fractionalization is statistically significantly associated with violence at the 10\% level in two of these models. However, there are a number of reasons to be very sceptical of this result. First, the direction of the estimated effect runs strongly counter to our expectations in that more fractionalization is assocated with \emph{less} legislative violence. Second, the effect is highly model dependent as it is not significant at the 10\% level when lower disproportionality is included or in a model by itself. 
+
+\begin{table}[H]
+    \caption{Ethnic Fractionalisation list-wise inclusion (Democracies 1990-2012)}
+    \label{results_frac}
+    \begin{center}
+\scalebox{0.7}{
+<<FracTable, warning=FALSE, echo=FALSE, message=FALSE, results='asis'>>=
+    source('/git_repositories/leg_violence_paper1/Analysis/leg_frac.R')
+    CoefNames <- c("Ethnic Frac.", "Dem. Age (log)", "Majority Size",
+                   "Lower Disproportionality",
+                "(Intercept)")
+
+    stargazer(F1, F2, F3, F4,
+    dep.var.labels = 'Violent Incident',
+    covariate.labels = CoefNames,
+    float = F,
+    out.header = F,
+    notes.append = T,
+    notes.align = 'l',
+    notes = 'Standard errors are in parentheses. All models use robust (WEAVE) standard errors.',
+    notes.label = '')
+@
+}    
+    \end{center}
+\end{table}
 
 %%%%%%%%%%%%%%%%%%%%%% Figures Start %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
