@@ -196,7 +196,7 @@ It is important to reiterate that though these interactive effects have statisti
 <<predProInteract1, warning=FALSE, echo=FALSE, message=FALSE, results='hide', fig.width=7, fig.height=7, out.width='0.95\\linewidth', cache=FALSE>>=
     ## Estimate models
     source('/git_repositories/leg_violence_paper1/Analysis/leg_interactions.R')
-    
+
     ## Create Graphs ##
     source("/git_repositories/leg_violence_paper1/Analysis/expected_values_interactions.R")
     grid.arrange(dp1_p, dp2_p,
@@ -292,7 +292,7 @@ It is important to reiterate that though these interactive effects have statisti
 <<marginalEffects, warning=FALSE, echo=FALSE, message=FALSE, results='hide', fig.width=6, fig.height=6, out.width='0.95\\linewidth', cache=FALSE>>=
     ## Create Graphs ##
     source('/git_repositories/leg_violence_paper1/Analysis/interaction_marginal_effects.R')
-@    
+@
     \end{center}
     \caption{Marginal Effects of Lower Disproportionality and Democratic Age Given Representive Ranges of Interaction Variables}
     \label{marginal_effect_plot}
@@ -306,7 +306,7 @@ It is important to reiterate that though these interactive effects have statisti
 
 \todo[inline]{Section added.}
 
-Table \ref{results_frac} shows models with ethnic fractionalization where key variables from the analysis are list-wise included. Ethnic fractionalization is statistically significantly associated with violence at the 10\% level in two of these models. However, there are a number of reasons to be very sceptical of this result. First, the direction of the estimated effect runs strongly counter to our expectations in that more fractionalization is assocated with \emph{less} legislative violence. Second, the effect is highly model dependent as it is not significant at the 10\% level when lower disproportionality is included or in a model by itself. 
+Table \ref{results_frac} shows models with ethnic fractionalization where key variables from the analysis are list-wise included. Ethnic fractionalization is statistically significantly associated with violence at the 10\% level in two of these models. However, there are a number of reasons to be very sceptical of this result. First, the direction of the estimated effect runs strongly counter to our expectations in that more fractionalization is assocated with \emph{less} legislative violence. Second, the effect is highly model dependent as it is not significant at the 10\% level when lower disproportionality is included or in a model by itself.
 
 \begin{table}[H]
     \caption{Ethnic Fractionalisation list-wise inclusion (Democracies 1990-2012)}
@@ -329,7 +329,7 @@ Table \ref{results_frac} shows models with ethnic fractionalization where key va
     notes = 'Standard errors are in parentheses. All models use robust (WEAVE) standard errors.',
     notes.label = '')
 @
-}    
+}
     \end{center}
 \end{table}
 

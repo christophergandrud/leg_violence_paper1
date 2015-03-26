@@ -31,7 +31,7 @@ P.S. The footnote numbering will automatically return to normal when we remove t
 
 > Explain ‘disproportionate electoral outcomes’ in the abstract and earlier in the introduction.
 
-    - I added a straighforward explanation of disproportionate electoral outcomes in the abstract and introduction.
+    - I added a straightforward explanation of disproportionate electoral outcomes in the abstract and introduction.
 
 > P. 1: ‘Actual, sword fights…’ -> ‘Actual sword fights…’
 
@@ -89,23 +89,19 @@ P.S. The footnote numbering will automatically return to normal when we remove t
 
 # Joint concerns
 
-Both Reviewer 2 and 3 wonder whether legislators are concerned about legislative procedures or policy outcomes when deciding whether to brawl. Reviewer 2 mentions: " I wonder ... whether these are separate influences on the credbile commitment mechanism (control of policy versus ability to alter the procedures), or whether they moderate the influence of the other". Reviewer 3 asks: "why are we assuming that legislatures are looking at the distribution of legislative resources and not legislative outcomes or even political outcomes?"
+Both Reviewer 2 and 3 wonder whether legislators are concerned about legislative procedures or policy outcomes when deciding whether to brawl. Reviewer 2 mentions: " I wonder ... whether these are separate influences on the credible commitment mechanism (control of policy versus ability to alter the procedures), or whether they moderate the influence of the other". Reviewer 3 asks: "why are we assuming that legislatures are looking at the distribution of legislative resources and not legislative outcomes or even political outcomes?"
 
-    I would argue, based on the prevailing understanding in legislative studies--in particular Cox's  'legislative cartel'--that these are highly intertwined such that who controls the legislative procedures controls what bills pass the legislature. Cox showed, for example, how important control of the legislative session's agenda was to affecting what bills pass. As such legislators, even those primarily concerned with policy outcomes, will be highly influenced in their behaviour by credible commitments about legislative rules and use of legislative resources.
 
+    My summary response: Overall, control over legislative procedures and control over legislative policy outcomes are very similar. As such I have altered the wording in the paper to show that credible commitment problems are typically related to both. Who controls the procedures often controls the policy outcomes. And policy outcomes can affect who controls the procedures in the future.
+
+    That being said, I have tried to control for how easy it is to change policy outcomes (not simply legislative outcomes) by adding in Henisz's Political Constraints variable. In additive models, this was not significant. There is (weak) evidence that perhaps credible commitment problems can be lessened in new democracies when it is harder to change policy.
+
+
+    Explanation of the entanglement of control of legislative procedures/control of policy outcomes: I would argue, based on the prevailing understanding in legislative studies--in particular Cox's  'legislative cartel'--that these are highly intertwined such that who controls the legislative procedures controls what bills pass the legislature. Cox showed, for example, how important control of the legislative session's agenda was to affecting what bills pass. As such legislators, even those primarily concerned with policy outcomes, will be highly influenced in their behaviour by credible commitments about legislative rules and use of legislative resources.
 
     It becomes even more difficult to separate the two given that policy outcomes, not directly related to legislative procedures can affect future distributions of legislative procedural power. For example, a recent brawl in South Korea was over media ownership rights. Allowing greater consolidation of media ownership, many feared would politically advantage the main right-wing governing party. The US case study in the article is another case in point. An end to slavery and the introduction of voting rights for African Americans would effectively end slave owning politicians' legislative power in the future.  
 
-
-    - To operationalise how difficult it is to change policy I included Henisz's widely used measure of political constraints, which explicitly captures the feasibility of policy change.
-
-    In purely additive models it is not statistically significant, i.e. I did not find evidence that there is an adittive relationship between political constraints and legislative brawls.
-
-
-
-
-
-- These are interesting alternative considerations, but I do think that looking at the distribution of legislative resources is crucial. First, there is an empirical issue, if the distribution of resources didn't matter then we wouldn't find the results that we do in the paper's parametric models. Second, legislative outcomes, political outcomes (in democracies), and the crediblilty of these outcomes are strongly caused by the distribution of legislative resources. Looking exclusively at policy outcomes would therefore miss the underlying causal process behind outcomes. [FINISH] Furthermore, it would be very difficult at a large-n level to do this. We would have to somehow devise a measure of legislators' preferences and score policy outcomes in a way that is comparable. Though this possible on individual country cases, it would be quite an undertaking across the 100+ countries in the sample. Future research could certainly examine this issue however.
+    That being said, control over what passes in the legislature is not necessarily the same thing as who controls policy outcomes, especially if there are external veto players (e.g. presidents or judiciaries). To operationalise how difficult it is to change policy I included Henisz's widely used measure of political constraints, which explicitly captures the feasibility of policy change. In purely additive models it is not statistically significant, i.e. I did not find evidence that there is an addittive relationship between political constraints and legislative brawls. In a new Interactions section in the Supplemental Materials (page [GET]) I discuss some evidence that perhaps there is an interaction between political constraints and democratic age, such that more political constraints could help overcome credible commitment problems in new democracies. Current losers may be less worried that the current winners can change the rules/implement policies that shift or entrench power in their favour.
 
 ---------
 
@@ -118,7 +114,21 @@ Both Reviewer 2 and 3 wonder whether legislators are concerned about legislative
 
 > 2. Proportionality and democratic age are not themselves the cause of political violence, but are instead merely proxies for what is going on in the society as a whole, or as the author puts it, “large rapid demographic and party system shifts” (page 6). This might be the reason why a measure of societal differences (ethnic fractionalization) is significant in some of the models (as noted on page 20).
 
-    - I would disagree with this interpretation of the findings. As mentioned in the paper ([GET PAGE]), the expectation would be that the societal variables would at least be associated with violence in models without the proportionality/democratic agevariables. This is not the case. Estimates where ethnic fractionalization is statistical significant (at the 10% level) are highly model dependent, such that they are not found in models with only ethnic fractionalization or when proportionality is included.  
+    - The empirical results do not really support this interpretation. As mentioned in the paper ([GET PAGE]), the expectation would be that the societal variables would at least be associated with violence in models without the proportionality/democratic age variables if they were the underlying cause of violence. This is not the case.
+
+    A new section/table added to the Supplemental Materials shows and discusses models with ethnic fractionalisation and other key variables list-wise added. In a model by itself, the variable is highly statistically insignificant.  Estimates where ethnic fractionalization is statistically significant (at the 10% level) are highly model dependent Not only are they not found in models with only ethnic fractionalization but also when proportionality is included.  
+
+    Furthermore, the coefficient estimate, regardless of level of statistical significance, are negative. I.e. more fractionalization is associated with less violence. This is strongly counter to expectations. Given that the estimates are (a) not found in models without the disproportionality finding, (b) weakly statistically significant results are highly model dependent, and (c) run counter to expectations it is reasonable to conclude that this paper has found no evidence that age of democracy and proportionality are merely proxies for ethnic fractionalisation when it comes to causing legislative violence.
+
+    There are two further points to make when thinking this issue:
+
+    - First, despite these null findings, perhaps societal factors cause changes in proportionality and democratic regime age.
+
+    - Second, maybe societal factors interact with democratic age/proportionality to affect outcomes.
+
+    On the first point, this would be a different causal story. Society causes -> Dem age/proportionality causes -> credible commitment problems -> legislative violence. This is a very interesting issue and surely occurs as is demonstrated in the US case study. However, a detailed investigation of this complex stage of the process is better served with its own research. Additionally, as discussed more below, these societal factors often change very slowly, especially relative to the length of the sample available. Given this, such an investigation of the multi-step causal chain it is infeasible to investigate in this single article.
+
+    See below for a discussion of the second possibility.
 
 > 3. Relatedly, I wonder whether this piece can actually say something about the timing of political violence. As it stands, democracy age and proportionality are relatively static, at least within a legislative session. Yet, the case study shows that it is the exogenous shocks that interact with the institutions to determine political violence; “three shocks that were largely exogenous from the national legislature” (page 10). It is my reading that the model does a good job of explaining the baseline level (or average) of political violence in a country, but a poor job of explaining why political violence occurs over time. Explaining how societal influences change in the context of legislative procedures would produce a dynamic account of legislative violence. You get at this partially by including measures of exogenous shocks like GINI and ethnic fractionalization, but these are included additively rather than interactively.
 
@@ -221,9 +231,11 @@ Both Reviewer 2 and 3 wonder whether legislators are concerned about legislative
 
     - An important reason (which I have further highlighted in the text [TO-DO]) that the US ante-bellum brawl is theoretically interesting is related to your following question regarding western cultural norms. Though it is difficult to gather information on violence in older legislatures, the case discussed highlights that there are prominent examples of violence in Western democracies when they were younger--as the paper predicts.
 
-    - I certainly agree that one case does not prove the theory, that is exactly why I use the case to illustrate the theorised process and with the bulk of the evidence built on the large-n parametric models. Nonetheless, many readers greatly appreciate illustrative case studies that add 'meat' to statistical 'bones'.
+    - I certainly agree that one case does not prove the theory, that is exactly why I use the case to illustrate and demonstrate the basic plausibility of the theorised process. The bulk of the evidence for the paper is built on the large-n parametric models. Nonetheless, many readers greatly appreciate illustrative case studies that add plausible 'meat' to statistical 'bones'.
 
-    Following the editor's request, I have strengthened the discussion of these reasons for including the case study in the text [TO-DO, GET PAGE]
+    - Reviewer 2 is very interested in understanding how societal factors may influence factors such as proportionality and democratic age and in turn their influence on brawls. For reasons that I discuss above such, primarily the typical slowness of societal changes, this is very difficult to effectively investigate in the large-n study. Though the case study is by no means a definitive investigation of these complex relationships, it does provide an early glimpse into how they may work.
+
+    As such, following the editor's request I have strengthened the discussion of these reasons for including the case study in the text [TO-DO, GET PAGE]
 
 > Western democracies seem to stick out as the only democracies that do not experience violence.  Is this a cultural norm that has developed and being exported globally?  Obviously this is an empirical question but it is hard to ignore how western democracies stand out.
 
@@ -244,7 +256,7 @@ Both Reviewer 2 and 3 wonder whether legislators are concerned about legislative
 
     - This is an interesting proposition. Though, I believe that the current analysis actually addresses this issue. If violence was being used to maintain/fight against disproportionate outcomes *and* create disproportionate outcomes in presently more proportional systems then the Lower Disproportionality variable would be statistically insignificant. I.e. their would not be a difference in brawls between proportionate and non-proportionate systems.
 
-    This, actually lends support to the idea that legislatures are able to achieve 'fairness equilibria'. Otherwise, we would have seen a cycling of violence where commitments are not credible in proportionate or disprortionate legislatures. I have added a discussion of this to the theory section. [TO-DO]
+    This, actually lends support to the idea that legislatures are able to achieve 'fairness equilibria'. Otherwise, we would have seen a cycling of violence where commitments are not credible in proportionate or disproportionate legislatures. I have added a discussion of this to the theory section. [TO-DO]
 
 
 > I think the author(s) need more fine grained data in order to determine who is instigating the violence to answer these questions but they seem critical as only one supports the theoretical argument.
