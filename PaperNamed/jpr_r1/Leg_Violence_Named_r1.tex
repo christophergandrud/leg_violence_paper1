@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Two Sword Lengths Apart
-% 27 March 2015
+% 30 March 2015
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % !Rnw weave = knitr
@@ -226,7 +226,7 @@ It's unclear if, at all, the size of the legislative majority, legislative immun
 %%%%%%%%%%%%%% Describing violence in National Legislatures
 \section{Describing Violence in National Legislative Chambers Around the World (1981-2012)}
 
-In order to further systematically explore the causes of legislative violence across the contemporary globe I primarily used the Google News Archive \citep{GoogleNews2011}, which has a global coverage of news sources, \add{as well as Google Search and Youtube searchs} to create a data set of {\emph{physical fights between legislators in national legislative chambers}}.\footnote{The Google News Archive search was conducted in Spring 2011. A research assistant and I searched using terms that included `national' `parliament', `legislature', `assembly', `brawls', `scuffles', `fights'. \add{This search was later supplemented in 2013-2015 by two other research assistants conducting Google and Youtube searches with these keywords. Youtube is a particularly useful resource for detailed video data on the size and dynamics of legislative brawls. In future research I aim to use this detailed data to study the dynamics of brawls once they happen. At this point it is useful to note that each brawl can be considered a single event. Though brawl intensity varies over the course of the brawl as more or fewer legislators are involved, they tend to center around the same issue on the same day. Therefore I treat each brawl as a single event per day.}} \change{This search was}{These searches were} supplemented by information from colleagues resulting in a data set of \change{91}{107} incidents of legislative violence in \change{32}{34} countries with elected multi-party national legislative chambers between 1981 and \change{Winter 2011}{2012}. We can see in Figure \ref{leg_map} that these events have occurred in many regions around the world. They do not appear to be confined to any one cultural group or region as a simple regional culture explanation would predict. Violence is nonetheless not evenly distributed across countries as we might expect if it was purely the result of legislators with violent personalities. Although I observed \change{32}{34} countries having legislative violence, about \change{60}{55} percent of these fights occurred in eight countries with four or more legislative brawls. These countries include\add{:} \change{Ukraine, Mexico, South Korea, and Taiwan}{Georgia, India, South Korea, Mexico, Nepal, Russia, Taiwan, and Ukraine}.
+In order to further systematically explore the causes of legislative violence across the contemporary globe I primarily used the Google News Archive \citep{GoogleNews2011}, which has a global coverage of news sources, \add{as well as , LexisNexis, NewsLibrary, NewsBank, general Google Search, and Youtube searchs} to create a data set of {\emph{physical fights between legislators in national legislative chambers}}.\footnote{The Google News Archive search was conducted in Spring 2011. A research assistant and I searched using terms that included `national' `parliament', `legislature', `assembly', `brawls', `scuffles', `fights'. \add{This search was later supplemented in 2013-2015 by two other research assistants conducting LexisNexis, NewsLibrary, NewsBank, general Google, and Youtube searches with these keywords. Youtube is a particularly useful resource for detailed video data on the size and dynamics of legislative brawls. In future research I aim to use this detailed data to study the dynamics of brawls once they happen. At this point it is useful to note that each brawl can be considered a single event. Though brawl intensity varies over the course of the brawl as more or fewer legislators are involved, they tend to center around the same issue on the same day. Therefore I treat each brawl as a single event per day.}} \change{This search was}{These searches were} supplemented by information from colleagues resulting in a data set of \change{91}{106} incidents of legislative violence in \change{32}{34} countries with elected multi-party national legislative chambers between 1981 and \change{Winter 2011}{2012}. We can see in Figure \ref{leg_map} that these events have occurred in many regions around the world. They do not appear to be confined to any one cultural group or region as a simple regional culture explanation would predict. Violence is nonetheless not evenly distributed across countries as we might expect if it was purely the result of legislators with violent personalities. Although I observed \change{32}{34} countries having legislative violence, about \change{60}{55} percent of these fights occurred in eight countries with four or more legislative brawls. These countries include\add{:} \change{Ukraine, Mexico, South Korea, and Taiwan}{Georgia, India, South Korea, Mexico, Nepal, Russia, Taiwan, and Ukraine}.
 
 Before moving on to the regression analysis it is useful to first examine the simple associations between proportional electoral outcomes, democratic age, and violence in this data. Figure \ref{framework_empirical} plots variables measuring these concepts in the entire sample of countries. In the following parametric analysis we will only look at multi-party elected legislatures. Each point represents a country-year. It's notable that virtually every observed incidence of violence took place in legislatures with more disproportionate seat distributions. Similarly, older democracies (approximately 55 years or older) were never observed having legislative brawls in the chamber. See below for details about how disproportionality and democratic age are measured.
 
@@ -317,7 +317,7 @@ Finally, I subsetted the sample to include only democracies defined as country-y
 \scalebox{0.8}{
 
 % Table created by stargazer v.5.1 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
-% Date and time: Sat, Mar 28, 2015 - 08:20:09
+% Date and time: Mon, Mar 30, 2015 - 17:15:26
 \begin{tabular}{@{\extracolsep{5pt}}lccccccc} 
 \\[-1.8ex]\hline 
 \hline \\[-1.8ex] 
@@ -326,40 +326,40 @@ Finally, I subsetted the sample to include only democracies defined as country-y
 \\[-1.8ex] & \multicolumn{7}{c}{Violent Incident} \\ 
 \\[-1.8ex] & (1) & (2) & (3) & (4) & (5) & (6) & (7)\\ 
 \hline \\[-1.8ex] 
- Lower Disproportionality & $-$0.621$^{**}$ & $-$0.678$^{**}$ & $-$0.683$^{**}$ & $-$0.680$^{**}$ & $-$0.660$^{**}$ & $-$0.571$^{*}$ & $-$0.672$^{**}$ \\ 
-  & (0.273) & (0.274) & (0.274) & (0.276) & (0.275) & (0.304) & (0.274) \\ 
+ Lower Disproportionality & $-$0.591$^{**}$ & $-$0.645$^{**}$ & $-$0.649$^{**}$ & $-$0.643$^{**}$ & $-$0.624$^{**}$ & $-$0.533$^{*}$ & $-$0.637$^{**}$ \\ 
+  & (0.274) & (0.275) & (0.275) & (0.276) & (0.275) & (0.305) & (0.275) \\ 
   & & & & & & & \\ 
- Dem. Age (log) & $-$0.274$^{**}$ & $-$0.282$^{**}$ & $-$0.281$^{**}$ & $-$0.286$^{**}$ & $-$0.280$^{**}$ & $-$0.339$^{**}$ & $-$0.293$^{**}$ \\ 
-  & (0.111) & (0.113) & (0.112) & (0.113) & (0.112) & (0.136) & (0.114) \\ 
+ Dem. Age (log) & $-$0.292$^{***}$ & $-$0.300$^{***}$ & $-$0.299$^{***}$ & $-$0.302$^{***}$ & $-$0.297$^{***}$ & $-$0.362$^{***}$ & $-$0.311$^{***}$ \\ 
+  & (0.111) & (0.114) & (0.113) & (0.114) & (0.112) & (0.137) & (0.115) \\ 
   & & & & & & & \\ 
- Majority Size &  & $-$0.027$^{***}$ & $-$0.027$^{***}$ & $-$0.027$^{***}$ & $-$0.025$^{***}$ & $-$0.026$^{**}$ & $-$0.027$^{***}$ \\ 
+ Majority Size &  & $-$0.025$^{***}$ & $-$0.025$^{***}$ & $-$0.025$^{***}$ & $-$0.024$^{***}$ & $-$0.024$^{**}$ & $-$0.025$^{***}$ \\ 
   &  & (0.009) & (0.009) & (0.009) & (0.009) & (0.010) & (0.009) \\ 
   & & & & & & & \\ 
- Internal Armed Conflict &  &  & 0.548 & 0.508 & 0.524 & 0.504 & 0.556$^{*}$ \\ 
-  &  &  & (0.334) & (0.337) & (0.334) & (0.374) & (0.335) \\ 
+ Internal Armed Conflict &  &  & 0.456 & 0.425 & 0.431 & 0.398 & 0.466 \\ 
+  &  &  & (0.345) & (0.348) & (0.345) & (0.388) & (0.346) \\ 
   & & & & & & & \\ 
- Leg. Immunity &  &  &  & $-$0.061 &  &  &  \\ 
-  &  &  &  & (0.267) &  &  &  \\ 
+ Leg. Immunity &  &  &  & $-$0.027 &  &  &  \\ 
+  &  &  &  & (0.269) &  &  &  \\ 
   & & & & & & & \\ 
- Single Party Gov. &  &  &  & $-$0.140 &  &  &  \\ 
-  &  &  &  & (0.265) &  &  &  \\ 
+ Single Party Gov. &  &  &  & $-$0.105 &  &  &  \\ 
+  &  &  &  & (0.266) &  &  &  \\ 
   & & & & & & & \\ 
- Political Constraints &  &  &  &  & $-$0.407 &  &  \\ 
-  &  &  &  &  & (0.928) &  &  \\ 
+ Political Constraints &  &  &  &  & $-$0.477 &  &  \\ 
+  &  &  &  &  & (0.930) &  &  \\ 
   & & & & & & & \\ 
- Self Expression &  &  &  &  &  & 3.545 &  \\ 
-  &  &  &  &  &  & (2.533) &  \\ 
+ Self Expression &  &  &  &  &  & 3.687 &  \\ 
+  &  &  &  &  &  & (2.552) &  \\ 
   & & & & & & & \\ 
- Ethnic Frac. &  &  &  &  &  &  & $-$0.285 \\ 
-  &  &  &  &  &  &  & (0.618) \\ 
+ Ethnic Frac. &  &  &  &  &  &  & $-$0.298 \\ 
+  &  &  &  &  &  &  & (0.620) \\ 
   & & & & & & & \\ 
- (Intercept) & $-$2.072$^{***}$ & $-$0.559 & $-$0.649 & $-$0.520 & $-$0.556 & $-$5.067 & $-$0.505 \\ 
-  & (0.317) & (0.556) & (0.559) & (0.651) & (0.620) & (3.183) & (0.649) \\ 
+ (Intercept) & $-$2.038$^{***}$ & $-$0.603 & $-$0.676 & $-$0.604 & $-$0.562 & $-$5.288$^{*}$ & $-$0.528 \\ 
+  & (0.318) & (0.561) & (0.563) & (0.657) & (0.626) & (3.209) & (0.652) \\ 
   & & & & & & & \\ 
 \hline \\[-1.8ex] 
 Observations & 1,445 & 1,437 & 1,437 & 1,415 & 1,413 & 808 & 1,431 \\ 
-Log Likelihood & $-$258.283 & $-$252.972 & $-$251.889 & $-$251.031 & $-$251.072 & $-$187.525 & $-$251.640 \\ 
-Akaike Inf. Crit. & 522.567 & 513.944 & 513.779 & 516.061 & 514.145 & 387.050 & 515.281 \\ 
+Log Likelihood & $-$255.164 & $-$250.432 & $-$249.748 & $-$248.943 & $-$248.877 & $-$185.571 & $-$249.481 \\ 
+Akaike Inf. Crit. & 516.327 & 508.865 & 509.497 & 511.886 & 509.753 & 383.142 & 510.962 \\ 
 \hline 
 \hline \\[-1.8ex] 
 \multicolumn{8}{l}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 

@@ -1,7 +1,7 @@
 # ---------------------------------------------------------------------------- #
 # Gather/Clean/Merge Data for Two Sword Lengths Apart
 # Christopher Gandrud
-# 24 March 2015
+# 30 March 2015
 # MIT License
 # ---------------------------------------------------------------------------- #
 
@@ -21,11 +21,14 @@ library(foreign)
 library(tidyr)
 library(repmis)
 library(stringr)
+library(lubridate)
 
 #### ----------------- Main Leg. Violence Data ---------------------------- ####
-main_violence <- import('data/raw/brawls_BG.csv') %>% 
-                    dplyr::select(iso2c, year) %>%
-                    filter(year <= 2012)
+main_violence <- import('Data/violence_sources.csv') %>% 
+                    dplyr::select(iso2c, date)
+
+main_violence$year <- year(main_violence$date)
+main_violence <- main_violence %>% filter(year <= 2012)
 main_violence$violence <- 1
 
 main_violence <- main_violence %>% group_by(iso2c, year) %>%
