@@ -130,7 +130,7 @@ What about at the other end of the spectrum? Minority governments are often cons
 
 Like in society generally, having laws that outlaw violence and sanction violators of these laws may dissuade physical attacks. In many countries legislators are immune from prosecution or at least arrest in the legislative chamber. Such immunity is often granted in order to prevent the legislature from being harassed and obstructed by the executive or judicial branches of government  \citep{Seghetti1984}. However, legislators immune from legal consequences may be more likely to physically harass and obstruct one another. Legislators who do not have this immunity might be less likely to attack their colleagues.
 
-It's important to note that if legislative violence is created by credible commitment problems, where legislators are not able to commit to peaceful bargains and rules, then they may not necessarily be prevented from using violence due to a lack of immunity. At the best a lack of immunity would make violence more costly thus marginally decreasing credible commitment problems, but not eliminate them. Furthermore, since the ``application of punishment is inherently political'', formal rules may not have any deterrent effect if legislators do not believe they will be applied to them for political reasons \cite[58]{Wolfe2004}.
+It is important to note that if legislative violence is created by credible commitment problems, where legislators are not able to commit to peaceful bargains and rules, then they may not necessarily be prevented from using violence due to a lack of immunity. At the best a lack of immunity would make violence more costly thus marginally decreasing credible commitment problems, but not eliminate them. Furthermore, since the ``application of punishment is inherently political'', formal rules may not have any deterrent effect if legislators do not believe they will be applied to them for political reasons \cite[58]{Wolfe2004}.
 
 \paragraph{The Broader Society}
 
@@ -142,7 +142,7 @@ An important issue to consider with societal-level explanations of legislative v
 
 \section{Case Study: The Caning of Senator Sumner}
 
-\add{This section presents an illustrative case study of the caning of Unite States Senator Charles Sumner. The case study demostrates the plausibility of the theory that credible commitment problems can lead to legislative violence, even in Western democracies. It also illustrates how societal changes can worsen legislative disproportionality, thus increasing violence. Given the relatively shorter time span covered by the large-n data set discussed below and the slowness with which most societal variables change, it is easier to begin an initial exploration of these processes in this well-documented case study.}
+\add{This section presents an illustrative case study of the caning of Unite States Senator Charles Sumner. The case study demonstrates the plausibility of the theory that credible commitment problems can lead to legislative violence, even in Western democracies. It also illustrates how societal changes can worsen legislative disproportionality, thus increasing violence. Given the relatively shorter time span covered by the large-n data set discussed below and the slowness with which most societal variables change, it is easier to begin an initial exploration of these processes in this well-documented case study.}
 
 The breakdown of the ability to make credible commitments in \change{unfair}{disproportionate} and new democratic legislatures is a key component behind the caning of United States Senator Charles Sumner in 1856. The development of the Senate prior to the Civil War, and especially in the 1850s, was preoccupied with the apportionment of pro and anti-slavery senators and how this apportionment was becoming increasingly unfair. Two senators were elected by each state's legislature. From the end of the Revolutionary War there had been more slave states than free states, thus more slave state senators and a pro-slave Senate veto \cite[151]{Weingast1998}. However, compromises that were made to have at least as many slave states as free states and as many pro as anti-slavery senators became increasingly unfair. As the 1800s progressed these compromises were undermined by three shocks that were largely exogenous from the national legislature.
 
@@ -166,7 +166,7 @@ It's unclear if, at all, the size of the legislative majority, legislative immun
 \begin{figure}[h!]
     \centering
 
-    	%% Created with Analysis/leg_violence_map.R
+        %% Created with Analysis/main_analysis_1.R
         \includegraphics[width = 13cm]{incidence_map.png}
 
         \caption{Incidences of Physical Fights Between Legislators in Multi-Party Elected National Legislative Chambers (1981-2012)}
@@ -190,7 +190,7 @@ This brief tour of descriptive statistics adds to the evidence from the previous
     \begin{center}
 
 <<FrameworkEmpirical, warning=FALSE, echo=FALSE, message=FALSE, fig.width=7, fig.height=4, out.width='0.8\\linewidth'>>=
-    source("/git_repositories/leg_violence_paper1/Analysis/framework_empirical_v3.R")
+    source("/git_repositories/leg_violence_paper1/Analysis/main_analysis_2.R")
 
 @
     \end{center}
@@ -210,7 +210,7 @@ This brief tour of descriptive statistics adds to the evidence from the previous
     ## Run the main analyses used for predicting quantities of interest and
     #  estimating regression coefficients.
     # Run analysis
-    source("/git_repositories/leg_violence_paper1/Analysis/leg_main_analyses_v4.R")
+    source("/git_repositories/leg_violence_paper1/Analysis/main_analyses_3.R")
 
 @
 
@@ -302,7 +302,7 @@ I avoid focusing on models that include highly correlated variables \citep[]{Ach
 
 <<predProb, warning=FALSE, echo=FALSE, message=FALSE, results='hide', fig.width=7, fig.height=4, out.width='0.95\\linewidth', cache=FALSE>>=
   ## Create Graphs ##
-  source("/git_repositories/leg_violence_paper1/Analysis/expected_values_plots.R")
+  source("/git_repositories/leg_violence_paper1/Analysis/main_analysis_4.R")
 
 @
     \end{center}
@@ -372,7 +372,7 @@ As this is the first large scale study on this subject there is still considerab
 \add{
 [WITHHELD FOR BLIND REVIEW]
 }
-% \noindent CHRISTOPHER GANDRUD, b, 1984 PhD in Political Science (London School of Economics, 2012); Post-doctoral Fellow, Hertie School of Governance (2013-- ); current main interests: financial policymaking and legislative poltics. Various recent publications in journals such as the \emph{Journal of Common Market Studies}, \emph{Political Science Research and Methods}, and \emph{Review of International Political Economy}.
+% \noindent CHRISTOPHER GANDRUD, b, 1984 PhD in Political Science (London School of Economics, 2012); Post-doctoral Fellow, Hertie School of Governance (2013-- ); current main interests: financial policymaking and legislative politics. Various recent publications in journals such as the \emph{Journal of Common Market Studies}, \emph{Political Science Research and Methods}, and \emph{Review of International Political Economy}.
 
 
 \end{document}

@@ -1,7 +1,7 @@
 #######################
 # Legislative Violence Expected Value Graphs
 # Christopher Gandrud
-# Updated 25 March 2015
+# Updated 31 March 2015
 #######################
 
 # Set working directory. Change as needed.
@@ -15,8 +15,8 @@ library(tidyr)
 library(gridExtra)
 
 # Load MinMaxLines function
-source('Analysis/MinMaxLines.R')
-source('Analysis/sim_strip.R')
+source('Analysis/functions/MinMaxLines.R')
+source('Analysis/functions/sim_strip.R')
 
 ## Ranges of fitted values
 high_prop.r <- c(0, 1)

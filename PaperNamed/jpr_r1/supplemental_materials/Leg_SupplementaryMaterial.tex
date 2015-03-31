@@ -1,11 +1,60 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Two Sword Lengths Apart: Supplementary Material
-% 27 March 2014
+% 31 March 2014
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % !Rnw weave = knitr
 
-\documentclass[a4paper]{article}
+\documentclass[a4paper]{article}\usepackage[]{graphicx}\usepackage[]{color}
+%% maxwidth is the original width if it is less than linewidth
+%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt}
 \usepackage{fullpage}
 \usepackage{lscape}
 \usepackage[authoryear]{natbib}
@@ -40,7 +89,7 @@
 
 %%%%%%% Title Page %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \title{Supplementary Material: Two Sword Lengths Apart: Credible Commitment Problems and Physical Violence in Democratic National Legislatures}
-
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 \begin{document}
 
 \maketitle
@@ -48,9 +97,7 @@
 
 
 %%%%%%%%%%%%%%%% Run Analyses %%%%%%%%%%%%%%%%%%%%%%%%
-<<models, include=FALSE>>=
-    source("/git_repositories/leg_violence_paper1/Analysis/leg_main_analyses_v4.R")
-@
+
 
 
 \section*{Examining Possible Measurement Error: Trends in Violence and Democracy}
@@ -68,12 +115,14 @@ Measurement error caused by the electronic availability of information be an iss
 \begin{figure}
 
     \begin{center}
-<<compareLegToViolence, warning=FALSE, echo=FALSE, message=FALSE, fig.width=7, fig.height=7, out.width='0.8\\linewidth'>>=
-    source("/git_repositories/leg_violence_paper1/Analysis/dem_vs_incidents.R")
-@
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+\includegraphics[width=0.8\linewidth]{figure/compareLegToViolence-1} 
+
+\end{knitrout}
     \end{center}
 
-    \caption{Comparing the Number of Multi-Party Elected National Legislatures to Observed Violence in These Legislatures Over Time}
+    \caption{Comparing the Number of Multi-Party Elected National Legislatures to Observed Violence in These Legislatures Over Time (1981-2012)}
     \label{elect_vs_violence}
 
 \end{figure}
@@ -122,27 +171,78 @@ Results for other political and institutional variables were largely not statist
 \label{outputTable.dem}
 \begin{center}
 {\scalebox{0.6}{
-<<OutTable1, warning=FALSE, echo=FALSE, message=FALSE, results='asis'>>=
-    library(stargazer)
 
-    CoefNames <- c("Lower Disproportionality",
-                    "Dem. Age (log)", "Majority Size", "Internal Armed Conflict",
-                    "Leg. Immunity", "Single Party Gov.", "Political Constraints",
-                    "Self Expression", "Ethnic Frac.", "Perc. Women in Parl.",
-                    "Murder Rate", "Federal", "Gov. Frac.",
-                    "No. of Parties by Seats", "GINI", "GDP per Capita (log)",
-                   "(Intercept)")
+% Table created by stargazer v.5.1 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Tue, Mar 31, 2015 - 12:31:03
+\begin{tabular}{@{\extracolsep{5pt}}lccccccccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{11}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-12} 
+\\[-1.8ex] & \multicolumn{11}{c}{Violent Incident} \\ 
+\\[-1.8ex] & (1) & (2) & (3) & (4) & (5) & (6) & (7) & (8) & (9) & (10) & (11)\\ 
+\hline \\[-1.8ex] 
+ Lower Disproportionality & $-$0.765$^{***}$ & $-$0.754$^{***}$ & $-$0.763$^{***}$ & $-$0.730$^{***}$ & $-$0.596$^{**}$ & $-$0.820$^{***}$ & $-$0.883$^{**}$ & $-$0.766$^{***}$ & $-$0.650$^{**}$ & $-$0.714$^{***}$ & $-$0.589$^{**}$ \\ 
+  & (0.270) & (0.270) & (0.272) & (0.271) & (0.301) & (0.312) & (0.393) & (0.279) & (0.276) & (0.270) & (0.283) \\ 
+  & & & & & & & & & & & \\ 
+ Dem. Age (log) & $-$0.274$^{**}$ & $-$0.268$^{**}$ & $-$0.273$^{**}$ & $-$0.267$^{**}$ & $-$0.300$^{**}$ & $-$0.300$^{**}$ & $-$0.344$^{**}$ & $-$0.282$^{**}$ & $-$0.295$^{***}$ & $-$0.318$^{***}$ & $-$0.264$^{**}$ \\ 
+  & (0.107) & (0.106) & (0.108) & (0.106) & (0.129) & (0.123) & (0.162) & (0.120) & (0.113) & (0.106) & (0.130) \\ 
+  & & & & & & & & & & & \\ 
+ Majority Size & $-$0.026$^{***}$ & $-$0.026$^{***}$ & $-$0.027$^{***}$ & $-$0.024$^{***}$ & $-$0.024$^{**}$ & $-$0.026$^{***}$ & $-$0.028$^{**}$ & $-$0.030$^{***}$ & $-$0.030$^{***}$ & $-$0.027$^{***}$ & $-$0.023$^{***}$ \\ 
+  & (0.008) & (0.008) & (0.009) & (0.008) & (0.010) & (0.010) & (0.014) & (0.009) & (0.010) & (0.009) & (0.009) \\ 
+  & & & & & & & & & & & \\ 
+ Internal Armed Conflict &  & 0.576$^{*}$ & 0.551$^{*}$ & 0.560$^{*}$ & 0.523 & 0.715$^{**}$ & 0.189 & 0.570$^{*}$ & 0.607$^{**}$ & 0.649$^{**}$ & 0.679$^{**}$ \\ 
+  &  & (0.304) & (0.304) & (0.304) & (0.352) & (0.337) & (0.547) & (0.310) & (0.309) & (0.308) & (0.317) \\ 
+  & & & & & & & & & & & \\ 
+ Leg. Immunity &  &  & $-$0.050 &  &  &  &  &  &  &  &  \\ 
+  &  &  & (0.260) &  &  &  &  &  &  &  &  \\ 
+  & & & & & & & & & & & \\ 
+ Single Party Gov. &  &  & $-$0.146 &  &  &  &  &  &  &  &  \\ 
+  &  &  & (0.252) &  &  &  &  &  &  &  &  \\ 
+  & & & & & & & & & & & \\ 
+ Political Constraints &  &  &  & $-$0.697 &  &  &  &  &  &  &  \\ 
+  &  &  &  & (0.931) &  &  &  &  &  &  &  \\ 
+  & & & & & & & & & & & \\ 
+ Self Expression &  &  &  &  & 2.295 &  &  &  &  &  &  \\ 
+  &  &  &  &  & (2.457) &  &  &  &  &  &  \\ 
+  & & & & & & & & & & & \\ 
+ Ethnic Frac. &  &  &  &  & $-$0.557 &  &  &  &  &  &  \\ 
+  &  &  &  &  & (0.772) &  &  &  &  &  &  \\ 
+  & & & & & & & & & & & \\ 
+ Perc. Women in Parl. &  &  &  &  &  & 0.016 &  &  &  &  &  \\ 
+  &  &  &  &  &  & (0.018) &  &  &  &  &  \\ 
+  & & & & & & & & & & & \\ 
+ Murder Rate &  &  &  &  &  &  & $-$0.002 &  &  &  &  \\ 
+  &  &  &  &  &  &  & (0.013) &  &  &  &  \\ 
+  & & & & & & & & & & & \\ 
+ Federal &  &  &  &  &  &  &  & 0.103 &  &  &  \\ 
+  &  &  &  &  &  &  &  & (0.358) &  &  &  \\ 
+  & & & & & & & & & & & \\ 
+ Gov. Frac. &  &  &  &  &  &  &  & 0.157 &  &  &  \\ 
+  &  &  &  &  &  &  &  & (0.470) &  &  &  \\ 
+  & & & & & & & & & & & \\ 
+ No. of Parties by Seats &  &  &  &  &  &  &  &  & $-$0.091 &  &  \\ 
+  &  &  &  &  &  &  &  &  & (0.095) &  &  \\ 
+  & & & & & & & & & & & \\ 
+ GINI &  &  &  &  &  &  &  &  &  & $-$0.037$^{**}$ &  \\ 
+  &  &  &  &  &  &  &  &  &  & (0.015) &  \\ 
+  & & & & & & & & & & & \\ 
+ GDP per Capita (log) &  &  &  &  &  &  &  &  &  &  & $-$0.060 \\ 
+  &  &  &  &  &  &  &  &  &  &  & (0.120) \\ 
+  & & & & & & & & & & & \\ 
+ (Intercept) & $-$0.711 & $-$0.802 & $-$0.645 & $-$0.616 & $-$3.584 & $-$0.918 & $-$0.261 & $-$0.567 & $-$0.243 & 0.776 & $-$0.936 \\ 
+  & (0.537) & (0.541) & (0.636) & (0.604) & (3.070) & (0.627) & (0.807) & (0.576) & (0.740) & (0.837) & (0.582) \\ 
+  & & & & & & & & & & & \\ 
+\hline \\[-1.8ex] 
+Observations & 1,699 & 1,699 & 1,674 & 1,674 & 909 & 1,578 & 821 & 1,563 & 1,584 & 1,677 & 1,624 \\ 
+Log Likelihood & $-$275.532 & $-$274.027 & $-$272.986 & $-$273.051 & $-$200.555 & $-$222.278 & $-$134.936 & $-$254.931 & $-$259.651 & $-$269.637 & $-$244.331 \\ 
+Akaike Inf. Crit. & 559.065 & 558.053 & 559.972 & 558.101 & 415.111 & 456.557 & 281.872 & 523.862 & 531.303 & 551.274 & 500.663 \\ 
+\hline 
+\hline \\[-1.8ex] 
+\multicolumn{12}{l}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\multicolumn{12}{l}{Standard errors are in parentheses. All models use robust (WEAVE) standard errors.} \\ 
+\end{tabular} 
 
-    stargazer(D1, D2, D3, D4, D5, D6, D7, D8, D9, D10, D11,
-        dep.var.labels = 'Violent Incident',
-        covariate.labels = CoefNames,
-        float = F,
-        out.header = F,
-        notes.append = T,
-        notes.align = 'l',
-        notes = 'Standard errors are in parentheses. All models use robust (WEAVE) standard errors.',
-        notes.label = '')
-@
 }}
 \end{center}
 
@@ -154,24 +254,63 @@ Results for other political and institutional variables were largely not statist
 \label{outputTable.1990_2nd}
 \begin{center}
 \scalebox{0.7}{
-<<OutTable2, warning=FALSE, echo=FALSE, message=FALSE, results='asis'>>=
-    CoefNames <- c("Lower Disproportionality",
-                "Dem. Age (log)", "Majority Size", "Internal Armed Conflict",
-                "Perc. Women in Parliament",
-                "Murder Rate", "Federal", "Gov. Frac.",
-                "No. of Parties by Seats", "Gini", "GDP per Capita (log)",
-                "(Intercept)")
 
-    stargazer(DN8, DN9, DN10, DN11, DN12, DN13,
-    dep.var.labels = 'Violent Incident',
-    covariate.labels = CoefNames,
-    float = F,
-    out.header = F,
-    notes.append = T,
-    notes.align = 'l',
-    notes = 'Standard errors are in parentheses. All models use robust (WEAVE) standard errors.',
-    notes.label = '')
-@
+% Table created by stargazer v.5.1 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Tue, Mar 31, 2015 - 12:31:06
+\begin{tabular}{@{\extracolsep{5pt}}lcccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{6}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-7} 
+\\[-1.8ex] & \multicolumn{6}{c}{Violent Incident} \\ 
+\\[-1.8ex] & (1) & (2) & (3) & (4) & (5) & (6)\\ 
+\hline \\[-1.8ex] 
+ Lower Disproportionality & $-$0.675$^{**}$ & $-$0.883$^{**}$ & $-$0.671$^{**}$ & $-$0.563$^{**}$ & $-$0.603$^{**}$ & $-$0.492$^{*}$ \\ 
+  & (0.319) & (0.393) & (0.283) & (0.280) & (0.275) & (0.290) \\ 
+  & & & & & & \\ 
+ Dem. Age (log) & $-$0.330$^{**}$ & $-$0.344$^{**}$ & $-$0.307$^{**}$ & $-$0.332$^{***}$ & $-$0.335$^{***}$ & $-$0.408$^{***}$ \\ 
+  & (0.132) & (0.162) & (0.129) & (0.121) & (0.112) & (0.141) \\ 
+  & & & & & & \\ 
+ Majority Size & $-$0.025$^{**}$ & $-$0.028$^{**}$ & $-$0.028$^{***}$ & $-$0.029$^{***}$ & $-$0.026$^{***}$ & $-$0.023$^{**}$ \\ 
+  & (0.010) & (0.014) & (0.010) & (0.010) & (0.009) & (0.010) \\ 
+  & & & & & & \\ 
+ Internal Armed Conflict & 0.530 & 0.188 & 0.480 & 0.532 & 0.555 & 0.662$^{*}$ \\ 
+  & (0.388) & (0.547) & (0.353) & (0.352) & (0.351) & (0.359) \\ 
+  & & & & & & \\ 
+ Perc. Women in Parliament & 0.010 &  &  &  &  &  \\ 
+  & (0.019) &  &  &  &  &  \\ 
+  & & & & & & \\ 
+ Murder Rate &  & $-$0.002 &  &  &  &  \\ 
+  &  & (0.013) &  &  &  &  \\ 
+  & & & & & & \\ 
+ Federal &  &  & $-$0.079 &  &  &  \\ 
+  &  &  & (0.412) &  &  &  \\ 
+  & & & & & & \\ 
+ Gov. Frac. &  &  & 0.029 &  &  &  \\ 
+  &  &  & (0.492) &  &  &  \\ 
+  & & & & & & \\ 
+ No. of Parties by Seats &  &  &  & $-$0.124 &  &  \\ 
+  &  &  &  & (0.099) &  &  \\ 
+  & & & & & & \\ 
+ Gini &  &  &  &  & $-$0.040$^{**}$ &  \\ 
+  &  &  &  &  & (0.016) &  \\ 
+  & & & & & & \\ 
+ GDP per Capita (log) &  &  &  &  &  & 0.122 \\ 
+  &  &  &  &  &  & (0.132) \\ 
+  & & & & & & \\ 
+ (Intercept) & $-$0.699 & $-$0.154 & $-$0.434 & 0.036 & 0.992 & $-$0.773 \\ 
+  & (0.655) & (0.807) & (0.599) & (0.774) & (0.858) & (0.614) \\ 
+  & & & & & & \\ 
+\hline \\[-1.8ex] 
+Observations & 1,316 & 821 & 1,316 & 1,334 & 1,415 & 1,368 \\ 
+Log Likelihood & $-$199.278 & $-$134.936 & $-$231.295 & $-$235.240 & $-$244.874 & $-$220.222 \\ 
+Akaike Inf. Crit. & 410.557 & 281.872 & 476.591 & 482.479 & 501.748 & 452.445 \\ 
+\hline 
+\hline \\[-1.8ex] 
+\multicolumn{7}{l}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\multicolumn{7}{l}{Standard errors are in parentheses. All models use robust (WEAVE) standard errors.} \\ 
+\end{tabular} 
+
 }
 \end{center}
 \end{table}
@@ -193,15 +332,11 @@ It is important to reiterate that though these interactive effects have statisti
 
 \begin{figure}
     \begin{center}
-<<predProInteract1, warning=FALSE, echo=FALSE, message=FALSE, results='hide', fig.width=7, fig.height=7, out.width='0.95\\linewidth', cache=FALSE>>=
-    ## Estimate models
-    source('/git_repositories/leg_violence_paper1/Analysis/leg_interactions.R')
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+\includegraphics[width=0.95\linewidth]{figure/predProInteract1-1} 
 
-    ## Create Graphs ##
-    source("/git_repositories/leg_violence_paper1/Analysis/expected_values_interactions.R")
-    grid.arrange(dp1_p, dp2_p,
-                 left = "Expected Probability of Violence in a Year")
-@
+\end{knitrout}
 
     \end{center}
     \caption{Expected Probability of Legislative Violence in Democratic Legislatures per Year (Interactions 1)}
@@ -213,11 +348,11 @@ It is important to reiterate that though these interactive effects have statisti
 
 \begin{figure}
     \begin{center}
-<<predProInteract2, warning=FALSE, echo=FALSE, message=FALSE, results='hide', fig.width=7, fig.height=7, out.width='0.95\\linewidth', cache=FALSE>>=
-    ## Create Graphs ##
-    grid.arrange(dp6_p, dpc2_p,
-                 left = "Expected Probability of Violence in a Year")
-@
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+\includegraphics[width=0.95\linewidth]{figure/predProInteract2-1} 
+
+\end{knitrout}
 
     \end{center}
     \caption{Expected Probability of Legislative Violence in Democratic Legislatures per Year (Interactions 2)}
@@ -232,27 +367,72 @@ It is important to reiterate that though these interactive effects have statisti
     \label{prop_interact}
     \begin{center}
     \scalebox{0.7}{
-<<PropInteractTable, warning=FALSE, echo=FALSE, message=FALSE, results='asis'>>=
-    CoefNames <- c("Majority Size", "Dem. Age (log)",
-                   "Lower Disproportionality",
-                   "Lower Disp.*Dem. Age",
-                   "Self Expression", "Lower Disp.*Self Expression",
-                   "Ethnic Frac.",  "Lower Disp.*Ethnic Frac.",
-                   "GINI", "Lower Disp.*GINI",
-                   "GDP per Capita (log)", "Lower Disp.*GDP Per Capita",
-                   "Political Constraints", "Lower Disp.*Pol. Constraints",
-                    "(Intercept)")
 
-    stargazer(DP1_1, DP1, DP2, DP3, DP4, DPC1,
-    dep.var.labels = 'Violent Incident',
-    covariate.labels = CoefNames,
-    float = F,
-    out.header = F,
-    notes.append = T,
-    notes.align = 'l',
-    notes = 'Standard errors are in parentheses. All models use robust (WEAVE) standard errors.',
-    notes.label = '')
-@
+% Table created by stargazer v.5.1 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Tue, Mar 31, 2015 - 12:31:13
+\begin{tabular}{@{\extracolsep{5pt}}lcccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{6}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-7} 
+\\[-1.8ex] & \multicolumn{6}{c}{Violent Incident} \\ 
+\\[-1.8ex] & (1) & (2) & (3) & (4) & (5) & (6)\\ 
+\hline \\[-1.8ex] 
+ Majority Size & $-$0.025$^{***}$ & $-$0.022$^{**}$ & $-$0.025$^{***}$ & $-$0.026$^{***}$ & $-$0.021$^{**}$ & $-$0.023$^{***}$ \\ 
+  & (0.009) & (0.010) & (0.009) & (0.009) & (0.010) & (0.009) \\ 
+  & & & & & & \\ 
+ Dem. Age (log) & $-$0.247$^{*}$ & $-$0.337$^{**}$ & $-$0.304$^{***}$ & $-$0.340$^{***}$ & $-$0.369$^{**}$ & $-$0.300$^{***}$ \\ 
+  & (0.138) & (0.135) & (0.116) & (0.114) & (0.144) & (0.113) \\ 
+  & & & & & & \\ 
+ Lower Disproportionality & $-$0.211 & 13.788$^{**}$ & $-$1.729$^{***}$ & $-$0.873 & 0.190 & $-$0.180 \\ 
+  & (0.687) & (6.543) & (0.601) & (1.191) & (0.438) & (0.783) \\ 
+  & & & & & & \\ 
+ Lower Disp.*Dem. Age & $-$0.159 &  &  &  &  &  \\ 
+  & (0.240) &  &  &  &  &  \\ 
+  & & & & & & \\ 
+ Self Expression &  & 6.594$^{**}$ &  &  &  &  \\ 
+  &  & (3.185) &  &  &  &  \\ 
+  & & & & & & \\ 
+ Lower Disp.*Self Expression &  & $-$11.297$^{**}$ &  &  &  &  \\ 
+  &  & (5.176) &  &  &  &  \\ 
+  & & & & & & \\ 
+ Ethnic Frac. &  &  & $-$1.173 &  &  &  \\ 
+  &  &  & (0.759) &  &  &  \\ 
+  & & & & & & \\ 
+ Lower Disp.*Ethnic Frac. &  &  & 2.842$^{**}$ &  &  &  \\ 
+  &  &  & (1.293) &  &  &  \\ 
+  & & & & & & \\ 
+ GINI &  &  &  & $-$0.040$^{*}$ &  &  \\ 
+  &  &  &  & (0.021) &  &  \\ 
+  & & & & & & \\ 
+ Lower Disp.*GINI &  &  &  & 0.007 &  &  \\ 
+  &  &  &  & (0.031) &  &  \\ 
+  & & & & & & \\ 
+ GDP per Capita (log) &  &  &  &  & 0.218 &  \\ 
+  &  &  &  &  & (0.153) &  \\ 
+  & & & & & & \\ 
+ Lower Disp.*GDP Per Capita &  &  &  &  & $-$0.439$^{*}$ &  \\ 
+  &  &  &  &  & (0.235) &  \\ 
+  & & & & & & \\ 
+ Political Constraints &  &  &  &  &  & $-$0.127 \\ 
+  &  &  &  &  &  & (1.177) \\ 
+  & & & & & & \\ 
+ Lower Disp.*Pol. Constraints &  &  &  &  &  & $-$1.117 \\ 
+  &  &  &  &  &  & (1.916) \\ 
+  & & & & & & \\ 
+ (Intercept) & $-$0.737 & $-$9.076$^{**}$ & $-$0.189 & 1.060 & $-$0.996 & $-$0.662 \\ 
+  & (0.599) & (4.064) & (0.660) & (0.994) & (0.649) & (0.723) \\ 
+  & & & & & & \\ 
+\hline \\[-1.8ex] 
+Observations & 1,437 & 808 & 1,431 & 1,415 & 1,368 & 1,413 \\ 
+Log Likelihood & $-$250.221 & $-$183.549 & $-$247.633 & $-$245.863 & $-$219.705 & $-$249.308 \\ 
+Akaike Inf. Crit. & 510.442 & 379.097 & 507.266 & 503.726 & 451.411 & 510.616 \\ 
+\hline 
+\hline \\[-1.8ex] 
+\multicolumn{7}{l}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\multicolumn{7}{l}{Standard errors are in parentheses. All models use robust (WEAVE) standard errors.} \\ 
+\end{tabular} 
+
     }
     \end{center}
 \end{table}
@@ -263,38 +443,82 @@ It is important to reiterate that though these interactive effects have statisti
     \label{dem_interact}
     \begin{center}
     \scalebox{0.7}{
-<<DemAgeInteractTable, warning=FALSE, echo=FALSE, message=FALSE, results='asis'>>=
-    CoefNames <- c("Majority Size", "Lower Disproportionality",
-                   "Dem. Age (log)",
-                   "Self Expression", "Dem. Age*Self Expression",
-                   "Ethnic Frac.",  "Dem. Age*Ethnic Frac.",
-                   "GINI", "Dem. Age*GINI",
-                   "GDP per Capita (log)", "Dem. Age*GDP Per Capita",
-                   "Political Constraints", "Dem. Age*Pol. Constraints",
-                    "(Intercept)")
 
-    stargazer(DP5, DP6, DP7, DP8, DPC2,
-    dep.var.labels = 'Violent Incident',
-    covariate.labels = CoefNames,
-    float = F,
-    out.header = F,
-    notes.append = T,
-    notes.align = 'l',
-    notes = 'Standard errors are in parentheses. All models use robust (WEAVE) standard errors.',
-    notes.label = '')
-@
+% Table created by stargazer v.5.1 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Tue, Mar 31, 2015 - 12:31:15
+\begin{tabular}{@{\extracolsep{5pt}}lccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{5}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-6} 
+\\[-1.8ex] & \multicolumn{5}{c}{Violent Incident} \\ 
+\\[-1.8ex] & (1) & (2) & (3) & (4) & (5)\\ 
+\hline \\[-1.8ex] 
+ Majority Size & $-$0.024$^{**}$ & $-$0.026$^{***}$ & $-$0.027$^{***}$ & $-$0.023$^{**}$ & $-$0.026$^{***}$ \\ 
+  & (0.010) & (0.009) & (0.009) & (0.010) & (0.009) \\ 
+  & & & & & \\ 
+ Lower Disproportionality & $-$0.533$^{*}$ & $-$0.644$^{**}$ & $-$0.601$^{**}$ & $-$0.473 & $-$0.631$^{**}$ \\ 
+  & (0.306) & (0.275) & (0.276) & (0.289) & (0.276) \\ 
+  & & & & & \\ 
+ Dem. Age (log) & $-$0.341 & 0.066 & 0.301 & $-$0.320 & $-$0.804$^{**}$ \\ 
+  & (2.825) & (0.216) & (0.517) & (0.211) & (0.332) \\ 
+  & & & & & \\ 
+ Self Expression & 3.292 &  &  &  &  \\ 
+  & (5.594) &  &  &  &  \\ 
+  & & & & & \\ 
+ Dem. Age*Self Expression & $-$0.003 &  &  &  &  \\ 
+  & (2.195) &  &  &  &  \\ 
+  & & & & & \\ 
+ Ethnic Frac. &  & 2.330$^{*}$ &  &  &  \\ 
+  &  & (1.385) &  &  &  \\ 
+  & & & & & \\ 
+ Dem. Age*Ethnic Frac. &  & $-$1.017$^{**}$ &  &  &  \\ 
+  &  & (0.497) &  &  &  \\ 
+  & & & & & \\ 
+ GINI &  &  & 0.005 &  &  \\ 
+  &  &  & (0.035) &  &  \\ 
+  & & & & & \\ 
+ Dem. Age*GINI &  &  & $-$0.017 &  &  \\ 
+  &  &  & (0.014) &  &  \\ 
+  & & & & & \\ 
+ GDP per Capita (log) &  &  &  & 0.190 &  \\ 
+  &  &  &  & (0.290) &  \\ 
+  & & & & & \\ 
+ Dem. Age*GDP Per Capita &  &  &  & $-$0.041 &  \\ 
+  &  &  &  & (0.094) &  \\ 
+  & & & & & \\ 
+ Political Constraints &  &  &  &  & $-$3.731$^{*}$ \\ 
+  &  &  &  &  & (2.134) \\ 
+  & & & & & \\ 
+ Dem. Age*Pol. Constraints &  &  &  &  & 1.347 \\ 
+  &  &  &  &  & (0.831) \\ 
+  & & & & & \\ 
+ (Intercept) & $-$4.776 & $-$1.479$^{*}$ & $-$0.544 & $-$0.828 & 0.812 \\ 
+  & (7.144) & (0.830) & (1.440) & (0.742) & (0.993) \\ 
+  & & & & & \\ 
+\hline \\[-1.8ex] 
+Observations & 808 & 1,431 & 1,415 & 1,368 & 1,413 \\ 
+Log Likelihood & $-$185.961 & $-$248.197 & $-$245.126 & $-$221.445 & $-$248.296 \\ 
+Akaike Inf. Crit. & 383.923 & 508.394 & 502.252 & 454.889 & 508.591 \\ 
+\hline 
+\hline \\[-1.8ex] 
+\multicolumn{6}{l}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\multicolumn{6}{l}{Standard errors are in parentheses. All models use robust (WEAVE) standard errors.} \\ 
+\end{tabular} 
+
     }
     \end{center}
 \end{table}
 
 \begin{figure}
     \begin{center}
-<<marginalEffects, warning=FALSE, echo=FALSE, message=FALSE, results='hide', fig.width=6, fig.height=6, out.width='0.95\\linewidth', cache=FALSE>>=
-    ## Create Graphs ##
-    source('/git_repositories/leg_violence_paper1/Analysis/interaction_marginal_effects.R')
-@
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+\includegraphics[width=0.95\linewidth]{figure/marginalEffects-1} 
+
+\end{knitrout}
     \end{center}
-    \caption{Marginal Effects of Lower Disproportionality and Democratic Age Given Representive Ranges of Interaction Variables}
+    \caption{Marginal Effects of Lower Disproportionality and Democratic Age Given Representative Ranges of Interaction Variables}
     \label{marginal_effect_plot}
     \begin{singlespace}
       {\scriptsize{The graphs show the median and middle 95\% of 1000 simulations at each fitted value of the variables. The simulations use estimates from tables \ref{prop_interact} and \ref{dem_interact}.}}
@@ -306,29 +530,49 @@ It is important to reiterate that though these interactive effects have statisti
 
 \todo[inline]{Section added.}
 
-Table \ref{results_frac} shows models with ethnic fractionalization where key variables from the analysis are list-wise included. Ethnic fractionalization is statistically significantly associated with violence at the 10\% level in two of these models. However, there are a number of reasons to be very sceptical of this result. First, the direction of the estimated effect runs strongly counter to our expectations in that more fractionalization is assocated with \emph{less} legislative violence. Second, the effect is highly model dependent as it is not significant at the 10\% level when lower disproportionality is included or in a model by itself.
+Table \ref{results_frac} shows models with ethnic fractionalization where key variables from the analysis are list-wise included. Ethnic fractionalization is statistically significantly associated with violence at the 10\% level in two of these models. However, there are a number of reasons to be very skeptical of this result. First, the direction of the estimated effect runs strongly counter to our expectations in that more fractionalization is associated with \emph{less} legislative violence. Second, the effect is highly model dependent as it is not significant at the 10\% level when lower disproportionality is included or in a model by itself.
 
 \begin{table}[H]
     \caption{Ethnic Fractionalisation list-wise inclusion (Democracies 1990-2012)}
     \label{results_frac}
     \begin{center}
 \scalebox{0.7}{
-<<FracTable, warning=FALSE, echo=FALSE, message=FALSE, results='asis'>>=
-    source('/git_repositories/leg_violence_paper1/Analysis/leg_frac.R')
-    CoefNames <- c("Ethnic Frac.", "Dem. Age (log)", "Majority Size",
-                   "Lower Disproportionality",
-                "(Intercept)")
 
-    stargazer(F1, F2, F3, F4,
-    dep.var.labels = 'Violent Incident',
-    covariate.labels = CoefNames,
-    float = F,
-    out.header = F,
-    notes.append = T,
-    notes.align = 'l',
-    notes = 'Standard errors are in parentheses. All models use robust (WEAVE) standard errors.',
-    notes.label = '')
-@
+% Table created by stargazer v.5.1 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Tue, Mar 31, 2015 - 12:31:18
+\begin{tabular}{@{\extracolsep{5pt}}lcccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{4}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-5} 
+\\[-1.8ex] & \multicolumn{4}{c}{Violent Incident} \\ 
+\\[-1.8ex] & (1) & (2) & (3) & (4)\\ 
+\hline \\[-1.8ex] 
+ Ethnic Frac. & $-$0.218 & $-$0.923$^{*}$ & $-$0.900$^{*}$ & $-$0.235 \\ 
+  & (0.498) & (0.531) & (0.531) & (0.611) \\ 
+  & & & & \\ 
+ Dem. Age (log) &  & $-$0.394$^{***}$ & $-$0.404$^{***}$ & $-$0.310$^{***}$ \\ 
+  &  & (0.101) & (0.103) & (0.116) \\ 
+  & & & & \\ 
+ Majority Size &  &  & $-$0.018$^{**}$ & $-$0.025$^{***}$ \\ 
+  &  &  & (0.008) & (0.009) \\ 
+  & & & & \\ 
+ Lower Disproportionality &  &  &  & $-$0.635$^{**}$ \\ 
+  &  &  &  & (0.275) \\ 
+  & & & & \\ 
+ (Intercept) & $-$3.128$^{***}$ & $-$1.833$^{***}$ & $-$0.834 & $-$0.596 \\ 
+  & (0.213) & (0.365) & (0.554) & (0.650) \\ 
+  & & & & \\ 
+\hline \\[-1.8ex] 
+Observations & 1,822 & 1,644 & 1,630 & 1,431 \\ 
+Log Likelihood & $-$321.979 & $-$299.871 & $-$296.353 & $-$250.204 \\ 
+Akaike Inf. Crit. & 647.957 & 605.743 & 600.706 & 510.408 \\ 
+\hline 
+\hline \\[-1.8ex] 
+\multicolumn{5}{l}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\multicolumn{5}{l}{Standard errors are in parentheses. All models use robust (WEAVE) standard errors.} \\ 
+\end{tabular} 
+
 }
     \end{center}
 \end{table}
@@ -386,6 +630,7 @@ Table \ref{results_frac} shows models with ethnic fractionalization where key va
 
     \begin{center}
 
+    %% Created with Analysis/supplemental_analysis_6.R
     \includegraphics[scale=0.5]{corrScatter.pdf}
 
     \end{center}
