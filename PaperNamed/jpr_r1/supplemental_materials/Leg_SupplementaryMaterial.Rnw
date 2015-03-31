@@ -392,7 +392,7 @@ Table \ref{results_frac} shows models with ethnic fractionalization where key va
 
     \end{center}
 
-    \caption{Correlation Matrix for Variables Included in the Analysis (Multi-Party Elected Legislatures)}
+    \caption{Correlation Matrix for Variables Included in the Analysis (Democratic Legislatures)}
     \label{corrmatrix}
 
     \begin{singlespace}

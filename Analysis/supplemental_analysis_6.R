@@ -1,7 +1,7 @@
 #####################
 # Correlation plot for key variables
 # Christopher Gandrud
-# 20 March 2015
+# 31 March 2015
 #####################
 
 setwd('/git_repositories/leg_violence_paper1/')
@@ -17,7 +17,7 @@ dem <- import('Data/LegislativeViolenceMain.csv')
 
 # Keep only data in models
 vars <- c('violence', 'high_prop', 'dem_age', 'maj', 'internal_conflict',
-          'immunity', 'pr', 'single_party', 'cw_surv_self_expr', 
+          'immunity', 'pr', 'single_party', 'polconiii', 'cw_surv_self_expr', 
           'ethnic_alesina', 'women_in_parl', 'murder_rate', 
           'federal', 'govfrac', 'enps', 'gini', 'gdp_per_capita')
 
