@@ -19,7 +19,7 @@ P.S. The footnote numbering will automatically return to normal when we remove t
 
     - I have attempted to fully conform the manuscript to JPR's style. I am happy to make additional changes as needed.
 
-    - I have posted all of the data and replication files for this paper at https://github.com/christophergandrud/leg_violence_paper1. I added a note after the main text about this, though the URL is obscured in the submitted manuscript to enable blind review.
+    - I have posted all of the data and replication files for this paper at https://github.com/christophergandrud/leg_violence_paper1. An overview of the contents of this repository are specifically available at: https://github.com/christophergandrud/leg_violence_paper1/blob/master/README.md. I added a note after the main article text regarding this. The the URL is obscured in the revised manuscript to enable blind review.
 
 > I quite like Figure 2, however I would appreciate if you could change the color of the dots so they are distinguishable from one another when printed in grey scale.
 

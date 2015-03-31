@@ -339,42 +339,43 @@ Table \ref{results_frac} shows models with ethnic fractionalization where key va
 
 %%%%%%%% Variable source summary table
 \begin{table}[!h]
-    \small
+    \footnotesize
     \begin{center}
     \caption{Variable Summary}
     \label{var_summary}
-    \begin{tabular}{l m{7cm} m{3.5cm}}
+    \begin{tabular}{m{2cm} r m{7cm} m{3.5cm}}
 
             \hline
-            Variable & Description & Source \\
+            Variable & Label & Description & Source \\
             \hline \hline
-            Disproportionality & Gallagher Index of Electoral Disproportionality & \cite{Gallagher2012} \& \cite{Carey2011} \\
-            ENPS & Effective number of parties by seats & \cite{Gallagher2012} \& \cite{Carey2011} \\
-            ENPV & Effective number of parties by votes & \cite{Gallagher2012} \& \cite{Carey2011} \\
-            Ethnic Fractionalization & Probability two randomly selected members of society are from the same ethnic group & \cite{Alesina2003} \\
-            Federal & Whether a country has a federal system or not & \cite{Carey2011}, updated from 2003 by the author \\
-            GDP/Capita & GDP per capita in thousands of US dollars & \cite{WorldBank2011} \\
-            Gov. Fractionalization & Probability that two members of the Government will be from different parties & \cite{DPI2001} \\
-            Gini & Gini Coefficient of income inequality averaged over reported sources & \cite{UNU2008} \\
-            Immunity & Whether a legislators are immune from arrest and/or criminal prosecution or not & \cite{Fish2009} \\
-            Internal Conflict & Internal armed conflict involving purely domestic as well as external combatants & UCDP/PRIO Armed Conflict Dataset \citep{Themner2014} \\
-            LEIC & Legislative Indices of Electoral Competitiveness. Includes both the existence of a legislature and its level of electoral competitiveness. & \cite{DPI2001} \\
-            Lower Disproportionality & Gallagher Index below the sample mean (6.4) & Author's calculations based on \cite{Gallagher2012} \& \cite{Carey2011}\\
-            Majority & Percentage of legislature controlled by governing parties & \cite{DPI2001} \\
-            Murder Rate & Murders per 100,000 population & \cite{UNMurder2013} \\
-            Political Constraints & POLCONIII measure of political constraints & \cite[][updated through 2011]{Henisz2004} \\
-            Polity & Polity IV Score & \cite{Marshall2009} \\
-            PR & Whether a country uses a proportional representation electoral system or a plurality system & \cite{DPI2001} \\
-            Self Expression & WVS self-expression indicator averaged across country-survey waves & \cite{WVS2009} \\
-            System & Government system (parliamentary, presidential, or mixed & \cite{DPI2001} \\
-            Trust & Average of WVS responses where 1 $=$ most people can be trusted and 2 $=$ you can't be too careful & \cite{WVS2009} \\
-            Violence & Incidences of violence between legislators in the national parliamentary chamber & author \\
-            Perc. Women in Parl. & Percentage of parliamentary seats held by women & \cite{WomParCrossNat} \& \cite{IPU2013} \\
+            Disproportionality & \texttt{disproportionality} & Gallagher Index of Electoral Disproportionality & \cite{Gallagher2012} \& \cite{Carey2011} \\
+            ENPS & \texttt{enps} & Effective number of parties by seats & \cite{Gallagher2012} \& \cite{Carey2011} \\
+            ENPV & \texttt{enpv} & Effective number of parties by votes & \cite{Gallagher2012} \& \cite{Carey2011} \\
+            Ethnic Fractionalization & \texttt{ethnic\_alesina} & Probability two randomly selected members of society are from the same ethnic group & \cite{Alesina2003} \\
+            Federal & \texttt{federal} & Whether a country has a federal system or not & \cite{Carey2011}, updated from 2003 by the author \\
+            GDP/Capita & \verb|gdp_per_capita| & GDP per capita in thousands of US dollars & \cite{WorldBank2011} \\
+            Gov. Fractionalization & \texttt{govfrac} & Probability that two members of the Government will be from different parties & \cite{DPI2001} \\
+            Gini & \texttt{gini} & Gini Coefficient of income inequality averaged over reported sources & \cite{UNU2008} \\
+            Immunity & \texttt{immunity} & Whether legislators are immune from arrest and/or criminal prosecution or not & \cite{Fish2009} \\
+            Internal Conflict & \verb|internal_conflict| & Internal armed conflict involving purely domestic as well as external combatants & UCDP/PRIO Armed Conflict Dataset \citep{Themner2014} \\
+            LEIC & \texttt{leic} & Legislative Indices of Electoral Competitiveness. Includes both the existence of a legislature and its level of electoral competitiveness. & \cite{DPI2001} \\
+            Lower Disproportionality & \verb|high_prop| & Gallagher Index below the sample mean (6.4) & Author's calculations based on \cite{Gallagher2012} \& \cite{Carey2011}\\
+            Majority & \texttt{maj} & Percentage of legislature controlled by governing parties & \cite{DPI2001} \\
+            Murder Rate & \verb|murder_rate| & Murders per 100,000 population & \cite{UNMurder2013} \\
+            Political Constraints & \texttt{polconiii} & POLCONIII measure of political constraints & \cite[][updated through 2011]{Henisz2004} \\
+            Polity & \texttt{polity2} & Polity IV Score & \cite{Marshall2009} \\
+            PR & \texttt{pr} & Whether a country uses a proportional representation electoral system or a plurality system & \cite{DPI2001} \\
+            Self Expression & \verb|cw_surv_self_expr| & WVS self-expression indicator averaged across country-survey waves & \cite{WVS2009} \\
+            System & \texttt{system} & Government system (parliamentary, presidential, or mixed & \cite{DPI2001} \\
+            Trust & \verb|higher_trust| & Average of WVS responses where 1 $=$ most people can be trusted and 2 $=$ you can't be too careful & \cite{WVS2009} \\
+            Violence & \texttt{violence} & Incidences of violence between legislators in the national parliamentary chamber & author \\
+            Perc. Women in Parl. & \verb|women_in_parl| & Percentage of parliamentary seats held by women & \cite{WomParCrossNat} \& \cite{IPU2013} \\
             \hline
 
     \end{tabular}
     \end{center}
     \begin{singlespace}
+        Label refers to the label used in the data file (\emph{LegislativeViolenceMain.csv}) for replication. \\
         Please contact the author for detailed summary statistics. \\
         All of the data from \cite{DPI2001} was updated through 2012.
     \end{singlespace}
