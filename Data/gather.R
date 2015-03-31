@@ -1,7 +1,7 @@
 # ---------------------------------------------------------------------------- #
 # Gather/Clean/Merge Data for Two Sword Lengths Apart
 # Christopher Gandrud
-# 30 March 2015
+# 31 March 2015
 # MIT License
 # ---------------------------------------------------------------------------- #
 
@@ -24,7 +24,7 @@ library(stringr)
 library(lubridate)
 
 #### ----------------- Main Leg. Violence Data ---------------------------- ####
-main_violence <- import('Data/violence_sources.csv') %>% 
+main_violence <- import('Data/violence_sources.csv') %>%
                     dplyr::select(iso2c, date)
 
 main_violence$year <- year(main_violence$date)
@@ -49,13 +49,13 @@ wdi <- wdi[!duplicated(wdi[, c('iso2c', 'year')]),]
 #### ------------------ GINI ---------------------------------------------- ####
 gini <- import('Data/raw/wiid_3b_1.csv')
 gini <- gini[c('Country', 'Year', 'Gini')]
-gini$iso2c <- countrycode(gini$Country, origin = 'country.name', 
+gini$iso2c <- countrycode(gini$Country, origin = 'country.name',
                           destination = 'iso2c')
 gini <- gini %>% dplyr::select(iso2c, Year, Gini)
 names(gini) <- c('iso2c', 'year', 'gini')
 
 # Average multiple sources
-gini <- gini %>% group_by(iso2c, year) %>% 
+gini <- gini %>% group_by(iso2c, year) %>%
             summarise(gini = mean (gini, na.rm = T))
 
 gini <- gini[!duplicated(gini[, c('iso2c', 'year')]),]
@@ -65,7 +65,7 @@ murder <- import('Data/raw/UNdata_HomicideRate.csv') %>%
             dplyr::select(`Country or Area`, Year, Rate) %>%
             rename(country = `Country or Area`)
 
-murder$iso2c <- countrycode(murder$country, origin = 'country.name', 
+murder$iso2c <- countrycode(murder$country, origin = 'country.name',
                           destination = 'iso2c')
 murder$Rate <- as.numeric(murder$Rate)
 murder <- murder %>% dplyr::select(iso2c, Year, Rate)
@@ -75,25 +75,25 @@ names(murder) <- c('iso2c', 'year', 'murder_rate')
 pol_constraints <- import('Data/raw/polcon2012.dta') %>%
                     select(polity_country, year, polconiii, polconv)
 
-pol_constraints$iso2c <- countrycode(pol_constraints$polity_country, 
+pol_constraints$iso2c <- countrycode(pol_constraints$polity_country,
                                      origin = 'country.name',
                                      destination = 'iso2c')
 
 pol_constraints <- DropNA(pol_constraints, 'iso2c')
-pol_constraints <- pol_constraints %>% select(-polity_country) %>% 
+pol_constraints <- pol_constraints %>% select(-polity_country) %>%
                     filter(year >= 1980)
 
 
 #### --------------- Armed Conflict --------------------------------------- ####
 conflict <- import('Data/raw/UCDPPrioArmedConflictDataset4a-2014.csv') %>%
-                filter(Year >= 1980) %>% 
+                filter(Year >= 1980) %>%
                 dplyr::select(ConflictId, Location, Year, TypeOfConflict)
 
-conflict <- conflict[!duplicated(conflict[, c('Location', 'Year')]), ] %>% 
+conflict <- conflict[!duplicated(conflict[, c('Location', 'Year')]), ] %>%
                 arrange(Location, Year)
 
 # Extract conflicts in involving two countries
-split_location <- str_split_fixed(conflict$Location, ', ', n = 2) %>% 
+split_location <- str_split_fixed(conflict$Location, ', ', n = 2) %>%
                     as.data.frame
 split_location$row_id <- 1:nrow(conflict)
 sub_location <- subset(split_location, V2 != '' & V2 != 'FYR')
@@ -101,7 +101,7 @@ sub_location <- subset(split_location, V2 != '' & V2 != 'FYR')
 sub_conflict <- conflict[sub_location$row_id, ]
 sub_conflict$Location <- sub_location$V2
 
-# Clean Iraq 2003 war 
+# Clean Iraq 2003 war
 sub_conflict <- sub_conflict[-2, ]
 iraq_war <- data.frame(ConflictId = rep('1-226', 3),
                        Location = c('Iraq', 'Unites Kingdom', 'United States'),
@@ -121,10 +121,10 @@ conflict$iso2c <- countrycode(conflict$Location, origin = 'country.name',
 conflict$internal_conflict <- 1
 conflict$internal_conflict[conflict$TypeOfConflict < 3] <- 0
 
-conflict <- conflict %>% DropNA('iso2c') %>% 
+conflict <- conflict %>% DropNA('iso2c') %>%
                 dplyr::select(iso2c, Year, TypeOfConflict, internal_conflict) %>%
                 arrange(iso2c, Year)
-names(conflict) <- c('iso2c', 'year', 'type_of_conflict', 'internal_conflict') 
+names(conflict) <- c('iso2c', 'year', 'type_of_conflict', 'internal_conflict')
 
 #### --------------- Women in Parliament ----------------------Year------------ ####
 # From 1997 data from Inter-Parliamentary Union via World Bank Development
@@ -201,7 +201,7 @@ cum_nozero <- function(x){
 
 polity$dem_age <- cum_nozero(x = 'democracy')
 
-polity <- polity %>% dplyr::select(iso2c, year, polity2, dem_age, durable)
+polity <- polity %>% dplyr::select(iso2c, year, polity2, dem_age)
 polity <- polity[!duplicated(polity[, c('iso2c', 'year')]),]
 
 #### ---------------------- Database of Political Institutions ------------ ####
@@ -306,8 +306,8 @@ comb <- merge(comb, wvs, by = c('iso2c', 'year'), all.x = T) %>%
 comb <- comb %>% group_by(iso2c) %>% mutate(higher_trust =
                                                 FillDown(Var = higher_trust))
 comb <- comb %>% group_by(iso2c) %>% mutate(cw_surv_self_expr =
-                                            FillDown(Var = cw_surv_self_expr)) %>%
-    as.data.frame
+                                        FillDown(Var = cw_surv_self_expr)) %>%
+            as.data.frame
 
 ## Merge political constraints
 comb <- merge(comb, pol_constraints, by = c('iso2c', 'year'), all.x = T) %>%
@@ -352,8 +352,7 @@ comb <- comb %>% group_by(iso2c) %>% mutate(gini = FillDown(Var = gini))
 
 ## Final clean
 #### Only countries with elected legislatures
-comb <- comb %>% filter(liec > 5 & !is.na(liec))
-
+# comb <- comb %>% filter(liec > 5 & !is.na(liec))
 
 comb <- comb %>% filter(!is.na(iso2c))
 
@@ -372,4 +371,3 @@ comb <- MoveFront(comb, c('country', 'iso2c', 'year'))
 
 #### -------------------- Save -------------------------------------------- ####
 export(comb, 'Data/LegislativeViolenceMain.csv')
-

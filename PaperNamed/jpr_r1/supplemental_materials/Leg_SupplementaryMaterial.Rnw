@@ -45,25 +45,22 @@
 
 \maketitle
 
-
-
 %%%%%%%%%%%%%%%% Run Analyses %%%%%%%%%%%%%%%%%%%%%%%%
 <<models, include=FALSE>>=
-    source("/git_repositories/leg_violence_paper1/Analysis/main_analyses_3.R")
+    source("/git_repositories/leg_violence_paper1/Analysis/main_analysis_3.R")
 @
-
 
 \section*{Examining Possible Measurement Error: Trends in Violence and Democracy}
 
 \todo[inline]{Section added.}
 
-As noted in the main text, data on incidents was primarily gathered using multiple key word searches of the Google News Archive, Google Search, and Youtube over a number of years. This method could have significant measurement error. The electronic availability of news and videos on legislative violence, as with material on almost all other phenomenon, could be positively correlated with time. I.e. more information is available for incidents in more recent periods.
+As noted in the main text, data on incidents was primarily gathered using multiple key word searches of the LexisNexis, NewsLibrary, NewsBank, general Google Search, and Youtube over a number of years. This information was supplemented with colleagues' expert knowledge. Nonetheless, such a method could have significant measurement error. The electronic availability of news and videos on legislative violence, as with material on almost all other phenomenon, could be positively correlated with time. I.e. more information is available for incidents in more recent years.
 
-There are more incidents in later periods of the data set than earlier periods. For example, there were only 8 incidents observed in the 1980s, but 65 in the sample's last ten years (2002-2012). However, there are good reasons to believe that this distribution of incidents in time is not simply the result of measurement error.
+There are indeed more incidents in later years of the data set. For example, there were only 8 incidents observed in the 1980s for the entire sample of countries. In contrast the democratic sample's last ten years (2002-2012) has 52. Nonetheless, there are good reasons to believe that this distribution of incidents over time is not simply the result of measurement error, but has more to do with increasing democratization.
 
-Primarily, there are many more countries with multi-party elected national legislatures--the criteria for inclusion--that could have violence later in the sample. The top panel of Figure \ref{elect_vs_violence} shows the number of countries in the sample with elected multi-party national legislatures. In 1981 there were only 65 countries. Between 1990 and 1995 a dramatic increase occurred such that by 1995 135 countries had multi-party elected legislatures. At the end of the sample period, almost double the original number 149 countries have multi-party elected national legislatures. In the bottom panel of Figure \ref{elect_vs_violence} we can see that the average observed number of violent incidents roughly follows the pattern of democratization. There is a noticeable increase in the average number of violent incidents from the mid-1990s. Furthermore, as the empirical evidence in this article has demonstrated newer democracies are more likely to have legislative violence. As such, we should expect to see more violence in the more recent period when there are many new democracies.
+There are many more countries with democratic multi-party national legislatures that could have violence later in the sample. The top panel of Figure \ref{elect_vs_violence} shows the number democracies in the sample as defined as having a Polity IV score greater than 5. In 1981 there were only 40 countries. Between 1990 and 1995 a dramatic increase occurred such that by 1995 there are 76 democracies. At the end of the sample period,more than double the original number--93--countries are democracies. In the bottom panel of Figure \ref{elect_vs_violence} we can see that the temporal distribution of legislative violence roughly follows the pattern of democratization. There is a noticeable increase in the average number of violent incidents from this mid-1990s. Furthermore, as the empirical evidence in this article has demonstrated newer democracies are more likely to have legislative violence. As such, we should expect to see more violence in the more recent period when there are many new democracies.
 
-Measurement error caused by the electronic availability of information be an issue. Nonetheless, the increasing prevalence of young multi-party elected national legislatures is likely an important cause of there being more observed incidents of violence later in the sample.
+Measurement error caused by the electronic availability of information could be an issue. Nonetheless, the increasing prevalence of young democracies with legislatures where members are competitively elected is likely an important cause of there being more observed incidents of violence later in the sample.
 
 \begin{figure}
 
@@ -77,13 +74,6 @@ Measurement error caused by the electronic availability of information be an iss
     \label{elect_vs_violence}
 
 \end{figure}
-
-
-\section*{Details on Prior Correction of the Rare Logistic Regression Models}
-
-\todo{UPDATE}
-
-For prior correction \citep[see][]{KingRareEventsPA2001} in the models with the full sample of elected multi-party legislatures I used the observed proportion of all observations with legislative violence \change{up to 2010}{through 2012}: i.e. \change{2.1}{2.2} percent of observations up until 2010 had violence ($\tau = \frac{117}{5360} = 0.022$). There were \change{63}{109} observed incidences of violence and \change{2654}{3990} country-years from 1990 through \change{2009}{2012} in the sample, so: $\tau = \frac{109}{3390} = 0.027$.
 
 \section*{Additional Right-hand Variables}
 
@@ -121,7 +111,7 @@ Results for other political and institutional variables were largely not statist
 \caption{Legislative Violence Rare Events Logistic Regression Results (Multi-Party Elected Legislature 1981-2012)}
 \label{outputTable.dem}
 \begin{center}
-{\scalebox{0.6}{
+{\scalebox{0.45}{
 <<OutTable1, warning=FALSE, echo=FALSE, message=FALSE, results='asis'>>=
     library(stargazer)
 
@@ -153,7 +143,7 @@ Results for other political and institutional variables were largely not statist
 \caption{Legislative Violence Regression Results (Democratic Legislature from 1990-2012)}
 \label{outputTable.1990_2nd}
 \begin{center}
-\scalebox{0.7}{
+\scalebox{0.5}{
 <<OutTable2, warning=FALSE, echo=FALSE, message=FALSE, results='asis'>>=
     CoefNames <- c("Lower Disproportionality",
                 "Dem. Age (log)", "Majority Size", "Internal Armed Conflict",
@@ -176,6 +166,9 @@ Results for other political and institutional variables were largely not statist
 \end{center}
 \end{table}
 
+\section*{Details on Prior Correction of the Rare Logistic Regression Models}
+
+For prior correction \citep[see][]{KingRareEventsPA2001} in the models with the full sample of democratic legislatures I used the observed proportion of all observations with legislative violence \change{up to 2010}{through 2012}: i.e. \change{2.1}{3.7} percent of observations up until \change{2010}{2012} had violence ($\tau = \frac{86}{2297} = 0.037$). There were \change{63}{79} observed incidences of violence and \change{2654}{1898} country-years from 1990 through \change{2009}{2012} in the sample, so: $\tau = \frac{79}{1898} = 0.042$.
 
 \section*{Interactions}
 
@@ -191,7 +184,7 @@ The substantive importance of these interactions is overall very weak. Plots of 
 
 It is important to reiterate that though these interactive effects have statistically significant terms, the substantive importance of these estimates for meaningful fitted values is very weak.
 
-\begin{figure}
+\begin{figure}[H]
     \begin{center}
 <<predProInteract1, warning=FALSE, echo=FALSE, message=FALSE, results='hide', fig.width=7, fig.height=7, out.width='0.95\\linewidth', cache=FALSE>>=
     ## Estimate models
@@ -211,7 +204,7 @@ It is important to reiterate that though these interactive effects have statisti
     \end{singlespace}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[H]
     \begin{center}
 <<predProInteract2, warning=FALSE, echo=FALSE, message=FALSE, results='hide', fig.width=7, fig.height=7, out.width='0.95\\linewidth', cache=FALSE>>=
     ## Create Graphs ##
@@ -227,7 +220,7 @@ It is important to reiterate that though these interactive effects have statisti
     \end{singlespace}
 \end{figure}
 
-\begin{table}
+\begin{table}[H]
     \caption{Legislative Violence Regression Results with Lower Disproportionality Interactions (Democratic Legislature from 1990-2012)}
     \label{prop_interact}
     \begin{center}
@@ -258,7 +251,7 @@ It is important to reiterate that though these interactive effects have statisti
 \end{table}
 
 }
-\begin{table}
+\begin{table}[H]
     \caption{Legislative Violence Regression Results with Democratic Age Interactions (Democratic Legislature from 1990-2012)}
     \label{dem_interact}
     \begin{center}
@@ -287,7 +280,7 @@ It is important to reiterate that though these interactive effects have statisti
     \end{center}
 \end{table}
 
-\begin{figure}
+\begin{figure}[H]
     \begin{center}
 <<marginalEffects, warning=FALSE, echo=FALSE, message=FALSE, results='hide', fig.width=6, fig.height=6, out.width='0.95\\linewidth', cache=FALSE>>=
     ## Create Graphs ##
@@ -338,7 +331,7 @@ Table \ref{results_frac} shows models with ethnic fractionalization where key va
 
 
 %%%%%%%% Variable source summary table
-\begin{table}[!h]
+\begin{table}[H]
     \footnotesize
     \begin{center}
     \caption{Variable Summary}
@@ -375,7 +368,7 @@ Table \ref{results_frac} shows models with ethnic fractionalization where key va
     \end{tabular}
     \end{center}
     \begin{singlespace}
-        Label refers to the label used in the data file (\emph{LegislativeViolenceMain.csv}) for replication. \\
+        Label refers to the label used in the replication data file (\emph{LegislativeViolenceMain.csv}). \\
         Please contact the author for detailed summary statistics. \\
         All of the data from \cite{DPI2001} was updated through 2012.
     \end{singlespace}

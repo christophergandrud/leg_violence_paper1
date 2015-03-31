@@ -94,23 +94,20 @@
 
 \maketitle
 
-
-
 %%%%%%%%%%%%%%%% Run Analyses %%%%%%%%%%%%%%%%%%%%%%%%
-
 
 
 \section*{Examining Possible Measurement Error: Trends in Violence and Democracy}
 
 \todo[inline]{Section added.}
 
-As noted in the main text, data on incidents was primarily gathered using multiple key word searches of the Google News Archive, Google Search, and Youtube over a number of years. This method could have significant measurement error. The electronic availability of news and videos on legislative violence, as with material on almost all other phenomenon, could be positively correlated with time. I.e. more information is available for incidents in more recent periods.
+As noted in the main text, data on incidents was primarily gathered using multiple key word searches of the LexisNexis, NewsLibrary, NewsBank, general Google Search, and Youtube over a number of years. This information was supplemented with colleagues' expert knowledge. Nonetheless, such a method could have significant measurement error. The electronic availability of news and videos on legislative violence, as with material on almost all other phenomenon, could be positively correlated with time. I.e. more information is available for incidents in more recent years.
 
-There are more incidents in later periods of the data set than earlier periods. For example, there were only 8 incidents observed in the 1980s, but 65 in the sample's last ten years (2002-2012). However, there are good reasons to believe that this distribution of incidents in time is not simply the result of measurement error.
+There are indeed more incidents in later years of the data set. For example, there were only 8 incidents observed in the 1980s for the entire sample of countries. In contrast the democratic sample's last ten years (2002-2012) has 52. Nonetheless, there are good reasons to believe that this distribution of incidents over time is not simply the result of measurement error, but has more to do with increasing democratization.
 
-Primarily, there are many more countries with multi-party elected national legislatures--the criteria for inclusion--that could have violence later in the sample. The top panel of Figure \ref{elect_vs_violence} shows the number of countries in the sample with elected multi-party national legislatures. In 1981 there were only 65 countries. Between 1990 and 1995 a dramatic increase occurred such that by 1995 135 countries had multi-party elected legislatures. At the end of the sample period, almost double the original number 149 countries have multi-party elected national legislatures. In the bottom panel of Figure \ref{elect_vs_violence} we can see that the average observed number of violent incidents roughly follows the pattern of democratization. There is a noticeable increase in the average number of violent incidents from the mid-1990s. Furthermore, as the empirical evidence in this article has demonstrated newer democracies are more likely to have legislative violence. As such, we should expect to see more violence in the more recent period when there are many new democracies.
+There are many more countries with democratic multi-party national legislatures that could have violence later in the sample. The top panel of Figure \ref{elect_vs_violence} shows the number democracies in the sample as defined as having a Polity IV score greater than 5. In 1981 there were only 40 countries. Between 1990 and 1995 a dramatic increase occurred such that by 1995 there are 76 democracies. At the end of the sample period,more than double the original number--93--countries are democracies. In the bottom panel of Figure \ref{elect_vs_violence} we can see that the temporal distribution of legislative violence roughly follows the pattern of democratization. There is a noticeable increase in the average number of violent incidents from this mid-1990s. Furthermore, as the empirical evidence in this article has demonstrated newer democracies are more likely to have legislative violence. As such, we should expect to see more violence in the more recent period when there are many new democracies.
 
-Measurement error caused by the electronic availability of information be an issue. Nonetheless, the increasing prevalence of young multi-party elected national legislatures is likely an important cause of there being more observed incidents of violence later in the sample.
+Measurement error caused by the electronic availability of information could be an issue. Nonetheless, the increasing prevalence of young democracies with legislatures where members are competitively elected is likely an important cause of there being more observed incidents of violence later in the sample.
 
 \begin{figure}
 
@@ -126,13 +123,6 @@ Measurement error caused by the electronic availability of information be an iss
     \label{elect_vs_violence}
 
 \end{figure}
-
-
-\section*{Details on Prior Correction of the Rare Logistic Regression Models}
-
-\todo{UPDATE}
-
-For prior correction \citep[see][]{KingRareEventsPA2001} in the models with the full sample of elected multi-party legislatures I used the observed proportion of all observations with legislative violence \change{up to 2010}{through 2012}: i.e. \change{2.1}{2.2} percent of observations up until 2010 had violence ($\tau = \frac{117}{5360} = 0.022$). There were \change{63}{109} observed incidences of violence and \change{2654}{3990} country-years from 1990 through \change{2009}{2012} in the sample, so: $\tau = \frac{109}{3390} = 0.027$.
 
 \section*{Additional Right-hand Variables}
 
@@ -170,10 +160,10 @@ Results for other political and institutional variables were largely not statist
 \caption{Legislative Violence Rare Events Logistic Regression Results (Multi-Party Elected Legislature 1981-2012)}
 \label{outputTable.dem}
 \begin{center}
-{\scalebox{0.6}{
+{\scalebox{0.45}{
 
 % Table created by stargazer v.5.1 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
-% Date and time: Tue, Mar 31, 2015 - 14:53:02
+% Date and time: Tue, Mar 31, 2015 - 16:10:37
 \begin{tabular}{@{\extracolsep{5pt}}lccccccccccc} 
 \\[-1.8ex]\hline 
 \hline \\[-1.8ex] 
@@ -182,61 +172,61 @@ Results for other political and institutional variables were largely not statist
 \\[-1.8ex] & \multicolumn{11}{c}{Violent Incident} \\ 
 \\[-1.8ex] & (1) & (2) & (3) & (4) & (5) & (6) & (7) & (8) & (9) & (10) & (11)\\ 
 \hline \\[-1.8ex] 
- Lower Disproportionality & $-$0.765$^{***}$ & $-$0.754$^{***}$ & $-$0.763$^{***}$ & $-$0.730$^{***}$ & $-$0.596$^{**}$ & $-$0.820$^{***}$ & $-$0.883$^{**}$ & $-$0.766$^{***}$ & $-$0.650$^{**}$ & $-$0.714$^{***}$ & $-$0.589$^{**}$ \\ 
-  & (0.270) & (0.270) & (0.272) & (0.271) & (0.301) & (0.312) & (0.393) & (0.279) & (0.276) & (0.270) & (0.283) \\ 
+ Lower Disproportionality & $-$0.701$^{***}$ & $-$0.689$^{***}$ & $-$0.693$^{***}$ & $-$0.664$^{**}$ & $-$0.524$^{*}$ & $-$0.732$^{**}$ & $-$0.883$^{**}$ & $-$0.692$^{**}$ & $-$0.587$^{**}$ & $-$0.652$^{**}$ & $-$0.524$^{*}$ \\ 
+  & (0.266) & (0.266) & (0.267) & (0.266) & (0.297) & (0.306) & (0.393) & (0.274) & (0.272) & (0.266) & (0.279) \\ 
   & & & & & & & & & & & \\ 
- Dem. Age (log) & $-$0.274$^{**}$ & $-$0.268$^{**}$ & $-$0.273$^{**}$ & $-$0.267$^{**}$ & $-$0.300$^{**}$ & $-$0.300$^{**}$ & $-$0.344$^{**}$ & $-$0.282$^{**}$ & $-$0.295$^{***}$ & $-$0.318$^{***}$ & $-$0.264$^{**}$ \\ 
-  & (0.107) & (0.106) & (0.108) & (0.106) & (0.129) & (0.123) & (0.162) & (0.120) & (0.113) & (0.106) & (0.130) \\ 
+ Dem. Age (log) & $-$0.303$^{***}$ & $-$0.297$^{***}$ & $-$0.299$^{***}$ & $-$0.294$^{***}$ & $-$0.340$^{***}$ & $-$0.336$^{***}$ & $-$0.344$^{**}$ & $-$0.325$^{***}$ & $-$0.332$^{***}$ & $-$0.350$^{***}$ & $-$0.301$^{**}$ \\ 
+  & (0.105) & (0.105) & (0.107) & (0.105) & (0.127) & (0.121) & (0.162) & (0.117) & (0.112) & (0.105) & (0.128) \\ 
   & & & & & & & & & & & \\ 
- Majority Size & $-$0.026$^{***}$ & $-$0.026$^{***}$ & $-$0.027$^{***}$ & $-$0.024$^{***}$ & $-$0.024$^{**}$ & $-$0.026$^{***}$ & $-$0.028$^{**}$ & $-$0.030$^{***}$ & $-$0.030$^{***}$ & $-$0.027$^{***}$ & $-$0.023$^{***}$ \\ 
-  & (0.008) & (0.008) & (0.009) & (0.008) & (0.010) & (0.010) & (0.014) & (0.009) & (0.010) & (0.009) & (0.009) \\ 
+ Majority Size & $-$0.023$^{***}$ & $-$0.023$^{***}$ & $-$0.023$^{***}$ & $-$0.022$^{***}$ & $-$0.019$^{*}$ & $-$0.022$^{**}$ & $-$0.028$^{**}$ & $-$0.026$^{***}$ & $-$0.026$^{***}$ & $-$0.024$^{***}$ & $-$0.020$^{**}$ \\ 
+  & (0.008) & (0.008) & (0.008) & (0.008) & (0.010) & (0.009) & (0.014) & (0.009) & (0.009) & (0.009) & (0.009) \\ 
   & & & & & & & & & & & \\ 
- Internal Armed Conflict &  & 0.576$^{*}$ & 0.551$^{*}$ & 0.560$^{*}$ & 0.523 & 0.715$^{**}$ & 0.189 & 0.570$^{*}$ & 0.607$^{**}$ & 0.649$^{**}$ & 0.679$^{**}$ \\ 
-  &  & (0.304) & (0.304) & (0.304) & (0.352) & (0.337) & (0.547) & (0.310) & (0.309) & (0.308) & (0.317) \\ 
+ Internal Armed Conflict &  & 0.556$^{*}$ & 0.535$^{*}$ & 0.542$^{*}$ & 0.494 & 0.689$^{**}$ & 0.189 & 0.537$^{*}$ & 0.576$^{*}$ & 0.638$^{**}$ & 0.661$^{**}$ \\ 
+  &  & (0.303) & (0.303) & (0.303) & (0.350) & (0.336) & (0.547) & (0.309) & (0.308) & (0.308) & (0.316) \\ 
   & & & & & & & & & & & \\ 
- Leg. Immunity &  &  & $-$0.050 &  &  &  &  &  &  &  &  \\ 
-  &  &  & (0.260) &  &  &  &  &  &  &  &  \\ 
+ Leg. Immunity &  &  & $-$0.015 &  &  &  &  &  &  &  &  \\ 
+  &  &  & (0.257) &  &  &  &  &  &  &  &  \\ 
   & & & & & & & & & & & \\ 
- Single Party Gov. &  &  & $-$0.146 &  &  &  &  &  &  &  &  \\ 
-  &  &  & (0.252) &  &  &  &  &  &  &  &  \\ 
+ Single Party Gov. &  &  & $-$0.102 &  &  &  &  &  &  &  &  \\ 
+  &  &  & (0.249) &  &  &  &  &  &  &  &  \\ 
   & & & & & & & & & & & \\ 
- Political Constraints &  &  &  & $-$0.697 &  &  &  &  &  &  &  \\ 
-  &  &  &  & (0.931) &  &  &  &  &  &  &  \\ 
+ Political Constraints &  &  &  & $-$0.735 &  &  &  &  &  &  &  \\ 
+  &  &  &  & (0.912) &  &  &  &  &  &  &  \\ 
   & & & & & & & & & & & \\ 
- Self Expression &  &  &  &  & 2.295 &  &  &  &  &  &  \\ 
-  &  &  &  &  & (2.457) &  &  &  &  &  &  \\ 
+ Self Expression &  &  &  &  & 2.384 &  &  &  &  &  &  \\ 
+  &  &  &  &  & (2.432) &  &  &  &  &  &  \\ 
   & & & & & & & & & & & \\ 
- Ethnic Frac. &  &  &  &  & $-$0.557 &  &  &  &  &  &  \\ 
-  &  &  &  &  & (0.772) &  &  &  &  &  &  \\ 
+ Ethnic Frac. &  &  &  &  & $-$0.523 &  &  &  &  &  &  \\ 
+  &  &  &  &  & (0.762) &  &  &  &  &  &  \\ 
   & & & & & & & & & & & \\ 
- Perc. Women in Parl. &  &  &  &  &  & 0.016 &  &  &  &  &  \\ 
-  &  &  &  &  &  & (0.018) &  &  &  &  &  \\ 
+ Perc. Women in Parl. &  &  &  &  &  & 0.015 &  &  &  &  &  \\ 
+  &  &  &  &  &  & (0.017) &  &  &  &  &  \\ 
   & & & & & & & & & & & \\ 
  Murder Rate &  &  &  &  &  &  & $-$0.002 &  &  &  &  \\ 
   &  &  &  &  &  &  & (0.013) &  &  &  &  \\ 
   & & & & & & & & & & & \\ 
- Federal &  &  &  &  &  &  &  & 0.103 &  &  &  \\ 
-  &  &  &  &  &  &  &  & (0.358) &  &  &  \\ 
+ Federal &  &  &  &  &  &  &  & 0.132 &  &  &  \\ 
+  &  &  &  &  &  &  &  & (0.357) &  &  &  \\ 
   & & & & & & & & & & & \\ 
- Gov. Frac. &  &  &  &  &  &  &  & 0.157 &  &  &  \\ 
-  &  &  &  &  &  &  &  & (0.470) &  &  &  \\ 
+ Gov. Frac. &  &  &  &  &  &  &  & 0.083 &  &  &  \\ 
+  &  &  &  &  &  &  &  & (0.468) &  &  &  \\ 
   & & & & & & & & & & & \\ 
  No. of Parties by Seats &  &  &  &  &  &  &  &  & $-$0.091 &  &  \\ 
-  &  &  &  &  &  &  &  &  & (0.095) &  &  \\ 
+  &  &  &  &  &  &  &  &  & (0.093) &  &  \\ 
   & & & & & & & & & & & \\ 
- GINI &  &  &  &  &  &  &  &  &  & $-$0.037$^{**}$ &  \\ 
+ GINI &  &  &  &  &  &  &  &  &  & $-$0.040$^{***}$ &  \\ 
   &  &  &  &  &  &  &  &  &  & (0.015) &  \\ 
   & & & & & & & & & & & \\ 
- GDP per Capita (log) &  &  &  &  &  &  &  &  &  &  & $-$0.060 \\ 
+ GDP per Capita (log) &  &  &  &  &  &  &  &  &  &  & $-$0.048 \\ 
   &  &  &  &  &  &  &  &  &  &  & (0.120) \\ 
   & & & & & & & & & & & \\ 
- (Intercept) & $-$0.711 & $-$0.802 & $-$0.645 & $-$0.616 & $-$3.584 & $-$0.918 & $-$0.261 & $-$0.567 & $-$0.243 & 0.776 & $-$0.936 \\ 
-  & (0.537) & (0.541) & (0.636) & (0.604) & (3.070) & (0.627) & (0.807) & (0.576) & (0.740) & (0.837) & (0.582) \\ 
+ (Intercept) & $-$0.831 & $-$0.923$^{*}$ & $-$0.835 & $-$0.717 & $-$3.897 & $-$1.067$^{*}$ & $-$0.288 & $-$0.688 & $-$0.371 & 0.775 & $-$1.085$^{*}$ \\ 
+  & (0.534) & (0.538) & (0.633) & (0.604) & (3.040) & (0.623) & (0.807) & (0.572) & (0.730) & (0.826) & (0.580) \\ 
   & & & & & & & & & & & \\ 
 \hline \\[-1.8ex] 
-Observations & 1,699 & 1,699 & 1,674 & 1,674 & 909 & 1,578 & 821 & 1,563 & 1,584 & 1,677 & 1,624 \\ 
-Log Likelihood & $-$275.532 & $-$274.027 & $-$272.986 & $-$273.051 & $-$200.555 & $-$222.278 & $-$134.936 & $-$254.931 & $-$259.651 & $-$269.637 & $-$244.331 \\ 
-Akaike Inf. Crit. & 559.065 & 558.053 & 559.972 & 558.101 & 415.111 & 456.557 & 281.872 & 523.862 & 531.303 & 551.274 & 500.663 \\ 
+Observations & 1,707 & 1,707 & 1,682 & 1,682 & 911 & 1,586 & 821 & 1,570 & 1,591 & 1,684 & 1,628 \\ 
+Log Likelihood & $-$279.636 & $-$278.226 & $-$277.253 & $-$277.151 & $-$203.983 & $-$226.651 & $-$134.936 & $-$259.188 & $-$263.690 & $-$273.029 & $-$248.318 \\ 
+Akaike Inf. Crit. & 567.272 & 566.452 & 568.507 & 566.302 & 421.966 & 465.303 & 281.872 & 532.377 & 539.380 & 558.058 & 508.636 \\ 
 \hline 
 \hline \\[-1.8ex] 
 \multicolumn{12}{l}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
@@ -253,10 +243,10 @@ Akaike Inf. Crit. & 559.065 & 558.053 & 559.972 & 558.101 & 415.111 & 456.557 & 
 \caption{Legislative Violence Regression Results (Democratic Legislature from 1990-2012)}
 \label{outputTable.1990_2nd}
 \begin{center}
-\scalebox{0.7}{
+\scalebox{0.5}{
 
 % Table created by stargazer v.5.1 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
-% Date and time: Tue, Mar 31, 2015 - 14:53:06
+% Date and time: Tue, Mar 31, 2015 - 16:10:40
 \begin{tabular}{@{\extracolsep{5pt}}lcccccc} 
 \\[-1.8ex]\hline 
 \hline \\[-1.8ex] 
@@ -265,46 +255,46 @@ Akaike Inf. Crit. & 559.065 & 558.053 & 559.972 & 558.101 & 415.111 & 456.557 & 
 \\[-1.8ex] & \multicolumn{6}{c}{Violent Incident} \\ 
 \\[-1.8ex] & (1) & (2) & (3) & (4) & (5) & (6)\\ 
 \hline \\[-1.8ex] 
- Lower Disproportionality & $-$0.675$^{**}$ & $-$0.883$^{**}$ & $-$0.671$^{**}$ & $-$0.563$^{**}$ & $-$0.603$^{**}$ & $-$0.492$^{*}$ \\ 
-  & (0.319) & (0.393) & (0.283) & (0.280) & (0.275) & (0.290) \\ 
+ Lower Disproportionality & $-$0.588$^{*}$ & $-$0.883$^{**}$ & $-$0.602$^{**}$ & $-$0.506$^{*}$ & $-$0.543$^{**}$ & $-$0.429 \\ 
+  & (0.313) & (0.393) & (0.278) & (0.276) & (0.271) & (0.286) \\ 
   & & & & & & \\ 
- Dem. Age (log) & $-$0.330$^{**}$ & $-$0.344$^{**}$ & $-$0.307$^{**}$ & $-$0.332$^{***}$ & $-$0.335$^{***}$ & $-$0.408$^{***}$ \\ 
-  & (0.132) & (0.162) & (0.129) & (0.121) & (0.112) & (0.141) \\ 
+ Dem. Age (log) & $-$0.368$^{***}$ & $-$0.344$^{**}$ & $-$0.356$^{***}$ & $-$0.372$^{***}$ & $-$0.367$^{***}$ & $-$0.450$^{***}$ \\ 
+  & (0.130) & (0.162) & (0.126) & (0.119) & (0.110) & (0.139) \\ 
   & & & & & & \\ 
- Majority Size & $-$0.025$^{**}$ & $-$0.028$^{**}$ & $-$0.028$^{***}$ & $-$0.029$^{***}$ & $-$0.026$^{***}$ & $-$0.023$^{**}$ \\ 
-  & (0.010) & (0.014) & (0.010) & (0.010) & (0.009) & (0.010) \\ 
+ Majority Size & $-$0.021$^{**}$ & $-$0.028$^{**}$ & $-$0.024$^{**}$ & $-$0.025$^{***}$ & $-$0.023$^{**}$ & $-$0.019$^{**}$ \\ 
+  & (0.010) & (0.014) & (0.009) & (0.010) & (0.009) & (0.009) \\ 
   & & & & & & \\ 
- Internal Armed Conflict & 0.530 & 0.188 & 0.480 & 0.532 & 0.555 & 0.662$^{*}$ \\ 
-  & (0.388) & (0.547) & (0.353) & (0.352) & (0.351) & (0.359) \\ 
+ Internal Armed Conflict & 0.509 & 0.188 & 0.452 & 0.504 & 0.549 & 0.648$^{*}$ \\ 
+  & (0.386) & (0.547) & (0.352) & (0.351) & (0.351) & (0.358) \\ 
   & & & & & & \\ 
- Perc. Women in Parliament & 0.010 &  &  &  &  &  \\ 
+ Perc. Women in Parliament & 0.009 &  &  &  &  &  \\ 
   & (0.019) &  &  &  &  &  \\ 
   & & & & & & \\ 
  Murder Rate &  & $-$0.002 &  &  &  &  \\ 
   &  & (0.013) &  &  &  &  \\ 
   & & & & & & \\ 
- Federal &  &  & $-$0.079 &  &  &  \\ 
-  &  &  & (0.412) &  &  &  \\ 
+ Federal &  &  & $-$0.036 &  &  &  \\ 
+  &  &  & (0.410) &  &  &  \\ 
   & & & & & & \\ 
- Gov. Frac. &  &  & 0.029 &  &  &  \\ 
-  &  &  & (0.492) &  &  &  \\ 
+ Gov. Frac. &  &  & $-$0.066 &  &  &  \\ 
+  &  &  & (0.489) &  &  &  \\ 
   & & & & & & \\ 
- No. of Parties by Seats &  &  &  & $-$0.124 &  &  \\ 
-  &  &  &  & (0.099) &  &  \\ 
+ No. of Parties by Seats &  &  &  & $-$0.123 &  &  \\ 
+  &  &  &  & (0.098) &  &  \\ 
   & & & & & & \\ 
- Gini &  &  &  &  & $-$0.040$^{**}$ &  \\ 
+ Gini &  &  &  &  & $-$0.043$^{***}$ &  \\ 
   &  &  &  &  & (0.016) &  \\ 
   & & & & & & \\ 
- GDP per Capita (log) &  &  &  &  &  & 0.122 \\ 
+ GDP per Capita (log) &  &  &  &  &  & 0.137 \\ 
   &  &  &  &  &  & (0.132) \\ 
   & & & & & & \\ 
- (Intercept) & $-$0.699 & $-$0.154 & $-$0.434 & 0.036 & 0.992 & $-$0.773 \\ 
-  & (0.655) & (0.807) & (0.599) & (0.774) & (0.858) & (0.614) \\ 
+ (Intercept) & $-$0.861 & $-$0.177 & $-$0.564 & $-$0.112 & 0.971 & $-$0.939 \\ 
+  & (0.652) & (0.807) & (0.597) & (0.764) & (0.849) & (0.612) \\ 
   & & & & & & \\ 
 \hline \\[-1.8ex] 
-Observations & 1,316 & 821 & 1,316 & 1,334 & 1,415 & 1,368 \\ 
-Log Likelihood & $-$199.278 & $-$134.936 & $-$231.295 & $-$235.240 & $-$244.874 & $-$220.222 \\ 
-Akaike Inf. Crit. & 410.557 & 281.872 & 476.591 & 482.479 & 501.748 & 452.445 \\ 
+Observations & 1,320 & 821 & 1,319 & 1,337 & 1,418 & 1,371 \\ 
+Log Likelihood & $-$203.253 & $-$134.936 & $-$235.109 & $-$238.861 & $-$247.922 & $-$223.698 \\ 
+Akaike Inf. Crit. & 418.507 & 281.872 & 484.219 & 489.722 & 507.845 & 459.396 \\ 
 \hline 
 \hline \\[-1.8ex] 
 \multicolumn{7}{l}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
@@ -315,6 +305,9 @@ Akaike Inf. Crit. & 410.557 & 281.872 & 476.591 & 482.479 & 501.748 & 452.445 \\
 \end{center}
 \end{table}
 
+\section*{Details on Prior Correction of the Rare Logistic Regression Models}
+
+For prior correction \citep[see][]{KingRareEventsPA2001} in the models with the full sample of democratic legislatures I used the observed proportion of all observations with legislative violence \change{up to 2010}{through 2012}: i.e. \change{2.1}{3.7} percent of observations up until \change{2010}{2012} had violence ($\tau = \frac{86}{2297} = 0.037$). There were \change{63}{79} observed incidences of violence and \change{2654}{1898} country-years from 1990 through \change{2009}{2012} in the sample, so: $\tau = \frac{79}{1898} = 0.042$.
 
 \section*{Interactions}
 
@@ -330,7 +323,7 @@ The substantive importance of these interactions is overall very weak. Plots of 
 
 It is important to reiterate that though these interactive effects have statistically significant terms, the substantive importance of these estimates for meaningful fitted values is very weak.
 
-\begin{figure}
+\begin{figure}[H]
     \begin{center}
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
@@ -346,7 +339,7 @@ It is important to reiterate that though these interactive effects have statisti
     \end{singlespace}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[H]
     \begin{center}
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
@@ -362,14 +355,14 @@ It is important to reiterate that though these interactive effects have statisti
     \end{singlespace}
 \end{figure}
 
-\begin{table}
+\begin{table}[H]
     \caption{Legislative Violence Regression Results with Lower Disproportionality Interactions (Democratic Legislature from 1990-2012)}
     \label{prop_interact}
     \begin{center}
     \scalebox{0.7}{
 
 % Table created by stargazer v.5.1 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
-% Date and time: Tue, Mar 31, 2015 - 14:53:12
+% Date and time: Tue, Mar 31, 2015 - 16:10:46
 \begin{tabular}{@{\extracolsep{5pt}}lcccccc} 
 \\[-1.8ex]\hline 
 \hline \\[-1.8ex] 
@@ -378,55 +371,55 @@ It is important to reiterate that though these interactive effects have statisti
 \\[-1.8ex] & \multicolumn{6}{c}{Violent Incident} \\ 
 \\[-1.8ex] & (1) & (2) & (3) & (4) & (5) & (6)\\ 
 \hline \\[-1.8ex] 
- Majority Size & $-$0.025$^{***}$ & $-$0.022$^{**}$ & $-$0.025$^{***}$ & $-$0.026$^{***}$ & $-$0.021$^{**}$ & $-$0.023$^{***}$ \\ 
+ Majority Size & $-$0.022$^{**}$ & $-$0.017$^{*}$ & $-$0.022$^{**}$ & $-$0.023$^{**}$ & $-$0.018$^{*}$ & $-$0.020$^{**}$ \\ 
   & (0.009) & (0.010) & (0.009) & (0.009) & (0.010) & (0.009) \\ 
   & & & & & & \\ 
- Dem. Age (log) & $-$0.247$^{*}$ & $-$0.337$^{**}$ & $-$0.304$^{***}$ & $-$0.340$^{***}$ & $-$0.369$^{**}$ & $-$0.300$^{***}$ \\ 
-  & (0.138) & (0.135) & (0.116) & (0.114) & (0.144) & (0.113) \\ 
+ Dem. Age (log) & $-$0.245$^{*}$ & $-$0.384$^{***}$ & $-$0.335$^{***}$ & $-$0.373$^{***}$ & $-$0.412$^{***}$ & $-$0.329$^{***}$ \\ 
+  & (0.137) & (0.132) & (0.114) & (0.112) & (0.142) & (0.112) \\ 
   & & & & & & \\ 
- Lower Disproportionality & $-$0.211 & 13.788$^{**}$ & $-$1.729$^{***}$ & $-$0.873 & 0.190 & $-$0.180 \\ 
-  & (0.687) & (6.543) & (0.601) & (1.191) & (0.438) & (0.783) \\ 
+ Lower Disproportionality & 0.082 & 14.407$^{**}$ & $-$1.638$^{***}$ & $-$0.559 & 0.262 & 0.022 \\ 
+  & (0.654) & (6.481) & (0.588) & (1.168) & (0.431) & (0.765) \\ 
   & & & & & & \\ 
- Lower Disp.*Dem. Age & $-$0.159 &  &  &  &  &  \\ 
-  & (0.240) &  &  &  &  &  \\ 
+ Lower Disp.*Dem. Age & $-$0.252 &  &  &  &  &  \\ 
+  & (0.234) &  &  &  &  &  \\ 
   & & & & & & \\ 
- Self Expression &  & 6.594$^{**}$ &  &  &  &  \\ 
-  &  & (3.185) &  &  &  &  \\ 
+ Self Expression &  & 7.058$^{**}$ &  &  &  &  \\ 
+  &  & (3.210) &  &  &  &  \\ 
   & & & & & & \\ 
- Lower Disp.*Self Expression &  & $-$11.297$^{**}$ &  &  &  &  \\ 
-  &  & (5.176) &  &  &  &  \\ 
+ Lower Disp.*Self Expression &  & $-$11.738$^{**}$ &  &  &  &  \\ 
+  &  & (5.128) &  &  &  &  \\ 
   & & & & & & \\ 
- Ethnic Frac. &  &  & $-$1.173 &  &  &  \\ 
-  &  &  & (0.759) &  &  &  \\ 
+ Ethnic Frac. &  &  & $-$1.193 &  &  &  \\ 
+  &  &  & (0.758) &  &  &  \\ 
   & & & & & & \\ 
- Lower Disp.*Ethnic Frac. &  &  & 2.842$^{**}$ &  &  &  \\ 
-  &  &  & (1.293) &  &  &  \\ 
+ Lower Disp.*Ethnic Frac. &  &  & 2.776$^{**}$ &  &  &  \\ 
+  &  &  & (1.270) &  &  &  \\ 
   & & & & & & \\ 
- GINI &  &  &  & $-$0.040$^{*}$ &  &  \\ 
+ GINI &  &  &  & $-$0.039$^{*}$ &  &  \\ 
   &  &  &  & (0.021) &  &  \\ 
   & & & & & & \\ 
- Lower Disp.*GINI &  &  &  & 0.007 &  &  \\ 
-  &  &  &  & (0.031) &  &  \\ 
+ Lower Disp.*GINI &  &  &  & 0.001 &  &  \\ 
+  &  &  &  & (0.030) &  &  \\ 
   & & & & & & \\ 
- GDP per Capita (log) &  &  &  &  & 0.218 &  \\ 
+ GDP per Capita (log) &  &  &  &  & 0.244 &  \\ 
   &  &  &  &  & (0.153) &  \\ 
   & & & & & & \\ 
- Lower Disp.*GDP Per Capita &  &  &  &  & $-$0.439$^{*}$ &  \\ 
-  &  &  &  &  & (0.235) &  \\ 
+ Lower Disp.*GDP Per Capita &  &  &  &  & $-$0.449$^{*}$ &  \\ 
+  &  &  &  &  & (0.231) &  \\ 
   & & & & & & \\ 
- Political Constraints &  &  &  &  &  & $-$0.127 \\ 
-  &  &  &  &  &  & (1.177) \\ 
+ Political Constraints &  &  &  &  &  & $-$0.030 \\ 
+  &  &  &  &  &  & (1.169) \\ 
   & & & & & & \\ 
- Lower Disp.*Pol. Constraints &  &  &  &  &  & $-$1.117 \\ 
-  &  &  &  &  &  & (1.916) \\ 
+ Lower Disp.*Pol. Constraints &  &  &  &  &  & $-$1.483 \\ 
+  &  &  &  &  &  & (1.881) \\ 
   & & & & & & \\ 
- (Intercept) & $-$0.737 & $-$9.076$^{**}$ & $-$0.189 & 1.060 & $-$0.996 & $-$0.662 \\ 
-  & (0.599) & (4.064) & (0.660) & (0.994) & (0.649) & (0.723) \\ 
+ (Intercept) & $-$0.953 & $-$9.836$^{**}$ & $-$0.313 & 0.928 & $-$1.177$^{*}$ & $-$0.850 \\ 
+  & (0.597) & (4.097) & (0.653) & (0.982) & (0.648) & (0.728) \\ 
   & & & & & & \\ 
 \hline \\[-1.8ex] 
-Observations & 1,437 & 808 & 1,431 & 1,415 & 1,368 & 1,413 \\ 
-Log Likelihood & $-$250.221 & $-$183.549 & $-$247.633 & $-$245.863 & $-$219.705 & $-$249.308 \\ 
-Akaike Inf. Crit. & 510.442 & 379.097 & 507.266 & 503.726 & 451.411 & 510.616 \\ 
+Observations & 1,441 & 810 & 1,435 & 1,418 & 1,371 & 1,417 \\ 
+Log Likelihood & $-$253.644 & $-$186.409 & $-$251.423 & $-$248.923 & $-$222.992 & $-$252.849 \\ 
+Akaike Inf. Crit. & 517.288 & 384.817 & 514.846 & 509.845 & 457.984 & 517.697 \\ 
 \hline 
 \hline \\[-1.8ex] 
 \multicolumn{7}{l}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
@@ -438,14 +431,14 @@ Akaike Inf. Crit. & 510.442 & 379.097 & 507.266 & 503.726 & 451.411 & 510.616 \\
 \end{table}
 
 }
-\begin{table}
+\begin{table}[H]
     \caption{Legislative Violence Regression Results with Democratic Age Interactions (Democratic Legislature from 1990-2012)}
     \label{dem_interact}
     \begin{center}
     \scalebox{0.7}{
 
 % Table created by stargazer v.5.1 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
-% Date and time: Tue, Mar 31, 2015 - 14:53:14
+% Date and time: Tue, Mar 31, 2015 - 16:10:49
 \begin{tabular}{@{\extracolsep{5pt}}lccccc} 
 \\[-1.8ex]\hline 
 \hline \\[-1.8ex] 
@@ -454,52 +447,52 @@ Akaike Inf. Crit. & 510.442 & 379.097 & 507.266 & 503.726 & 451.411 & 510.616 \\
 \\[-1.8ex] & \multicolumn{5}{c}{Violent Incident} \\ 
 \\[-1.8ex] & (1) & (2) & (3) & (4) & (5)\\ 
 \hline \\[-1.8ex] 
- Majority Size & $-$0.024$^{**}$ & $-$0.026$^{***}$ & $-$0.027$^{***}$ & $-$0.023$^{**}$ & $-$0.026$^{***}$ \\ 
-  & (0.010) & (0.009) & (0.009) & (0.010) & (0.009) \\ 
+ Majority Size & $-$0.019$^{*}$ & $-$0.023$^{***}$ & $-$0.023$^{**}$ & $-$0.019$^{**}$ & $-$0.024$^{***}$ \\ 
+  & (0.010) & (0.009) & (0.009) & (0.009) & (0.009) \\ 
   & & & & & \\ 
- Lower Disproportionality & $-$0.533$^{*}$ & $-$0.644$^{**}$ & $-$0.601$^{**}$ & $-$0.473 & $-$0.631$^{**}$ \\ 
-  & (0.306) & (0.275) & (0.276) & (0.289) & (0.276) \\ 
+ Lower Disproportionality & $-$0.465 & $-$0.583$^{**}$ & $-$0.537$^{**}$ & $-$0.410 & $-$0.568$^{**}$ \\ 
+  & (0.301) & (0.271) & (0.272) & (0.285) & (0.272) \\ 
   & & & & & \\ 
- Dem. Age (log) & $-$0.341 & 0.066 & 0.301 & $-$0.320 & $-$0.804$^{**}$ \\ 
-  & (2.825) & (0.216) & (0.517) & (0.211) & (0.332) \\ 
+ Dem. Age (log) & $-$0.749 & 0.018 & 0.008 & $-$0.364$^{*}$ & $-$0.780$^{**}$ \\ 
+  & (2.750) & (0.213) & (0.503) & (0.207) & (0.313) \\ 
   & & & & & \\ 
- Self Expression & 3.292 &  &  &  &  \\ 
-  & (5.594) &  &  &  &  \\ 
+ Self Expression & 2.873 &  &  &  &  \\ 
+  & (5.389) &  &  &  &  \\ 
   & & & & & \\ 
- Dem. Age*Self Expression & $-$0.003 &  &  &  &  \\ 
-  & (2.195) &  &  &  &  \\ 
+ Dem. Age*Self Expression & 0.277 &  &  &  &  \\ 
+  & (2.139) &  &  &  &  \\ 
   & & & & & \\ 
- Ethnic Frac. &  & 2.330$^{*}$ &  &  &  \\ 
-  &  & (1.385) &  &  &  \\ 
+ Ethnic Frac. &  & 2.155 &  &  &  \\ 
+  &  & (1.340) &  &  &  \\ 
   & & & & & \\ 
- Dem. Age*Ethnic Frac. &  & $-$1.017$^{**}$ &  &  &  \\ 
-  &  & (0.497) &  &  &  \\ 
+ Dem. Age*Ethnic Frac. &  & $-$0.971$^{**}$ &  &  &  \\ 
+  &  & (0.486) &  &  &  \\ 
   & & & & & \\ 
- GINI &  &  & 0.005 &  &  \\ 
-  &  &  & (0.035) &  &  \\ 
+ GINI &  &  & $-$0.015 &  &  \\ 
+  &  &  & (0.034) &  &  \\ 
   & & & & & \\ 
- Dem. Age*GINI &  &  & $-$0.017 &  &  \\ 
-  &  &  & (0.014) &  &  \\ 
+ Dem. Age*GINI &  &  & $-$0.010 &  &  \\ 
+  &  &  & (0.013) &  &  \\ 
   & & & & & \\ 
- GDP per Capita (log) &  &  &  & 0.190 &  \\ 
-  &  &  &  & (0.290) &  \\ 
+ GDP per Capita (log) &  &  &  & 0.209 &  \\ 
+  &  &  &  & (0.283) &  \\ 
   & & & & & \\ 
- Dem. Age*GDP Per Capita &  &  &  & $-$0.041 &  \\ 
-  &  &  &  & (0.094) &  \\ 
+ Dem. Age*GDP Per Capita &  &  &  & $-$0.042 &  \\ 
+  &  &  &  & (0.092) &  \\ 
   & & & & & \\ 
- Political Constraints &  &  &  &  & $-$3.731$^{*}$ \\ 
-  &  &  &  &  & (2.134) \\ 
+ Political Constraints &  &  &  &  & $-$3.405$^{*}$ \\ 
+  &  &  &  &  & (1.983) \\ 
   & & & & & \\ 
- Dem. Age*Pol. Constraints &  &  &  &  & 1.347 \\ 
-  &  &  &  &  & (0.831) \\ 
+ Dem. Age*Pol. Constraints &  &  &  &  & 1.224 \\ 
+  &  &  &  &  & (0.786) \\ 
   & & & & & \\ 
- (Intercept) & $-$4.776 & $-$1.479$^{*}$ & $-$0.544 & $-$0.828 & 0.812 \\ 
-  & (7.144) & (0.830) & (1.440) & (0.742) & (0.993) \\ 
+ (Intercept) & $-$4.392 & $-$1.535$^{*}$ & 0.046 & $-$0.997 & 0.574 \\ 
+  & (6.876) & (0.806) & (1.396) & (0.739) & (0.960) \\ 
   & & & & & \\ 
 \hline \\[-1.8ex] 
-Observations & 808 & 1,431 & 1,415 & 1,368 & 1,413 \\ 
-Log Likelihood & $-$185.961 & $-$248.197 & $-$245.126 & $-$221.445 & $-$248.296 \\ 
-Akaike Inf. Crit. & 383.923 & 508.394 & 502.252 & 454.889 & 508.591 \\ 
+Observations & 810 & 1,435 & 1,418 & 1,371 & 1,417 \\ 
+Log Likelihood & $-$189.097 & $-$252.058 & $-$248.643 & $-$224.856 & $-$252.091 \\ 
+Akaike Inf. Crit. & 390.194 & 516.115 & 509.285 & 461.711 & 516.183 \\ 
 \hline 
 \hline \\[-1.8ex] 
 \multicolumn{6}{l}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
@@ -510,7 +503,7 @@ Akaike Inf. Crit. & 383.923 & 508.394 & 502.252 & 454.889 & 508.591 \\
     \end{center}
 \end{table}
 
-\begin{figure}
+\begin{figure}[H]
     \begin{center}
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
@@ -539,7 +532,7 @@ Table \ref{results_frac} shows models with ethnic fractionalization where key va
 \scalebox{0.7}{
 
 % Table created by stargazer v.5.1 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
-% Date and time: Tue, Mar 31, 2015 - 14:53:17
+% Date and time: Tue, Mar 31, 2015 - 16:10:52
 \begin{tabular}{@{\extracolsep{5pt}}lcccc} 
 \\[-1.8ex]\hline 
 \hline \\[-1.8ex] 
@@ -548,25 +541,25 @@ Table \ref{results_frac} shows models with ethnic fractionalization where key va
 \\[-1.8ex] & \multicolumn{4}{c}{Violent Incident} \\ 
 \\[-1.8ex] & (1) & (2) & (3) & (4)\\ 
 \hline \\[-1.8ex] 
- Ethnic Frac. & $-$0.218 & $-$0.923$^{*}$ & $-$0.900$^{*}$ & $-$0.235 \\ 
-  & (0.498) & (0.531) & (0.531) & (0.611) \\ 
+ Ethnic Frac. & $-$0.254 & $-$0.930$^{*}$ & $-$0.914$^{*}$ & $-$0.249 \\ 
+  & (0.498) & (0.533) & (0.527) & (0.605) \\ 
   & & & & \\ 
- Dem. Age (log) &  & $-$0.394$^{***}$ & $-$0.404$^{***}$ & $-$0.310$^{***}$ \\ 
-  &  & (0.101) & (0.103) & (0.116) \\ 
+ Dem. Age (log) &  & $-$0.357$^{***}$ & $-$0.415$^{***}$ & $-$0.342$^{***}$ \\ 
+  &  & (0.097) & (0.101) & (0.115) \\ 
   & & & & \\ 
- Majority Size &  &  & $-$0.018$^{**}$ & $-$0.025$^{***}$ \\ 
-  &  &  & (0.008) & (0.009) \\ 
+ Majority Size &  &  & $-$0.016$^{**}$ & $-$0.022$^{**}$ \\ 
+  &  &  & (0.007) & (0.009) \\ 
   & & & & \\ 
- Lower Disproportionality &  &  &  & $-$0.635$^{**}$ \\ 
-  &  &  &  & (0.275) \\ 
+ Lower Disproportionality &  &  &  & $-$0.571$^{**}$ \\ 
+  &  &  &  & (0.271) \\ 
   & & & & \\ 
- (Intercept) & $-$3.128$^{***}$ & $-$1.833$^{***}$ & $-$0.834 & $-$0.596 \\ 
-  & (0.213) & (0.365) & (0.554) & (0.650) \\ 
+ (Intercept) & $-$3.142$^{***}$ & $-$1.966$^{***}$ & $-$0.895 & $-$0.727 \\ 
+  & (0.213) & (0.354) & (0.550) & (0.642) \\ 
   & & & & \\ 
 \hline \\[-1.8ex] 
-Observations & 1,822 & 1,644 & 1,630 & 1,431 \\ 
-Log Likelihood & $-$321.979 & $-$299.871 & $-$296.353 & $-$250.204 \\ 
-Akaike Inf. Crit. & 647.957 & 605.743 & 600.706 & 510.408 \\ 
+Observations & 1,870 & 1,692 & 1,640 & 1,435 \\ 
+Log Likelihood & $-$327.144 & $-$305.950 & $-$299.687 & $-$253.953 \\ 
+Akaike Inf. Crit. & 658.288 & 617.900 & 607.374 & 517.906 \\ 
 \hline 
 \hline \\[-1.8ex] 
 \multicolumn{5}{l}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
@@ -581,7 +574,7 @@ Akaike Inf. Crit. & 647.957 & 605.743 & 600.706 & 510.408 \\
 
 
 %%%%%%%% Variable source summary table
-\begin{table}[!h]
+\begin{table}[H]
     \footnotesize
     \begin{center}
     \caption{Variable Summary}
@@ -618,7 +611,7 @@ Akaike Inf. Crit. & 647.957 & 605.743 & 600.706 & 510.408 \\
     \end{tabular}
     \end{center}
     \begin{singlespace}
-        Label refers to the label used in the data file (\emph{LegislativeViolenceMain.csv}) for replication. \\
+        Label refers to the label used in the replication data file (\emph{LegislativeViolenceMain.csv}). \\
         Please contact the author for detailed summary statistics. \\
         All of the data from \cite{DPI2001} was updated through 2012.
     \end{singlespace}

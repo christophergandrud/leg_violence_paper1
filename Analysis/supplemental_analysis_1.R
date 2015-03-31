@@ -1,7 +1,7 @@
 ############
 # Compare incidents to 
 # Christopher Gandrud
-# 20 March 2015
+# 31 March 2015
 ############
 
 # Set working directory. Change as needed.
@@ -16,8 +16,11 @@ library(ggplot2)
 library(gridExtra)
 
 # Load data
-dem <- import('Data/LegislativeViolenceMain.csv')
-dem <- subset(dem, year > 1980)
+all <- import('Data/LegislativeViolenceMain.csv')
+all <- subset(all, year > 1980)
+
+#### Keep only democracies ####
+dem <- subset(all, polity2 > 5)
 
 # Find year totals
 dem$fake <- 1
