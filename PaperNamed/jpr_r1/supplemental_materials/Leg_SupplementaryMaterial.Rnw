@@ -39,7 +39,7 @@
 \setlength{\belowcaptionskip}{0.5cm}
 
 %%%%%%% Title Page %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\title{Supplementary Material: Two Sword Lengths Apart: Credible Commitment Problems and Physical Violence in Democratic National Legislatures}
+\title{Online Appendix: Two Sword Lengths Apart: Credible Commitment Problems and Physical Violence in Democratic National Legislatures}
 
 \begin{document}
 
