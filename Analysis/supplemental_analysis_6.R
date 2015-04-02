@@ -18,7 +18,7 @@ dem <- import('Data/LegislativeViolenceMain.csv')
 # Keep only data in models
 vars <- c('violence', 'high_prop', 'dem_age', 'maj', 'internal_conflict',
           'immunity', 'pr', 'single_party', 'polconiii', 'cw_surv_self_expr', 
-          'ethnic_alesina', 'women_in_parl', 'murder_rate', 
+          'ethnic_alesina', 'dom_personal_vote', 'women_in_parl', 'murder_rate', 
           'federal', 'govfrac', 'enps', 'gini', 'gdp_per_capita')
 
 dem_sub <- dem[, vars]

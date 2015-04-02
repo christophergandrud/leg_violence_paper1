@@ -7,13 +7,13 @@
 
 A scuffle last week in which a female deputy (Malalai Joya) was attacked with water bottles and allegedly threatened with a knife shows that Afghanistan has a lot to learn about parliamentary procedure At this, several members of Parliament began hurling water bottles at her, and then rushed her. Several very unflattering terms were thrown at her along with the bottles - amounting to a grave insult in a conservative Muslim society.
 - http://www.dailystar.com.lb/News/Middle-East/May/20/Assault-on-female-Afghan-MP-opens-wider-brawl.ashx#ixzz2fAJamheu
-- http://www.youtube.com/watch?v=g4W6UdjDa9M
+- http://www.YouTube.com/watch?v=g4W6UdjDa9M
 
 ## Afghanistan June 6, 2011
 
 A stunned Ms Ahmadzai chucked a bottle back towards Ms Zaki, who then launched herself at Ms Ahmadzai, trying to grab her around the neck and delivering a series of punches to her face as lawmakers gathered for the morning session. Ms Ahmadzai tried to fight back as male MPs rushed in to break up the scrap. MPs were mostly tight-lipped over the embarrassing incident that took place as British Prime Minister David Cameron visited the capital Kabul and held talks with President Hamid Karzai over peace talks with the Taliban.
 - http://www.ndtv.com/article/world/women-afghan-mps-fight-water-bottle-thrown-117012
-- http://www.youtube.com/watch?v=T2f61zRVvvo
+- http://www.YouTube.com/watch?v=T2f61zRVvvo
 
 ## Argentina November 2010
 
@@ -62,7 +62,7 @@ Supporters of former Parliamentary Speaker Zurab Zhvania clashed with the suppor
 
 ## Georgia 2010
 
-- http://www.youtube.com/watch?v=yeJ_g20xE8s
+- http://www.YouTube.com/watch?v=yeJ_g20xE8s
 
 ## Georgia 2012
 
@@ -158,7 +158,7 @@ Mr. Masu’udi tried to attack Mr. Sneid
 
 Israeli MP Anastassia Michaeli has thrown a glass of water over her counterpart Raleb Majadele during a heated debate in parliament.
 
-- http://www.youtube.com/watch?v=cHO7iWXDc9A
+- http://www.YouTube.com/watch?v=cHO7iWXDc9A
 
 ## Italy 1981
 
@@ -240,7 +240,7 @@ Talal Al Sharif Opened fire in house meeting
 Al Sharif was earlier detained for 15 days in the Al Jwaideh prison and accused of attempted murder, resisting security forces and holding a weapon without a license, according to a security official
 Qusai Al Dmeisi, who was involved in the brawl with Al-Sharif during a meeting to discuss budgetary matters, Xinhua reported citing state-run Petra news agency
 
-- http://www.youtube.com/watch?v=8h2cqsq4V2Y
+- http://www.YouTube.com/watch?v=8h2cqsq4V2Y
 
 ## Kenya 1997
 
