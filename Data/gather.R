@@ -1,7 +1,7 @@
 # ---------------------------------------------------------------------------- #
 # Gather/Clean/Merge Data for Two Sword Lengths Apart
 # Christopher Gandrud
-# 31 March 2015
+# 2 April 2015
 # MIT License
 # ---------------------------------------------------------------------------- #
 
@@ -126,7 +126,25 @@ conflict <- conflict %>% DropNA('iso2c') %>%
                 arrange(iso2c, Year)
 names(conflict) <- c('iso2c', 'year', 'type_of_conflict', 'internal_conflict')
 
-#### --------------- Women in Parliament ----------------------Year------------ ####
+#### --------------- Dominant Tier Personal Vote--------------------------- ####
+# Johnson and Wallack's (n.d.) Domminant Personalisation Index
+# Downloaded from http://hdl.handle.net/1902.1/17901
+
+personal_vote <- import('Data/raw/espv_sep2010.xls', sheet = 2)
+
+personal_vote <- personal_vote[3:nrow(personal_vote), c(2, 4, 10)]
+names(personal_vote) <- c('country', 'year', 'dom_personal_vote')
+personal_vote$year <- as.integer(personal_vote$year)
+personal_vote$dom_personal_vote <- as.numeric(personal_vote$dom_personal_vote)
+
+personal_vote$iso2c <- countrycode(personal_vote$country, 
+                                   origin = 'country.name', 
+                                   destination = 'iso2c')
+personal_vote <- personal_vote %>% DropNA(c('iso2c', 'dom_personal_vote')) %>%
+                    select(-country)
+
+
+#### --------------- Women in Parliament ---------------------------------- ####
 # From 1997 data from Inter-Parliamentary Union via World Bank Development
 # Indicators
 ## WDI indicator ID: SG.GEN.PARL.ZS
@@ -295,6 +313,14 @@ comb <- merge(comb, women, by = c('iso2c', 'year'), all.x = T) %>%
 ## Merge in immunity
 comb <- merge(comb, immunity, by = c('iso2c'), all.x = T) %>%
     arrange(iso2c, year)
+
+## Merge in dominant personal vote
+comb <- merge(comb, personal_vote, by = c('iso2c', 'year'), all.x = T) %>%
+    arrange(iso2c, year)
+
+comb <- comb %>% group_by(iso2c) %>% mutate(dom_personal_vote =
+                                        FillDown(Var = dom_personal_vote)) %>%
+            as.data.frame
 
 ## Merge ethic fractionalisation
 comb <- merge(comb, ethnic_frac, by = c('iso2c'), all.x = T) %>%

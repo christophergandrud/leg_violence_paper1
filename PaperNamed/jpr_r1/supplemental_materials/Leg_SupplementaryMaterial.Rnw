@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Two Sword Lengths Apart: Supplementary Material
-% 31 March 2014
+% 2 April 2015
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % !Rnw weave = knitr
@@ -81,7 +81,11 @@ Measurement error caused by the electronic availability of information could be 
 
 I examined a number of other legislative and societal-level variables to guard against omitted variable bias. Results from models with these variables are shown in tables \ref{outputTable.dem} and \ref{outputTable.1990_2nd}. The variables are described below. It is important to first note that overall these factors were not found to be statistically significantly associated with legislative violence nor did they substantively alter the article's core findings.
 
-\subsubsection*{Variable Descriptions}
+\subsubsection*{Motivation and Variable Descriptions}
+
+\todo[inline]{The following paragraph was added.}
+
+Previous research on protest movements has often focused on the role of these movements' ability to organize and overcome collective action problems that discourage individuals from becoming involved in protests \citep{lohmann1994,tucker2007}. Perhaps this approach is applicable to legislative violence. Groups of legislators that are better able to organize may be more willing to engage in violent acts. However, there is a clear reason to be skeptical of the usefulness of this approach to explain whether or not legislative brawls occur: legislators are generally well-organized into political parties. Even weak parties with relatively few legislators, typically in the hundreds at most, are generally better organized and less subject to collective action problems than protest movements. That being said, the legislative studies literature has shown that the degree of personal vs. party organization varies across countries and is particularly influenced by the electoral system \citep{carey1995}. For example, if parties control the order of candidates on a closed-list ballot then the party will have considerable control over politicians. If a politician does not tow the party line, then the party could move the candidate lower down the list at the next election, decreasing their chances of re-election. Conversely, if candidates are placed on the ballot through open primaries, then parties have less control and candidates have stronger incentives to cultivate a personal vote. To measure the degree of party control I used the dominant legislative tier's--i.e. the tier with the most seats--\emph{personal vote} rank. The data is from \cite{johnson2012} and is based on \cite{carey1995}. Higher scores indicate stronger incentives for candidates to cultivate a personal vote, i.e. there is less party control. The data is available through 2005. It was assumed to be constant from this point through 2012.
 
 Gender is closely correlated with violence in society generally. Though there are many possible reasons for this that are beyond the scope of this article, women tend to commit many fewer acts of violence than men \citep[]{Schwartz2009}. Previous research has found that women's participation in parliament has an impact on government decisions to go to war \citep{Melander2005}. Perhaps if a larger proportion of legislators are women there will be less violence in the parliamentary chamber. To examine this possibility, I gathered data on the \emph{percentage of women in parliament} per country-year from two sources. Data from 1997 and after was from the Inter-Parliamentary Union \citeyearpar{IPU2013}. Data from before 1997 was from \cite{Schwartz2009}.
 
@@ -103,7 +107,7 @@ In general the additional societal-level variables were found to be associated w
 
 \paragraph{Other Political and Institutional Variables}
 
-Results for other political and institutional variables were largely not statistically significant. The effective number of parties variables and the basic continuous government fractionalization variable was statistically significant in the analyses. Likewise, federalism did not appear to be robustly related to legislative violence across the models. All of these variables are not as directly related to legislative fairness and an ability to make credible legislative commitments at a theoretical level, compared to disproportionality, democratic age and, to a lesser extent, governing majority size. So it should not come as too much of a surprise to find that they are more loosely, if not at all, associated with legislative violence.
+Results for other political and institutional variables were largely not statistically significant. The personalistic vote index was insignificant, perhaps because the baseline level of party organization is high, even if it does vary between legislatures. The effective number of parties variables and the basic continuous government fractionalization variable was statistically significant in the analyses. Likewise, federalism did not appear to be robustly related to legislative violence across the models. All of these variables are not as directly related to legislative fairness and an ability to make credible legislative commitments at a theoretical level, compared to disproportionality, democratic age and, to a lesser extent, governing majority size. So it should not come as too much of a surprise to find that they are more loosely, if not at all, associated with legislative violence.
 
 
 %%%%%%%% Elected Legislatures Results Table
@@ -118,12 +122,12 @@ Results for other political and institutional variables were largely not statist
     CoefNames <- c("Lower Disproportionality",
                     "Dem. Age (log)", "Majority Size", "Internal Armed Conflict",
                     "Leg. Immunity", "Single Party Gov.", "Political Constraints",
-                    "Self Expression", "Ethnic Frac.", "Perc. Women in Parl.",
-                    "Murder Rate", "Federal", "Gov. Frac.",
-                    "No. of Parties by Seats", "GINI", "GDP per Capita (log)",
-                   "(Intercept)")
+                    "Self Expression", "Ethnic Frac.", "Personalistic Vote",
+                    "Perc. Women in Parl.", "Murder Rate", "Federal",
+                    "Gov. Frac.", "No. of Parties by Seats", "GINI",
+                    "GDP per Capita (log)", "(Intercept)")
 
-    stargazer(D1, D2, D3, D4, D5, D6, D7, D8, D9, D10, D11,
+    stargazer(D1, D2, D3, D4, D5, D6, D7, D8, D9, D10, D11, D12,
         dep.var.labels = 'Violent Incident',
         covariate.labels = CoefNames,
         float = F,
@@ -147,12 +151,12 @@ Results for other political and institutional variables were largely not statist
 <<OutTable2, warning=FALSE, echo=FALSE, message=FALSE, results='asis'>>=
     CoefNames <- c("Lower Disproportionality",
                 "Dem. Age (log)", "Majority Size", "Internal Armed Conflict",
-                "Perc. Women in Parliament",
+                "Personalistic Vote", "Perc. Women in Parliament",
                 "Murder Rate", "Federal", "Gov. Frac.",
                 "No. of Parties by Seats", "Gini", "GDP per Capita (log)",
                 "(Intercept)")
 
-    stargazer(DN8, DN9, DN10, DN11, DN12, DN13,
+    stargazer(DN8, DN9, DN10, DN11, DN12, DN13, DN14,
     dep.var.labels = 'Violent Incident',
     covariate.labels = CoefNames,
     float = F,
@@ -355,6 +359,7 @@ Table \ref{results_frac} shows models with ethnic fractionalization where key va
             Lower Disproportionality & \verb|high_prop| & Gallagher Index below the sample mean (6.4) & Author's calculations based on \cite{Gallagher2012} \& \cite{Carey2011}\\
             Majority & \texttt{maj} & Percentage of legislature controlled by governing parties & \cite{DPI2001} \\
             Murder Rate & \verb|murder_rate| & Murders per 100,000 population & \cite{UNMurder2013} \\
+            Dominant Personalistic Vote Rank & \verb|dom_personal_vote| & The personalistic vote rank in the most populous legislative chamber & \citep{johnson2012} \\
             Political Constraints & \texttt{polconiii} & POLCONIII measure of political constraints & \cite[][updated through 2011]{Henisz2004} \\
             Polity & \texttt{polity2} & Polity IV Score & \cite{Marshall2009} \\
             PR & \texttt{pr} & Whether a country uses a proportional representation electoral system or a plurality system & \cite{DPI2001} \\
