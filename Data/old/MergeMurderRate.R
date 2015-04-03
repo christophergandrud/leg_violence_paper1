@@ -8,7 +8,7 @@
 library(countrycode)
 
 #### Load murder data
-Murder <- read.csv("/git_repositories/LegislativeViolence/Data/Others/UNdata_HomicideRate.csv", stringsAsFactors = FALSE)
+Murder <- read.csv("~/git_repositories/LegislativeViolence/Data/Others/UNdata_HomicideRate.csv", stringsAsFactors = FALSE)
 
 # Clean
 Murder$iso2c <- countrycode(Murder$Country.or.Area, origin = "country.name",
@@ -20,7 +20,7 @@ names(MurderSub) <- c("iso2c", "year", "UNMurderRate")
 MurderSub <- MurderSub[order(MurderSub$iso2c, MurderSub$year), ]
 
 #### Load main data
-leg.raw <- read.csv("/git_repositories/LegislativeViolence/Data/LegViolenceMain.csv")
+leg.raw <- read.csv("~/git_repositories/LegislativeViolence/Data/LegViolenceMain.csv")
 
 leg.raw$iso2c <- countrycode(leg.raw$country, origin = "country.name",
                             destination = "iso2c")
@@ -28,5 +28,5 @@ leg.raw$iso2c <- countrycode(leg.raw$country, origin = "country.name",
 #### Merge together
 leg <- merge(leg.raw, MurderSub, by = c("iso2c", "year"), all.x = TRUE)
 
-write.csv(leg, "/git_repositories/LegislativeViolence/Data/LegViolenceMain.csv", 
+write.csv(leg, "~/git_repositories/LegislativeViolence/Data/LegViolenceMain.csv", 
           row.names = FALSE)

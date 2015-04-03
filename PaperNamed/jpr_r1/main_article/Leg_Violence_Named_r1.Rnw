@@ -71,7 +71,7 @@ I begin the article by advancing an argument for understanding when legislative 
 
 \section*{Understanding Legislative Violence}
 
-Legislative violence, like other forms of violent disruption \citep[]{Beaulieu2008,BeaulieuForthcoming,wilkinson2006}, could be used for strategic purposes by both legislative winners and losers. Legislative losers--those who are not in control of the ``legislative cartel''  that sets the agenda \citep{cox2007} and are not part of the deciding majority--may use violence to stall legislation or rule changes they dislike. Winners--those in the legislative cartel--could use violence to prevent losers from utilizing procedures that might constrain their decision-making power. \add{Both winners and losers may use violence to shore up support among their proponents, as a way of expressing dissatisfaction with legislative outcomes, and to publicize issues they and their supporters care about} \citep{Spary2013}. Winners may not only use active violence, but also might make a strategic choice not to use their powers, e.g. control of security forces, to prevent or curtail losers' violence with the hope that losers will be publicly discredited.\footnote{\add{Examining the interactions of both those in power and those out of it is in contrast to important strains in the political protest movement literature. Political opportunity structure theories of protest have examined how, largely exogenous, state power} \citep{skocpol1979} \add{and state receptiveness to protester demands} \citep{mcadam1982,tarrow1989} \add{encourages or discourages protest. In my approach, winners clearly play an important role in causing violence, they may even be violent. However, I do not treat them as exogenous. They are goal-seeking actors engaged in bargaining with other legislators.}}
+Legislative violence, like other forms of violent disruption \citep[]{Beaulieu2008,BeaulieuForthcoming,wilkinson2006}, could be used for strategic purposes by both legislative winners and losers. Legislative losers--those who are not in control of the ``legislative cartel''  that sets the agenda \citep{cox2007} and \add{so} are not part of the \change{deciding majority}{group that passes legislation}\footnote{\add{There is strong evidence that those who control the legislative agenda tend to control what bills are brought up for a vote and in turn what bills are passed} \citep[93]{tsebelis2002}.}--may use violence to stall legislation or rule changes they dislike. Winners--those in the legislative cartel--could use violence to prevent losers from utilizing procedures that might constrain their \change{decision-making} power \add{to control the legislative agenda and therefore legislative policy outcomes}.\footnote{\add{Control over }} \add{Both winners and losers may use violence to shore up support among their proponents, as a way of expressing dissatisfaction with legislative outcomes, and to publicize issues they and their supporters care about} \citep{Spary2013}. Winners may not only use active violence, but also might make a strategic choice not to use their powers, e.g. control of security forces, to prevent or curtail losers' violence with the hope that losers will be publicly discredited.\footnote{\add{Examining the interactions of both those in power and those out of it is in contrast to important strains in the political protest movement literature. Political opportunity structure theories of protest have examined how, largely exogenous, state power} \citep{skocpol1979} \add{and state receptiveness to protester demands} \citep{mcadam1982,tarrow1989} \add{encourages or discourages protest. In my approach, winners clearly play an important role in causing violence, they may even be violent. However, I do not treat them as exogenous. They are goal-seeking actors engaged in bargaining with other legislators.}}
 
 Just because actors can gain a strategic advantage \add{or express their discontent} through violence does not mean they will choose to. Though violence may have strategic benefits, it also entails costs. Violent conflict has physical costs. In a number of incidents legislators have been hospitalized or even, as in the case of Charles Sumner discussed below, almost died. Beyond the physical costs of legislative violence, there may be other costs such as legal penalties and reputational costs.
 
@@ -194,7 +194,7 @@ This brief tour of descriptive statistics adds to the evidence from the previous
     \begin{center}
 
 <<FrameworkEmpirical, warning=FALSE, echo=FALSE, message=FALSE, fig.width=7, fig.height=4, out.width='0.8\\linewidth'>>=
-    source("/git_repositories/leg_violence_paper1/Analysis/main_analysis_2.R")
+    source("~/git_repositories/leg_violence_paper1/Analysis/main_analysis_2.R")
 
 @
     \end{center}
@@ -214,7 +214,7 @@ This brief tour of descriptive statistics adds to the evidence from the previous
     ## Run the main analyses used for predicting quantities of interest and
     #  estimating regression coefficients.
     # Run analysis
-    source("/git_repositories/leg_violence_paper1/Analysis/main_analysis_3.R")
+    source("~/git_repositories/leg_violence_paper1/Analysis/main_analysis_3.R")
 
 @
 
@@ -306,7 +306,7 @@ I avoid focusing on models that include highly correlated variables \citep[]{Ach
 
 <<predProb, warning=FALSE, echo=FALSE, message=FALSE, results='hide', fig.width=7, fig.height=4, out.width='0.95\\linewidth', cache=FALSE>>=
   ## Create Graphs ##
-  source("/git_repositories/leg_violence_paper1/Analysis/main_analysis_4.R")
+  source("~/git_repositories/leg_violence_paper1/Analysis/main_analysis_4.R")
 
 @
     \end{center}

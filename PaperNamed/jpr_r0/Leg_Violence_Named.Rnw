@@ -188,7 +188,7 @@ This brief tour of descriptive statistics adds to the evidence from the previous
     #URLDescript <- "https://raw.github.com/christophergandrud/LegislativeViolence/master/Data/LegViolenceDescriptives.csv"
     #leg.cumulative <- repmis::source_GitHubData(URLDescript)
 
-    leg.cumulative <- read.csv("/git_repositories/LegislativeViolence/Data/LegViolenceDescriptives.csv",
+    leg.cumulative <- read.csv("~/git_repositories/LegislativeViolence/Data/LegViolenceDescriptives.csv",
                                stringsAsFactors = FALSE)
 
     leg.cumulative$violence <- factor(leg.cumulative$violence, label = c("No Violence", "Violence"))
@@ -197,7 +197,7 @@ This brief tour of descriptive statistics adds to the evidence from the previous
 
     cols <- c("1" = "#EDDD00", "2" = "#ED6700", "3" = "#A04400", "0" = "#5E5E5E")
 
-    source("/git_repositories/LegislativeViolence/Analysis/FrameworkEmpirical2.R")
+    source("~/git_repositories/LegislativeViolence/Analysis/FrameworkEmpirical2.R")
 
 @
     \end{center}
@@ -213,7 +213,7 @@ This brief tour of descriptive statistics adds to the evidence from the previous
     #URLMain <- "https://raw.github.com/christophergandrud/LegislativeViolence/master/Data/LegViolenceMain.csv"
     #leg.raw <- repmis::source_GitHubData(URLMain)
 
-    leg.raw <- read.csv("/git_repositories/LegislativeViolence/Data/LegViolenceMain.csv")
+    leg.raw <- read.csv("~/git_repositories/LegislativeViolence/Data/LegViolenceMain.csv")
 
     ## Keep variables of interest
     vars <- c("country", "year", "violence", "system", "DemAge", "maj", "MajCat",
@@ -263,7 +263,7 @@ This brief tour of descriptive statistics adds to the evidence from the previous
     ## Run the main analyses used for predicting quantities of interest and
     #  estimating regression coefficients.
     # Run analysis
-    source("/git_repositories/LegislativeViolence/Analysis/leg.main.analyses3.R")
+    source("~/git_repositories/LegislativeViolence/Analysis/leg.main.analyses3.R")
 
 @
 
@@ -357,7 +357,7 @@ I avoid focusing on models that include highly correlated variables \citep[see][
 
 <<predProb, warning=FALSE, echo=FALSE, message=FALSE, results='hide', fig.width=7, fig.height=4, out.width='0.8\\linewidth', cache=TRUE>>=
   ## Create Graphs ##
-  source("/git_repositories/LegislativeViolence/Analysis/expectedValueGraphs2.R")
+  source("~/git_repositories/LegislativeViolence/Analysis/expectedValueGraphs2.R")
 
 @
     \end{center}

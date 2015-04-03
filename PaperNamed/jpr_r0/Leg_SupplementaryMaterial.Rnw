@@ -49,7 +49,7 @@
     #URLMain <- "https://raw.github.com/christophergandrud/LegislativeViolence/master/Data/LegViolenceMain.csv"
     #leg.raw <- repmis::source_GitHubData(URLMain)
     
-    leg.raw <- read.csv("/git_repositories/LegislativeViolence/Data/LegViolenceMain.csv")
+    leg.raw <- read.csv("~/git_repositories/LegislativeViolence/Data/LegViolenceMain.csv")
 
     ## Keep variables of interest
     vars <- c("country", "year", "violence", "system", "DemAge", "maj", "MajCat", "govfrac", "singleParty", "pr", "tenshort", "UDS", "polity2", "ethnicAlesina", "CWtrust", "higherTrust", "CWsurvSelfExpr", "legislature", "elect_legislature", "disproportionality", "gini", "GDPperCapita", "enps", "enpv", "federal", "immunity", "liec", "UNMurderRate","WomenInParl")
@@ -93,7 +93,7 @@
     ## Analyses
     ## Run the main analyses used for predicting quantities of interest and estimating regression coefficients.
     # Run analysis
-    source("/git_repositories/LegislativeViolence/Analysis/leg.main.analyses3.R") 
+    source("~/git_repositories/LegislativeViolence/Analysis/leg.main.analyses3.R") 
 
 @
 

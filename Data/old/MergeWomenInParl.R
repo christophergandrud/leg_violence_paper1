@@ -41,10 +41,10 @@ WomenComb <- rbind(women, moltenWomen)
 WomenComb <- WomenComb[order(WomenComb$iso2c, WomenComb$year), ]
 
 #### Load main data
-leg.raw <- read.csv("/git_repositories/LegislativeViolence/Data/LegViolenceMain.csv")
+leg.raw <- read.csv("~/git_repositories/LegislativeViolence/Data/LegViolenceMain.csv")
 
 #### Merge together
 leg <- merge(leg.raw, WomenComb, by = c("iso2c", "year"), all.x = TRUE)
 
-write.csv(leg, "/git_repositories/LegislativeViolence/Data/LegViolenceMain.csv", 
+write.csv(leg, "~/git_repositories/LegislativeViolence/Data/LegViolenceMain.csv", 
           row.names = FALSE)
