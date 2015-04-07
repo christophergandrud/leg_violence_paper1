@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Two Sword Lengths Apart: Supplementary Material
-% 2 April 2015
+% Two Sword Lengths Apart: Online Appendix
+% 7 April 2015
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % !Rnw weave = knitr
@@ -30,10 +30,6 @@
 \usepackage{float}
 
 \usepackage[margins]{trackchanges}
-
-\usepackage{footmisc}
-\setlength{\footnotesep}{\baselineskip}
-\renewcommand{\footnotelayout}{\doublespacing\normalsize}
 
 \renewcommand*\thetable{\Roman{table}}
 \setlength{\belowcaptionskip}{0.5cm}

@@ -65,7 +65,7 @@ Many parliaments' histories contain incidents of physical violence between legis
 
 Physical violence is a dramatic break from scholars' assumption that compliance with legislative rules of the game is a given and as such \change{symbolizes}{can symbolize} poorly functioning \add{democratic} legislative institutions. Some work has examined the strategic and expressive choices politicians make when they decide not to participate in the democratic rules of the game\add{, including before elections }\citep{wilkinson2006,Beaulieu2008,BeaulieuForthcoming}. In this article I extend this work by advancing a theory of legislative violence in \change{multi-party elected}{democratic} national legislatures and test it using both case study and global-level data. Indeed, this article includes the first cross-country description of violence between legislators. It also provides us with an important window for understanding what makes legislatures work (or not) as institutions for peacefully resolving disputes between opposing parties.\footnote{Note that the underlying process I discuss that creates conditions for violence likely also creates environments where legislators use other types of less violent--and less easily observable on a global scale--forms of legislative rule breaking.}
 
-I begin the article by advancing an argument for understanding when legislative violence between members of \change{multi-party elected}{democratic} elected legislatures is more likely. Though legislators' personalities surely play some part in any given violent incident, I argue that the probability of violence is strongly influenced by the wider political environment. In particular, violence is much more likely when there are \emph{credible commitment problems} that incentivize legislators to break peaceful bargains. At least two observable institutional factors are important for affecting the likelihood that commitments will be adhered to: the \emph{proportionality of a country's electoral outcomes}\add{--e.g. when votes for parties do not closely correspond to the legislative seats they are given--}and the \emph{age of its democracy}. After proposing this argument and discussing a number of key alternative explanations, I begin to empirically examine it with a case study of violence in the antebellum United States Senate. \add{This case is illustrative of how credible commitment problems can lead to violence, even in Western democracies where they are rare in the contemporary period.} I then move to \add{the core of the empirical analysis:} a global-level study of contemporary legislative violence by describing a new data set of legislative violence. In this section I also demonstrate simple associations between my argument's key variables and violence on a global scale. I then discuss the variables and parametric regression models I use to further study these events. Finally, I lay out the evidence from these models that legislative violence is more prevalent in countries with disproportionate electoral outcomes and in new democracies. I also find that violence is more likely in legislatures with small minority governments. I conclude the article with a discussion of the possible implications of these findings for democratic institution designers and directions for future research.
+I begin the article by advancing an argument for understanding when legislative violence between members of \change{multi-party elected}{democratic} elected legislatures is more likely. Though legislators' personalities surely play some part in any given violent incident, I argue that the probability of violence is strongly influenced by the wider political environment. In particular, violence is much more likely when there are \emph{credible commitment problems} that incentivize legislators to break peaceful bargains. At least two observable institutional factors are important for affecting the likelihood that commitments will be adhered to: the \emph{proportionality of a country's electoral outcomes}\add{--e.g. when votes for parties do not closely correspond to the legislative seats they are given--}and the \emph{age of its democracy}. After proposing this argument and discussing a number of key alternative explanations, I begin to empirically examine it with a case study of violence in the antebellum United States Senate. I then move to \add{the core of the empirical analysis:} a global-level study of contemporary legislative violence by describing a new data set of legislative violence. In this section I also demonstrate simple associations between my argument's key variables and violence on a global scale. I then discuss the variables and parametric regression models I use to further study these events. Finally, I lay out the evidence from these models that legislative violence is more prevalent in countries with disproportionate electoral outcomes and in new democracies. I also find that violence is more likely in legislatures with small minority governments. I conclude the article with a discussion of the possible implications of these findings for democratic institution designers and directions for future research.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Previous Research & Framework
 
@@ -147,7 +147,7 @@ An important issue to consider with societal-level explanations of legislative v
 
 \section*{Case Study: The Caning of Senator Sumner}
 
-\add{This section presents an illustrative case study of the caning of United States Senator Charles Sumner in 1856. The case study demonstrates the plausibility of the theory that credible commitment problems can lead to legislative violence. It shows that these incidents occur even in Western democracies. The case also illustrates how societal changes can worsen legislative disproportionality, thus increasing violence. Given the relatively shorter time span covered by the large-n data set discussed below and the slowness with which most societal variables change, exploring these complex processes in this well-documented case study is more empirically feasible.}
+\add{This section presents a case study of the caning of United States Senator Charles Sumner in 1856. The incident is a useful supplement to the large-n regression analysis below for a number of reasons. First, despite taking place in a Western democracy, this case is ``typical''} \citep[299]{Seawright2008} \add{in that the United States at the time was a new democracy and the US Senate was very disproportional. As such it is useful for illustrating and probing our causal mechanisms in detail. Second, the Senate's disporportionality increased over time due to reasons that are largely exogenous of the legislature. This allows us to make a within-case comparison, such that we can explore violence under both less and more disproportionate conditions in largely otherwise the same legislature. Third, the case drawn from outside the large-n sample discussed below. This helps us explore the whether the hypotheses proposed in this \change{paper}{article} are generalizable to other time periods. Finally, the case also illustrates how societal changes can worsen legislative disproportionality, thus increasing violence. Given the relatively shorter time span covered by the large-n data set discussed below and the slowness with which most societal variables change, exploring these complex processes in this well-documented case study is more empirically feasible.}
 
 The breakdown of the ability to make credible commitments in \change{unfair}{disproportionate} and new democratic legislatures is a key component behind the caning \change{of United States Senator Charles Sumner in 1856}{incident}. The development of the Senate prior to the Civil War, and especially in the 1850s, was preoccupied with the apportionment of pro and anti-slavery senators and how this apportionment was becoming increasingly unfair. Two senators were elected by each state's legislature. From the end of the Revolutionary War there had been more slave states than free states, thus more slave state senators and a pro-slave Senate veto \cite[151]{Weingast1998}. However, compromises that were made to have at least as many slave states as free states and as many pro as anti-slavery senators became increasingly unfair. As the 1800s progressed these compromises were undermined by three shocks that were largely exogenous from the national legislature.
 
@@ -167,17 +167,11 @@ Senator Sumner's rule stretching speech and his subsequent caning happened becau
 
 It's unclear if, at all, the size of the legislative majority, legislative immunity, or culture played a role in this incident. The pro-slavery Democrats controlled 63\% of the Senate. This is certainly not a minority, which theoretically is most strongly indicative of a tendency for violence. Brooks was arrested for beating Sumner indicating that a formal lack of immunity from arrest did not stop him from using violence.\footnote{Though arrested, Brook's ultimate punishment was a \$300 fine \cite[59]{Wolfe2004}.} It is difficult to tell how much cultural values may have played a role in the caning. Certainly it appears that the senators involved on both sides had a low respect for authority. However, this appears to be more the result of increasing \change{unfairness}{disproportionality} and credible commitment problems than an independent cause of violence.
 
-%%%%%%%% Map of Incidences
-\begin{figure}[h!]
-    \centering
-
-        %% Created with Analysis/main_analysis_1.R
-        \includegraphics[width = 13cm]{incidence_map.png}
-
-        \caption{Incidences of Physical Fights Between Legislators in Democratic National Legislative Chambers (1981-2012)}
-        \label{leg_map}
-
-\end{figure}
+\begin{center}
+    \hline \vspace{0.5cm}
+        FIGURE 1 ABOUT HERE \vspace{0.5cm}
+    \hline
+\end{center}
 
 %%%%%%%%%%%%%% Describing violence in National Legislatures
 \section*{Describing Violence in National Legislative Chambers Around the World (1981-2012)}
@@ -190,34 +184,11 @@ While it appears that having disproportionate electoral outcomes \emph{or} a new
 
 This brief tour of descriptive statistics adds to the evidence from the previous case study suggesting that violence between legislators does not occur randomly or is confined to one cultural region. Instead violence does appear to be a characteristic of countries with disproportionate electoral outcomes and new democracies.
 
-%%%%%%%%%%%%%%%% Scatterplot of Disproportionality, age_dem, and Violence %%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[t]
-    \begin{center}
-
-<<FrameworkEmpirical, warning=FALSE, echo=FALSE, message=FALSE, fig.width=7, fig.height=4, out.width='0.8\\linewidth'>>=
-    source("/git_repositories/leg_violence_paper1/Analysis/main_analysis_2.R")
-
-@
-    \end{center}
-
-    \caption{Scatter plots of Disproportionality, Age of Democracy, and Violence in the Countries with {Elected Multi-party}{Democratic} National Legislatures.}
-    \label{framework_empirical}
-
-    \begin{singlespace}
-        {\scriptsize{Each point represents a country-year. The data is from a sample of countries from 1981 through \change{2009}{2012} due to data availability. The points are jittered horizontally.}}
-    \end{singlespace}
-
-\end{figure}
-
-%%%%%%%%%%%%%%%% Run Analyses %%%%%%%%%%%%%%%%%%%%%%%%
-<<models, include=FALSE>>=
-    ## Analyses
-    ## Run the main analyses used for predicting quantities of interest and
-    #  estimating regression coefficients.
-    # Run analysis
-    source("/git_repositories/leg_violence_paper1/Analysis/main_analysis_3.R")
-
-@
+\begin{center}
+    \hline\vspace{0.5cm}
+        FIGURE 2 ABOUT HERE\vspace{0.5cm}
+    \hline
+\end{center}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Empirical Analysis
 \section*{Parametric Analysis: Set up}
@@ -271,52 +242,19 @@ Individual observations are clearly correlated within countries and years, espec
 Finally, I subsetted the sample to include only democracies defined as country-years with a Polity IV greater than 5. Results from models with all countries that had elected multi-party legislatures, regardless of their Polity IV score are substantively similar.
 }
 
-%%%%%%%% Elected Legislatures Results Table from 1990
-\begin{table}
-\caption{Legislative Violence Regression Results (Democratic Legislatures 1990-2012)}
-\label{outputTable.1990}
 \begin{center}
-\scalebox{0.8}{
-<<OutTable2, warning=FALSE, echo=FALSE, message=FALSE, results='asis'>>=
-    library(stargazer)
-
-    CoefNames <- c("Lower Disproportionality",
-                "Dem. Age (log)", "Majority Size", "Internal Armed Conflict",
-                "Leg. Immunity", "Single Party Gov.", "Political Constraints",
-                "Self Expression", "Ethnic Frac.", "(Intercept)")
-
-    stargazer(DN1, DN2, DN3, DN4, DN5, DN6, DN7,
-    dep.var.labels = 'Violent Incident',
-    covariate.labels = CoefNames,
-    float = F,
-    out.header = F,
-    notes.append = T,
-    notes.align = 'l',
-    notes = 'Standard errors are in parentheses. All models use robust (WEAVE) standard errors.',
-    notes.label = '')
-@
-}
+    \hline\vspace{0.5cm}
+        TABLE I ABOUT HERE\vspace{0.5cm}
+    \hline
 \end{center}
-\end{table}
 
 I avoid focusing on models that include highly correlated variables \citep[]{Achen2002, Schrodt2006}. In these models (not shown), as the statistical literature predicts, the coefficient estimates and standard errors change dramatically for many of the variables. I also ignore results from models with the government system type variable. It had very large, highly unstable, and largely nonsensical coefficient estimates, suggesting that the model does not contain enough information to test \citep{Babyak2004} whether or not crude political system type has an effect on violence. \add{The instability in the coefficient estimates likely has more to do with a lack of variation on this covariates rather than the violence dependent variable. Political system rarely changes in the sample.}
 
-%%%%%%%%%%%%%%%% Expected Probability Graphs %%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[t]
-    \begin{center}
-
-<<predProb, warning=FALSE, echo=FALSE, message=FALSE, results='hide', fig.width=7, fig.height=4, out.width='0.95\\linewidth', cache=FALSE>>=
-  ## Create Graphs ##
-  source("/git_repositories/leg_violence_paper1/Analysis/main_analysis_4.R")
-
-@
-    \end{center}
-    \caption{Expected Probability of Legislative Violence in Democratic Legislatures per Year}
-    \label{pred_prob}
-    \begin{singlespace}
-      {\scriptsize{The graphs show the median and middle 95\% of 1000 simulations at each fitted value of the variables. The simulations use estimates from Model 3, Table \ref{outputTable.1990}. For each set of simulations all other variables were fitted at their means.}}
-    \end{singlespace}
-\end{figure}
+\begin{center}
+    \hline\vspace{0.5cm}
+        FIGURE 3 ABOUT HERE\vspace{0.5cm}
+    \hline
+\end{center}
 
 \paragraph{Disproportionality}
 
@@ -379,5 +317,92 @@ As this is the first large scale study on this subject there is still considerab
 }
 % \noindent CHRISTOPHER GANDRUD, b, 1984 PhD in Political Science (London School of Economics, 2012); Post-doctoral Fellow, Hertie School of Governance (2013-- ); current main interests: financial policymaking and legislative politics. Various recent publications in journals such as the \emph{Journal of Common Market Studies}, \emph{Political Science Research and Methods}, and \emph{Review of International Political Economy}.
 
+\clearpage
+
+%%%%%%%% Map of Incidences
+\begin{figure}[h!]
+    \centering
+
+        %% Created with Analysis/main_analysis_1.R
+        \includegraphics[width = 13cm]{incidence_map.png}
+
+        \caption{Incidences of Physical Fights Between Legislators in Democratic National Legislative Chambers (1981-2012)}
+        \label{leg_map}
+
+\end{figure}
+
+%%%%%%%%%%%%%%%% Scatterplot of Disproportionality, age_dem, and Violence %%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[t]
+    \begin{center}
+
+<<FrameworkEmpirical, warning=FALSE, echo=FALSE, message=FALSE, fig.width=7, fig.height=4, out.width='0.8\\linewidth'>>=
+    source("/git_repositories/leg_violence_paper1/Analysis/main_analysis_2.R")
+
+@
+    \end{center}
+
+    \caption{Scatter plots of Disproportionality, Age of Democracy, and Violence in the Countries with {Elected Multi-party}{Democratic} National Legislatures.}
+    \label{framework_empirical}
+
+    \begin{singlespace}
+        {\scriptsize{Each point represents a country-year. The data is from a sample of countries from 1981 through 2012 due to data availability. The points are jittered horizontally.}}
+    \end{singlespace}
+
+\end{figure}
+
+%%%%%%%%%%%%%%%% Run Analyses %%%%%%%%%%%%%%%%%%%%%%%%
+<<models, include=FALSE>>=
+    ## Analyses
+    ## Run the main analyses used for predicting quantities of interest and
+    #  estimating regression coefficients.
+    # Run analysis
+    source("/git_repositories/leg_violence_paper1/Analysis/main_analysis_3.R")
+@
+
+%%%%%%%% Elected Legislatures Results Table from 1990
+\begin{table}
+\caption{Legislative Violence Regression Results (Democratic Legislatures 1990-2012)}
+\label{outputTable.1990}
+\begin{center}
+\scalebox{0.8}{
+<<OutTable2, warning=FALSE, echo=FALSE, message=FALSE, results='asis'>>=
+    library(stargazer)
+
+    CoefNames <- c("Lower Disproportionality",
+                "Dem. Age (log)", "Majority Size", "Internal Armed Conflict",
+                "Leg. Immunity", "Single Party Gov.", "Political Constraints",
+                "Self Expression", "Ethnic Frac.", "(Intercept)")
+
+    stargazer(DN1, DN2, DN3, DN4, DN5, DN6, DN7,
+    dep.var.labels = 'Violent Incident',
+    covariate.labels = CoefNames,
+    float = F,
+    out.header = F,
+    notes.append = T,
+    notes.align = 'l',
+    notes = 'Standard errors are in parentheses. All models use robust (WEAVE) standard errors.',
+    notes.label = '')
+@
+}
+\end{center}
+\end{table}
+
+
+%%%%%%%%%%%%%%%% Expected Probability Graphs %%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[t]
+    \begin{center}
+
+<<predProb, warning=FALSE, echo=FALSE, message=FALSE, results='hide', fig.width=7, fig.height=4, out.width='0.95\\linewidth', cache=FALSE>>=
+  ## Create Graphs ##
+  source("/git_repositories/leg_violence_paper1/Analysis/main_analysis_4.R")
+
+@
+    \end{center}
+    \caption{Expected Probability of Legislative Violence in Democratic Legislatures per Year}
+    \label{pred_prob}
+    \begin{singlespace}
+      {\scriptsize{The graphs show the median and middle 95\% of 1000 simulations at each fitted value of the variables. The simulations use estimates from Model 3, Table \ref{outputTable.1990}. For each set of simulations all other variables were fitted at their means.}}
+    \end{singlespace}
+\end{figure}
 
 \end{document}

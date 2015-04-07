@@ -1,18 +1,18 @@
 Dear Editors of the Journal of Peace Research,
 
-thank you for the opportunity to revise and resubmit my manuscript "Two Sword Lengths Apart: Credible Commitment Problems and Physical Violence in Multi-party Elected National Legislatures".
+thank you for the opportunity to revise and resubmit my manuscript "Two Sword Lengths Apart: Credible Commitment Problems and Physical Violence in Democratic National Legislatures".
 
-I have done my best to incorporate the reviewers' very helpful suggestions, as well as your own while keeping the manuscript within the Journal's 10,000 word limit. (The revised text's word count is [GET].) The manuscript is much improved because of these suggestions.
+I have done my best to incorporate the reviewers' very helpful suggestions, as well as your own, while keeping the manuscript within the Journal's 10,000 word limit. (The revised text's word count is [GET].) The manuscript is much improved because of these suggestions.
 
-I have highlighted key changes in the text with track changes and notes. My detailed responses to the suggestions are below. I have also updated the data set and conducted another validation if it using additional searches detailed in the Online Appendix. Due to data availability on the covariates, the data set used in the statistical analyses now runs through 2012. Previously it ran through 2009. The results remain substantively the same, however.
+I have highlighted key changes in the text with track changes and notes. My detailed responses to the suggestions are below. I have also updated the data set and conducted another validation if it using additional searches detailed in the Online Appendix. Due to data availability on the covariates, the data set used in the statistical analyses now runs through 2012. Previously it ran through 2009. The results remain substantively the same.
 
-Please do not hesitate to contact us if you require more information or have other suggestions.
+Please do not hesitate to contact me if you require more information or have other suggestions.
 
 Kind regards,
 
 
 
-P.S. The footnote numbering will automatically return to normal when we remove the track changes. This is simply an artifact of the LaTeX track changes package we used.
+P.S. The footnote numbering will automatically return to normal when I remove the track changes. This is simply an artifact of the LaTeX track changes package.
 
 -------------------
 
@@ -20,9 +20,9 @@ P.S. The footnote numbering will automatically return to normal when we remove t
 
 > While your ms. is in relatively good shape, I ask that the next version fully complies with JPR style.
 
-- I have attempted to fully conform the manuscript to JPR's style. I am happy to make additional changes as needed.
+I have attempted to fully conform the manuscript to JPR's style. I am happy to make additional changes as needed.
 
-- I have posted all of the data and replication files for this paper at:
+I have posted all of the data and replication files for this paper at:
 
 https://github.com/christophergandrud/leg_violence_paper1.
 
@@ -30,7 +30,7 @@ An overview of the contents of this repository are specifically available at:
 
 https://github.com/christophergandrud/leg_violence_paper1/blob/master/README.md.
 
-- I added a note after the main article text regarding the locations of these files. The URL is obscured in the revised manuscript to enable blind review.
+I also added a note after the main article text regarding the locations of these files. The URL is obscured in the revised manuscript to enable blind review.
 
 > I quite like Figure 2, however I would appreciate if you could change the color of the dots so they are distinguishable from one another when printed in grey scale.
 
@@ -50,7 +50,7 @@ https://github.com/christophergandrud/leg_violence_paper1/blob/master/README.md.
 
 > P. 2 and elsewhere: ‘paper’ -> ‘article’.
 
-- Replace all 'paper' with 'article'.
+- Replaced all 'paper' with 'article'.
 
 > P. 4: ‘a large increases’ -> ‘a large increase’
 
@@ -68,17 +68,17 @@ https://github.com/christophergandrud/leg_violence_paper1/blob/master/README.md.
 
 > P. 12: footnote 1 close to the bottom: which note does this refer to?
 
-- Very sorry, this footnote should have been for a description of the search terms/data gathering process. This was mistakenly left out of the original submission due to a LaTeX issues. I have reentered it an updated and expanded discussion of this information to the Online Appendix.
+- Very sorry, this footnote should have been a description of the search terms/data gathering process for the legislative violence data set. This was mistakenly left out of the original submission due to a LaTeX issues. I have reentered the information the note should have included in an updated and expanded section in the Online Appendix.
 
 > P. 13: please name all six countries making up 60% of events.
 
-- I have completed the full list of seven countries (in the updated data set) with 4 or more incidents that make up about 60% of the cases.  
+- I have completed the full list of seven countries (in the updated data set) with 4 or more incidents that also make up about 60% of the cases.  
 
 > P. 18: Models A4..A8 are, in my view superfluous and can be moved to the online appendix and mentioned only briefly in a footnote.
 
 - I have moved these models to the Online Appendix (Table II).
 
-- I also moved the discussion of the variables in these models to the Online Appendix (pages 2-6).
+- I also moved the discussion of the variables in these models to the Online Appendix (pages 2, 3-6).
 
 > P. 18: please consider adding past armed conflict as a control.
 
@@ -251,13 +251,19 @@ Finally, I certainly do not assume that all actors will always view particular n
 
 > I am not sure what the case study does theoretically or empirically.
 
-- I certainly agree that one case does not prove the theory, that is exactly why I use the case to illustrate and demonstrate the basic plausibility of the theorised process. The bulk of the evidence for the paper is built on the large-n parametric models. Nonetheless, many readers greatly appreciate illustrative case studies that add plausible 'meat' to statistical 'bones'. In particular showing how actual disproportionality causes credible committment problems that then cause violence.
+Thank you for this suggestion. Following your and the Editor's suggestion I have greatly strengthened the case for this case study on page 10.
 
-- One important reason (which I have further highlighted in the text on page 10) that the US ante-bellum brawl is theoretically interesting is related to your following question regarding western cultural norms. Though it is difficult to gather information on violence in older legislatures, the case discussed highlights that there are prominent examples of violence in Western democracies when they were younger--as the paper predicts.
+The case useful for a number of reasons:
+
+- It is a "typical case" (Seawright and Gerring 2008) in that it is a legislature in a new democracy with high disproportionality.
+
+- The level of disproportionality changed considerably due to exogenous factors allowing us to make a within-case comparison: such that we can explore violence under both less and more disproportionate conditions in largely otherwise the same legislature. This helps address a question you raise below about the causal direction between disproportionality and violence. Of course this is one case, but it does demonstrate the plausibility of the causal change where disproportionality causes violence.
+
+- The case drawn from outside the large-n sample discussed below. This helps us explore the whether the hypotheses proposed in this paper are generalizable to other time periods.
 
 - Furthermore, Reviewer 2 is very interested in understanding how societal factors may influence factors such as proportionality and democratic age and in turn their influence on brawls. For reasons that I discuss above, such as the general slowness of societal changes, this is very difficult to effectively investigate in the large-n work. Though the case study is by no means a definitive investigation of these complex relationships, it does provide an early glimpse into how they may work.
 
-As such, following the editor's request I have strengthened the discussion of these reasons for including the case study in the text on page 10.
+Another reason the case is theoretically interesting is related to your following question regarding western cultural norms. Though it is difficult to gather information on violence in older legislatures, the case discussed highlights that there are prominent examples of violence in Western democracies when they were younger--as the paper predicts. I have alluded to this on page 10, but would be happy to expand the discussion if requested.
 
 > Western democracies seem to stick out as the only democracies that do not experience violence.  Is this a cultural norm that has developed and being exported globally?  Obviously this is an empirical question but it is hard to ignore how western democracies stand out.
 
@@ -273,6 +279,8 @@ This causal story, rather than a simple norm diffusion model, then also explains
 - I think the reviewer and I are actually in close agreement on this. As discussed in the theory section, violence may be *both* used by those who wish to have legislative resources more closely align with electoral support *and* by those who wish to preserve imbalances.  
 
 - One point of disagreement is that in highly proportional systems it does not appear--at least in this sampling period--that parties using violence to increase disproportionality is common. For example, The only case of violence in a highly proportional country--South Africa [FINISH]
+
+-The US case study is useful for exploring this point. It shows that disproportionality in the Senate increased for exogenous reasons. Violence ensued because this disproportionality created credible commitment problems. Of course this is one case, but it demonstrates a plausible causal pathway from disproportionality to violence. I have added a brief note on this point to the case justification on page [GET].
 
 > Could the violence be the source of the “unfairness.” In addition, why assume there is only one cause.  Could it not be the case that sometimes it is creating and others the cause in which case the question is when these happen?
 
