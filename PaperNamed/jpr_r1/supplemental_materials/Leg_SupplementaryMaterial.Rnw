@@ -47,7 +47,7 @@
 
 %%%%%%%%%%%%%%%% Run Analyses %%%%%%%%%%%%%%%%%%%%%%%%
 <<models, include=FALSE>>=
-    source("~/git_repositories/leg_violence_paper1/Analysis/main_analysis_3.R")
+    source("/git_repositories/leg_violence_paper1/Analysis/main_analysis_3.R")
 @
 
 \section*{Data Set of Legislative Violence}
@@ -76,7 +76,7 @@ Measurement error caused by the electronic availability of information could be 
 
     \begin{center}
 <<compareLegToViolence, warning=FALSE, echo=FALSE, message=FALSE, fig.width=7, fig.height=7, out.width='0.8\\linewidth'>>=
-    source("~/git_repositories/leg_violence_paper1/Analysis/supplemental_analysis_1.R")
+    source("/git_repositories/leg_violence_paper1/Analysis/supplemental_analysis_1.R")
 @
     \end{center}
 
@@ -202,10 +202,10 @@ It is important to reiterate that though these interactive effects have statisti
     \begin{center}
 <<predProInteract1, warning=FALSE, echo=FALSE, message=FALSE, results='hide', fig.width=7, fig.height=7, out.width='0.95\\linewidth', cache=FALSE>>=
     ## Estimate models
-    source('~/git_repositories/leg_violence_paper1/Analysis/supplemental_analysis_2.R')
+    source('/git_repositories/leg_violence_paper1/Analysis/supplemental_analysis_2.R')
 
     ## Create Graphs ##
-    source("~/git_repositories/leg_violence_paper1/Analysis/supplemental_analysis_3.R")
+    source("/git_repositories/leg_violence_paper1/Analysis/supplemental_analysis_3.R")
     grid.arrange(dp1_p, dp2_p,
                  left = "Expected Probability of Violence in a Year")
 @
@@ -298,7 +298,7 @@ It is important to reiterate that though these interactive effects have statisti
     \begin{center}
 <<marginalEffects, warning=FALSE, echo=FALSE, message=FALSE, results='hide', fig.width=6, fig.height=6, out.width='0.95\\linewidth', cache=FALSE>>=
     ## Create Graphs ##
-    source('~/git_repositories/leg_violence_paper1/Analysis/supplemental_analysis_4.R')
+    source('/git_repositories/leg_violence_paper1/Analysis/supplemental_analysis_4.R')
 @
     \end{center}
     \caption{Marginal Effects of Lower Disproportionality and Democratic Age Given Representative Ranges of Interaction Variables}
@@ -321,7 +321,7 @@ Table \ref{results_frac} shows models with ethnic fractionalization where key va
     \begin{center}
 \scalebox{0.7}{
 <<FracTable, warning=FALSE, echo=FALSE, message=FALSE, results='asis'>>=
-    source('~/git_repositories/leg_violence_paper1/Analysis/supplemental_analysis_5.R')
+    source('/git_repositories/leg_violence_paper1/Analysis/supplemental_analysis_5.R')
 
     CoefNames <- c("Ethnic Frac.", "Dem. Age (log)", "Majority Size",
                    "Lower Disproportionality",

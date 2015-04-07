@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Two Sword Lengths Apart
-% 3 April 2015
+% 7 April 2015
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % !Rnw weave = knitr
@@ -120,7 +120,7 @@ I begin the article by advancing an argument for understanding when legislative 
 
 \section*{Understanding Legislative Violence}
 
-Legislative violence, like other forms of violent disruption \citep[]{Beaulieu2008,BeaulieuForthcoming,wilkinson2006}, could be used for strategic purposes by both legislative winners and losers. Legislative losers--those who are not in control of the ``legislative cartel''  that sets the agenda \citep{cox2007} and \add{so} are not part of the \change{deciding majority}{group that passes legislation}\footnote{\add{There is strong evidence that those who control the legislative agenda tend to control what bills are brought up for a vote and in turn what bills are passed} \citep[93]{tsebelis2002}.}--may use violence to stall legislation or rule changes they dislike. Winners--those in the legislative cartel--could use violence to prevent losers from utilizing procedures that might constrain their \change{decision-making} power \add{to control the legislative agenda and therefore legislative policy outcomes}.\footnote{\add{Control over }} \add{Both winners and losers may use violence to shore up support among their proponents, as a way of expressing dissatisfaction with legislative outcomes, and to publicize issues they and their supporters care about} \citep{Spary2013}. Winners may not only use active violence, but also might make a strategic choice not to use their powers, e.g. control of security forces, to prevent or curtail losers' violence with the hope that losers will be publicly discredited.\footnote{\add{Examining the interactions of both those in power and those out of it is in contrast to important strains in the political protest movement literature. Political opportunity structure theories of protest have examined how, largely exogenous, state power} \citep{skocpol1979} \add{and state receptiveness to protester demands} \citep{mcadam1982,tarrow1989} \add{encourages or discourages protest. In my approach, winners clearly play an important role in causing violence, they may even be violent. However, I do not treat them as exogenous. They are goal-seeking actors engaged in bargaining with other legislators.}}
+Legislative violence, like other forms of violent disruption \citep[]{Beaulieu2008,BeaulieuForthcoming,wilkinson2006}, could be used for strategic purposes by both legislative winners and losers. Legislative losers--those who are not in control of the ``legislative cartel''  that sets the agenda \citep{cox2007} and \add{so} are not part of the \change{deciding majority}{group that passes legislation}\footnote{\add{There is strong evidence that those who control the legislative agenda tend to control what bills are brought up for a vote and in turn what bills are passed} \citep[93]{tsebelis2002}.}--may use violence to stall legislation or rule changes they dislike. Winners--those in the legislative cartel--could use violence to prevent losers from utilizing procedures that might constrain their \change{decision-making} power \add{to control the legislative agenda and therefore legislative policy outcomes}. \add{Both winners and losers may use violence to shore up support among their proponents, as a way of expressing dissatisfaction with legislative outcomes, and to publicize issues they and their supporters care about} \citep{Spary2013}. Winners may not only use active violence, but also might make a strategic choice not to use their powers, e.g. control of security forces, to prevent or curtail losers' violence with the hope that losers will be publicly discredited.\footnote{\add{Examining the interactions of both those in power and those out of it is in contrast to important strains in the political protest movement literature. Political opportunity structure theories of protest have examined how, largely exogenous, state power} \citep{skocpol1979} \add{and state receptiveness to protester demands} \citep{mcadam1982,tarrow1989} \add{encourages or discourages protest. In my approach, winners clearly play an important role in causing violence, they may even be violent. However, I do not treat them as exogenous. They are goal-seeking actors engaged in bargaining with other legislators.}}
 
 Just because actors can gain a strategic advantage \add{or express their discontent} through violence does not mean they will choose to. Though violence may have strategic benefits, it also entails costs. Violent conflict has physical costs. In a number of incidents legislators have been hospitalized or even, as in the case of Charles Sumner discussed below, almost died. Beyond the physical costs of legislative violence, there may be other costs such as legal penalties and reputational damage.
 
@@ -223,7 +223,7 @@ It's unclear if, at all, the size of the legislative majority, legislative immun
         %% Created with Analysis/main_analysis_1.R
         \includegraphics[width = 13cm]{incidence_map.png}
 
-        \caption{Incidences of Physical Fights Between Legislators in \change{Multi-Party Elected}{Democratic} National Legislative Chambers (1981-2012)}
+        \caption{Incidences of Physical Fights Between Legislators in Democratic National Legislative Chambers (1981-2012)}
         \label{leg_map}
 
 \end{figure}
@@ -279,7 +279,7 @@ I included a number of political and societal variables in the regression models
 
 I measure the {\emph{age of a democratic regime}} as the number of years a country's Polity IV score \citep{Marshall2009} is greater than five. \add{Because this variable is highly right-skewed, I transformed it using the natural logarithm.} As noted earlier, simply looking at the electoral mechanics confuses mechanisms with outcomes. So, I use the standard Least Squares or Gallagher Index \citep{Gallagher1991} to measure realized {\emph{electoral disproportionality}}. The available data is in terms of overall national disproportionality. To gain maximum coverage, I compiled the data from both \cite{Gallagher2012} and \cite{Carey2011}. Full details can be found at: \url{http://christophergandrud.github.com/Disproportionality_Data/}. A country's disproportionality score is treated as constant from the year of an election until the year before the following election. Higher values on the Gallagher Index indicate more disproportionate, i.e. less fair electoral outcomes.
 
-As we saw in Figure \ref{framework_empirical} there appears to be a very strong negative correlation between very low levels of disproportionality and legislative violence. Only one instance of violence was observed in countries with a disproportionality score of less than about 2.5.\footnote{Though the observed range of disproportionality scores goes from almost 0 to 30, countries with scores less than 2.5 are not outliers. About 16\% of county-years in the full sample had scores of 2.5 or smaller.} This can be explained by fairness equilibria and is partially corroborated by Marien's \citeyearpar{Marien2011} finding regarding very low disproportionality measured with the Gallagher Index and political trust discussed above. To capture a possible disproportionality threshold effect--where low disproportionality is associated with stronger feelings of fairness--I created a low disproportionality dummy variable. County-years with disproportionality greater than or equal to the observed median in the full sample (\change{6}{6.34})\footnote{The observed range is 0.26 to 34.52.} are coded as having higher disproportionality and those with scores lower than \change{6}{6.34} are coded as having lower disproportionality.\footnote{\add{Medians of other sample subsets, such as all country-years with \change{elected multi-party}{democratic} legislatures, were also examined. The results were substantively similar. Additional} models were estimated with the continuous disproportionality measure. The parameter estimates were not statistically significant and are not shown.}
+As we saw in Figure \ref{framework_empirical} there appears to be a very strong negative correlation between very low levels of disproportionality and legislative violence. Only one instance of violence was observed in countries with a disproportionality score of less than about 2.5.\footnote{Though the observed range of disproportionality scores goes from almost 0 to 30, countries with scores less than 2.5 are not outliers. About 16\% of county-years in the full sample had scores of 2.5 or smaller.} This can be explained by fairness equilibria and is partially corroborated by Marien's \citeyearpar{Marien2011} finding regarding very low disproportionality measured with the Gallagher Index and political trust discussed above. To capture a possible disproportionality threshold effect--where low disproportionality is associated with stronger feelings of fairness--I created a low disproportionality dummy variable. County-years with disproportionality greater than or equal to the observed median in the full sample (\change{6}{6.34})\footnote{The observed range is 0.26 to 34.52.} are coded as having higher disproportionality and those with scores lower than \change{6}{6.34} are coded as having lower disproportionality.\footnote{\add{Medians of other sample subsets, such as all country-years with democratic legislatures, were also examined. The results were substantively similar. Additional} models were estimated with the continuous disproportionality measure. The parameter estimates were not statistically significant and are not shown.}
 
 I also investigated the possibility that a number of political, institutional, and cultural variables may actually be associated with legislative violence and that the key variables from my argument actually have spurious associations. To get a sense of how the size of the governing majority is associated with legislative violence I include the government {\emph{majority}} variable (from the DPI). It simply measures the seats held by governing parties as a proportion of all seats. I transformed the variable from a proportion to a\%age to ease interpretation. Legislators may be less likely to attack one another if they know that they could be arrested for assault. To examine this possibility I include Fish and Koening's \citeyearpar{Fish2009} dichotomous \emph{legislator immunity} variable. It equals one if national legislators are immune from arrest and/or prosecution and zero otherwise. Unfortunately, their data only captures legislative immunity in 2007. I extrapolated the 2007 value of the variable to the other observation years.\footnote{I also considered using the legislator immunity variable from the Comparative Constitutions Project \citep{ElkinsCCP2010}. However, the coding of the immunity variable is vaguer than Fish and Koening's and only deals with constitutionally mandated immunity.} We should therefore approach results from this variable with caution since it might not be a valid indicator for all country-years.
 
@@ -320,12 +320,57 @@ Finally, I subsetted the sample to include only democracies defined as country-y
 \label{outputTable.1990}
 \begin{center}
 \scalebox{0.8}{
-\begin{kframe}
 
+% Table created by stargazer v.5.1 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Tue, Apr 07, 2015 - 07:49:18
+\begin{tabular}{@{\extracolsep{5pt}}lccccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{7}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-8} 
+\\[-1.8ex] & \multicolumn{7}{c}{Violent Incident} \\ 
+\\[-1.8ex] & (1) & (2) & (3) & (4) & (5) & (6) & (7)\\ 
+\hline \\[-1.8ex] 
+ Lower Disproportionality & $-$0.578$^{**}$ & $-$0.583$^{**}$ & $-$0.586$^{**}$ & $-$0.575$^{**}$ & $-$0.560$^{**}$ & $-$0.467 & $-$0.573$^{**}$ \\ 
+  & (0.269) & (0.271) & (0.271) & (0.272) & (0.271) & (0.300) & (0.271) \\ 
+  & & & & & & & \\ 
+ Dem. Age (log) & $-$0.275$^{**}$ & $-$0.331$^{***}$ & $-$0.329$^{***}$ & $-$0.331$^{***}$ & $-$0.325$^{***}$ & $-$0.409$^{***}$ & $-$0.343$^{***}$ \\ 
+  & (0.108) & (0.112) & (0.111) & (0.112) & (0.111) & (0.135) & (0.114) \\ 
+  & & & & & & & \\ 
+ Majority Size &  & $-$0.022$^{***}$ & $-$0.022$^{**}$ & $-$0.021$^{**}$ & $-$0.021$^{**}$ & $-$0.019$^{*}$ & $-$0.022$^{**}$ \\ 
+  &  & (0.009) & (0.008) & (0.009) & (0.008) & (0.010) & (0.009) \\ 
+  & & & & & & & \\ 
+ Internal Armed Conflict &  &  & 0.440 & 0.421 & 0.413 & 0.386 & 0.449 \\ 
+  &  &  & (0.344) & (0.347) & (0.344) & (0.386) & (0.345) \\ 
+  & & & & & & & \\ 
+ Leg. Immunity &  &  &  & 0.012 &  &  &  \\ 
+  &  &  &  & (0.267) &  &  &  \\ 
+  & & & & & & & \\ 
+ Single Party Gov. &  &  &  & $-$0.049 &  &  &  \\ 
+  &  &  &  & (0.263) &  &  &  \\ 
+  & & & & & & & \\ 
+ Political Constraints &  &  &  &  & $-$0.534 &  &  \\ 
+  &  &  &  &  & (0.913) &  &  \\ 
+  & & & & & & & \\ 
+ Self Expression &  &  &  &  &  & 3.870 &  \\ 
+  &  &  &  &  &  & (2.533) &  \\ 
+  & & & & & & & \\ 
+ Ethnic Frac. &  &  &  &  &  &  & $-$0.308 \\ 
+  &  &  &  &  &  &  & (0.614) \\ 
+  & & & & & & & \\ 
+ (Intercept) & $-$2.120$^{***}$ & $-$0.735 & $-$0.807 & $-$0.811 & $-$0.671 & $-$5.675$^{*}$ & $-$0.659 \\ 
+  & (0.307) & (0.559) & (0.561) & (0.655) & (0.625) & (3.180) & (0.645) \\ 
+  & & & & & & & \\ 
+\hline \\[-1.8ex] 
+Observations & 1,492 & 1,441 & 1,441 & 1,419 & 1,417 & 810 & 1,435 \\ 
+Log Likelihood & $-$260.703 & $-$254.213 & $-$253.577 & $-$252.777 & $-$252.611 & $-$188.719 & $-$253.279 \\ 
+Akaike Inf. Crit. & 527.406 & 516.426 & 517.155 & 519.554 & 517.222 & 389.438 & 518.559 \\ 
+\hline 
+\hline \\[-1.8ex] 
+\multicolumn{8}{l}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\multicolumn{8}{l}{Standard errors are in parentheses. All models use robust (WEAVE) standard errors.} \\ 
+\end{tabular} 
 
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in library(stargazer): there is no package called 'stargazer'}}
-
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in eval(expr, envir, enclos): could not find function "{}stargazer"{}}}\end{kframe}
 }
 \end{center}
 \end{table}

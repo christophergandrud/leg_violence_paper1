@@ -5,7 +5,7 @@
 ###############
 
 # Set working directory. Change as needed.
-setwd('~/git_repositories/leg_violence_paper1/')
+setwd('/git_repositories/leg_violence_paper1/')
 
 # Load packages
 if (!('rio' %in% installed.packages()[, 1]))
