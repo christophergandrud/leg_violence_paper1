@@ -1,7 +1,7 @@
 ############
 # Main Analysis 4 for Legislative Violence
 # Christopher Gandrud
-# 2 April 2015
+# 7 April 2015
 ############
 
 # Set working directory. Change as needed.
@@ -29,7 +29,7 @@ tau_dNew <- sum(dNew$violence) / nrow(dNew)
 # Subset complete cases for model that will be used in simulations
 vars.3 <- c("violence", "dem_age", "high_prop", 'maj', 'internal_conflict')
 
-dNew_3_complete <- dNew[complete.cases(dNew[vars.3]),]
+dNew_3_complete <- dNew[complete.cases(dNew[vars.3]), ]
 
 ###########################
 ### Sample of countries with elected legislatures
@@ -60,7 +60,6 @@ D6 <- zelig(violence ~ high_prop + log(dem_age) + maj + internal_conflict +
                 dom_personal_vote,
             model = "relogit", data = dem, tau = tau_dem,
             robust = list(method = "weave"), cite = FALSE)
-
 
 D7 <- zelig(violence ~ high_prop + log(dem_age) + maj + internal_conflict +
                 women_in_parl,

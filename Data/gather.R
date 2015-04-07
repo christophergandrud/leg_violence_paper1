@@ -1,7 +1,7 @@
 # ---------------------------------------------------------------------------- #
 # Gather/Clean/Merge Data for Two Sword Lengths Apart
 # Christopher Gandrud
-# 2 April 2015
+# 7 April 2015
 # MIT License
 # ---------------------------------------------------------------------------- #
 
@@ -44,7 +44,7 @@ wdi <- WDI(indicator = indicators_wdi, start = 1975, end = 2014, extra = T) %>%
 # GDP to thousands of dollars
 wdi$gdp_per_capita <- wdi$gdp_per_capita / 1000
 
-wdi <- wdi[!duplicated(wdi[, c('iso2c', 'year')]),]
+wdi <- wdi[!duplicated(wdi[, c('iso2c', 'year')]), ]
 
 #### ------------------ GINI ---------------------------------------------- ####
 gini <- import('Data/raw/wiid_3b_1.csv')
@@ -56,9 +56,9 @@ names(gini) <- c('iso2c', 'year', 'gini')
 
 # Average multiple sources
 gini <- gini %>% group_by(iso2c, year) %>%
-            summarise(gini = mean (gini, na.rm = T))
+            summarise(gini = mean(gini, na.rm = T))
 
-gini <- gini[!duplicated(gini[, c('iso2c', 'year')]),]
+gini <- gini[!duplicated(gini[, c('iso2c', 'year')]), ]
 
 #### ------------------- Murder Rate -------------------------------------- ####
 murder <- import('Data/raw/UNdata_HomicideRate.csv') %>%
@@ -276,15 +276,15 @@ ethnic_frac$ethnic_alesina <- ethnic_frac$ethnic_alesina %>% as.character %>%
 ethnic_frac$iso2c <- countrycode(ethnic_frac$country, origin = 'country.name',
                                  destination = 'iso2c')
 ethnic_frac <- dplyr::select(ethnic_frac, iso2c, ethnic_alesina)
-ethnic_frac <- ethnic_frac[!duplicated(ethnic_frac[, 'iso2c']),]
+ethnic_frac <- ethnic_frac[!duplicated(ethnic_frac[, 'iso2c']), ]
 
 #### ------------------ World Values Survey ------------------------------- ####
 wvs <- import('Data/raw/wvs.csv')
-wvs <- wvs[!duplicated(wvs[, c('iso2c', 'year')]),]
+wvs <- wvs[!duplicated(wvs[, c('iso2c', 'year')]), ]
 
 #### ------------------ Federal ----------- ------------------------------- ####
 federal <- import('Data/raw/federal.csv')
-federal <- federal[!duplicated(federal[, c('iso2c', 'year')]),]
+federal <- federal[!duplicated(federal[, c('iso2c', 'year')]), ]
 
 #### ------------------ Effective No. Parties------------------------------ ####
 enpv_enps <- import('Data/raw/enpv_epns.csv')
@@ -386,6 +386,16 @@ violence_sub <- comb %>% filter(!is.na(violence))
 
 # Convert NAs to missing
 for (i in c('violence', 'violence_y_cum')) comb[, i][is.na(comb[, i])] <- 0
+
+# Create lagged conflict variable
+comb <- slide(comb, Var = 'internal_conflict', TimeVar = 'year', 
+              GroupVar = 'iso2c', NewVar = 'internal_conflict_lag2', 
+              slideBy = -2)
+
+# Create lead conflict variable
+comb <- slide(comb, Var = 'internal_conflict', TimeVar = 'year', 
+              GroupVar = 'iso2c', NewVar = 'internal_conflict_lead2', 
+              slideBy = 2)
 
 # Limit to 1980-2012
 comb <- comb %>% filter(year >= 1980) %>% filter(year <= 2012)
