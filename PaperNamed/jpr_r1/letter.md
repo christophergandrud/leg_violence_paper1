@@ -11,9 +11,6 @@ Please do not hesitate to contact me if you require more information or have oth
 Kind regards,
 
 
-
-P.S. The footnote numbering will automatically return to normal when I remove the track changes. This is simply an artifact of the LaTeX track changes package.
-
 -------------------
 
 # Editor
@@ -108,7 +105,7 @@ An important component of the article's explanation of these credible commitment
 
 Control over rules enables a high degree of control over legislation outcomes. The inability to credibly commit to legislative rules means that there is an inability to credibly commit to legislative policy outcomes. As such legislators, even those exclusively motivated by passing legislation, will be highly influenced in their behaviour by credible commitments about legislative rules.
 
-I have tried to clarify key points from the above discussion in the text (especially the footnote on page 3). Due to word count limitations, I have not discussed this point at length. However, I would be more than happy to develop the discussion further if the reviewers deem it necessary.
+I have tried to clarify key points from the above discussion in the text (pages 3-4 and especially the footnote on page 3). Due to word count limitations, I have not discussed this point at length. However, I would be more than happy to develop the discussion further if the reviewers deem it necessary.
 
 It becomes even more difficult to separate the two given that policy outcomes can affect control of future legislative resources. For example, a recent brawl in South Korea was over media ownership regulations. Allowing greater consolidation of media ownership, many feared, would politically advantage the main right-wing governing party by enabling increased control of the media by sympathetic news outlets. The US case study in the article is another case in point. Creating a more proportional Senate would likely lead to the end of slavery--a policy outcome. This would then effectively end slave owning politicians' legislative power in the future. I would be happy to include a discussion of this in the article, but haven't so far due to word count limits.
 
@@ -288,7 +285,7 @@ This finding lends support to the idea that legislatures are able to achieve 'fa
 
 > The author(s) assume that it is those who do not have their fair share as acting out against it but why should we assume that?
 
-I would argue that this is an incorrect reading of the paper. For example, the first paragraph of page 3 discusses why 'winners' and 'losers' would use violence. This is discussed throughout the theory section. The US case study shows that both sides broke peaceful bargaining outcomes (Sumner with his sexual imagery and Brooks by caning Sumner).
+I would argue that this is an incorrect reading of the paper. For example, the first paragraph of page 3 discusses why 'winners' and 'losers' would use violence. This is discussed throughout the theory section. For example on page 5: "Importantly, in the absence of credible commitments from the temporarily weak, the temporarily strong may use preemptive violence to prevent changes to the rules that distribute legislative resources in closer alignment with electoral support." The US case study shows that both sides broke peaceful bargaining outcomes (Sumner with his sexual imagery and Brooks by caning Sumner).
 
 I realise a possible source of confusion may be that the wording regarding how disproportionality could incentivise violence from beneficiaries of disproportionality was confusing. I have changed this on page 5 ("They" to "The temporarily strong").
 
