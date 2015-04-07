@@ -25,6 +25,9 @@ dNew <- subset(dem, year > 1989)
 tau_dNew <- sum(dNew$violence) / nrow(dNew)
 
 # Complete cases
+vars_1_1 <- c("violence", "dem_age", "high_prop", 'maj')
+dNew_1_1.c <- dNew[complete.cases(dNew[vars_1_1]), ]
+
 vars_1 <- c("violence", "dem_age", "high_prop", 'maj', 'internal_conflict',
             'cw_surv_self_expr')
 dNew_1.c <- dNew[complete.cases(dNew[vars_1]),]
@@ -46,7 +49,7 @@ dNew_4.c <- dNew[complete.cases(dNew[vars_4]),]
 ### Sample of countries with elected legislatures from 1990
 ## Lower disproportionality
 DP1_1 <- zelig(violence ~ maj + log(dem_age)*high_prop, model = "relogit",
-              data = dNew, tau = tau_dNew, robust = list(method = "weave"),
+              data = dNew_1_1.c, tau = tau_dNew, robust = list(method = "weave"),
               cite = FALSE)
 
 DP1 <- zelig(violence ~ maj + log(dem_age) + 

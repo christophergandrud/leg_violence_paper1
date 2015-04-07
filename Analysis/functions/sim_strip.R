@@ -45,7 +45,7 @@ marginal_effect <- function(obj, b1, b2, X2, nsim = 1000){
     
     Simb$QI <- Simb[, 2] + (Simb[, 4] * Simb[, 5])
     
-    Simb <- Simb %>% select(X2, QI)
+    Simb <- Simb %>% dplyr::select(X2, QI)
     names(Simb) <- c('fitted', 'value')
     
     out <- MinMaxLines(Simb)
