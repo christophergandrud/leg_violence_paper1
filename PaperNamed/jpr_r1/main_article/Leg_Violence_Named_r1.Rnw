@@ -78,7 +78,7 @@ There are situations where legislators perceive the benefits of violence to be g
 
 \subsection*{Observing Situations Where Credible Commitment Problems are Worse}
 
-To empirically test my theory I focus on two clearly observable institutional factors that influence legislators' credible commitment problems: proportionality of electoral outcomes and age of democracy. Please note that these are likely not the only factors that shape credible commitments, but they are observable in a cross-country study.
+To empirically test this approach I focus on two clearly observable institutional factors that influence legislators' credible commitment problems: proportionality of electoral outcomes and age of democracy. Please note that these are likely not the only factors that shape credible commitments, but they are observable in a cross-country study.
 
 \paragraph{Proportional Electoral Outcomes}
 

@@ -85,7 +85,7 @@ Thank you for this useful suggestion. I have included data on internal armed con
 
 > Since one of the key contributions is the dataset, please do provide additional information on the data collection procedure (e.g. search algorithm?) and the coding (e.g. how did you separate between multiple events involving the same actors). Additional information should be included in the article, though more detailed descriptions may be relegated to the supplementary (online) file.
 
-As mentioned above, unfortunately the footnote detailing the original data gathering process was accidentally not included in the original version. I have made sure that this information is now available in an expanded section in the Online Appendix (pages 1-2).
+As mentioned above, unfortunately the footnote detailing the original data gathering process was accidentally not included in the original version. I have made sure that this information is now available in an expanded section in the Online Appendix (page 1).
 
 Largely subsequent to the original submission, I and three new research assistants completed a verification and update of the data using additional keyword searches of the Google News Archive, LexisNexis, NewsLibrary, NewsBank, NewsBank, Google, and YouTube (a surprisingly good source of information on legislative brawls). This work is primarily for a spin-off project, but I have incorporated all relevant changes to the data set used in this paper as well. The primary change was expanding the time period through 2012.
 
