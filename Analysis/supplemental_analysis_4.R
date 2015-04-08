@@ -1,7 +1,7 @@
 ###################
 # Marginal effects for key interactions
 # Christopher Gandrud
-# 31 March 2015
+# 8 April 2015
 ###################
 
 # Set working directory. Change as needed.
@@ -44,7 +44,7 @@ dp2_me_p <- ggplot(dp2_me, aes(fitted, Median, ymin = Min_CI, ymax = Max_CI)) +
 dp6_me <- marginal_effect(obj = DP6, b1 = 'log.dem_age.', b2 = 'ethnic_alesina',
                         X2 = seq(0.1, 0.8, by = 0.1))
 
-dp6_me_p <-ggplot(dp6_me, aes(fitted, Median, ymin = Min_CI, ymax = Max_CI)) +
+dp6_me_p <- ggplot(dp6_me, aes(fitted, Median, ymin = Min_CI, ymax = Max_CI)) +
     geom_line() +
     geom_ribbon(alpha = 0.3) +
     xlab("\nEthnic Frac.") +
@@ -54,7 +54,7 @@ dp6_me_p <-ggplot(dp6_me, aes(fitted, Median, ymin = Min_CI, ymax = Max_CI)) +
 dpc2_me <- marginal_effect(obj = DPC2, b1 = 'log.dem_age.', b2 = 'polconiii',
                            X2 = seq(0.1, 0.7, by = 0.1))
 
-dpc2_me_p <-ggplot(dpc2_me, aes(fitted, Median, ymin = Min_CI, ymax = Max_CI)) +
+dpc2_me_p <- ggplot(dpc2_me, aes(fitted, Median, ymin = Min_CI, ymax = Max_CI)) +
     geom_line() +
     geom_ribbon(alpha = 0.3) +
     xlab("\nPolitical Constraints") +
@@ -62,3 +62,18 @@ dpc2_me_p <-ggplot(dpc2_me, aes(fitted, Median, ymin = Min_CI, ymax = Max_CI)) +
     theme_bw(base_size = 12)
 
 grid.arrange(dp1_me_p, dp2_me_p, dp6_me_p, dpc2_me_p)
+
+#### Democratic age * high proportionality
+# d_prop <- zelig(violence ~ maj + high_prop*log(dem_age), model = "relogit",
+#                data = dNew_1_1.c, tau = tau_dNew, robust = list(method = "weave"),
+#                cite = FALSE)
+
+# d_prop_me <- marginal_effect(obj = d_prop, b1 = 'high_prop', b2 = 'log.dem_age.',
+#                             X2 = seq(1, 20, by = 1))
+
+#dp1_me_p <- ggplot(d_prop_me, aes(fitted, Median, ymin = Min_CI, ymax = Max_CI)) +
+#    geom_line() +
+#    geom_ribbon(alpha = 0.3) +
+#    xlab("\nAge of Democracy") +
+#    ylab("Marginal Effect of\nLower Disproportionality\n") +
+#    theme_bw(base_size = 12)
