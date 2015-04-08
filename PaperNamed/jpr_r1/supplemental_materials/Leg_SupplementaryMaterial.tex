@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Two Sword Lengths Apart: Online Appendix
-% 7 April 2015
+% 8 April 2015
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % !Rnw weave = knitr
@@ -130,17 +130,25 @@ Measurement error caused by the electronic availability of information could be 
 
 \end{figure}
 
+\section*{Discussion of Contrasting Contemporary Cases}
+
+\todo[inline]{This paragraph was moved from the main text.}
+
+While it appears in Figure 2 of the main text that having disproportionate electoral outcomes \emph{or} a new democracy is not necessary for legislative violence, based on the data, having \emph{both} of them might make violence much more likely. South Korea's national assembly, like the antebellum US Senate, is an example of a `perfect storm'. It is both in a new democracy and has relatively disproportionate electoral outcomes.\footnote{South Korea’s average disproportionality as measured by the Gallagher Index \citep{Gallagher1991} from 2000 until 2012 was 12. This places it in the upper 25\% of observations with elected legislatures. It also became a democracy within the past 20 years.} South Korea had eight observed incidence of legislative violence in the full sample. Countries that have \emph{either} proportional outcomes \emph{or} old democracies appear to be able to compensate fairly well for an absence of the other characteristic. The United Kingdom has a relatively disproportionate electoral system,\footnote{It had an average Gallagher disproportionality of 16.5 from 2000 to 2012.} but no violence in the sample. One reason for this might be that it has a very old democracy where the major parties have had experience in government and so view commitments to allow for the alteration of power to be credible. Conversely, only one incident of violence\footnote{Two members of parliament punched each other in 1998.} was observed in South Africa's new democracy during the sampling period. South Africa's democracy is about the same age as South Korea's and the country has a very violent recent past and present,\footnote{Its rate of murders per 100,000 people is regularly among the highest in the \cite{UNMurder2013} data set.} but it has very proportionate electoral outcomes.\footnote{South Africa’s average disproportionality was 0.28 from 2000 until 2012, one of the lowest observed in the sample.} South Africa's one scuffle in 1998 is quite an outlier as it is the only violent incident observed in very proportional legislatures in the sample.\footnote{There was a scuffle in the South African legislature on 12 February 2015, when opposition legislators were being ejected for interrupting the president \citep{Guardian2015}. Though South Africa has very proportionate electoral outcomes, the ANC's uninterrupted rule since the end of Apartheid is perhaps beginning to test opposition legislators' belief that the majority can maintain its commitments, especially to alternate power.}
+
 \section*{Additional Right-hand Variables}
 
 \todo[inline]{This section was moved from the main paper at the editor's request}
 
 I examined a number of other legislative and societal-level variables to guard against omitted variable bias. Results from models with these variables are shown in tables \ref{outputTable.dem} and \ref{outputTable.1990_2nd}. The variables are described below. It is important to first note that overall these factors were not found to be statistically significantly associated with legislative violence nor did they substantively alter the article's core findings.
 
+I avoid focusing on models that include highly correlated variables \citep[]{Achen2002, Schrodt2006}. In these models (not shown), as the statistical literature predicts, the coefficient estimates and standard errors change dramatically for many of the variables. Earlier models included a government system type variable. However, I ignore results from this variable. It had very large, highly unstable, and largely nonsensical coefficient estimates, suggesting that the model does not contain enough information to test \citep{Babyak2004} whether or not crude political system type has an effect on violence. The instability in the coefficient estimates likely has more to do with a lack of variation on this covariates rather than the violence dependent variable. Political system rarely changes in the sample.
+
 \subsubsection*{Motivation and Variable Descriptions}
 
 \todo[inline]{The following paragraph was added.}
 
-Previous research on protest movements has often focused on how they organize to overcome the collective action problems that would discourage individuals from protesting \citep{lohmann1994,tucker2007}. Perhaps this approach is applicable to legislative violence. Groups of legislators that are better able to organize may be more willing to engage in violent acts. However, there is a clear reason to be skeptical of the usefulness of this approach to explain whether or not legislative brawls occur: legislators are generally well-organized into political parties. Even weak parties with few members, typically in the hundreds at most, relative to protest movements are generally better organized and less subject to collective action problems than protest movements. That being said, the legislative studies literature has shown that the degree of personal vs. party organization varies across countries and is particularly influenced by the electoral system \citep{carey1995}. For example, if parties control the order of candidates on a closed-list ballot then the party will have considerable control over politicians. If a politician does not tow the party line, then the party could move the candidate lower down the list at the next election, decreasing their chances of re-election. Conversely, if candidates are placed on the ballot through open primaries, then parties have less control and candidates have stronger incentives to cultivate a personal vote. Legislative collective action problems in these systems are higher. To measure the degree of party control I used the dominant legislative tier's--i.e. the tier with the most seats--\emph{personal vote} rank. The data is from \cite{johnson2012} and is based on the index developed by \cite{carey1995}. Scores range between 1 and 13. Higher scores indicate stronger incentives for candidates to cultivate a personal vote, i.e. there is less party control. The data is available through 2005. I assumed it was constant from this point through 2012.
+Previous research on protest movements has often focused on how they organize to overcome the collective action problems that would discourage individuals from protesting \citep{lohmann1994,tucker2007}. Perhaps this approach is applicable to legislative violence. Groups of legislators that are better able to organize may be more willing and able to engage in violent acts. However, there is a clear reason to be skeptical of the usefulness of this approach to explain whether or not legislative brawls occur: legislators are generally well-organized into political parties. Even weak parties with few members, typically in the hundreds at most, relative to protest movements are generally better organized and less subject to collective action problems than protest movements. That being said, the legislative studies literature has shown that the degree of personal vs. party organization varies across countries and is particularly influenced by the electoral system \citep{carey1995}. For example, if parties control the order of candidates on a closed-list ballot then the party will have considerable control over politicians. If a politician does not tow the party line, then the party could move the candidate lower down the list at the next election, decreasing their chances of re-election. Conversely, if candidates are placed on the ballot through open primaries, then parties have less control and candidates have stronger incentives to cultivate a personal vote. Legislative collective action problems in these systems are higher. To measure the degree of party control I used the dominant legislative tier's--i.e. the tier with the most seats--\emph{personal vote} rank. The data is from \cite{johnson2012} and is based on the index developed by \cite{carey1995}. Scores range between 1 and 13. Higher scores indicate stronger incentives for candidates to cultivate a personal vote, i.e. there is less party control. The data is available through 2005. I assumed it was constant from this point through 2012.
 
 Gender is closely correlated with violence in society generally. Though there are many possible reasons for this that are beyond the scope of this article, women tend to commit many fewer acts of violence than men \citep[]{Schwartz2009}. Previous research has found that women's participation in parliament has an impact on government decisions to go to war \citep{Melander2005}. Perhaps if a larger proportion of legislators are women there will be less violence in the parliamentary chamber. To examine this possibility, I gathered data on the \emph{percentage of women in parliament} per country-year from two sources. Data from 1997 and after was from the Inter-Parliamentary Union \citeyearpar{IPU2013}. Data from before 1997 was from \cite{Schwartz2009}.
 
@@ -173,7 +181,7 @@ Results for other political and institutional variables were largely not statist
 {\scalebox{0.45}{
 
 % Table created by stargazer v.5.1 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
-% Date and time: Tue, Apr 07, 2015 - 13:54:48
+% Date and time: Wed, Apr 08, 2015 - 17:12:01
 \begin{tabular}{@{\extracolsep{5pt}}lcccccccccccc} 
 \\[-1.8ex]\hline 
 \hline \\[-1.8ex] 
@@ -259,7 +267,7 @@ Akaike Inf. Crit. & 567.272 & 566.452 & 568.507 & 566.302 & 421.966 & 489.043 & 
 \scalebox{0.5}{
 
 % Table created by stargazer v.5.1 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
-% Date and time: Tue, Apr 07, 2015 - 13:54:52
+% Date and time: Wed, Apr 08, 2015 - 17:12:05
 \begin{tabular}{@{\extracolsep{5pt}}lccccccc} 
 \\[-1.8ex]\hline 
 \hline \\[-1.8ex] 
@@ -378,7 +386,7 @@ It is important to reiterate that though these interactive effects have statisti
     \scalebox{0.7}{
 
 % Table created by stargazer v.5.1 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
-% Date and time: Tue, Apr 07, 2015 - 13:54:58
+% Date and time: Wed, Apr 08, 2015 - 17:12:11
 \begin{tabular}{@{\extracolsep{5pt}}lcccccc} 
 \\[-1.8ex]\hline 
 \hline \\[-1.8ex] 
@@ -454,7 +462,7 @@ Akaike Inf. Crit. & 517.288 & 384.817 & 514.846 & 509.845 & 457.984 & 517.697 \\
     \scalebox{0.7}{
 
 % Table created by stargazer v.5.1 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
-% Date and time: Tue, Apr 07, 2015 - 13:55:00
+% Date and time: Wed, Apr 08, 2015 - 17:12:13
 \begin{tabular}{@{\extracolsep{5pt}}lccccc} 
 \\[-1.8ex]\hline 
 \hline \\[-1.8ex] 
@@ -548,7 +556,7 @@ Table \ref{results_frac} shows models with ethnic fractionalization where key va
 \scalebox{0.7}{
 
 % Table created by stargazer v.5.1 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
-% Date and time: Tue, Apr 07, 2015 - 13:55:03
+% Date and time: Wed, Apr 08, 2015 - 17:12:16
 \begin{tabular}{@{\extracolsep{5pt}}lcccc} 
 \\[-1.8ex]\hline 
 \hline \\[-1.8ex] 
