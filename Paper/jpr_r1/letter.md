@@ -226,7 +226,7 @@ Overall, I feel that it is an issue of framing that can be ameliorated by using 
 
 As such, 'fairness' has been entirely removed from the discussion of democratic age, and largely removed from the proportional electoral outcomes section. The paragraphs originally in the main part of the theory section that relate primarily to proportionality have now been moved directly to the Proportional Electoral Outcomes subsection.
 
-It should be noted that I have kept the proposition that legislatures where legislative resources closely correspond to electoral support are less likely to have violence because actors do care about fairness to some extent. Though not all actors and not in all times care about fairness to the same extent, the fact that many do is a very well established finding in the game theoretical and related experimental literature. This also corresponds to Marien's (2011) finding regarding the curvilinear relationship between electoral proportionality and citizen's political trust. Importantly for this paper's theory it helps explain peaceful equilibria in highly proportional systems. Without the 'fairness equilibria' we would expect to see a cycling of violence as credible commitments would not be possible in proportional systems.
+It should be noted that I have kept the proposition that legislatures where legislative resources closely correspond to electoral support are less likely to have violence because actors do care about fairness to some extent. Though not all actors and not in all times care about fairness to the same extent, the fact that many do is a very well established finding in the game theoretical and related experimental literature. This also corresponds to Marien's (2011) finding regarding the curvilinear relationship between electoral proportionality and citizen's political trust. Importantly for this paper's theory it helps explain peaceful equilibria in highly proportional systems. Without the 'fairness equilibria' we would expect to see a cycling of violence as credible commitments would not be possible in proportional systems. I have added a footnote on this to page 5.
 
 As you mention later, beneficiaries of increasing disproportionality in highly proportional systems might use violence to create disproportionate outcomes otherwise. If this was true then we would expect to see an insignificant proportionality variable--there is no difference in violence between proportional and more disproportional legislatures. However, we do not see this.
 
@@ -239,7 +239,6 @@ Finally, I certainly do not assume that all actors will always view particular n
 > Would there not be a more dynamic process that takes into account deviations from expectations and not simply deviations from some pre-defined level?  The author(s) get at this a little with the old versus new democracy argument but it gets tangled up with the discussion of fairness.  I would simply talk about this as a more dynamic process and then the old versus new division seems a lot more intuitive.
 
 - I have altered the discussion to reflect this (discussed above).
-
 
 > In addition, if these are linked then would there not be an interactive effect?
 
