@@ -1,7 +1,7 @@
 ############
 # Compare incidents to 
 # Christopher Gandrud
-# 31 March 2015
+# 9 April 2015
 ############
 
 # Set working directory. Change as needed.
@@ -24,17 +24,17 @@ dem <- subset(all, polity2 > 5)
 
 # Find year totals
 dem$fake <- 1
-summed_elect <- dem %>% group_by(year) %>% 
-                    summarise(total_elect = sum(fake))
-summed_violence <- dem %>% group_by(year) %>% 
+summed_dem <- dem %>% group_by(year) %>% 
+                    summarise(total_dem = sum(fake))
+summed_violence <- all %>% group_by(year) %>% 
                     summarise(total_violence = sum(violence))
 
 # Plot of elected legislatures by year
-elect_p <- ggplot(summed_elect, aes(as.numeric(year), total_elect)) +
+elect_p <- ggplot(summed_dem, aes(as.numeric(year), total_dem)) +
                 geom_point() +
                 geom_line() +
                 scale_x_continuous(breaks = c(1981, 1990, 1995, 2000, 2010)) +
-                xlab('') + ylab('Elected Multi-Party National Legislatures\n') +
+                xlab('') + ylab('Democratic Countries\n') +
                 theme_bw()
 
 # Plot of violence by year
@@ -42,7 +42,7 @@ violence_p <- ggplot(summed_violence, aes(as.numeric(year), total_violence)) +
                 geom_point() +
                 stat_smooth(se = F) +
                 scale_x_continuous(breaks = c(1981, 1990, 1995, 2000, 2010)) +
-                xlab('') + ylab('Violence in Elected Legislatures\n') +
+                xlab('') + ylab('Violence Incidents in All Legislatures\n') +
                 theme_bw()
 
 grid.arrange(elect_p, violence_p)

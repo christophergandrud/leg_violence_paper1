@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Two Sword Lengths Apart
-% 8 April 2015
+% 9 April 2015
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % !Rnw weave = knitr
@@ -48,7 +48,7 @@ Word Count: 9,856
 
 %%%%%%% Abstract %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
-Ideally, national legislatures in democracies should be venues for peacefully resolving conflicts between opposing groups. However, they can become places of physical violence. Such violence is an indication that a country's legislative institutions are functioning far from the democratic ideal of being a venue for peaceful conflict reconciliation. In some cases, such as in Ukraine throughout the early 2000s, violence can indicate and possibly fuel deeper political divisions. In this first global study of legislative violence, I show that brawls are more likely when legislators find it difficult to credibly commit to follow peaceful bargains. Credible commitment problems are more acute in countries with disproportionate electoral outcomes--i.e. when votes for parties do not closely correspond to the legislative seats they are given--and in new democracies. I find robust support for this argument using a case study of legislative violence in the antebellum United States Senate and a new global data set. In addition I find strong evidence that violence is more likely in legislatures with small minority governments.
+Ideally, national legislatures in democracies should be venues for peacefully resolving conflicts between opposing groups. However, they can become places of physical violence. Such violence can be an indication that a country's legislative institutions are functioning far from the democratic ideal of being a venue for peaceful conflict reconciliation. In some cases, such as in Ukraine throughout the early 2000s, violence can indicate and possibly fuel deeper political divisions. In this first global study of legislative violence, I show that brawls are more likely when legislators find it difficult to credibly commit to follow peaceful bargains. Credible commitment problems are more acute in countries with disproportionate electoral outcomes--i.e. when votes for parties do not closely correspond to the legislative seats they are given--and in new democracies. I find robust support for this argument using a case study of legislative violence in the antebellum United States Senate and a new global data set. In addition I find strong evidence that violence is more likely in legislatures with small minority governments.
 \end{abstract}
 
 
@@ -223,7 +223,7 @@ To examine relationships between societal-level values and legislative violence 
 
 In addition, competition in more ethnically divided societies may be generally more intense. These conflicts may spill over into legislatures where they precipitate violence between members. I include Alesina et al.'s \citeyearpar{Alesina2003} {\emph{ethnic fractionalization}} data to account for the fact that a legislature's composition in terms of its fractionalization is not only a function of political institutions, but also social divisions \citep{Neto1997, Mozaffar2003}. The variable measures the probability that two randomly selected members of society will be from different ethnic groups. Higher values indicate more fractionalization.
 
-Please see the Online Appendix for discussions of and results for a number of other variables that were tested to examine the possibility of omitted variable bias. These variables include: the percentage of women in parliament, murder rates, government fractionalization, the effective number of parties in the legislature, federalism, the Gini coefficient, and GDP per capita.
+Please see the Online Appendix for discussions of and results for a number of other variables that were tested to examine the possibility of omitted variable bias. These variables include: the percentage of women in parliament, murder rates, the raw government fractionalization variable, the effective number of parties in the legislature, federalism, the Gini coefficient, and GDP per capita.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Analyses
 

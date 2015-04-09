@@ -1,7 +1,7 @@
 # ---------------------------------------------------------------------------- #
 # Gather/Clean/Merge Data for Two Sword Lengths Apart
 # Christopher Gandrud
-# 7 April 2015
+# 9 April 2015
 # MIT License
 # ---------------------------------------------------------------------------- #
 
@@ -22,6 +22,7 @@ library(tidyr)
 library(repmis)
 library(stringr)
 library(lubridate)
+library(foreign)
 
 #### ----------------- Main Leg. Violence Data ---------------------------- ####
 main_violence <- import('Data/violence_sources.csv') %>%
@@ -30,6 +31,8 @@ main_violence <- import('Data/violence_sources.csv') %>%
 main_violence$year <- year(main_violence$date)
 main_violence <- main_violence %>% filter(year <= 2012)
 main_violence$violence <- 1
+
+main_violence <- main_violence %>% dplyr::rename(violent_incident_date = date)
 
 main_violence <- main_violence %>% group_by(iso2c, year) %>%
     mutate(violence_y_cum = sum(violence))
@@ -72,15 +75,15 @@ murder <- murder %>% dplyr::select(iso2c, Year, Rate)
 names(murder) <- c('iso2c', 'year', 'murder_rate')
 
 #### ------------------ Political Constraints ----------------------------- ####
-pol_constraints <- import('Data/raw/polcon2012.dta') %>%
-                    select(polity_country, year, polconiii, polconv)
+pol_constraints <- read.dta('Data/raw/polcon2012.dta') %>%
+                    dplyr::select(polity_country, year, polconiii, polconv)
 
 pol_constraints$iso2c <- countrycode(pol_constraints$polity_country,
                                      origin = 'country.name',
                                      destination = 'iso2c')
 
 pol_constraints <- DropNA(pol_constraints, 'iso2c')
-pol_constraints <- pol_constraints %>% select(-polity_country) %>%
+pol_constraints <- pol_constraints %>% dplyr::select(-polity_country) %>%
                     filter(year >= 1980)
 
 
@@ -141,7 +144,7 @@ personal_vote$iso2c <- countrycode(personal_vote$country,
                                    origin = 'country.name', 
                                    destination = 'iso2c')
 personal_vote <- personal_vote %>% DropNA(c('iso2c', 'dom_personal_vote')) %>%
-                    select(-country)
+                    dplyr::select(-country)
 
 
 #### --------------- Women in Parliament ---------------------------------- ####
@@ -154,7 +157,7 @@ women <- WDI(indicator = "SG.GEN.PARL.ZS", start = 1997) %>%
 
 # Data from before 1997 from ICPSR: http://www.icpsr.umich.edu/icpsrweb/ICPSR/studies/24340
 women_old <- read.dta('Data/raw/24340-0001-Data.dta')
-women_old<- women_old[, 5:64]
+women_old <- women_old[, 5:64]
 
 women_old <- gather(women_old, year, women_in_parl, -COUNTRYN)
 women_old$year <- women_old$year %>% gsub('P', '', .) %>% as.numeric
@@ -168,7 +171,7 @@ women_old <- women_old %>% dplyr::select(iso2c, year, women_in_parl) %>%
 
 women <- rbind(women_old, women) %>% arrange(iso2c, year)
 
-women <- women[!duplicated(women[, c('iso2c', 'year')]),]
+women <- women[!duplicated(women[, c('iso2c', 'year')]), ]
 
 
 #### --------------- Age of Democracy ------------------------------------- ####
@@ -220,7 +223,7 @@ cum_nozero <- function(x){
 polity$dem_age <- cum_nozero(x = 'democracy')
 
 polity <- polity %>% dplyr::select(iso2c, year, polity2, dem_age)
-polity <- polity[!duplicated(polity[, c('iso2c', 'year')]),]
+polity <- polity[!duplicated(polity[, c('iso2c', 'year')]), ]
 
 #### ---------------------- Database of Political Institutions ------------ ####
 tmpfile <- tempfile()
@@ -246,7 +249,7 @@ dpi$single_party[!is.na(dpi$govfrac)] <- 0
 dpi$single_party[dpi$govfrac == 0] <- 1
 dpi$single_party[is.na(dpi$govfrac)] <- NA
 
-dpi <- dpi[!duplicated(dpi[, c('iso2c', 'year')]),]
+dpi <- dpi[!duplicated(dpi[, c('iso2c', 'year')]), ]
 
 #### ----------------- Dispoportionality ---------------------------------- ####
 disprop <- import('http://bit.ly/Ss6zDO', format = 'csv') %>%
@@ -258,11 +261,11 @@ disprop$high_prop <- 0
 disprop$high_prop[disprop$disproportionality < 6.34] <- 1
 disprop$high_prop[is.na(disprop$high_prop)] <- NA
 
-disprop <- disprop[!duplicated(disprop[, c('iso2c', 'year')]),]
+disprop <- disprop[!duplicated(disprop[, c('iso2c', 'year')]), ]
 
 #### ----------------- Legislative Immunity ------------------------------- ####
 immunity <- import('Data/raw/fish_k_immunity.csv') %>% dplyr::select(-year)
-immunity <- immunity[!duplicated(immunity[, 'iso2c']),]
+immunity <- immunity[!duplicated(immunity[, 'iso2c']), ]
 
 #### ----------------- Ethnic Fractionalization---------------------------- ####
 ethnic_frac <- 'http://www.anderson.ucla.edu/faculty_pages/romain.wacziarg/downloads/fractionalization.xls' %>%
