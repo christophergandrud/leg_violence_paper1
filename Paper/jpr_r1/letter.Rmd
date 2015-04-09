@@ -57,7 +57,7 @@ I also added a note after the main article text regarding the locations of these
 
 > P 5 and 7: please name hypotheses ‘H1’ and ‘H2’.
 
-- Added H1 and H2.
+- Added H1 and H2 names.
 
 > P. 6: ‘(Saideman, Lanoue and Stanton, 2002, 108)’ -> ‘(Saideman, Lanoue & Stanton, 2002: 108)’, here and throughout the ms.
 
