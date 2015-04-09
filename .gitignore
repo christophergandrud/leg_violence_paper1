@@ -4,15 +4,15 @@
 .DS_Store
 .Rhistory
 
-PaperNamed/cache/*
-PaperNamed/figure/*
+Paper/cache/*
+Paper/figure/*
 PaperNotNamed/*
 Old/*
 JJPS/*
 GovandOpp/*
 JPR/Unnammed/cache/*
-PaperNamed/jpr_r1/main_article/figure/*
-PaperNamed/jpr_r1/main_article/figure/FrameworkEmpirical-1.pdf
+Paper/jpr_r1/main_article/figure/*
+Paper/jpr_r1/main_article/figure/FrameworkEmpirical-1.pdf
 
 ## Core latex/pdflatex auxiliary files:
 *.aux

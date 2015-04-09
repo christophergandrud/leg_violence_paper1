@@ -19,7 +19,7 @@ in the main article and Supplementary Materials.
 - **Data**: Data files, descriptions, and R code used to clean/merge the raw data files
 together.
 
-- **PaperNamed**: TeX files used to create the main article and Supplementary
+- **Paper**: TeX files used to create the main article and Supplementary
 Materials.
 
 ## Analysis
