@@ -1,3 +1,6 @@
+---
+output: word_document
+---
 Dear Editors of the Journal of Peace Research,
 
 thank you for the opportunity to revise and resubmit my manuscript "Two Sword Lengths Apart: Credible Commitment Problems and Physical Violence in Democratic National Legislatures".
@@ -117,7 +120,7 @@ All of this being said, as Reviewer 2 suggests, control over what passes in the 
 
 To test this I included Henisz's widely used measure of political constraints, which explicitly captures the feasibility of policy change given the number and polarisation of veto players. In additive models (shown in the main text, Table I) the variable is not statistically significant. In a new Interactions section of the Online Appendix (pages 8-14) I discuss some evidence that perhaps there is an interaction between political constraints and democratic age, such that more political constraints could help overcome credible commitment problems in new democracies. Current losers may be less worried that the current legislative winners can change the rules/implement policies that shift or entrench power in their favour.
 
-It should be noted that the inclusion of governement fractionalisation and single party government variables in the original text did also try to test the ease with which the majority can pass legislation. These variables were always statistically insignificant.
+It should be noted that the inclusion of government fractionalisation and single party government variables in the original text did also try to test the ease with which the majority can pass legislation. These variables were always statistically insignificant.
 
 ---------
 
@@ -285,7 +288,7 @@ I realise a possible source of confusion may be that the wording regarding how d
 
 Thank you for this suggestion. In fact, colleagues and I are actively deepening the detail of this data set so that we can understand the internal dynamics of specific brawls, including which side (those that would benefit from an increase or decrease in a correspondence between legislative resources and electoral support) 'started' a given brawl. Nonetheless, as you point out and as is discussed in the paper, either side could start a brawl with the ultimate cause being a credible commitment problem.
 
-> 8. Finally, with so many zero cases and an event count, why not use a zero inflated negative binomial model?
+> Finally, with so many zero cases and an event count, why not use a zero inflated negative binomial model?
 
 I examined the possibility of using zero inflated negative binomial regression. This was not in practice possible (using `zeroinfl` from the R pscl package). There are few country-years with more than 1 brawl (32). Most of these had two brawls, only 6 had 3 brawls. As zero inflated negative binomial regression uses a mixture model, there is likely not enough variation in the count part of the model to estimate it.
 
