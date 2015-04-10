@@ -3,6 +3,8 @@ Two Sword Lengths Apart: Research on Violence in National Legislatures
 
 Christopher Gandrud
 
+10 April 2015
+
 # Purpose
 
 This repository contains all of the material needed to reproduce the analyses
@@ -57,4 +59,4 @@ violence_incidents <- repmis::source_data('https://raw.githubusercontent.com/chr
 ```
 
 Highlights from reports about the incidents can be found in
-[Data/violence_incidence_descriptions.md](Data/violence_incidence_descriptions.md).
+[Data/violence_incidents_descriptions.md](Data/violence_incidents_descriptions.md).

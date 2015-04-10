@@ -13,6 +13,7 @@ GovandOpp/*
 JPR/Unnammed/cache/*
 Paper/jpr_r1/main_article/figure/*
 Paper/jpr_r1/main_article/figure/FrameworkEmpirical-1.pdf
+*.doc
 
 ## Core latex/pdflatex auxiliary files:
 *.aux
