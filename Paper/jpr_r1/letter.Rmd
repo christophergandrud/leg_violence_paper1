@@ -3,13 +3,13 @@ output: word_document
 ---
 Dear Editors of the Journal of Peace Research,
 
-thank you for the opportunity to revise and resubmit my manuscript "Two Sword Lengths Apart: Credible Commitment Problems and Physical Violence in Democratic National Legislatures".
+Thank you for the opportunity to revise and resubmit my manuscript "Two Sword Lengths Apart: Credible Commitment Problems and Physical Violence in Democratic National Legislatures".
 
 I have done my best to incorporate the reviewers' very helpful suggestions, as well as your own, while keeping the manuscript within the Journal's 10,000 word limit (the revised text's word count is [GET]). The manuscript is much improved because of these suggestions.
 
-I have included two versions of the main manuscript. The first is a clean revised version. The second marks up all of the changes. My detailed responses to the suggestions are below. Page numbers referenced in the main text refer to the non-tracked changes version.
-
 It should be noted that I have also updated and further validated the legislative violence data set using additional searches detailed in the Online Appendix. Due to data availability on the covariates, the data set used in the statistical analyses now runs through 2012. Previously it ran through 2009. The results remain substantively the same however.
+
+I have included two versions of the main manuscript. The first is a clean revised version. The second marks up all of the changes. My detailed responses to the suggestions are below. Page numbers referenced in the main text refer to the non-tracked changes version.
 
 Please do not hesitate to contact me if you require more information or have other suggestions.
 
@@ -72,7 +72,7 @@ Removed 'see' from all in-text citations.
 
 > "P. 12: footnote 1 close to the bottom: which note does this refer to?"
 
-Very sorry, this footnote should have been a description of the search terms/data gathering process for the legislative violence data set. This was mistakenly left out of the original submission due to my not noticing a LaTeX compile issue. I have re-entered and expanded the information that should have been included in the main article (pages 12-13) and, in more detail, the Online Appendix (page 1).
+Very sorry, this footnote should have been a description of the search terms/data gathering process for the legislative violence data set. This was mistakenly left out of the original submission due to a LaTeX compile issue. I have re-entered and expanded the information that should have been included in the main article (pages 12-13) and, in more detail, the Online Appendix (page 1).
 
 > "P. 13: please name all six countries making up 60% of events."
 
@@ -84,11 +84,11 @@ I have moved these models to the Online Appendix (Table II). I also moved the di
 
 > "P. 18: please consider adding past armed conflict as a control."
 
-Thank you for this useful suggestion. I have included data on internal armed conflicts from the UCDP/PRIO Armed Conflict Dataset. The results from including all conflicts--internal and external--are similar, as there are very few interstate conflicts in the sample period. I have added the variable to the regression estimates tables. Results from current year conflict are shown. Lag and lead variables were also examined. Though the conflict variable (and its lags/leads) is sometimes significant at, typically at the 10% level, the variable is overall not robustly significant. Its inclusion also does not alter the article's central findings. Nonetheless, given the substantive importance of this variable, we would certainly benefit from exploring the relationship between legislative violence and armed conflict in future research. This is mentioned in the conclusion.
+Thank you for this useful suggestion. I have included data on internal armed conflicts from the UCDP/PRIO Armed Conflict Dataset. The results from including all conflicts--internal and external--are similar, as there are very few interstate conflicts in the sample period. I have added the variable to the regression estimates tables. Results from current year conflict are shown. Lag and lead variables were also examined. Though the conflict variable (and its lags/leads) is sometimes significant, typically at the 10% level, the variable is overall not robustly significant. Its inclusion also does not alter the article's central findings. Nonetheless, given the substantive importance of this variable, we would certainly benefit from exploring the relationship between legislative violence and armed conflict in future research. This is mentioned in the conclusion.
 
 > "Since one of the key contributions is the dataset, please do provide additional information on the data collection procedure (e.g. search algorithm?) and the coding (e.g. how did you separate between multiple events involving the same actors). Additional information should be included in the article, though more detailed descriptions may be relegated to the supplementary (online) file."
 
-Unfortunately the footnote detailing the original data gathering process was accidentally not included in the original version. It has been renetered as mentioned above. The replication materials listed above also contains a CSV file of primary sources on each violent incident (Data/violence_sources.csv) and short descriptions of the conflicts (Data/violence_incident_descriptions.md).
+Unfortunately the footnote detailing the original data gathering process was accidentally omitted from the original version. It has been renetered as mentioned above. The replication materials listed above also contains a CSV file of primary sources on each violent incident (Data/violence_sources.csv) and short descriptions of the conflicts (Data/violence_incident_descriptions.md).
 
 Largely subsequent to the original submission, I and three new research assistants completed a verification and update of the data using additional keyword searches of the Google News Archive, LexisNexis, NewsLibrary, NewsBank, NewsBank, Google, and YouTube (a surprisingly good source of information on the dynamics of legislative brawls). This work is primarily for a spin-off project, but I have incorporated all relevant changes to the data set used in this paper as well. The primary change was expanding the time period through 2012.
 
@@ -108,7 +108,7 @@ There seems to have been a slight confusion, likely due to poor wording on my pa
 
 An important component of the article's explanation of credible commitment problems is the control of legislative resources, broadly defined as both seats--i.e. legislative votes--and other resources such as committee appointments and agenda setting. The primary reason for defining legislative resources like this is that the set of actors who control legislative procedures and control legislative policy outcomes--bills that pass the legislature--are in practice often identical. Control of the procedures typically goes to the governing party/coalition and this group tends to have a majority or at least a plurality of seats. Control of the procedures enables agenda setting power that solidifies the governing party/coalition's power to control legislative outcomes, even if they do not control a majority of the seats. This is well understood in legislative studies as those who control the legislative agenda overwhelmingly control what bills (including legislative rule changes) are introduced to the floor to be voted on. These bills then have a very high probability of success (Tsebelis 2002, 93).
 
-The inability to credibly commit to legislative rules means that there is an inability to credibly commit to legislative policy outcomes. As such legislators, even those exclusively motivated by legislative outcomes, will be highly influenced in their behaviour by credible commitments about legislative rules.
+The inability to credibly commit to legislative rules means, by extension, that there is an inability to credibly commit to legislative policy outcomes. As such legislators, even those exclusively motivated by legislative outcomes, will be highly influenced in their behaviour by credible commitments about legislative rules.
 
 I have tried to clarify key points from the above discussion in the text (pages 3-4 and especially the footnote 5 on page 3). Due to word count limitations, I have not discussed this point at length. However, I would be more than happy to develop the discussion further if the reviewers deem it necessary.
 
