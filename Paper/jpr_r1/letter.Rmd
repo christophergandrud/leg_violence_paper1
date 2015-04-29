@@ -7,7 +7,7 @@ Thank you for the opportunity to revise and resubmit my manuscript "Two Sword Le
 
 I have done my best to incorporate the reviewers' very helpful suggestions, as well as your own, while keeping the manuscript within the Journal's 10,000 word limit (the revised text's word count is [GET], all inclusive). The manuscript is much improved because of these suggestions.
 
-It should be noted that I have also updated and further validated the legislative violence data set using additional searches detailed in the Online Appendix. Due to data availability on the covariates, the data set used in the statistical analyses now runs through 2012. Previously it ran through 2009. The results remain substantively the same however.
+It should be noted that I have also updated and further validated the legislative violence data set using additional searches detailed in the Online Appendix. Due to availability of some of the covariates, the sample used in the statistical analyses now runs through 2012. Previously it ran through 2009. Nonetheless, the results remain substantively the same.
 
 I have included two versions of the main manuscript. The first is a clean revised version. The second marks up all of the changes. My detailed responses to the suggestions are below. Page numbers referenced in the main text refer to the non-tracked changes version.
 
