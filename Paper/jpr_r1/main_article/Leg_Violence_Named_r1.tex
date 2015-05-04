@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Two Sword Lengths Apart
-% 22 April 2015
+% 4 May 2015
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % !Rnw weave = knitr
@@ -92,7 +92,7 @@
 \maketitle
 
 \begin{center}
-Word Count: 9,821
+Word Count: 9,812
 \end{center}
 
 %%%%%%% Abstract %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -144,7 +144,7 @@ At what levels of disproportionately would we expect to observe more violence? A
 Empirical research on the functional form of the relationship between political trust and disproportionality provides some initial evidence for the claim that there could be a threshold effect between disproportionality and legislative violence. \cite{Marien2011} found that there was a curvilinear relationship between proportional electoral outcomes and citizens' political trust. Feelings of political trust were highest with very proportional outcomes, as well as those with disproportional or majoritarian systems. Countries in the middle had the lowest trust. Marien argues that high trust in very proportional systems is caused by high fairness. The fairness effect seems to quickly disappear as we move in the direction of more disproportionate outcomes. Marien argues that high voter trust in very disproportionate countries is caused not by fairness, but by high accountability. Should we expect a curvilinear relationship between proportionality and legislative violence? Probably not. Though accountability may please voters in general, there is little reason to believe that this will ameliorate credible commitment problems between legislators created by unfairness. For these reasons we should expect:
 
 \begin{quote}
-    H1: \emph{Countries with very proportional outcomes to have fewer incidents of violence. All other countries should be more likely to have more violence.}
+    H1: \emph{Countries with very proportional electoral outcomes have fewer incidents of violence.}
 \end{quote}
 
 It's important to note that though the exact type of electoral system is ultimately interesting to us from an institutional design point of view, we should not confuse ``the outcome of an electoral system with its mechanics'' \citep[][109]{Golder2005}.
@@ -261,7 +261,7 @@ I also investigated the possibility that a number of political, institutional, a
 
 To assess any effect of coalition compared to single-party governments I included a transformation of the DPI {\emph{government fractionalization}} variable. It is the probability that two randomly picked deputies in the government are from different parties. I used the fractionalization variable to create an indicator of {\emph{single-party}} government. It is simply a dummy equaling one if fractionalization was zero, i.e. all governing legislators were from the same party. In general, single party governments probably are better able to pass policies very close to their ideal preferences. This could heighten losers' losses and make them less likely to want to conform to non-violent legislative rules. However, all single party governments are not created equal. Some parties may act as umbrella parties that incorporate many different factions. Others are narrowly focused on a particular constituency.
 
-Perhaps legislators are more violent if they become frustrated with their ability to effect policy change. Control over legislative resources typically closely corresponds to an ability to shape outcomes. However, veto players outside the legislature may severely restrict which bills pass the legislature are actually enacted. To examine this possibility, I included Henisz's \citeyearpar{Henisz2004} measure of political constraints.\footnote{The version of the variable included is POLCONIII. Results are similar for the other version--POLCONV--which includes two additional veto points: the judiciary and sub-federal units.} This variable captures the feasibility of policy change. It ranges between zero and one. Higher values indicate that there are more veto players with disparate preferences and thus there is a lower likelihood of policy change. The variable has been updated through 2011.
+Perhaps legislators are more violent if they become frustrated with their (in)ability to effect policy change. Control over legislative resources typically closely corresponds to an ability to shape outcomes. However, veto players outside the legislature may severely restrict which bills pass the legislature are actually enacted. To examine this possibility, I included Henisz's \citeyearpar{Henisz2004} measure of political constraints.\footnote{The version of the variable included is POLCONIII. Results are similar for the other version--POLCONV--which includes two additional veto points: the judiciary and sub-federal units.} This variable captures the feasibility of policy change. It ranges between zero and one. Higher values indicate that there are more veto players with disparate preferences and thus there is a lower likelihood of policy change. The variable has been updated through 2011.
 
 To examine the possibility that armed conflict may be associated with legislative violence I created a binary internal armed conflict variable using the UCDP/PRIO Armed Conflict Dataset \citep{Themner2014}. The variable is one if there is an internal armed conflict (either involving or not involving external states) and zero otherwise.
 
@@ -278,7 +278,7 @@ Please see the Online Appendix for discussions of and results for a number of ot
 
 I used the {\tt{relogit}} model from the {\tt{R}} package {\tt{Zelig}} \citep{IMAIKingZelig2008} to estimate regression models. To get a better understanding of the magnitude of the estimated relationships between the right-hand variables and violence beyond simple statistical significance \citep{ward2010perils} I also used Zelig to predict incident probabilities with 1,000 simulations per fitted value \citep[]{King2002}. Expected probabilities for various fitted values of the key findings of interest are shown in Figure \ref{pred_prob}. Note: because the variables are in country-year records, all of the results should be interpreted in terms of the predicted effect of a variable on the probability of legislative violence in a given country per year.
 
-I observed relatively few incidents of violence in the 1980s. There were only 8 observed incidents before 1990 in the full sample. To examine any estimation biases this might create I ran the regressions on a further constricted sample of democratic legislatures from 1990. The results were broadly similar across the two samples. Regression coefficient point estimates and robust standard errors for the sample that is truncated from 1990 can be found in Table \ref{outputTable.1990}. Results from the full observation period can be found in the Online Appendix. In addition, the Online Appendix contains an examination of why more incidents are observed in more recent time periods.
+I observed relatively few incidents of violence in the 1980s. There were only 8 observed incidents before 1990 in the full sample. To examine any estimation biases this might create I ran the regressions on a further constricted sample of democratic legislatures from 1990. The results were broadly similar across the two samples. Regression coefficient point estimates and robust standard errors for the sample that is truncated from 1990 can be found in Table \ref{outputTable.1990}. Results from the full observation period can be found in the Online Appendix. In addition, the Online Appendix contains an examination of why more violent incidents are observed in more recent time periods.
 
 \vspace{0.5cm}
 
@@ -293,7 +293,7 @@ I observed relatively few incidents of violence in the 1980s. There were only 8 
 
 \paragraph{Disproportionality}
 
-Across virtually all of the models the estimates for the dummy {\emph{low disproportionality}} variable indicate that proportional electoral outcomes are associated with less legislative violence. This finding is robust at least at the 5\% significance level in most model specifications.\footnote{The only model in Table \ref{outputTable.1990} where it drops just below the 10\% significance level is Model 6. This model includes the self expression variable which, due to list-wise deletion for missing-ness, causes the sample size to be cut almost in half. In the full 1990-2012 sample the coefficient estimate was significant at the 10\% level with self-expression included. Please see the Online Appendix for details.} The finding corroborates what we saw in the Sumner caning case study and Figure \ref{framework_empirical}. More interesting than simple statistical significance or coefficient point estimates is the magnitude of and uncertainty surrounding the disproportionality/violence relationship. To get a sense of the magnitude of this estimated relationship and the uncertainty around it, I plotted the predicted probabilities of having a legislative brawl in the left-most plot of Figure \ref{pred_prob} using estimates from Model 3. We can see that the median of the expected probabilities of a country having violence when disproportionality is greater than or equal to 6.34 is approximately three percent in a given year. All other variables are fitted at their means. Countries with disproportionality less than 6.34 a median expected probability closer to one percent.
+Across virtually all of the models the estimates for the dummy {\emph{low disproportionality}} variable indicate that proportional electoral outcomes are associated with less legislative violence. This finding is robust at least at the 5\% significance level in most model specifications.\footnote{The only model in Table \ref{outputTable.1990} where it drops just below the 10\% significance level is Model 6. This model includes the self expression variable which, due to list-wise deletion for missing-ness, causes the sample size to be cut almost in half. In the full 1990-2012 sample the coefficient estimate was significant at the 10\% level with self-expression included. Please see the Online Appendix for details.} The finding corroborates what we saw in the Sumner caning case study and Figure \ref{framework_empirical}. More interesting than simple statistical significance or coefficient point estimates is the magnitude of and uncertainty surrounding the disproportionality/violence relationship. To get a sense of the magnitude of this estimated relationship and the uncertainty around it, I plotted the predicted probabilities of having a legislative brawl in the left-most plot of Figure \ref{pred_prob} using estimates from Model 3. We can see that the median of the expected probabilities of a country having violence when disproportionality is greater than or equal to 6.34 is approximately three percent in a given year. All other variables are fitted at their means. Countries with disproportionality less than 6.34 have a median expected probability closer to one percent.
 
 \paragraph{Age of democracy}
 
@@ -390,7 +390,7 @@ As this is the first large scale study on this subject there is still considerab
 \scalebox{0.8}{
 
 % Table created by stargazer v.5.1 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
-% Date and time: Mon, May 04, 2015 - 11:46:32
+% Date and time: Mon, May 04, 2015 - 14:35:50
 \begin{tabular}{@{\extracolsep{5pt}}lccccccc} 
 \\[-1.8ex]\hline 
 \hline \\[-1.8ex] 
