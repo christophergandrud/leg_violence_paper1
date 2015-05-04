@@ -43,7 +43,7 @@
 \maketitle
 
 \begin{center}
-Word Count: 9,824
+Word Count: 9,821
 \end{center}
 
 %%%%%%% Abstract %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
