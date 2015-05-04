@@ -2,6 +2,7 @@
 output: word_document
 ---
 Dear Editors of the Journal of Peace Research,
+Dear Reviewers,
 
 Thank you for the opportunity to revise and resubmit my manuscript "Two Sword Lengths Apart: Credible Commitment Problems and Physical Violence in Democratic National Legislatures".
 
@@ -121,6 +122,12 @@ Despite this strong interrelation, as Reviewer 2 suggests, control over what pas
 To test this I included Henisz's (2004, updated through 2011) widely used measure of political constraints. It explicitly captures the feasibility of policy change given the number and polarisation of veto players. In additive models (shown in the main text, Table I) the variable is not statistically significant. In a new Interactions section of the Online Appendix (pages 8-13) I discuss some evidence that perhaps there is an interaction between political constraints and democratic age, such that more political constraints could help overcome credible commitment problems in new democracies. Current losers may be less worried that the current winners can change the rules/implement policies that entrench power further in their favour.
 
 It should be noted that the inclusion of government fractionalisation and single party government variables in the original text did also try to test the ease with which the majority can pass legislation. These variables are always statistically insignificant.
+
+---------
+
+# Reviewer 1
+
+Thank you so much for these kind and supportive words. I really appreciate it.
 
 ---------
 
