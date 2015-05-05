@@ -46,6 +46,8 @@
     source("/git_repositories/leg_violence_paper1/Analysis/main_analysis_3.R")
 @
 
+\section*{Additional Materials for the Caning of Senator Sumner Case Study}
+
 \section*{Data Set of Legislative Violence}
 
 The legislative violence data set used in this paper was built by the author and four research assistants over a number of years using keyword searches of electronic print news and video sources. The initial data set was compiled in Spring 2011 with keyword searches of the Google News Archive.\footnote{\url{https://news.google.com}.} This resource has global coverage of a diverse range of news sources over a long period of time. An initial search was done by a research assistant and the author using keywords that included ``parliament'', ``legislature'', ``national assembly'', ``brawls'', ``scuffles'', and ``fights''. The initial data set was then verified and supplemented between 2013 and early 2015 by three other research assistants with similar keyword searches of the Google News Archive, LexisNexis,\footnote{\url{http://www.lexisnexis.com/en-us/gateway.page}. Accessed 2013-2014.} NewsLibrary,\footnote{\url{www.newslibrary.com}. Accessed 2013-2014.} NewsBank,\footnote{\url{www.newsbank.com}. Accessed 2013-2014.} general Google search,\footnote{\url{www.google.com}. Accessed 2013-2015.} and YouTube.\footnote{\url{www.youtube.com}. Accessed 2013-2014.} These searches were further supplemented with colleagues' expert knowledge. Sources and descriptions of legislative violence incidents included in the data set can be found at:
