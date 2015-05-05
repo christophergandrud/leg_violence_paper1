@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Two Sword Lengths Apart: Online Appendix
-% 14 April 2015
+% 5 May 2015
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % !Rnw weave = knitr
@@ -48,8 +48,6 @@
 
 \section*{Data Set of Legislative Violence}
 
-\todo[inline]{Section added.}
-
 The legislative violence data set used in this paper was built by the author and four research assistants over a number of years using keyword searches of electronic print news and video sources. The initial data set was compiled in Spring 2011 with keyword searches of the Google News Archive.\footnote{\url{https://news.google.com}.} This resource has global coverage of a diverse range of news sources over a long period of time. An initial search was done by a research assistant and the author using keywords that included ``parliament'', ``legislature'', ``national assembly'', ``brawls'', ``scuffles'', and ``fights''. The initial data set was then verified and supplemented between 2013 and early 2015 by three other research assistants with similar keyword searches of the Google News Archive, LexisNexis,\footnote{\url{http://www.lexisnexis.com/en-us/gateway.page}. Accessed 2013-2014.} NewsLibrary,\footnote{\url{www.newslibrary.com}. Accessed 2013-2014.} NewsBank,\footnote{\url{www.newsbank.com}. Accessed 2013-2014.} general Google search,\footnote{\url{www.google.com}. Accessed 2013-2015.} and YouTube.\footnote{\url{www.youtube.com}. Accessed 2013-2014.} These searches were further supplemented with colleagues' expert knowledge. Sources and descriptions of legislative violence incidents included in the data set can be found at:
 %%\url{https://github.com/christophergandrud/leg_violence_paper1/tree/master/Data}
 [OBSCURED FOR BLIND REVIEW].
@@ -57,8 +55,6 @@ The legislative violence data set used in this paper was built by the author and
 YouTube is a particularly useful resource for detailed video data on the size and dynamics of legislative brawls. In future research I aim to use this data to study brawl dynamics. For this article, though, it is useful to note that each brawl can be considered a single event. Though brawl intensity varies between brawls and over the course of the brawls as more or fewer legislators are involved, they tend to center around the same issue on the same day.
 
 \section*{Examining Possible Measurement Error}
-
-\todo[inline]{Section added.}
 
 Relying heavily on electronic sources may create measurement error. The electronic availability of print news and videos about legislative violence, as with material on almost all other phenomenon, could be positively correlated with time. More information is available for incidents in more recent years.
 
@@ -83,21 +79,15 @@ Measurement error caused by the electronic availability of information on legisl
 
 \section*{Discussion of Contrasting Contemporary Cases}
 
-\todo[inline]{This paragraph was moved from the main text to meet word limit requirements.}
-
 While it appears in Figure 2 of the article's main text that having disproportionate electoral outcomes \emph{or} a new democracy is not necessary for legislative violence, based on the data, having \emph{both} of them might make violence much more likely. South Korea's national assembly, like the antebellum US Senate, is an example of a ``perfect storm''. It is both in a new democracy and has relatively disproportionate electoral outcomes.\footnote{South Korea's average disproportionality as measured by the Gallagher Index \citep{Gallagher1991} from 2000 until 2012 was 12. This places it in the upper 25\% of observations with elected legislatures. It also became a democracy within the past 20 years.} South Korea had eight observed incidents of legislative violence in the full sample. Countries that have \emph{either} proportional outcomes \emph{or} old democracies appear to be able to compensate fairly well for an absence of the other characteristic. The United Kingdom has a relatively disproportionate electoral system,\footnote{It had an average Gallagher disproportionality of 16.5 from 2000 to 2012.} but no violence in the sample. One reason for this might be that it has a very old democracy where the major parties have had experience in government and so view commitments to allow for the alteration of power to be credible. Conversely, only one incident of violence\footnote{Two members of parliament punched each other in 1998.} was observed in South Africa's new democracy during the sampling period. South Africa's democracy is about the same age as South Korea's and the country has a very violent recent past and present,\footnote{Its rate of murders per 100,000 people is regularly among the highest in the \cite{UNMurder2013} data set.} but it has very proportionate electoral outcomes.\footnote{South Africa's average disproportionality was 0.28 from 2000 until 2012, one of the lowest observed in the sample.} South Africa's one scuffle in 1998 is quite an outlier.\footnote{There was a scuffle in the South African legislature on 12 February 2015, when opposition legislators were being ejected for interrupting the president \citep{Guardian2015}. Though South Africa has very proportionate electoral outcomes, the ruling African National Congress' uninterrupted rule since the end of Apartheid is perhaps beginning to test opposition legislators' belief that the majority can maintain its commitments, especially to alternate power.}
 
 \section*{Additional Right-hand Variables}
 
-\todo[inline]{This section was moved from the main text at the editor's request}
+I examined a number of other legislative and societal-level variables to guard against omitted variable bias and test alternative hypotheses. Results from models with these variables are shown in tables \ref{outputTable.dem} and \ref{outputTable.1990_2nd}. The variables are described below. It is important to first note that overall these factors were not found to be statistically significantly associated with legislative violence nor did they substantively alter the article's core findings.
 
-I examined a number of other legislative and societal-level variables to guard against omitted variable bias \add{and test alternative hypotheses}. Results from models with these variables are shown in tables \ref{outputTable.dem} and \ref{outputTable.1990_2nd}. The variables are described below. It is important to first note that overall these factors were not found to be statistically significantly associated with legislative violence nor did they substantively alter the article's core findings.
-
-I avoid focusing on models that include highly correlated variables \citep[]{Achen2002, Schrodt2006}. In these models (not shown), as the statistical literature predicts, the coefficient estimates and standard errors change dramatically for many of the variables. Earlier models included a government system type variable. However, I ignore results from this variable. It had very large, highly unstable, and largely nonsensical coefficient estimates, suggesting that the model does not contain enough information to test \citep{Babyak2004} whether or not crude political system type has an effect on violence. \add{The instability in the coefficient estimates likely has more to do with a lack of variation on this covariate rather than the violence dependent variable. Political systems rarely change in the sample of democracies. Aspects of the political process captured by this variable that are theoretically interesting here--particularly the existence of non-legislative, e.g. presidential veto players, are furthermore captured more directly by other variables included, primarily the political constraints variable from} \cite{Henisz2004}.
+I avoid focusing on models that include highly correlated variables \citep[]{Achen2002, Schrodt2006}. In these models (not shown), as the statistical literature predicts, the coefficient estimates and standard errors change dramatically for many of the variables. Earlier models included a government system type variable. However, I ignore results from this variable. It had very large, highly unstable, and largely nonsensical coefficient estimates, suggesting that the model does not contain enough information to test \citep{Babyak2004} whether or not crude political system type has an effect on violence. The instability in the coefficient estimates likely has more to do with a lack of variation on this covariate rather than the violence dependent variable. Political systems rarely change in the sample of democracies. Aspects of the political process captured by this variable that are theoretically interesting here--particularly the existence of non-legislative, e.g. presidential veto players, are furthermore captured more directly by other variables included, primarily the political constraints variable from \cite{Henisz2004}.
 
 \subsubsection*{Motivation and Variable Descriptions}
-
-\todo[inline]{The following paragraph was added. Subsequent paragraphs are from the original.}
 
 Previous research on protest movements has often focused on how they organize to overcome the collective action problems that would discourage individuals from protesting \citep{lohmann1994,tucker2007}. Perhaps this approach is applicable to legislative violence. Groups of legislators that are better able to organize may be more willing and able to engage in violent acts. However, there is a clear reason to be sceptical of the usefulness of this approach to explain whether or not legislative brawls occur: legislators are generally well-organized into political parties. Even weak parties with few members (typically in the hundreds at most) relative to protest movements are generally better organized and less subject to collective action problems than protest movements. That being said, the legislative studies literature has shown that the degree of personal vs. party organization varies considerably across countries and is particularly influenced by the electoral system \citep{carey1995}. For example, if parties control the order of candidates on a closed-list ballot then the party will have considerable control over politicians. If a politician does not tow the party line, then the party could move the candidate lower down the list at the next election, decreasing their chances of re-election. Conversely, if candidates are placed on the ballot through open primaries, then parties have fewer sticks to control legislators, who instead have stronger incentives to cultivate a personal vote. Legislative collective action problems in these systems are higher. To measure the degree of party control I used data on \emph{personal vote} rank in countries's dominant legislative tier--i.e. the chamber with the most seats. The data is from \cite{johnson2012} and is based on the index developed by \cite{carey1995}. Scores range between 1 and 13. Higher scores indicate stronger incentives for candidates to cultivate a personal vote, i.e. there is less party control. The data is available through 2005. I assumed it was constant from this point through 2012.
 
@@ -113,8 +103,6 @@ Conflict in more economically divided societies may be generally more intense. T
 
 \subsection*{Results Discussion}
 
-\todo[inline]{Moved from main paper and changed for results with updated data.}
-
 \paragraph{Societal-level Variables}
 
 In general the additional societal-level variables were found to be associated with legislative violence in any of the models. Countries' murder rates were not found to be associated with violence indicating that the link between societal and legislative violence is not strong. GDP per capita was also not found to be associated with violence. The Gini coefficient was negatively associated with brawls--more inequality was associated with less violence. This finding runs counter to expectations and requires more research to fully understand. Nonetheless, the article's core findings remain the same when Gini is included.
@@ -123,9 +111,12 @@ In general the additional societal-level variables were found to be associated w
 
 Results for other political and institutional variables were largely not statistically significant. The personalistic vote index was insignificant, perhaps because the baseline level of party organization is high, even if it does vary between legislatures. The effective number of parties variables and the basic continuous government fractionalization variable was statistically significant in the analyses. Likewise, federalism did not appear to be robustly related to legislative violence across the models. All of these variables are not as directly related to an ability to make credible legislative commitments at a theoretical level, compared to disproportionality, democratic age and, to a lesser extent, governing majority size. It should not come as too much of a surprise to find that they are not associated with legislative violence in these models.
 
+\section*{Details on Prior Correction of the Rare Logistic Regression Models}
+
+For prior correction \citep[see][]{KingRareEventsPA2001} in the rare event logistic regression models with the full sample of democratic legislatures, I used the observed proportion of all observations with legislative violence through 2012: i.e. 3.7 percent of observations up until 2012 had violence ($\tau = \frac{86}{2297} = 0.037$). There were 79 observed incidents of violence and 1898 country-years from 1990 through 2012 in the sample, so: $\tau = \frac{79}{1898} = 0.042$.
 
 %%%%%%%% Elected Legislatures Results Table
-\begin{table}[H]
+\begin{table}
 \caption{Legislative Violence Rare Events Logistic Regression Results (Multi-Party Elected Legislature 1981-2012)}
 \label{outputTable.dem}
 \begin{center}
@@ -157,7 +148,7 @@ Results for other political and institutional variables were largely not statist
 \end{table}
 
 %%%%%%%% Elected Legislatures Results Table from 1990--Robustness
-\begin{table}[H]
+\begin{table}
 \caption{Legislative Violence Regression Results (Democratic Legislature from 1990-2012)}
 \label{outputTable.1990_2nd}
 \begin{center}
@@ -184,13 +175,7 @@ Results for other political and institutional variables were largely not statist
 \end{center}
 \end{table}
 
-\section*{Details on Prior Correction of the Rare Logistic Regression Models}
-
-For prior correction \citep[see][]{KingRareEventsPA2001} in the rare event logistic regression models with the full sample of democratic legislatures, I used the observed proportion of all observations with legislative violence \change{up to 2010}{through 2012}: i.e. \change{2.1}{3.7} percent of observations up until \change{2010}{2012} had violence ($\tau = \frac{86}{2297} = 0.037$). There were \change{63}{79} observed incidents of violence and \change{2654}{1898} country-years from 1990 through \change{2009}{2012} in the sample, so: $\tau = \frac{79}{1898} = 0.042$.
-
 \section*{Interactions}
-
-\todo[inline]{Section added}
 
 While I did not find evidence for additive relationships between most of the societal variables and legislative brawls, perhaps they mediate the effect of disproportionality or democratic age. For example, legislators in more homogeneous societies might have small information asymmetries across partisan divides, thus enabling them to establish credible commitments in new democracies. Tables \ref{prop_interact} and \ref{dem_interact} provide the raw estimates from these interactive models. We can see that some of the interactions contain statistically significant terms, though often only at the 10\% level.
 
@@ -200,7 +185,7 @@ The substantive importance of these interactions is overall very weak. Plots of 
 
 It is important to reiterate that though these interactive effects have statistically significant terms, the substantive importance of these estimates for meaningful fitted values is very weak.
 
-\begin{figure}[H]
+\begin{figure}
     \begin{center}
 <<predProInteract1, warning=FALSE, echo=FALSE, message=FALSE, results='hide', fig.width=7, fig.height=7, out.width='0.95\\linewidth', cache=FALSE>>=
     ## Estimate models
@@ -220,7 +205,7 @@ It is important to reiterate that though these interactive effects have statisti
     \end{singlespace}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}
     \begin{center}
 <<predProInteract2, warning=FALSE, echo=FALSE, message=FALSE, results='hide', fig.width=7, fig.height=7, out.width='0.95\\linewidth', cache=FALSE>>=
     ## Create Graphs ##
@@ -236,7 +221,7 @@ It is important to reiterate that though these interactive effects have statisti
     \end{singlespace}
 \end{figure}
 
-\begin{table}[H]
+\begin{table}
     \caption{Legislative Violence Regression Results with Lower Disproportionality Interactions (Democratic Legislature from 1990-2012)}
     \label{prop_interact}
     \begin{center}
@@ -267,7 +252,7 @@ It is important to reiterate that though these interactive effects have statisti
 \end{table}
 
 }
-\begin{table}[H]
+\begin{table}
     \caption{Legislative Violence Regression Results with Democratic Age Interactions (Democratic Legislature from 1990-2012)}
     \label{dem_interact}
     \begin{center}
@@ -298,11 +283,9 @@ It is important to reiterate that though these interactive effects have statisti
 
 \section*{Ethnic fractionalization list-wise inclusion}
 
-\todo[inline]{Section added.}
-
 Table \ref{results_frac} shows models with ethnic fractionalization where key variables from the analysis are list-wise included. Ethnic fractionalization is statistically significantly associated with violence at the 10\% level in two of these models. However, there are a number of reasons to be very sceptical of this result. First, the direction of the estimated effect runs strongly counter to our expectations as more fractionalization is estimated to be associated with \emph{less} legislative violence. Second, the effect is highly model dependent as it is not significant at the 10\% level when lower disproportionality is included or in a model by itself.
 
-\begin{table}[H]
+\begin{table}
     \caption{Ethnic Fictionalization list-wise inclusion (Democracies 1990-2012)}
     \label{results_frac}
     \begin{center}
@@ -332,7 +315,7 @@ Table \ref{results_frac} shows models with ethnic fractionalization where key va
 
 
 %%%%%%%% Variable source summary table
-\begin{table}[H]
+\begin{table}
     \footnotesize
     \begin{center}
     \caption{Variable Descriptions}
