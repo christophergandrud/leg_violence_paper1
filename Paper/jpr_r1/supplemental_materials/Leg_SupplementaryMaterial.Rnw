@@ -1,6 +1,5 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Two Sword Lengths Apart: Online Appendix
-% 5 May 2015
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % !Rnw weave = knitr
@@ -37,6 +36,8 @@
 %%%%%%% Title Page %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \title{Online Appendix: Two Sword Lengths Apart: Credible Commitment Problems and Physical Violence in Democratic National Legislatures}
 
+\author{Christopher Gandrud \\ \emph{City University London} \\ \emph{Hertie School of Governance} \\ \href{mailto:gandrud@hertie-school.org}{\nolinkurl{gandrud@hertie-school.org}}}
+
 \begin{document}
 
 \maketitle
@@ -56,7 +57,7 @@ Anti-slavery supporters became very vocal about the increasingly disproportionat
 
 \subsection*{The Crime Against Kansas Speech}
 
-Pierson contends that, rather than being purely emotional and personal, Senator Sumner's Crime Against Kansas speech was the culmination of an electorally motivated strategy to push the boundaries of the Senate's rules. Early in his first Senate term beginning in 1851 Sumner spoke ``within the rhetorical restraints imposed by his minority position in the Senate as well as the minority status of his own [Free Soil then Republican] party'' \cite[534]{Pierson1995}. In the early to mid-1850s, party alignments shifted considerably, especially following the collapse of the Whig party in 1852.\footnote{The Whigs had been divided on the issue of slavery} The new Republican and anti-Catholic Know Nothing parties were left to compete for the allegiance of Northern voters who were both anti-Catholic and anti-slave power. Sumner attempted to appeal to these voters by rhetorically emphasizing the problem of disproportionate slave power. He increased his rhetoric, pushing the bounds of Senate rules to gain more publicity for the Republican's anti-slave power position.
+Pierson \citeyearpar{Pierson1995} contends that, rather than being purely emotional and personal, Senator Sumner's Crime Against Kansas speech was the culmination of an electorally motivated strategy to push the boundaries of the Senate's rules. Early in his first Senate term beginning in 1851 Sumner spoke ``within the rhetorical restraints imposed by his minority position in the Senate as well as the minority status of his own [Free Soil then Republican] party'' \cite[534]{Pierson1995}. In the early to mid-1850s, party alignments shifted considerably, especially following the collapse of the Whig party in 1852.\footnote{The Whigs had been divided on the issue of slavery} The new Republican and anti-Catholic Know Nothing parties were left to compete for the allegiance of Northern voters who were both anti-Catholic and anti-slave power. Sumner attempted to appeal to these voters by rhetorically emphasizing the problem of disproportionate slave power. He increased his rhetoric, pushing the bounds of Senate rules to gain more publicity for the Republican's anti-slave power position.
 
 
 \section*{Data Set of Legislative Violence}
@@ -94,11 +95,17 @@ Measurement error caused by the electronic availability of information on legisl
 
 While it appears in Figure 2 of the article's main text that having disproportionate electoral outcomes \emph{or} a new democracy is not necessary for legislative violence, based on the data, having \emph{both} of them might make violence much more likely. South Korea's national assembly, like the antebellum US Senate, is an example of a ``perfect storm''. It is both in a new democracy and has relatively disproportionate electoral outcomes.\footnote{South Korea's average disproportionality as measured by the Gallagher Index \citep{Gallagher1991} from 2000 until 2012 was 12. This places it in the upper 25\% of observations with elected legislatures. It also became a democracy within the past 20 years.} South Korea had eight observed incidents of legislative violence in the full sample. Countries that have \emph{either} proportional outcomes \emph{or} old democracies appear to be able to compensate fairly well for an absence of the other characteristic. The United Kingdom has a relatively disproportionate electoral system,\footnote{It had an average Gallagher disproportionality of 16.5 from 2000 to 2012.} but no violence in the sample. One reason for this might be that it has a very old democracy where the major parties have had experience in government and so view commitments to allow for the alteration of power to be credible. Conversely, only one incident of violence\footnote{Two members of parliament punched each other in 1998.} was observed in South Africa's new democracy during the sampling period. South Africa's democracy is about the same age as South Korea's and the country has a very violent recent past and present,\footnote{Its rate of murders per 100,000 people is regularly among the highest in the \cite{UNMurder2013} data set.} but it has very proportionate electoral outcomes.\footnote{South Africa's average disproportionality was 0.28 from 2000 until 2012, one of the lowest observed in the sample.} South Africa's one scuffle in 1998 is quite an outlier.\footnote{There was a scuffle in the South African legislature on 12 February 2015, when opposition legislators were being ejected for interrupting the president \citep{Guardian2015}. Though South Africa has very proportionate electoral outcomes, the ruling African National Congress' uninterrupted rule since the end of Apartheid is perhaps beginning to test opposition legislators' belief that the majority can maintain its commitments, especially to alternate power.}
 
+\section*{Discussion of Transformations to the Self-Expression Variable}
+
+Following \cite{Inglehart2003}, I average the \emph{self-expression} variable across individual participants within countries and survey waves. I only use the third through fifth survey waves as the first two waves have very poor coverage. I used Wave 3 for all years before 1998, Wave 4 for all years between 1999 and 2004 and Wave 5 onward. 
+
 \section*{Additional Right-hand Variables}
 
 I examined a number of other legislative and societal-level variables to guard against omitted variable bias and test alternative hypotheses. Results from models with these variables are shown in tables \ref{outputTable.dem} and \ref{outputTable.1990_2nd}. The variables are described below. It is important to first note that overall these factors were not found to be statistically significantly associated with legislative violence nor did they substantively alter the article's core findings.
 
 I avoid focusing on models that include highly correlated variables \citep[]{Achen2002, Schrodt2006}. In these models (not shown), as the statistical literature predicts, the coefficient estimates and standard errors change dramatically for many of the variables. Earlier models included a government system type variable. However, I ignore results from this variable. It had very large, highly unstable, and largely nonsensical coefficient estimates, suggesting that the model does not contain enough information to test \citep{Babyak2004} whether or not crude political system type has an effect on violence. The instability in the coefficient estimates likely has more to do with a lack of variation on this covariate rather than the violence dependent variable. Political systems rarely change in the sample of democracies. Aspects of the political process captured by this variable that are theoretically interesting here--particularly the existence of non-legislative, e.g. presidential veto players, are furthermore captured more directly by other variables included, primarily the political constraints variable from \cite{Henisz2004}.
+
+I also considered using the legislator immunity variable from the Comparative Constitutions Project \citep{ElkinsCCP2010}. However, the coding of the immunity variable is vaguer than Fish and Koening's \citeyearpar{Fish2009} immunity variable and only deals with constitutionally mandated immunity.
 
 \subsubsection*{Motivation and Variable Descriptions}
 
@@ -152,6 +159,7 @@ For prior correction \citep[see][]{KingRareEventsPA2001} in the rare event logis
         out.header = F,
         notes.append = T,
         notes.align = 'l',
+        star.cutoffs = c(0.05, 0.01, 0.001),
         notes = 'Standard errors are in parentheses. All models use robust (WEAVE) standard errors.',
         notes.label = '')
 @
@@ -181,6 +189,7 @@ For prior correction \citep[see][]{KingRareEventsPA2001} in the rare event logis
     out.header = F,
     notes.append = T,
     notes.align = 'l',
+    star.cutoffs = c(0.05, 0.01, 0.001),
     notes = 'Standard errors are in parentheses. All models use robust (WEAVE) standard errors.',
     notes.label = '')
 @
@@ -257,6 +266,7 @@ It is important to reiterate that though these interactive effects have statisti
     out.header = F,
     notes.append = T,
     notes.align = 'l',
+    star.cutoffs = c(0.05, 0.01, 0.001),
     notes = 'Standard errors are in parentheses. All models use robust (WEAVE) standard errors.',
     notes.label = '')
 @
@@ -287,6 +297,7 @@ It is important to reiterate that though these interactive effects have statisti
     out.header = F,
     notes.append = T,
     notes.align = 'l',
+    star.cutoffs = c(0.05, 0.01, 0.001),
     notes = 'Standard errors are in parentheses. All models use robust (WEAVE) standard errors.',
     notes.label = '')
 @
@@ -317,6 +328,7 @@ Table \ref{results_frac} shows models with ethnic fractionalization where key va
     out.header = F,
     notes.append = T,
     notes.align = 'l',
+    star.cutoffs = c(0.05, 0.01, 0.001),
     notes = 'Standard errors are in parentheses. All models use robust (WEAVE) standard errors.',
     notes.label = '')
 @
