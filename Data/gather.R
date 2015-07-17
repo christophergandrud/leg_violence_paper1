@@ -14,8 +14,8 @@ library(WDI)
 library(countrycode)
 library(psData)
 library(DataCombine)
-if (!('rio' %in% installed.packages()[, 1]))
-    devtools::install_github('leeper/rio')
+# Download dev build of rio
+devtools::install_github('leeper/rio')
 library(rio)
 library(foreign)
 library(tidyr)
@@ -23,6 +23,9 @@ library(repmis)
 library(stringr)
 library(lubridate)
 library(foreign)
+
+# Load helper function
+source('Analysis/functions/labelDataset.R')
 
 #### ----------------- Main Leg. Violence Data ---------------------------- ####
 main_violence <- import('Data/violence_sources.csv') %>%
@@ -75,7 +78,7 @@ murder <- murder %>% dplyr::select(iso2c, Year, Rate)
 names(murder) <- c('iso2c', 'year', 'murder_rate')
 
 #### ------------------ Political Constraints ----------------------------- ####
-pol_constraints <- read.dta('Data/raw/polcon2012.dta') %>%
+pol_constraints <- import('Data/raw/polcon2012.dta') %>%
                     dplyr::select(polity_country, year, polconiii, polconv)
 
 pol_constraints$iso2c <- countrycode(pol_constraints$polity_country,
@@ -85,7 +88,6 @@ pol_constraints$iso2c <- countrycode(pol_constraints$polity_country,
 pol_constraints <- DropNA(pol_constraints, 'iso2c')
 pol_constraints <- pol_constraints %>% dplyr::select(-polity_country) %>%
                     filter(year >= 1980)
-
 
 #### --------------- Armed Conflict --------------------------------------- ####
 conflict <- import('Data/raw/UCDPPrioArmedConflictDataset4a-2014.csv') %>%
@@ -140,8 +142,8 @@ names(personal_vote) <- c('country', 'year', 'dom_personal_vote')
 personal_vote$year <- as.integer(personal_vote$year)
 personal_vote$dom_personal_vote <- as.numeric(personal_vote$dom_personal_vote)
 
-personal_vote$iso2c <- countrycode(personal_vote$country, 
-                                   origin = 'country.name', 
+personal_vote$iso2c <- countrycode(personal_vote$country,
+                                   origin = 'country.name',
                                    destination = 'iso2c')
 personal_vote <- personal_vote %>% DropNA(c('iso2c', 'dom_personal_vote')) %>%
                     dplyr::select(-country)
@@ -186,30 +188,30 @@ polity$democracy[is.na(polity$polity2)] <- NA
 cum_nozero <- function(x){
     polity <- as.data.frame(polity)
     comb <- vector()
-    for (u in unique(polity$iso2c)){
+    for (u in unique(polity$iso2c)) {
         message(u)
         temp <- subset(polity, iso2c == u)
         temp_cum <- rep(0, nrow(temp))
 
-        for (i in 1:nrow(temp)){
+        for (i in 1:nrow(temp)) {
             message(i)
             if (i == 1) {
                 temp_cum[1] <- temp[1, x]
             }
             else if (i > 1) {
-                if (is.na(temp[i, x])){
+                if (is.na(temp[i, x])) {
                     temp_cum[i] <- temp[i, x]
                 }
-                else if (!is.na(temp[i, x])){
-                    if (!is.na(temp[i-1, x])){
-                        if (temp[i-1, x] == 0 & temp[i, x] > 0) {
+                else if (!is.na(temp[i, x])) {
+                    if (!is.na(temp[i - 1, x])) {
+                        if (temp[i - 1, x] == 0 & temp[i, x] > 0) {
                             temp_cum[i] <- 1
                         }
-                        else if (temp[i-1, x] > 0){
-                            temp_cum[i] <- temp_cum[i-1] + 1
+                        else if (temp[i - 1, x] > 0) {
+                            temp_cum[i] <- temp_cum[i - 1] + 1
                         }
                     }
-                    else if (is.na(temp[i-1, x])){
+                    else if (is.na(temp[i - 1, x])) {
                         temp_cum[i] <- NA
                     }
                 }
@@ -226,10 +228,8 @@ polity <- polity %>% dplyr::select(iso2c, year, polity2, dem_age)
 polity <- polity[!duplicated(polity[, c('iso2c', 'year')]), ]
 
 #### ---------------------- Database of Political Institutions ------------ ####
-tmpfile <- tempfile()
-download.file('http://bit.ly/1jZ3nmM', tmpfile)
-DpiData <- read.dta(tmpfile)
-unlink(tmpfile)
+DpiData <- import('http://bit.ly/1jZ3nmM')
+DpiData <- labelDataset(DpiData)
 
 # Correct South Africa
 DpiData$countryname <- as.character(DpiData$countryname)
@@ -391,13 +391,13 @@ violence_sub <- comb %>% filter(!is.na(violence))
 for (i in c('violence', 'violence_y_cum')) comb[, i][is.na(comb[, i])] <- 0
 
 # Create lagged conflict variable
-comb <- slide(comb, Var = 'internal_conflict', TimeVar = 'year', 
-              GroupVar = 'iso2c', NewVar = 'internal_conflict_lag2', 
+comb <- slide(comb, Var = 'internal_conflict', TimeVar = 'year',
+              GroupVar = 'iso2c', NewVar = 'internal_conflict_lag2',
               slideBy = -2)
 
 # Create lead conflict variable
-comb <- slide(comb, Var = 'internal_conflict', TimeVar = 'year', 
-              GroupVar = 'iso2c', NewVar = 'internal_conflict_lead2', 
+comb <- slide(comb, Var = 'internal_conflict', TimeVar = 'year',
+              GroupVar = 'iso2c', NewVar = 'internal_conflict_lead2',
               slideBy = 2)
 
 # Limit to 1980-2012
