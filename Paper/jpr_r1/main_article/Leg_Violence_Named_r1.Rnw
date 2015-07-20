@@ -35,14 +35,14 @@
 %%%%%%% Title Page %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \title{Two Sword Lengths Apart: Credible Commitment Problems and Physical Violence in Democratic National Legislatures}
 
-%\author{Christopher Gandrud \\ Hertie School of Governance\footnote{Email: \href{mailto:gandrud@hertie-school.org}{gandrud@hertie-school.org}. Thank you to Gary Cox, Simon Hix, Shirin Rai, Carole Spary, as well as seminar participants at the Hertie School of Governance and Yonsei University for very helpful comments and insights. I would also like to thank Hortense Badarani, Tyler Daveron, Alexander Hall, and Lauren Wallace for research assistance, as well as my students at the LSE for inspiration. An earlier version was circulated under the title ``Two Sword Lengths: Losers' consent and violence in national legislatures''.}}
+\author{Christopher Gandrud \\ Hertie School of Governance\footnote{Email: \href{mailto:gandrud@hertie-school.org}{gandrud@hertie-school.org}. Thank you to Emily Beaulieu, Gary Cox, Simon Hix, Shirin Rai, Carole Spary, as well as seminar participants at the Hertie School of Governance and Yonsei University for very helpful comments and insights. I would also like to thank Hortense Badarani, Tyler Daveron, Alexander Hall, and Lauren Wallace for research assistance, as well as my students at the LSE for inspiration. An earlier version was circulated under the title ``Two Sword Lengths: Losers' consent and violence in national legislatures''.}}
 
 \begin{document}
 
 \maketitle
 
 \begin{center}
-Word Count: 9,812
+Forthcoming in the \emph{Journal of Peace Reserach}
 \end{center}
 
 %%%%%%% Abstract %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
