@@ -1,0 +1,16 @@
+#' @source \url{https://github.com/hadley/haven/issues/86#issuecomment-119388845}
+#' @noRd
+
+labelDataset <- function(data) {
+    correctLabel <- function(x) {
+
+        if (!is.null(attributes(x)$labels)) {
+            class(attributes(x)$labels) <- typeof(x)
+        }
+        return(x)
+    }
+    for (i in colnames(data)) {
+        data[, i] <- correctLabel(data[, i])
+    }
+    return(data)
+}
