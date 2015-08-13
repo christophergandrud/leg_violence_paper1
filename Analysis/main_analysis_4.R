@@ -1,7 +1,7 @@
 #######################
 # Legislative Violence Expected Value Graphs
 # Christopher Gandrud
-# Updated 31 March 2015
+# Updated 13 August 2015
 #######################
 
 # Set working directory. Change as needed.
@@ -33,7 +33,7 @@ high_prop_p <- ggplot(high_prop_sum, aes(fitted, Median, ymin = Min_CI,
                     ymax = Max_CI)) +
         geom_pointrange(size = 1) +
         geom_line() +
-        scale_x_reverse(breaks = c(0, 1), labels = c("Above", "Below Median")) +
+        scale_x_reverse(breaks = c(0, 1), labels = c("Above", "Below median")) +
         scale_y_continuous(breaks = c(0, 0.05, 0.1),
                            limits = c(0, 0.17)) +
         xlab("\nDisproportionality") + ylab("") +
@@ -52,7 +52,7 @@ dem_age_p <- DN3.HighProp.p <- ggplot(dem_age_sum, aes(fitted, Median,
         scale_y_continuous(breaks = c(0, 0.05, 0.1),
                            limits = c(0, 0.17)) +
         scale_x_continuous(breaks = c(1, 25, 50, 75)) +
-        xlab("\nAge of Democracy") + ylab("") +
+        xlab("\nAge of democracy") + ylab("") +
         theme_bw(base_size = 12)
 
 #### Majority ####
@@ -66,11 +66,11 @@ maj_p <- ggplot(maj_sum, aes(fitted, Median, ymin = Min_CI, ymax = Max_CI)) +
         geom_ribbon(alpha = 0.3) +
         scale_y_continuous(breaks = c(0, 0.05, 0.1),
                            limits = c(0, 0.17)) +
-        xlab("\nGovernment Majority") + ylab("") +
+        xlab("\nGovernment majority") + ylab("") +
         theme_bw(base_size = 12)
 
 #### Combibine plots
 predicted.combine <- grid.arrange(high_prop_p, dem_age_p, maj_p,
                         ncol = 3,
-                        left = "Expected Probability of Violence in a Year")
+                        left = "Expected probability of violence in a year")
 print(predicted.combine)
