@@ -8,8 +8,8 @@ Christopher Gandrud
 # Purpose
 
 This repository contains all of the material needed to reproduce the analyses
-in *Two Sword Lengths Apart: Credible Commitment Problems and Physical Violence
-in Democratic National Legislatures*, forthcoming in the *Journal of Peace Research*.
+in "Two Sword Lengths Apart: Credible Commitment Problems and Physical Violence
+in Democratic National Legislatures", forthcoming in the *Journal of Peace Research*.
 
 # File Structure
 
