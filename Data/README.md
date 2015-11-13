@@ -11,7 +11,7 @@ scrapped from the internet as well as manually downloaded and stored in the
 [Data/raw](Data/raw) directory.
 
 The legislative incidents data, including key sources, can be found in
-[Data/violence_sources.csv](Data/violence_sources.csv).
+[Data/violence_sources.csv](https://github.com/christophergandrud/leg_violence_paper1/blob/master/Data/violence_sources.csv).
 You can download the data directly into R with:
 
 ```{S}
